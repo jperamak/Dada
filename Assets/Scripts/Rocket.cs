@@ -24,6 +24,13 @@ public class Rocket : MonoBehaviour
 	
 	void OnTriggerEnter2D (Collider2D col) 
 	{
+
+		// If the hit object is damageable...
+		if (col.gameObject.GetComponent<Damageable>() != null) {
+			// ...give it 10 hitpointd of damage
+			col.gameObject.GetComponent<Damageable>().TakeDamage(10);
+		}
+
 		// If it hits an enemy...
 		if(col.tag == "Enemy")
 		{
