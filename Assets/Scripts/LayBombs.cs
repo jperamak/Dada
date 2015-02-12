@@ -16,7 +16,6 @@ public class LayBombs : MonoBehaviour
 	void Awake ()
 	{
 		// Setting up the reference.
-		bombHUD = GameObject.Find("ui_bombHUD").guiTexture;
 		playerContr = GetComponent<PlayerControl>();
 	}
 
@@ -39,7 +38,5 @@ public class LayBombs : MonoBehaviour
 			Instantiate(bomb, transform.position, transform.rotation);
 		}
 
-		// The bomb heads up display should be enabled if the player has bombs, other it should be disabled.
-		bombHUD.enabled = bombCount > 0;
 	}
 }

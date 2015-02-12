@@ -24,7 +24,7 @@ public class DadaInput {
 
 	public static AbstractController Controller{get{ return _instance._joy; }}
 	public static string[] ControllerNames{get{return _instance._controllerNames; }}
-	public static int ConrtollerCount{get{return _instance._controllerNames.Length; }}
+	public static int ConrtollerCount{get{return _instance._joyList.Count; }}
 			
 	public static float GetAxis(VirtualKey key){ return _instance._joy.GetAxis(key); }
 	public static bool GetButton(VirtualKey key){ return _instance._joy.GetButton(key); }
