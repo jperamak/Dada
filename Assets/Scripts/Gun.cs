@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
 	void Update ()
 	{
 		// If the fire button is pressed...
-		if(Input.GetButtonDown(playerCtrl.playerNumber + "Fire1"))
+		if(playerCtrl.controller.GetButtonDown(VirtualKey.SHOOT))
 		{
 			// ... set the animator Shoot trigger parameter and play the audioclip.
 			anim.SetTrigger("Shoot");

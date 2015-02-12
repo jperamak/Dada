@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Dada.InputSystem;
 using System.Collections;
 
 public class PlayerControl : MonoBehaviour
@@ -7,7 +8,8 @@ public class PlayerControl : MonoBehaviour
 	public bool facingRight = true;			// For determining which way the player is currently facing.
 	[HideInInspector]
 	public bool jump = false;				// Condition for whether the player should jump.
-
+	[HideInInspector]
+	public AbstractController controller;
 
     public int playerNumber = 0;
 
@@ -31,6 +33,9 @@ public class PlayerControl : MonoBehaviour
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
+
+		if(controller == null)
+			controller = DadaInput.Controller;
 	}
 
 
@@ -40,7 +45,7 @@ public class PlayerControl : MonoBehaviour
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetButtonDown(playerNumber+"Jump") && grounded)
+		if(controller.GetButtonDown(VirtualKey.JUMP) && grounded)
 			jump = true;
 	}
 
@@ -48,7 +53,7 @@ public class PlayerControl : MonoBehaviour
 	void FixedUpdate ()
 	{
 		// Cache the horizontal input.
-		float h = Input.GetAxis(playerNumber+"Horizontal");
+		float h = controller.XAxis;
 
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		anim.SetFloat("Speed", Mathf.Abs(h));

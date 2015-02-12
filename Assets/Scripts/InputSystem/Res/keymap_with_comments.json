@@ -1,0 +1,116 @@
+{
+    "*ConfigurationName*":{
+        "*VirtualKey1_Name*":[
+            {
+                "KeyName":"*axis or button name*",
+                "IsAxis": true, //default false if property is missing
+                "Inverted": true, //default false if property is missing
+                "KeyTriggerCondition" : "*condition*", //(default NON_ZERO if property is missing) POSITIVE, NEGATIVE, ONE, MINUS_ONE, ABS_ONE, NON_ZERO
+                "AxisOrientation" : "*orientation*" //(default NONE if property is missing) VERTICAL, HORIZONTAL, NONE
+           }
+        ]
+    }
+}
+
+
+
+
+
+
+//Example: 
+{
+    "Touch": {
+        "FIRE": [{KeyName: "touch.button.fire"}],
+        "TIDAL": [{KeyName: "touch.button.tidal"}],
+        "HEAL": [{KeyName: "touch.button.heal"}],
+        "AMMO": [{KeyName: "touch.button.ammo"}],
+        
+        "XAXIS": [{KeyName: "touch.axis.move", IsAxis:true, AxisOrientation:"HORIZONTAL"}],
+        "YAXIS": [{KeyName: "touch.axis.move", IsAxis:true, AxisOrientation:"VERTICAL"}],
+        "XMOVE": [{KeyName: "touch.axis.move", IsAxis:true, AxisOrientation:"HORIZONTAL"}],
+        "YMOVE": [{KeyName: "touch.axis.move", IsAxis:true, AxisOrientation:"VERTICAL"}],
+        "XLOOK": [{KeyName: "touch.axis.look", IsAxis:true, AxisOrientation:"HORIZONTAL"}],
+        "YLOOK": [{KeyName: "touch.axis.look", IsAxis:true, AxisOrientation:"VERTICAL"}],
+        "MENU": [{KeyName: "touch.button.menu"}],
+        "BACK": [{KeyName: "touch.button.back"}],
+        "PAUSE": [{KeyName: "touch.button.pause"}],
+
+        "FORWARD": [],
+        "BACKWARD": [],
+        "STRAFERIGHT": [],
+        "STRAFELEFT": [],
+        "LOOKUP": [],
+        "LOOKDOWN": [],
+        "LOOKRIGHT": [],
+        "LOOKLEFT": []
+    },
+    "Keyboard": {
+        "FIRE": [{"KeyName": "Space"}],
+        "TIDAL": [{"KeyName": "LeftShift"}],
+        "HEAL": [{"KeyName": "Q"}],
+        "AMMO": [{"KeyName": "E"}],
+        "XAXIS": [{"KeyName": "D"},{"KeyName": "A", "Inverted": true}],
+        "YAXIS": [{"KeyName": "W"},{"KeyName": "S", "Inverted": true}],
+        "XMOVE": [{"KeyName": "D"},{"KeyName": "A", "Inverted": true}],
+        "YMOVE": [{"KeyName": "W"},{"KeyName": "S", "Inverted": true}],
+        "XLOOK": [{"KeyName": "UpArrow"},{"KeyName": "DownArrow", "Inverted": true}, {"KeyName": "mouse X", "IsAxis": true}],
+        "YLOOK": [{"KeyName": "RightArrow"},{"KeyName": "LeftArrow", "Inverted": true}, {"KeyName": "mouse Y", "IsAxis": true}],
+        "MENU": [{"KeyName": "Escape"}],
+        "BACK": [{"KeyName": "Backspace"}],
+        "PAUSE":[{"KeyName": "P"}],
+        "FORWARD": [],
+        "BACKWARD": [],
+        "STRAFERIGHT": [],
+        "STRAFELEFT": [],
+        "LOOKUP": [],
+        "LOOKDOWN": [],
+        "LOOKRIGHT": [],
+        "LOOKLEFT": []
+    },
+"Logitech Dual Action": {
+        "FIRE": [{"KeyName": "joystick button 1"}],
+        "TIDAL": [{"KeyName": "joystick button 2"}],
+        "HEAL": [{"KeyName": "joystick button 3"}],
+        "AMMO": [{"KeyName": "joystick button 4"}],
+        "XAXIS": [{"KeyName": "X axis","IsAxis": true}],
+        "YAXIS": [{"KeyName": "Y axis","IsAxis": true}],
+        "XMOVE": [{"KeyName": "X axis","IsAxis": true}, {"KeyName": "5th axis","IsAxis": true}],
+        "YMOVE": [{"KeyName": "Y axis","IsAxis": true}, {"KeyName": "6th axis", "IsAxis": true}],
+        "XLOOK": [{"KeyName": "3th axis","IsAxis": true}],
+        "YLOOK": [{"KeyName": "4th axis","IsAxis": true}],
+        "MENU": [{"KeyName": "joystick button 9"}],
+        "BACK": [{"KeyName": "joystick button 8"}],
+        "PAUSE": [],
+        "FORWARD": [],
+        "BACKWARD": [],
+        "STRAFERIGHT": [],
+        "STRAFELEFT": [],
+        "LOOKUP": [],
+        "LOOKDOWN": [],
+        "LOOKRIGHT": [],
+        "LOOKLEFT": []
+    },
+    "JoystickDefault": {
+        "FIRE": [{"KeyName": "joystick button 1"}],
+        "TIDAL": [{"KeyName": "joystick button 2"}],
+        "HEAL": [{"KeyName": "joystick button 3"}],
+        "AMMO": [{"KeyName": "joystick button 4"}],
+        "XAXIS": [{"KeyName": "X axis","IsAxis": true}],
+        "YAXIS": [{"KeyName": "Y axis","IsAxis": true}],
+        "XMOVE": [{"KeyName": "4th axis","IsAxis": true}, {"KeyName": "6th axis","IsAxis": true}],
+        "YMOVE": [{"KeyName": "5th axis","IsAxis": true}, {"KeyName": "7th axis", "IsAxis": true}],
+        "XLOOK": [{"KeyName": "3th axis","IsAxis": true}],
+        "YLOOK": [{"KeyName": "4th axis","IsAxis": true}],
+        "MENU": [{"KeyName": "joystick button 9"}],
+        "BACK": [{"KeyName": "joystick button 8"}],
+        "PAUSE": [],
+        "FORWARD": [],
+        "BACKWARD": [],
+        "STRAFERIGHT": [],
+        "STRAFELEFT": [],
+        "LOOKUP": [],
+        "LOOKDOWN": [],
+        "LOOKRIGHT": [],
+        "LOOKLEFT": []
+    }
+}

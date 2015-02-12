@@ -9,7 +9,7 @@ public class LayBombs : MonoBehaviour
 	public AudioClip bombsAway;			// Sound for when the player lays a bomb.
 	public GameObject bomb;				// Prefab of the bomb.
 
-
+	private PlayerControl playerContr;
 	private GUITexture bombHUD;			// Heads up display of whether the player has a bomb or not.
 
 
@@ -17,13 +17,14 @@ public class LayBombs : MonoBehaviour
 	{
 		// Setting up the reference.
 		bombHUD = GameObject.Find("ui_bombHUD").guiTexture;
+		playerContr = GetComponent<PlayerControl>();
 	}
 
 
 	void Update ()
 	{
 		// If the bomb laying button is pressed, the bomb hasn't been laid and there's a bomb to lay...
-		if(Input.GetButtonDown("Fire2") && !bombLaid && bombCount > 0)
+		if(playerContr.controller.GetButtonDown(VirtualKey.SPECIAL) && !bombLaid && bombCount > 0)
 		{
 			// Decrement the number of bombs.
 			bombCount--;
