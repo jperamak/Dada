@@ -23,7 +23,8 @@ public class PlayerControl : MonoBehaviour
 	private int tauntIndex;					// The index of the taunts array indicating the most recent taunt.
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private bool grounded = false;			// Whether or not the player is grounded.
-	private Animator anim;					// Reference to the player's animator component.
+    private int walljump = 0;               // whether or not the player can walljump
+    private Animator anim;					// Reference to the player's animator component.
 
 
 	void Awake()
@@ -37,8 +38,13 @@ public class PlayerControl : MonoBehaviour
 	void Update()
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
-
+		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        if (Input.GetButtonDown(playerNumber + "Jump") && Physics2D.Linecast(transform.position,transform.position + new Vector3(-0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+            walljump = 1;
+        else if (Input.GetButtonDown(playerNumber + "Jump") && Physics2D.Linecast(transform.position, transform.position + new Vector3(0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+            walljump = 2;
+        else
+            walljump = 0;
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if(Input.GetButtonDown(playerNumber+"Jump") && grounded)
 			jump = true;
@@ -71,7 +77,7 @@ public class PlayerControl : MonoBehaviour
 		else if(h < 0 && facingRight)
 			// ... flip the player.
 			Flip();
-
+         
 		// If the player should jump...
 		if(jump)
 		{
@@ -80,7 +86,7 @@ public class PlayerControl : MonoBehaviour
 
 			// Play a random jump audio clip.
 			int i = Random.Range(0, jumpClips.Length);
-			AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
+			AudioSource.PlayClipAtPoint(jumpClips[i], transform.  position);
 
 			// Add a vertical force to the player.
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
@@ -88,6 +94,21 @@ public class PlayerControl : MonoBehaviour
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;
 		}
+        if (walljump > 0 && !grounded)
+        {
+            anim.SetTrigger("Jump");
+
+            // Play a random jump audio clip.
+            int i = Random.Range(0, jumpClips.Length);
+            AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
+
+            // Add a vertical force to the player.
+            if (walljump == 1)
+                rigidbody2D.AddForce(new Vector2(jumpForce, jumpForce));
+            else
+                rigidbody2D.AddForce(new Vector2(-jumpForce, jumpForce));
+
+        }
 	}
 	
 	
