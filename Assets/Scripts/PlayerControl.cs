@@ -25,7 +25,7 @@ public class PlayerControl : MonoBehaviour
 	private bool grounded = false;			// Whether or not the player is grounded.
     private int walljump = 0;               // whether or not the player can walljump
     private Animator anim;					// Reference to the player's animator component.
-
+    private int points = 0;
 
 	void Awake()
 	{
@@ -58,6 +58,10 @@ public class PlayerControl : MonoBehaviour
 	{
 		// Cache the horizontal input.
 		float h = controller.XAxis;
+
+        // quick fix for joystick deadzone
+        if (Mathf.Abs(h) < 0.2f)
+            h = 0;
 
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		anim.SetFloat("Speed", Mathf.Abs(h));
@@ -116,10 +120,15 @@ public class PlayerControl : MonoBehaviour
                 rigidbody2D.velocity = Vector2.zero;
                 rigidbody2D.AddForce(new Vector2(-jumpForce, jumpForce));
             }
-
         }
 	}
-	
+
+    public void GivePoints()
+    {
+        points++;
+        GameObject scores = GameObject.Find("Scores" + controller.Number);
+        scores.GetComponent<GUIText>().text = ""+points;
+    }
 	
 	void Flip ()
 	{
@@ -132,6 +141,10 @@ public class PlayerControl : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
+    public void Die()
+    {
+        Destroy(this.gameObject);
+    }
 
 	public IEnumerator Taunt()
 	{
@@ -154,7 +167,6 @@ public class PlayerControl : MonoBehaviour
 			}
 		}
 	}
-
 
 	int TauntRandom()
 	{

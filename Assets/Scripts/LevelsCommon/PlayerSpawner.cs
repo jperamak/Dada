@@ -8,11 +8,13 @@ public class PlayerSpawner : MonoBehaviour {
 	public Transform[] SpawnPoints;
 
 	private PlayerHealth[] _assignedHealth;
+    private int[] _scores;
 	private int _joinedPlayers = 0;
 
 	void Start () {
 		_assignedHealth = new PlayerHealth[DadaInput.ConrtollerCount];
 		Debug.Log("There are "+DadaInput.ConrtollerCount);
+        _scores = new int[4] { 0,0,0,0};
 	}
 
 	void Update () {
@@ -30,7 +32,8 @@ public class PlayerSpawner : MonoBehaviour {
 					int random = Random.Range(0,SpawnPoints.Length);
 					newPlayer.transform.position = SpawnPoints[random].position;
 				}
-				else{
+				else
+                {
 					newPlayer.transform.position = SpawnPoints[_joinedPlayers-1].position;
 				}
 			}
@@ -45,4 +48,10 @@ public class PlayerSpawner : MonoBehaviour {
 
 		}
 	}
+
+    public void AddPoint(int playerNum)
+    {
+        _scores[playerNum]++;
+        GameObject.Find("Scores" + playerNum).GetComponent<GUIText>().text = ""+_scores[playerNum];
+    }
 }

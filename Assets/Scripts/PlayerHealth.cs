@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
 			{
 				// ... and if the player still has health...
 			    // ... take damage and reset the lastHitTime.
-			    TakeDamage(col.transform); 
+			    TakeDamage(col.transform, null); 
 			    lastHitTime = Time.time; 
 				
 			}
@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 
-	public void TakeDamage (Transform enemy)
+	public void TakeDamage (Transform enemy, PlayerControl player)
 	{
 		// Make sure the player can't jump.
 		playerControl.jump = false;
@@ -66,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0f)
         {
+            GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(playerControl.controller.Number);
             // Find all of the colliders on the gameobject and set them all to be triggers.
             Collider2D[] cols = GetComponents<Collider2D>();
             foreach (Collider2D c in cols)
@@ -81,16 +82,21 @@ public class PlayerHealth : MonoBehaviour
             }
 
             // ... disable user Player Control script
-            GetComponent<PlayerControl>().enabled = false;
+            playerControl.enabled = false;
 
             // ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
             GetComponentInChildren<Gun>().enabled = false;
 
             // ... Trigger the 'Die' animation state
             anim.SetTrigger("Die");
+            Invoke("Die", 2);
         }
 	}
 
+    void Die()
+    {
+        playerControl.Die();
+    }
 
 	public void UpdateHealthBar ()
 	{

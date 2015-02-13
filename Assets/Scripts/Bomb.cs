@@ -20,7 +20,7 @@ public class Bomb : MonoBehaviour
 	{
 		// Setting up references.
 		explosionFX = GameObject.FindGameObjectWithTag("ExplosionFX").GetComponent<ParticleSystem>();
-		pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
+		//pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
 		if(GameObject.FindGameObjectWithTag("Player"))
 			layBombs = GameObject.FindGameObjectWithTag("Player").GetComponent<LayBombs>();
 	}

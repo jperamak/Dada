@@ -4,7 +4,8 @@ using System.Collections;
 public class Rocket : MonoBehaviour 
 {
 	public GameObject explosion;		// Prefab of explosion effect.
-
+    [HideInInspector]
+    public PlayerControl player;
 
 	void Start () 
 	{
@@ -58,10 +59,11 @@ public class Rocket : MonoBehaviour
 		// Otherwise if the player manages to shoot himself...
 		else if(col.gameObject.tag == "Player")
 		{
+
 			// Instantiate the explosion and destroy the rocket.
 			OnExplode();
             PlayerHealth pH = col.gameObject.GetComponent<PlayerHealth>();
-            pH.TakeDamage(gameObject.transform);
+            pH.TakeDamage(gameObject.transform, player);
             Destroy (gameObject);
 
 		}
