@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 5984826}
   m_Layer: 12
-  m_Name: GameObject
+  m_Name: blocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
