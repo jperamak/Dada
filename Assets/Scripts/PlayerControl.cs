@@ -27,11 +27,17 @@ public class PlayerControl : MonoBehaviour
     private Animator anim;					// Reference to the player's animator component.
     private int points = 0;
 
+    private CameraFollow camera;
+
 	void Awake()
 	{
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
+
+        camera = FindObjectOfType<CameraFollow>();
+        camera.AddPlayer(transform);
+
 
 		if(controller == null)
 			controller = DadaInput.Controller;
@@ -42,12 +48,25 @@ public class PlayerControl : MonoBehaviour
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-		if (controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position,transform.position + new Vector3(-0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+
+        var sliding = false;
+        if (Physics2D.Linecast(transform.position,transform.position + new Vector3(-0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")) || 
+            Physics2D.Linecast(transform.position, transform.position + new Vector3(0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")) )
+        {
+            anim.SetBool("Slide", true);
+            sliding = true;
+        }
+
+		if (controller.GetButtonDown(VirtualKey.JUMP) && sliding )
             walljump = 1;
-		else if (controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+        else if (controller.GetButtonDown(VirtualKey.JUMP) && sliding)
             walljump = 2;
         else
+        {
             walljump = 0;
+            if (!sliding)
+                anim.SetBool("Slide", false);
+        }
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if(controller.GetButtonDown(VirtualKey.JUMP) && grounded)
 			jump = true;
@@ -64,7 +83,7 @@ public class PlayerControl : MonoBehaviour
             h = 0;
 
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
-		anim.SetFloat("Speed", Mathf.Abs(h));
+		anim.SetFloat("Speed", grounded ? Mathf.Abs(h) : 0);
 
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
 		if(h * rigidbody2D.velocity.x < maxSpeed)
@@ -85,10 +104,14 @@ public class PlayerControl : MonoBehaviour
 			// ... flip the player.
 			Flip();
          
+        if (grounded)
+            anim.SetBool("Slide", false);
+
 		// If the player should jump...
 		if(jump)
 		{
 			// Set the Jump animator trigger parameter.
+            anim.SetBool("Slide", false);
 			anim.SetTrigger("Jump");
 
 			// Play a random jump audio clip.
@@ -103,8 +126,8 @@ public class PlayerControl : MonoBehaviour
 		}
         if (walljump > 0 && !grounded)
         {
+            anim.SetBool("Slide", false);
             anim.SetTrigger("Jump");
-
             // Play a random jump audio clip.
             int i = Random.Range(0, jumpClips.Length);
             AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
@@ -143,6 +166,7 @@ public class PlayerControl : MonoBehaviour
 
     public void Die()
     {
+        camera.RemovePlayer(transform);
         Destroy(this.gameObject);
     }
 
