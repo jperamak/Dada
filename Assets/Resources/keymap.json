@@ -1,8 +1,8 @@
 {
     "Keyboard": {
-        "MELEE": [{"KeyName": "Mouse0"}],
-        "SHOOT": [{"KeyName": "Mouse1"}],
-        "JUMP": [{"KeyName": "Space"}],
+        "MELEE": [{"KeyName": "Alpha2"}],
+        "SHOOT": [{"KeyName": "Alpha3"}],
+        "JUMP": [{"KeyName": "Alpha1"}],
         "SPECIAL": [{"KeyName": "LeftShift"}],
         "MENU": [{"KeyName": "Return"}],
         "START": [{"KeyName": "Return"}],
@@ -10,10 +10,10 @@
         "PAUSE": [{"KeyName": "P"}],
         "SUBMIT": [{"KeyName": "Return"}],
         "CANCEL": [{"KeyName": "Backspace"}],
-        "X_AXIS": [{"KeyName": "D"},{"KeyName": "A", "Inverted": true}],
-        "Y_AXIS": [{"KeyName": "W"},{"KeyName": "S", "Inverted": true}],
-        "MOVE_AXIS": [{"KeyName": "D"},{"KeyName": "A", "Inverted": true}],
-        "AIM_AXIS": [{"KeyName": "W"},{"KeyName": "S", "Inverted": true}]
+        "X_AXIS": [{"KeyName": "RightArrow"},{"KeyName": "LeftArrow", "Inverted": true}],
+        "Y_AXIS": [{"KeyName": "UpArrow"},{"KeyName": "DownArrow", "Inverted": true}],
+        "MOVE_AXIS": [{"KeyName": "RightArrow"},{"KeyName": "LeftArrow", "Inverted": true}],
+        "AIM_AXIS": [{"KeyName": "UpArrow"},{"KeyName": "DownArrow", "Inverted": true}]
     },
     "Controller (XBOX 360 For Windows)": {
         "MELEE": [{"KeyName": "button 1"}],
@@ -26,6 +26,22 @@
         "PAUSE": [{"KeyName": "button 7"}],
         "SUBMIT": [{"KeyName": "button 0"}],
         "CANCEL": [{"KeyName": "button 1"}],
+        "X_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
+        "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
+        "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
+        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}]
+    },
+        "©Microsoft Corporation Controller": {
+        "MELEE": [{"KeyName": "button 17"}],
+        "SHOOT": [{"KeyName": "button 18"}],
+        "JUMP": [{"KeyName": "button 16"}],
+        "SPECIAL": [{"KeyName": "button 19"}],
+        "MENU": [{"KeyName": "button 9"}],
+        "START": [{"KeyName": "button 9"}],
+        "BACK": [{"KeyName": "button 10"}],
+        "PAUSE": [{"KeyName": "button 9"}],
+        "SUBMIT": [{"KeyName": "button 16"}],
+        "CANCEL": [{"KeyName": "button 17"}],
         "X_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
         "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
         "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
