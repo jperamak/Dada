@@ -4,6 +4,7 @@ using System.Collections;
 public class Rocket : MonoBehaviour 
 {
 	public GameObject explosion;		// Prefab of explosion effect.
+    public float radius;
     [HideInInspector]
     public PlayerControl player;
 
@@ -23,54 +24,60 @@ public class Rocket : MonoBehaviour
 		Instantiate(explosion, transform.position, randomRotation);
 	}
 	
-	void OnTriggerEnter2D (Collider2D col) 
+	void OnTriggerEnter2D (Collider2D c) 
 	{
 
-		// If the hit object is damageable...
-		if (col.gameObject.GetComponent<Damageable>() != null) {
-			// ...give it 10 hitpointd of damage
-			col.gameObject.GetComponent<Damageable>().TakeDamage(10);
-		}
-
-		// If it hits an enemy...
-		if(col.tag == "Enemy")
-		{
-			// ... find the Enemy script and call the Hurt function.
-			col.gameObject.GetComponent<Enemy>().Hurt();
-
-			// Call the explosion instantiation.
-			OnExplode();
-
-			// Destroy the rocket.
-			Destroy (gameObject);
-		}
-		// Otherwise if it hits a bomb crate...
-		else if(col.tag == "BombPickup")
-		{
-			// ... find the Bomb script and call the Explode function.
-			col.gameObject.GetComponent<Bomb>().Explode();
-
-			// Destroy the bomb crate.
-			Destroy (col.transform.root.gameObject);
-
-			// Destroy the rocket.
-			Destroy (gameObject);
-		}
-		// Otherwise if the player manages to shoot himself...
-		else if(col.gameObject.tag == "Player")
-		{
-
-			// Instantiate the explosion and destroy the rocket.
-			OnExplode();
-            PlayerHealth pH = col.gameObject.GetComponent<PlayerHealth>();
-            pH.TakeDamage(gameObject.transform, player);
-            Destroy (gameObject);
-
-		}
-        else if (col.gameObject.tag != "Player")
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius, LayerMask.GetMask(new string[] {"Enemy", "Player", "Ground"}));
+        foreach (Collider2D col in hits)
         {
-            OnExplode();
-            Destroy(gameObject);
+            Debug.Log(c);
+            // If the hit object is damageable...
+            if (col.gameObject.GetComponent<Damageable>() != null)
+            {
+                // ...give it 10 hitpointd of damage
+                col.gameObject.GetComponent<Damageable>().TakeDamage(10);
+            }
+
+            // If it hits an enemy...
+            if (col.tag == "Enemy")
+            {
+                // ... find the Enemy script and call the Hurt function.
+                col.gameObject.GetComponent<Enemy>().Hurt();
+
+                // Call the explosion instantiation.
+                OnExplode();
+
+                // Destroy the rocket.
+                Destroy(gameObject);
+            }
+            // Otherwise if it hits a bomb crate...
+            else if (col.tag == "BombPickup")
+            {
+                // ... find the Bomb script and call the Explode function.
+                col.gameObject.GetComponent<Bomb>().Explode();
+
+                // Destroy the bomb crate.
+                Destroy(col.transform.root.gameObject);
+
+                // Destroy the rocket.
+                Destroy(gameObject);
+            }
+            // Otherwise if the player manages to shoot himself...
+            else if (col.gameObject.tag == "Player")
+            {
+
+                // Instantiate the explosion and destroy the rocket.
+                OnExplode();
+                PlayerHealth pH = col.gameObject.GetComponent<PlayerHealth>();
+                pH.TakeDamage(gameObject.transform, player);
+                Destroy(gameObject);
+
+            }
+            else if (col.gameObject.tag != "Player")
+            {
+                OnExplode();
+                Destroy(gameObject);
+            }
         }
 	}
 }
