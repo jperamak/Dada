@@ -33,7 +33,7 @@ public class Rocket : MonoBehaviour
 	
 	void OnTriggerEnter2D (Collider2D col) 
 	{
-
+        // aoe damage thing, does not work with mortar :<
         //Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius, LayerMask.GetMask(new string[] {"Enemy", "Player", "Ground"}));
         //foreach (Collider2D col in hits)
         {
@@ -63,15 +63,11 @@ public class Rocket : MonoBehaviour
                 PlayerHealth pH = col.gameObject.GetComponent<PlayerHealth>();
                 pH.TakeDamage(gameObject.transform, player);
                 OnExplode();
-                //Destroy(gameObject);
-
             }
             else if (col.gameObject.tag != "Player")
             {
                 OnExplode();
             }
         }
-        //if (hits.Length > 0)
-        //    OnExplode();
 	}
 }

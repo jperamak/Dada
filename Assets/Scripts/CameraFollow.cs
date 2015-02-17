@@ -72,7 +72,7 @@ public class CameraFollow : MonoBehaviour
         float y = Mathf.Abs(minPlayer.y - maxPlayer.y);
 
 
-        if (x < minZoom && y < minZoom)
+        if (x < minZoom || y < minZoom)
             camera.orthographicSize = minZoom;
         else //if (x > camera.orthographicSize || y > camera.orthographicSize)
         {
@@ -83,7 +83,6 @@ public class CameraFollow : MonoBehaviour
 	
 	void TrackPlayer ()
 	{
-        //average = players[0].position; 
         minPlayer = maxXAndY;
         maxPlayer = minXAndY;
         foreach (Transform t in players)
