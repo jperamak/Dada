@@ -20,6 +20,8 @@ public class PlayerSpawner : MonoBehaviour {
 	void Update () {
 		if(_joinedPlayers != DadaInput.ConrtollerCount){
 			AbstractController contr = DadaInput.DetectKeypress(VirtualKey.START);
+			if(contr != null)
+				Debug.Log("Press start controller "+contr.Number+" "+contr.Name);
 
 			if(contr != null && _assignedHealth[contr.Number] == null){
 				_joinedPlayers++;

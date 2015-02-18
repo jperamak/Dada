@@ -41,8 +41,6 @@ public class DadaInput {
 
 
 	private DadaInput(){
-	//Devo testare che funzioni. creare una KeyMap fittizia e assegnarla al ConsoleController. Bisogna anche migliorare KeyMap e classe Enum.
-			//Vedi http://stackoverflow.com/questions/424366/c-sharp-string-enums
 		_rawKeyMaps = new Dictionary<string, KeyMap>();
 		_joyList = new List<AbstractController>();
 	}
@@ -86,7 +84,7 @@ public class DadaInput {
 
 	public static AbstractController DetectKeypress(VirtualKey key){
 		List<AbstractController> list = _instance._joyList;
-		if(list.Count > 1)
+		if(list.Count > 0)
 			for(int i=0; i<list.Count; i++)
 				if(list[i].GetButtonDown(key))
 					return list[i];
