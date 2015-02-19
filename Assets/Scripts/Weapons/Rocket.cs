@@ -31,11 +31,10 @@ public class Rocket : MonoBehaviour
         Destroy(gameObject);
 	}
 	
-	void OnTriggerEnter2D (Collider2D col) 
+	void OnTriggerEnter2D (Collider2D c) 
 	{
-        // aoe damage thing, does not work with mortar :<
-        //Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius, LayerMask.GetMask(new string[] {"Enemy", "Player", "Ground"}));
-        //foreach (Collider2D col in hits)
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius, LayerMask.GetMask(new string[] { "Enemy", "Player", "Ground", "BackgroundBlock" }));
+        foreach (Collider2D col in hits)
         {
             //Debug.Log(c);
             // If the hit object is damageable...
@@ -52,7 +51,7 @@ public class Rocket : MonoBehaviour
                 col.gameObject.GetComponent<Enemy>().Hurt();
 
                 // Call the explosion instantiation.
-                OnExplode();
+                //OnExplode();
             }
 
             // Otherwise if the player manages to shoot himself...
@@ -62,12 +61,14 @@ public class Rocket : MonoBehaviour
                 // Instantiate the explosion and destroy the rocket.
                 PlayerHealth pH = col.gameObject.GetComponent<PlayerHealth>();
                 pH.TakeDamage(gameObject.transform, player);
-                OnExplode();
+                //OnExplode();
             }
             else if (col.gameObject.tag != "Player")
             {
-                OnExplode();
+                //OnExplode();
             }
         }
-	}
+        OnExplode();
+    }
+	
 }

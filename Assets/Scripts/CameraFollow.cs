@@ -60,7 +60,7 @@ public class CameraFollow : MonoBehaviour
 	}
 
 
-	void FixedUpdate ()
+	void LateUpdate ()
 	{
         if (players.Count > 0)
 		    TrackPlayer();
@@ -72,12 +72,13 @@ public class CameraFollow : MonoBehaviour
         float y = Mathf.Abs(minPlayer.y - maxPlayer.y);
 
 
-        if (x < minZoom || y < minZoom)
+        if (x < minZoom && y < minZoom)
             camera.orthographicSize = minZoom;
         else //if (x > camera.orthographicSize || y > camera.orthographicSize)
         {
             camera.orthographicSize = x > y ? x : y;
-            camera.orthographicSize *= 0.8f;
+            camera.orthographicSize = camera.orthographicSize < maxZoom ? camera.orthographicSize : maxZoom;
+            //camera.orthographicSize *= 0.8f;
         }
     }
 	
