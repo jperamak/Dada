@@ -39,7 +39,7 @@ public class Gun : MonoBehaviour
 		angle = Mathf.Clamp(angle, minAngle, maxAngle);
         */
 
-        float y = playerCtrl.controller.YAxis;
+        //float y = playerCtrl.controller.YAxis;
 
 		angle = aiming.transform.eulerAngles.z; //Mathf.Rad2Deg * Mathf.Asin(y);
         transform.eulerAngles = new Vector3(0, 0, angle);

@@ -5,6 +5,7 @@ public class MeleeWeapon : MonoBehaviour
 {
 
 	public MeleeStrike meleeStrike;
+	public GameObject aiming;
 	public float cooldown;
 	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
 
@@ -18,6 +19,8 @@ public class MeleeWeapon : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		float angle = aiming.transform.eulerAngles.z; //Mathf.Rad2Deg * Mathf.Asin(y);
+		transform.eulerAngles = new Vector3(0, 0, angle);
 
 		if(playerCtrl.controller.GetButtonDown(VirtualKey.MELEE) )// && time > cooldown)
 		{
@@ -33,8 +36,8 @@ public class MeleeWeapon : MonoBehaviour
 		//	{
 				
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				MeleeStrike strikeInstance = Instantiate(meleeStrike, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,0))) as MeleeStrike;
-
+				MeleeStrike strikeInstance = Instantiate(meleeStrike, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,angle))) as MeleeStrike;
+				//strikeInstance.transform.eulerAngles = new Vector3(0, 0, angle);
 				//				bulletInstance.velocity = new Vector2(speed, 0);
 		//	}
 		//	else
