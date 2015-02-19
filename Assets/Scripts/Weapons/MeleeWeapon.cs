@@ -37,6 +37,7 @@ public class MeleeWeapon : MonoBehaviour
 				
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
 				MeleeStrike strikeInstance = Instantiate(meleeStrike, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,angle))) as MeleeStrike;
+                strikeInstance.transform.parent = playerCtrl.transform;
 				//strikeInstance.transform.eulerAngles = new Vector3(0, 0, angle);
 				//				bulletInstance.velocity = new Vector2(speed, 0);
 		//	}
