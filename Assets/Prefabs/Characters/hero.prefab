@@ -958,6 +958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeStrike: {fileID: 11445174, guid: ff80d736762c943dd9ab19502a725d43, type: 2}
+  aiming: {fileID: 124390}
   cooldown: 0
 --- !u!114 &11478980
 MonoBehaviour:
