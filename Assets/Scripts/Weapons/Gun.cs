@@ -4,6 +4,7 @@ using System.Collections;
 public class Gun : MonoBehaviour
 {
 	public Rigidbody2D rocket;				// Prefab of the rocket.
+	public GameObject aiming;
 	public float speed = 20f;				// The speed the rocket will fire at.
     public float cooldown;
 	public float angle = 5f;
@@ -40,7 +41,7 @@ public class Gun : MonoBehaviour
 
         float y = playerCtrl.controller.YAxis;
 
-        angle = Mathf.Rad2Deg * Mathf.Asin(y);
+		angle = aiming.transform.eulerAngles.z; //Mathf.Rad2Deg * Mathf.Asin(y);
         transform.eulerAngles = new Vector3(0, 0, angle);
 
 		if(playerCtrl.controller.GetButtonDown(VirtualKey.SHOOT) && time > cooldown)
