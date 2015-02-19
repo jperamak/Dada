@@ -217,6 +217,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &124390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 424390}
+  - 114: {fileID: 11478980}
+  m_Layer: 9
+  m_Name: Aiming
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &149056
 GameObject:
   m_ObjectHideFlags: 1
@@ -250,6 +266,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &167906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 467906}
+  - 114: {fileID: 11467906}
+  m_Layer: 9
+  m_Name: MeleeWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &189640
 GameObject:
   m_ObjectHideFlags: 1
@@ -260,6 +292,21 @@ GameObject:
   - 4: {fileID: 489640}
   m_Layer: 9
   m_Name: RocketSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &192496
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 492496}
+  m_Layer: 9
+  m_Name: StrikeSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,6 +418,8 @@ Transform:
   - {fileID: 400024}
   - {fileID: 400010}
   - {fileID: 400028}
+  - {fileID: 467906}
+  - {fileID: 424390}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400022
@@ -408,7 +457,6 @@ Transform:
   m_LocalScale: {x: .399999976, y: .399999976, z: .399999976}
   m_Children:
   - {fileID: 489640}
-  - {fileID: 406756}
   m_Father: {fileID: 400020}
   m_RootOrder: 1
 --- !u!4 &400028
@@ -430,11 +478,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.67999983, y: .270000011, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 1.94313288, y: .273223907, z: 1}
+  m_LocalScale: {x: .799999952, y: .799999952, z: .399999976}
   m_Children: []
-  m_Father: {fileID: 400026}
-  m_RootOrder: 1
+  m_Father: {fileID: 424390}
+  m_RootOrder: 0
+--- !u!4 &424390
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 406756}
+  m_Father: {fileID: 400020}
+  m_RootOrder: 13
 --- !u!4 &449056
 Transform:
   m_ObjectHideFlags: 1
@@ -460,6 +521,19 @@ Transform:
   - {fileID: 449056}
   m_Father: {fileID: 400020}
   m_RootOrder: 0
+--- !u!4 &467906
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 492496}
+  m_Father: {fileID: 400020}
+  m_RootOrder: 12
 --- !u!4 &489640
 Transform:
   m_ObjectHideFlags: 1
@@ -471,6 +545,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400026}
+  m_RootOrder: 0
+--- !u!4 &492496
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.29999995, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 467906}
   m_RootOrder: 0
 --- !u!50 &5000000
 Rigidbody2D:
@@ -834,6 +920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocket: {fileID: 5000000, guid: bac8ba5c6c7ef495b867c6223008aab3, type: 2}
+  aiming: {fileID: 124390}
   speed: 35
   cooldown: .5
   angle: 5
@@ -852,12 +939,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocket: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  aiming: {fileID: 124390}
   speed: 25
   cooldown: .5
   angle: 0
   aimingDegPerSec: 30
   minAngle: 0
   maxAngle: 0
+--- !u!114 &11467906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378d04dbc950741ddb3a950e4cb404b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeStrike: {fileID: 11445174, guid: ff80d736762c943dd9ab19502a725d43, type: 2}
+  cooldown: 0
+--- !u!114 &11478980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e111e4a5cfff94ee1818e95b3a537dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
