@@ -12,7 +12,7 @@ public class Bomb : MonoBehaviour
 
 
 	private LayBombs layBombs;				// Reference to the player's LayBombs script.
-	private PickupSpawner pickupSpawner;	// Reference to the PickupSpawner script.
+	//private PickupSpawner pickupSpawner;	// Reference to the PickupSpawner script.
 	private ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
 
@@ -54,13 +54,13 @@ public class Bomb : MonoBehaviour
 		layBombs.bombLaid = false;
 
 		// Make the pickup spawner start to deliver a new pickup.
-		pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
+		//pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
 
 		// Find all the colliders on the Enemies layer within the bombRadius.
 		Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, bombRadius, 1 << LayerMask.NameToLayer("Enemies"));
 
 		// For each collider...
-		foreach(Collider2D en in enemies)
+	/*	foreach(Collider2D en in enemies)
 		{
 			// Check if it has a rigidbody (since there is only one per enemy, on the parent).
 			Rigidbody2D rb = en.rigidbody2D;
@@ -77,7 +77,7 @@ public class Bomb : MonoBehaviour
 				rb.AddForce(force);
 			}
 		}
-
+*/
 		// Set the explosion effect's position to the bomb's position and play the particle system.
 		explosionFX.transform.position = transform.position;
 		explosionFX.Play();

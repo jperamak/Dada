@@ -32,7 +32,7 @@ public class LayBombs : MonoBehaviour
 			bombLaid = true;
 
 			// Play the bomb laying sound.
-			AudioSource.PlayClipAtPoint(bombsAway,transform.position);
+			//AudioSource.PlayClipAtPoint(bombsAway,transform.position);
 
 			// Instantiate the bomb prefab.
 			Instantiate(bomb, transform.position, transform.rotation);
