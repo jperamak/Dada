@@ -9,6 +9,10 @@ TextureImporter:
     21300008: Beam
     21300010: Beam_Lught_Damage
     21300012: Beam_Heavy_Damage
+    21300014: Rubble1
+    21300016: Rubble2
+    21300018: Rubble3
+    21300020: Ruble4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -117,6 +121,46 @@ TextureImporter:
         y: 417
         width: 98
         height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble1
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 462
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble2
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 462
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 448
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ruble4
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 448
+        width: 15
+        height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

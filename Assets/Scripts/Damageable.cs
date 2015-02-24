@@ -9,10 +9,13 @@ public class Damageable : MonoBehaviour {
 	public int hitpointsLightDamage = 8;		// hitpoints when lightly damaged sprite is applied 
 	public int hitpointsHeavyDamage = 4;		// hitpoints when heavily damaged sprite is applied
 
-	private int hitpointsLeft = 10;
-
 	public Sprite spriteLightDamage = null;		// sprite for lightly damaged object
 	public Sprite spriteHeavyDamage = null;		// sprite for heavily damaged object
+
+	public GameObject leftWhenDestroyed = null;  // When hitpoints reach zero, the gameObject is replaced with this one
+
+	private int hitpointsLeft = 10;
+
 
 	void Awake () {
 		hitpointsLeft = maxHitpoints;
@@ -39,6 +42,13 @@ public class Damageable : MonoBehaviour {
 	}
 
 	private void OnDestroyed() {
+
+		if (leftWhenDestroyed != null) {
+			GameObject ruin = Instantiate(leftWhenDestroyed, transform.position, transform.rotation) as GameObject;
+			ruin.transform.localScale = transform.localScale;
+
+		}
+
 		Destroy(gameObject);
 	}
 
