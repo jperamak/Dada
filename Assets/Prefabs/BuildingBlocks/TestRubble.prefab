@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21260222}
   - 50: {fileID: 5060222}
   - 60: {fileID: 6060222}
-  - 114: {fileID: 11460222}
+  - 114: {fileID: 11427642}
   m_Layer: 0
   m_Name: Rubble4
   m_TagString: Untagged
@@ -30,7 +30,7 @@ GameObject:
   - 212: {fileID: 21260224}
   - 50: {fileID: 5060224}
   - 60: {fileID: 6060224}
-  - 114: {fileID: 11460224}
+  - 114: {fileID: 11497932}
   m_Layer: 0
   m_Name: Rubble3
   m_TagString: Untagged
@@ -49,7 +49,7 @@ GameObject:
   - 212: {fileID: 21260226}
   - 50: {fileID: 5060226}
   - 60: {fileID: 6060226}
-  - 114: {fileID: 11460226}
+  - 114: {fileID: 11470744}
   m_Layer: 0
   m_Name: Rubble2
   m_TagString: Untagged
@@ -68,7 +68,7 @@ GameObject:
   - 212: {fileID: 21260228}
   - 50: {fileID: 5060228}
   - 60: {fileID: 6060228}
-  - 114: {fileID: 11460228}
+  - 114: {fileID: 11499494}
   m_Layer: 0
   m_Name: Rubble1
   m_TagString: Untagged
@@ -286,7 +286,7 @@ PolygonCollider2D:
       - {x: -.0539169312, y: -.238767624}
       - {x: .213115692, y: .0664577484}
       - {x: .217605591, y: .200574875}
---- !u!114 &11460222
+--- !u!114 &11427642
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -294,33 +294,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 160222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
+  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 3
+  maxHitpoints: 15
   hitpointsLightDamage: 0
-  hitpointsHeavyDamage: 40
+  hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
---- !u!114 &11460224
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitpoints: 3
-  hitpointsLightDamage: 0
-  hitpointsHeavyDamage: 40
-  spriteLightDamage: {fileID: 0}
-  spriteHeavyDamage: {fileID: 0}
-  leftWhenDestroyed: {fileID: 0}
---- !u!114 &11460226
+--- !u!114 &11470744
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -328,16 +311,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 160226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
+  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 3
+  maxHitpoints: 15
   hitpointsLightDamage: 0
-  hitpointsHeavyDamage: 40
+  hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
---- !u!114 &11460228
+--- !u!114 &11497932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitpoints: 15
+  hitpointsLightDamage: 0
+  hitpointsHeavyDamage: 0
+  spriteLightDamage: {fileID: 0}
+  spriteHeavyDamage: {fileID: 0}
+  leftWhenDestroyed: {fileID: 0}
+--- !u!114 &11499494
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -345,12 +345,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 160228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
+  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 3
+  maxHitpoints: 15
   hitpointsLightDamage: 0
-  hitpointsHeavyDamage: 40
+  hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}

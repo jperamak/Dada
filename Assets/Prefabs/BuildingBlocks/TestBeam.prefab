@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21280660}
   - 61: {fileID: 6180660}
   - 50: {fileID: 5080660}
-  - 114: {fileID: 11480660}
+  - 114: {fileID: 11408036}
   m_Layer: 0
   m_Name: TestBeam
   m_TagString: Untagged
@@ -57,7 +57,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 3.26757717, y: .269129038}
   m_Center: {x: -.00468510389, y: .00468635559}
---- !u!114 &11480660
+--- !u!114 &11408036
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,14 +65,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 180660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
+  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 20
-  hitpointsLightDamage: 15
+  maxHitpoints: 30
+  hitpointsLightDamage: 20
   hitpointsHeavyDamage: 10
   spriteLightDamage: {fileID: 21300010, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300012, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  leftWhenDestroyed: {fileID: 0}
 --- !u!212 &21280660
 SpriteRenderer:
   m_ObjectHideFlags: 1

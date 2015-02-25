@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21238116}
   - 61: {fileID: 6138116}
   - 50: {fileID: 5038116}
-  - 114: {fileID: 11453912}
+  - 114: {fileID: 11469694}
   m_Layer: 0
   m_Name: TestSquare
   m_TagString: Untagged
@@ -57,7 +57,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
---- !u!114 &11453912
+--- !u!114 &11469694
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 138116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
+  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitpoints: 30
