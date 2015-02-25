@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5060222}
   - 60: {fileID: 6060222}
   - 114: {fileID: 11427642}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rubble4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ GameObject:
   - 50: {fileID: 5060224}
   - 60: {fileID: 6060224}
   - 114: {fileID: 11497932}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rubble3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   - 50: {fileID: 5060226}
   - 60: {fileID: 6060226}
   - 114: {fileID: 11470744}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rubble2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - 50: {fileID: 5060228}
   - 60: {fileID: 6060228}
   - 114: {fileID: 11499494}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rubble1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460230}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TestRubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
