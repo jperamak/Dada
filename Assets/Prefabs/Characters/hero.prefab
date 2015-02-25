@@ -403,7 +403,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.2099266, y: -4.08443451, z: -1}
+  m_LocalPosition: {x: -33.0441437, y: 12.4642973, z: -1}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
   m_Children:
   - {fileID: 449058}
@@ -591,7 +591,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 1debb068374764196a01e1c69c1f413f, type: 2}
+  m_Material: {fileID: 6200000, guid: 2f33dc684b21da640b19632ec7c2228d, type: 2}
   m_IsTrigger: 0
   m_Size: {x: .75999999, y: 1.04999995}
   m_Center: {x: 0, y: .0299999993}
@@ -863,14 +863,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dafa1cc4eb8714341a7c595abfba35d8, type: 3}
   jumpForce: 1100
   taunts:
-  - {fileID: 8300000, guid: 27cbebf9d650249e5b032494eae5322c, type: 3}
-  - {fileID: 8300000, guid: 986fa1b8984964da79d1be0597332fb2, type: 3}
-  - {fileID: 8300000, guid: 18cb2f6181960417299fa419548cade6, type: 3}
-  - {fileID: 8300000, guid: 0c92f302b5186464187ab9b6adcd1282, type: 3}
-  - {fileID: 8300000, guid: 57d899f9f78ef4493b0b79dbc9d55e40, type: 3}
-  - {fileID: 8300000, guid: 0695e43dc27f94eecbf41013ef61b603, type: 3}
-  - {fileID: 8300000, guid: f00d6706bf8224fe39835855574f94c7, type: 3}
-  - {fileID: 8300000, guid: ddd0ca15e5d0a42b98f08337c1690bb1, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tauntProbability: 50
   tauntDelay: 1
 --- !u!114 &11400004
