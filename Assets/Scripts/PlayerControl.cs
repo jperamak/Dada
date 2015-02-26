@@ -27,7 +27,7 @@ public class PlayerControl : MonoBehaviour
     private Animator anim;					// Reference to the player's animator component.
     private int points = 0;
 
-    private CameraFollow camera;
+    private CameraFollow _camera;
 
 	void Awake()
 	{
@@ -35,8 +35,8 @@ public class PlayerControl : MonoBehaviour
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
 
-        camera = FindObjectOfType<CameraFollow>();
-        camera.AddPlayer(transform);
+        _camera = FindObjectOfType<CameraFollow>();
+        _camera.AddPlayer(transform);
 
 
 		if(controller == null)
@@ -47,7 +47,7 @@ public class PlayerControl : MonoBehaviour
 	void Update()
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        grounded = Physics2D.Linecast(transform.position, groundCheck.position, LayerMask.GetMask(new string[] { "Ground", "Rubble" }));
 
         var sliding = false;
         if (Physics2D.Linecast(transform.position,transform.position + new Vector3(-0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")) || 
@@ -166,7 +166,7 @@ public class PlayerControl : MonoBehaviour
 
     public void Die()
     {
-        camera.RemovePlayer(transform);
+        _camera.RemovePlayer(transform);
         Destroy(this.gameObject);
     }
 

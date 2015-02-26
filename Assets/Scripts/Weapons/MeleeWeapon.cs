@@ -4,49 +4,38 @@ using System.Collections;
 public class MeleeWeapon : MonoBehaviour 
 {
 
-	public MeleeStrike meleeStrike;
-	public GameObject aiming;
-	public float cooldown;
-	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
+	public MeleeStrike MeleeStrike;
+	public GameObject Aiming;
+	public float Cooldown;
+	private PlayerControl _playerCtrl;		// Reference to the PlayerControl script.
+    private float _time;
 
 	// Use this for initialization
 	void Awake () 
 	{
-		playerCtrl = transform.root.GetComponent<PlayerControl>();
-	
+		_playerCtrl = transform.root.GetComponent<PlayerControl>();
+        _time = Cooldown;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		float angle = aiming.transform.eulerAngles.z; //Mathf.Rad2Deg * Mathf.Asin(y);
+        _time += Time.deltaTime;
+		float angle = Aiming.transform.eulerAngles.z; //Mathf.Rad2Deg * Mathf.Asin(y);
 		transform.eulerAngles = new Vector3(0, 0, angle);
 
-		if(playerCtrl.controller.GetButtonDown(VirtualKey.MELEE) )// && time > cooldown)
+		if(_playerCtrl.controller.GetButtonDown(VirtualKey.MELEE)  && _time > Cooldown)
 		{
-			//time = 0;
+			_time = 0;
 			// ... set the animator Shoot trigger parameter and play the audioclip.
-			//anim.SetTrigger("Shoot");
+			//anim.SetTrigger("Melee");
 			//audio.Play();
 			
 			Transform spawnPoint = transform.Find("StrikeSpawnPoint");
 			
-			// If the player is facing right...
-		//	if(playerCtrl.facingRight)
-		//	{
-				
-				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				MeleeStrike strikeInstance = Instantiate(meleeStrike, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,angle))) as MeleeStrike;
-                strikeInstance.transform.parent = playerCtrl.transform;
-				//strikeInstance.transform.eulerAngles = new Vector3(0, 0, angle);
-				//				bulletInstance.velocity = new Vector2(speed, 0);
-		//	}
-		//	else
-		//	{
-				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
-		//		Rigidbody2D bulletInstance = Instantiate(rocket, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
-				//bulletInstance.velocity = new Vector2(-speed, 0);
-		//	}
+			MeleeStrike strikeInstance = Instantiate(MeleeStrike, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,angle))) as MeleeStrike;
+            strikeInstance.transform.parent = _playerCtrl.transform;
+
 		}
 	
 	}

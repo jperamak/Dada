@@ -3,10 +3,13 @@ using System.Collections;
 
 public class Rocket : MonoBehaviour 
 {
-	public GameObject explosion;		// Prefab of explosion effect.
-    public float radius;
+	public GameObject Explosion;		// Prefab of explosion effect.
+    public float Radius;
+    public float ExplosionForce;
+    public int Damage;
+        
     [HideInInspector]
-    public PlayerControl player;
+    public PlayerControl Player;
 
 	void Start () 
 	{
@@ -28,8 +31,8 @@ public class Rocket : MonoBehaviour
 		Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
 		
 		// Instantiate the explosion where the rocket is with the random rotation.
-        GameObject expl = (GameObject)Instantiate(explosion, transform.position, randomRotation);
-        expl.GetComponent<Explosion>().BetterExplode(player, radius);
+        GameObject expl = (GameObject)Instantiate(Explosion, transform.position, randomRotation);
+        expl.GetComponent<Explosion>().Explode(Player, Radius, ExplosionForce, Damage);
         Destroy(gameObject);
 	}
 	

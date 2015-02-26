@@ -919,14 +919,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocket: {fileID: 5000000, guid: bac8ba5c6c7ef495b867c6223008aab3, type: 2}
-  aiming: {fileID: 124390}
-  speed: 35
-  cooldown: .5
-  angle: 5
-  aimingDegPerSec: 30
-  minAngle: -80
-  maxAngle: 90
+  Rocket: {fileID: 5000000, guid: bac8ba5c6c7ef495b867c6223008aab3, type: 2}
+  Aiming: {fileID: 124390}
+  Speed: 30
+  Cooldown: .5
+  Angle: 5
+  AimingDegPerSec: 30
+  MinAngle: -80
+  MaxAngle: 90
 --- !u!114 &11449058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -938,14 +938,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocket: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
-  aiming: {fileID: 124390}
-  speed: 25
-  cooldown: .5
-  angle: 0
-  aimingDegPerSec: 30
-  minAngle: 0
-  maxAngle: 0
+  Rocket: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  Aiming: {fileID: 124390}
+  Speed: 30
+  Cooldown: .5
+  Angle: 5
+  AimingDegPerSec: 30
+  MinAngle: -80
+  MaxAngle: 90
 --- !u!114 &11467906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -957,9 +957,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378d04dbc950741ddb3a950e4cb404b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeStrike: {fileID: 11445174, guid: ff80d736762c943dd9ab19502a725d43, type: 2}
-  aiming: {fileID: 124390}
-  cooldown: 0
+  MeleeStrike: {fileID: 11445174, guid: ff80d736762c943dd9ab19502a725d43, type: 2}
+  Aiming: {fileID: 124390}
+  Cooldown: .699999988
 --- !u!114 &11478980
 MonoBehaviour:
   m_ObjectHideFlags: 1

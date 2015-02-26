@@ -57,7 +57,7 @@ public class Bomb : MonoBehaviour
 		//pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
 
 		// Find all the colliders on the Enemies layer within the bombRadius.
-		Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, bombRadius, 1 << LayerMask.NameToLayer("Enemies"));
+		//Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, bombRadius, 1 << LayerMask.NameToLayer("Enemies"));
 
 		// For each collider...
 	/*	foreach(Collider2D en in enemies)

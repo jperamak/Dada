@@ -3,33 +3,33 @@ using System.Collections;
 
 public class Gun : MonoBehaviour
 {
-	public Rigidbody2D rocket;				// Prefab of the rocket.
-	public GameObject aiming;
-	public float speed = 20f;				// The speed the rocket will fire at.
-    public float cooldown;
-	public float angle = 5f;
+	public Rigidbody2D Rocket;				// Prefab of the rocket.
+	public GameObject Aiming;
+	public float Speed = 20f;				// The speed the rocket will fire at.
+    public float Cooldown;
+	public float Angle = 5f;
 	
-	public float aimingDegPerSec = 30f;
-	public float minAngle = -80f;
-	public float maxAngle = 90f;
+	public float AimingDegPerSec = 30f;
+	public float MinAngle = -80f;
+	public float MaxAngle = 90f;
 
 
-	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
-	private Animator anim;					// Reference to the Animator component.
-    private float time;
+	private PlayerControl _playerCtrl;		// Reference to the PlayerControl script.
+	private Animator _anim;					// Reference to the Animator component.
+    private float _time;
 
 	void Awake()
 	{
 		// Setting up the references.
-		anim = transform.root.gameObject.GetComponent<Animator>();
-		playerCtrl = transform.root.GetComponent<PlayerControl>();
-        time = Time.fixedTime - cooldown;
+		_anim = transform.root.gameObject.GetComponent<Animator>();
+		_playerCtrl = transform.root.GetComponent<PlayerControl>();
+        _time = Cooldown;
 	}
 
 
 	void Update ()
 	{
-        time += Time.deltaTime;
+        _time += Time.deltaTime;
 
 		/*float h = playerCtrl.controller.YAxis;
         if (Mathf.Abs(h) < 0.2f)
@@ -41,33 +41,33 @@ public class Gun : MonoBehaviour
 
         //float y = playerCtrl.controller.YAxis;
 
-		angle = aiming.transform.eulerAngles.z; //Mathf.Rad2Deg * Mathf.Asin(y);
-        transform.eulerAngles = new Vector3(0, 0, angle);
+		Angle = Aiming.transform.eulerAngles.z; //Mathf.Rad2Deg * Mathf.Asin(y);
+        transform.eulerAngles = new Vector3(0, 0, Angle);
 
-		if(playerCtrl.controller.GetButtonDown(VirtualKey.SHOOT) && time > cooldown)
+		if(_playerCtrl.controller.GetButtonDown(VirtualKey.SHOOT) && _time > Cooldown)
 		{
-            time = 0;
+            _time = 0;
 			// ... set the animator Shoot trigger parameter and play the audioclip.
-			anim.SetTrigger("Shoot");
+			_anim.SetTrigger("Shoot");
 			audio.Play();
 
 			Transform spawnPoint = transform.Find("RocketSpawnPoint");
 
 			// If the player is facing right...
-			if(playerCtrl.facingRight)
+			if(_playerCtrl.facingRight)
 			{
 				
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				Rigidbody2D bulletInstance = Instantiate(rocket, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
+				Rigidbody2D bulletInstance = Instantiate(Rocket, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
 				//				bulletInstance.velocity = new Vector2(speed, 0);
-				bulletInstance.velocity = Quaternion.Euler(0, 0, angle) * new Vector2(speed,0);
+				bulletInstance.velocity = Quaternion.Euler(0, 0, Angle) * new Vector2(Speed,0);
 			}
 			else
 			{
 				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
-				Rigidbody2D bulletInstance = Instantiate(rocket, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
+				Rigidbody2D bulletInstance = Instantiate(Rocket, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
 				//bulletInstance.velocity = new Vector2(-speed, 0);
-				bulletInstance.velocity = Quaternion.Euler(0, 0, -angle) * new Vector2(-speed,0);
+				bulletInstance.velocity = Quaternion.Euler(0, 0, -Angle) * new Vector2(-Speed,0);
 			}
 		}
 	}
