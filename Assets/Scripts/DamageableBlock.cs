@@ -5,23 +5,16 @@ using System.Collections;
 
 public class DamageableBlock : Damageable {
 
-//	public int maxHitpoints = 10;				// hitpoints when undamaged
-	public int hitpointsLightDamage = 8;		// hitpoints when lightly damaged sprite is applied 
-	public int hitpointsHeavyDamage = 4;		// hitpoints when heavily damaged sprite is applied
+	public float hitpointsLightDamage = 8.0f;		// hitpoints when lightly damaged sprite is applied 
+	public float hitpointsHeavyDamage = 4.0f;		// hitpoints when heavily damaged sprite is applied
 
 	public Sprite spriteLightDamage = null;		// sprite for lightly damaged object
 	public Sprite spriteHeavyDamage = null;		// sprite for heavily damaged object
 
 	public GameObject leftWhenDestroyed = null;  // When hitpoints reach zero, the gameObject is replaced with this one
 
-//	private int currentHitpoints = 10;
 
-
-//	void Awake () {
-//		hitpointsLeft = maxHitpoints;
-//	}
-
-	public override void TakeDamage( int hitpoints ) {
+	public override void TakeDamage( float hitpoints ) {
 
 		base.TakeDamage( hitpoints ); // also destroys object on 0 hp
 
@@ -33,7 +26,7 @@ public class DamageableBlock : Damageable {
 		else if (currentHitpoints <= hitpointsLightDamage && spriteLightDamage != null)
 			sr.sprite = spriteLightDamage;
 
-		if (currentHitpoints <= 0 && leftWhenDestroyed != null) {
+		if (currentHitpoints <= 0.0f && leftWhenDestroyed != null) {
 			LeaveRuins();
 		}
 

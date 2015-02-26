@@ -5,28 +5,25 @@ using System.Collections;
 
 abstract public class Damageable : MonoBehaviour {
 
-	public int maxHitpoints = 10;				// hitpoints when undamaged
-	protected int currentHitpoints = 10;
+	public float maxHitpoints = 10.0f;				// hitpoints when undamaged
+	protected float currentHitpoints = 10.0f;
 
 
 	void Awake () {
 		currentHitpoints = maxHitpoints;
 	}
 
-	public virtual void TakeDamage( int hitpoints ) {
+	public virtual void TakeDamage( float hitpoints ) {
 		currentHitpoints -= hitpoints;
 
 		// If there is no hitpoints left, destroy the object.
-		if (currentHitpoints <= 0) {
+		if (currentHitpoints <= 0.0) {
 			OnDestroyed();
-			return;
 		}
 
 	}
 
 	protected virtual void OnDestroyed() {
-		Debug.Log("D3");
-
 		Destroy(gameObject);
 	}
 
