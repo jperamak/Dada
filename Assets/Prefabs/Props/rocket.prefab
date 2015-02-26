@@ -175,7 +175,7 @@ MonoBehaviour:
   Explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
   Radius: 3
   ExplosionForce: 1
-  Damage: 5
+  Damage: 20
   Player: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:

@@ -7,9 +7,14 @@ public class Explosion : MonoBehaviour {
     {
         Vector2 dir;
         Vector2 position = new Vector2(transform.position.x, transform.position.y);
-        for (int i = 0; i < 16; i++)
+
+        float divider = 4 * radius > 4 ? 4 * radius : 4;
+        float invDiv = 1/divider;
+        float step = 360f * invDiv;
+
+        for (int i = 0; i < divider; i++)
         {
-            dir = Quaternion.AngleAxis(11.75f+22.5f*i,Vector3.forward)*Vector2.up;
+            dir = Quaternion.AngleAxis(step*0.5f + step*i,Vector3.forward)*Vector2.up;
             RaycastHit2D[] hits = Physics2D.LinecastAll(position, position + dir * radius, LayerMask.GetMask(new string[] { "Enemy", "Player", "Ground", "BackgroundBlock", "Rubble" }));
             foreach (RaycastHit2D hit in hits)
             {
@@ -20,7 +25,7 @@ public class Explosion : MonoBehaviour {
                 if (hit.collider.gameObject.GetComponent<Damageable>() != null)
                 {
                     // ...give it 10 hitpointd of damage
-                    hit.collider.gameObject.GetComponent<Damageable>().TakeDamage(damage);
+                    hit.collider.gameObject.GetComponent<Damageable>().TakeDamage((int)(damage * invDiv));
                 }
 
                 // Otherwise if the player manages to shoot himself...
