@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5060222}
   - 60: {fileID: 6060222}
   - 114: {fileID: 11427642}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Rubble4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ GameObject:
   - 50: {fileID: 5060224}
   - 60: {fileID: 6060224}
   - 114: {fileID: 11497932}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Rubble3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   - 50: {fileID: 5060226}
   - 60: {fileID: 6060226}
   - 114: {fileID: 11470744}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Rubble2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - 50: {fileID: 5060228}
   - 60: {fileID: 6060228}
   - 114: {fileID: 11499494}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Rubble1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 460230}
   m_Layer: 14
-  m_Name: TestRubble
+  m_Name: StoneWall_Rubble_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,10 +372,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1024582385
-  m_SortingOrder: 0
+  m_SortingLayerID: 1535931219
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300020, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .588235259, g: .588235259, b: .588235259, a: 1}
 --- !u!212 &21260224
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -394,10 +394,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1024582385
-  m_SortingOrder: 0
+  m_SortingLayerID: 1535931219
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300018, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .632352948, g: .632352948, b: .632352948, a: 1}
 --- !u!212 &21260226
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -416,10 +416,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1024582385
-  m_SortingOrder: 0
+  m_SortingLayerID: 1535931219
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300016, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .683823526, g: .683823526, b: .683823526, a: 1}
 --- !u!212 &21260228
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -438,10 +438,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1024582385
-  m_SortingOrder: 0
+  m_SortingLayerID: 1535931219
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300014, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .610294104, g: .610294104, b: .610294104, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
