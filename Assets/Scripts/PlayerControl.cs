@@ -11,8 +11,8 @@ public class PlayerControl : MonoBehaviour
 	[HideInInspector]
 	public AbstractController controller;
 
-	public float moveForce = 365f;			// Amount of force added to move the player left and right.
-	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
+	public float moveForce = 365.0f;			// Amount of force added to move the player left and right.
+	public float maxSpeed = 3f;				// The fastest the player can travel in the x axis.
 	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
 	public AudioClip[] taunts;				// Array of clips for when the player taunts.

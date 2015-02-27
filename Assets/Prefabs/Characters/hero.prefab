@@ -403,7 +403,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.0441437, y: 12.4642973, z: -1}
+  m_LocalPosition: {x: 16.0713081, y: -17.164505, z: -1}
   m_LocalScale: {x: 1.10000002, y: 1.10000002, z: 1.10000002}
   m_Children:
   - {fileID: 449058}
@@ -503,7 +503,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.26999998, y: 0, z: 0}
+  m_LocalPosition: {x: 3.75999999, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 449058}
@@ -541,7 +541,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.26999998, y: .159999996, z: 0}
+  m_LocalPosition: {x: 3.69000006, y: .159999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400026}
@@ -922,7 +922,7 @@ MonoBehaviour:
   Rocket: {fileID: 5000000, guid: bac8ba5c6c7ef495b867c6223008aab3, type: 2}
   Aiming: {fileID: 124390}
   Speed: 30
-  Cooldown: .5
+  Cooldown: 2
   Angle: 5
   AimingDegPerSec: 30
   MinAngle: -80
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MeleeStrike: {fileID: 11445174, guid: ff80d736762c943dd9ab19502a725d43, type: 2}
   Aiming: {fileID: 124390}
-  Cooldown: .699999988
+  Cooldown: .5
 --- !u!114 &11478980
 MonoBehaviour:
   m_ObjectHideFlags: 1

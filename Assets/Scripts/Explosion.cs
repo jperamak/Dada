@@ -8,8 +8,9 @@ public class Explosion : MonoBehaviour {
         Vector2 dir;
         Vector2 position = new Vector2(transform.position.x, transform.position.y);
 
-        float divider = 4 * radius > 4 ? 4 * radius : 4;
-        float invDiv = 1/divider;
+        //float divider = 4 * radius > 4 ? 4 * radius : 4;
+		float divider = 64f; 
+		float invDiv = 1/divider;
         float step = 360f * invDiv;
 
         for (int i = 0; i < divider; i++)
@@ -24,8 +25,8 @@ public class Explosion : MonoBehaviour {
                 // If the hit object is damageable...
                 if (hit.collider.gameObject.GetComponent<Damageable>() != null)
                 {
-                    // ...give it 10 hitpointd of damage
-                    hit.collider.gameObject.GetComponent<Damageable>().TakeDamage((int)(damage * invDiv));
+                    // ...give it the damage
+                    hit.collider.gameObject.GetComponent<Damageable>().TakeDamage((float)damage * invDiv);
                 }
 
                 // Otherwise if the player manages to shoot himself...
