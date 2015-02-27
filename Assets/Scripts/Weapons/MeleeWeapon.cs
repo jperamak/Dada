@@ -35,7 +35,7 @@ public class MeleeWeapon : MonoBehaviour
 			
 			MeleeStrike strikeInstance = Instantiate(MeleeStrike, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,angle))) as MeleeStrike;
             strikeInstance.transform.parent = _playerCtrl.transform;
-
+            strikeInstance.GetComponent<MeleeStrike>().Player = _playerCtrl;
 		}
 	
 	}

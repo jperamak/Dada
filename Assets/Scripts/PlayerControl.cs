@@ -29,6 +29,19 @@ public class PlayerControl : MonoBehaviour
 
     private CameraFollow _camera;
 
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag != "player")
+        {
+            Rigidbody2D o = other.gameObject.GetComponent<Rigidbody2D>();
+
+            if (o && o.GetPointVelocity(transform.position).magnitude > 15f && o.mass > 5)
+                //Debug.Log(o.GetPointVelocity(transform.position));
+                GetComponent<PlayerHealth>().TakeDamage(null);
+        }
+    }
+
 	void Awake()
 	{
 		// Setting up references.

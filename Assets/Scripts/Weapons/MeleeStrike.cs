@@ -3,6 +3,8 @@ using System.Collections;
 
 public class MeleeStrike : MonoBehaviour {
 
+    public PlayerControl Player;
+
 	public float damage;
 	// Use this for initialization
 	void Start () {
@@ -27,7 +29,7 @@ public class MeleeStrike : MonoBehaviour {
 		if(col.gameObject.tag == "Player")
 		{
 			PlayerHealth pH = col.gameObject.GetComponent<PlayerHealth>();
-			pH.TakeDamage(gameObject.transform, null);
+			pH.TakeDamage(Player);
 		}
 	}
 }

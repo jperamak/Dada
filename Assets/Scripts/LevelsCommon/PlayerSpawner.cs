@@ -51,9 +51,9 @@ public class PlayerSpawner : MonoBehaviour {
 		}
 	}
 
-    public void AddPoint(int playerNum)
+    public void AddPoint(int playerNum, int amount)
     {
-        _scores[playerNum]++;
+        _scores[playerNum] += amount;
         GameObject.Find("Scores" + playerNum).GetComponent<GUIText>().text = ""+_scores[playerNum];
     }
 }

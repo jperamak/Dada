@@ -61,6 +61,7 @@ public class Gun : MonoBehaviour
 				Rigidbody2D bulletInstance = Instantiate(Rocket, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
 				//				bulletInstance.velocity = new Vector2(speed, 0);
 				bulletInstance.velocity = Quaternion.Euler(0, 0, Angle) * new Vector2(Speed,0);
+                bulletInstance.GetComponent<Rocket>().Player = _playerCtrl;
 			}
 			else
 			{
@@ -68,6 +69,8 @@ public class Gun : MonoBehaviour
 				Rigidbody2D bulletInstance = Instantiate(Rocket, spawnPoint.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
 				//bulletInstance.velocity = new Vector2(-speed, 0);
 				bulletInstance.velocity = Quaternion.Euler(0, 0, -Angle) * new Vector2(-Speed,0);
+                bulletInstance.GetComponent<Rocket>().Player = _playerCtrl;
+
 			}
 		}
 	}

@@ -35,7 +35,7 @@ public class Explosion : MonoBehaviour {
 
                     // Instantiate the explosion and destroy the rocket.
                     PlayerHealth pH = hit.collider.gameObject.GetComponent<PlayerHealth>();
-                    pH.TakeDamage(gameObject.transform, source);
+                    pH.TakeDamage(source);
                 }
                 // dont hit things behind solid blocks
                 if (hit.transform.gameObject.layer == LayerMask.GetMask("Ground"))

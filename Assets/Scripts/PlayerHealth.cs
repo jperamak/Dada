@@ -9,17 +9,17 @@ public class PlayerHealth : MonoBehaviour
 	public float hurtForce = 10f;				// The force with which the player is pushed when hurt.
 	public float damageAmount = 10f;			// The amount of damage to take when enemies touch the player
 
-	private float lastHitTime;					// The time at which the player was last hit.
-	private Vector3 healthScale;				// The local scale of the health bar initially (with full health).
-	private PlayerControl playerControl;		// Reference to the PlayerControl script.
-	private Animator anim;						// Reference to the Animator on the player
+	private float _lastHitTime;					// The time at which the player was last hit.
+	private Vector3 _healthScale;				// The local scale of the health bar initially (with full health).
+	private PlayerControl _playerControl;		// Reference to the PlayerControl script.
+	private Animator _anim;						// Reference to the Animator on the player
 
 
 	void Awake ()
 	{
 		// Setting up references.
-		playerControl = GetComponent<PlayerControl>();
-		anim = GetComponent<Animator>();
+		_playerControl = GetComponent<PlayerControl>();
+		_anim = GetComponent<Animator>();
 
 		// Getting the intial scale of the healthbar (whilst the player has full health).
 	}
@@ -31,34 +31,27 @@ public class PlayerHealth : MonoBehaviour
     	if(col.gameObject.tag == "Enemy")
 		{
 			// ... and if the time exceeds the time of the last hit plus the time between hits...
-			if (Time.time > lastHitTime + repeatDamagePeriod) 
+			if (Time.time > _lastHitTime + repeatDamagePeriod) 
 			{
 				// ... and if the player still has health...
 			    // ... take damage and reset the lastHitTime.
-			    TakeDamage(col.transform, null); 
-			    lastHitTime = Time.time; 
+			    TakeDamage(null); 
+			    _lastHitTime = Time.time; 
 				
 			}
 		}
 	}
 
 
-	public void TakeDamage (Transform enemy, PlayerControl player)
+	public void TakeDamage (PlayerControl shooter)
 	{
 		// Make sure the player can't jump.
-		playerControl.jump = false;
+		_playerControl.jump = false;
 
-		// Create a vector that's from the enemy to the player with an upwards boost.
-		Vector3 hurtVector = transform.position - enemy.position + Vector3.up * 5f;
-
-		// Add a force to the player in the direction of the vector and multiply by the hurtForce.
-		//rigidbody2D.AddForce(hurtVector * hurtForce);
-
+        if (health <= 0)
+            return;
 		// Reduce the player's health by 10.
 		health -= damageAmount;
-
-		// Update what the health bar looks like.
-		UpdateHealthBar();
 
 		// Play a random clip of the player getting hurt.
 		int i = Random.Range (0, ouchClips.Length);
@@ -66,7 +59,10 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0f)
         {
-            GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(playerControl.controller.Number);
+            if (_playerControl.Equals(shooter))
+                GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(_playerControl.controller.Number, 1);
+            else if (shooter != null)
+                GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(shooter.controller.Number, -1);
             // Find all of the colliders on the gameobject and set them all to be triggers.
             Collider2D[] cols = GetComponents<Collider2D>();
             foreach (Collider2D c in cols)
@@ -82,23 +78,20 @@ public class PlayerHealth : MonoBehaviour
             }
 
             // ... disable user Player Control script
-            playerControl.enabled = false;
+            _playerControl.enabled = false;
 
             // ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
             GetComponentInChildren<Gun>().enabled = false;
 
             // ... Trigger the 'Die' animation state
-            anim.SetTrigger("Die");
+            _anim.SetTrigger("Die");
             Invoke("Die", 2);
         }
 	}
 
     void Die()
     {
-        playerControl.Die();
+        _playerControl.Die();
     }
 
-	public void UpdateHealthBar ()
-	{
-	}
 }
