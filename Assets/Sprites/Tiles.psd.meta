@@ -13,6 +13,20 @@ TextureImporter:
     21300016: Rubble2
     21300018: Rubble3
     21300020: Ruble4
+    21300022: Stone_block
+    21300024: Stone_Block_light_damage
+    21300026: Stone_Block_heavy_damage
+    21300028: Wide_block
+    21300030: Rubble_rock01
+    21300032: Rubble_rock02
+    21300034: Rubble_rock03
+    21300036: Rubble_rock04
+    21300038: Rubble_rock05
+    21300040: Rubble_rock06
+    21300042: Wide_block_low_damage
+    21300044: Wide_block_high_damage
+    21300046: Wide_block_window
+    21300048: Wide_block_door
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,33 +78,33 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Square
+    - name: Stone_block
       rect:
         serializedVersion: 2
-        x: 182
-        y: 447
-        width: 30
-        height: 30
+        x: 7
+        y: 316
+        width: 53
+        height: 53
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Square_Light_Damage
+    - name: Stone_Block_light_damage
       rect:
         serializedVersion: 2
-        x: 216
-        y: 447
-        width: 30
-        height: 30
+        x: 70
+        y: 316
+        width: 53
+        height: 53
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Square_Heavy_Damage
+    - name: Stone_Block_heavy_damage
       rect:
         serializedVersion: 2
-        x: 250
-        y: 447
-        width: 30
-        height: 30
+        x: 133
+        y: 316
+        width: 53
+        height: 53
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,6 +175,116 @@ TextureImporter:
         y: 448
         width: 15
         height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wide_block
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 242
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock01
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 272
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock02
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 241
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock03
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 291
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock04
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 265
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock05
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 278
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock06
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 242
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wide_block_low_damage
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 181
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wide_block_high_damage
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 120
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wide_block_window
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 59
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wide_block_door
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 181
+        width: 104
+        height: 54
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -13,7 +13,7 @@ GameObject:
   - 50: {fileID: 5038116}
   - 114: {fileID: 11469694}
   m_Layer: 13
-  m_Name: StoneWall_Square_Background
+  m_Name: StoneWall_Rectangle_Background_window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.3258247, y: -17.177599, z: 0}
+  m_LocalPosition: {x: -20.3699245, y: -20.8864021, z: 0}
   m_LocalScale: {x: .699999988, y: .699999988, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37,7 +37,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
-  m_Mass: 10
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 3.18000007, y: 1.58000004}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11469694
 MonoBehaviour:
@@ -68,11 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 50
-  hitpointsLightDamage: 35
-  hitpointsHeavyDamage: 15
-  spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  maxHitpoints: 75
+  hitpointsLightDamage: 50
+  hitpointsHeavyDamage: 25
+  spriteLightDamage: {fileID: 21300004, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  spriteHeavyDamage: {fileID: 21300006, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
 --- !u!212 &21238116
 SpriteRenderer:
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1535931219
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300022, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  m_Sprite: {fileID: 21300046, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   m_Color: {r: .661764741, g: .661764741, b: .661764741, a: 1}
 --- !u!1001 &100100000
 Prefab:
