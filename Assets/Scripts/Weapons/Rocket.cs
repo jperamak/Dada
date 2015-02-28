@@ -18,7 +18,7 @@ public class Rocket : MonoBehaviour
         //Destroy(gameObject, 4);
 	}
 	
-	void Update ()
+	void FixedUpdate ()
 	{
 		Vector2 velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
 		float angle = Mathf.Atan2( velocity.y, velocity.x );
