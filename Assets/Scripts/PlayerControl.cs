@@ -63,17 +63,20 @@ public class PlayerControl : MonoBehaviour
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, LayerMask.GetMask(new string[] { "Ground", "Rubble" }));
 
         var sliding = false;
-        if (Physics2D.Linecast(transform.position,transform.position + new Vector3(-0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")) || 
-            Physics2D.Linecast(transform.position, transform.position + new Vector3(0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")) )
+
+        if (controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(-0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
         {
+            walljump = 1;
             anim.SetBool("Slide", true);
             sliding = true;
         }
 
-		if (controller.GetButtonDown(VirtualKey.JUMP) && sliding )
-            walljump = 1;
-        else if (controller.GetButtonDown(VirtualKey.JUMP) && sliding)
+        else if (controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+        {
             walljump = 2;
+            anim.SetBool("Slide", true);
+            sliding = true;
+        }
         else
         {
             walljump = 0;
