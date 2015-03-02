@@ -35,10 +35,14 @@ public class Rocket : MonoBehaviour
         expl.GetComponent<Explosion>().Explode(Player, Radius, ExplosionForce, Damage);
         Destroy(gameObject);
 	}
-	
-	void OnTriggerEnter2D (Collider2D c) 
-	{
-        OnExplode();
+
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        if (c.gameObject.layer != LayerMask.NameToLayer("Melee"))
+            OnExplode();
+        else
+        {
+            gameObject.rigidbody2D.velocity = -gameObject.rigidbody2D.velocity;
+        }
     }
-	
 }

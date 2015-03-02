@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11445174}
   - 61: {fileID: 6143430}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: meleeStrike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 902fea2af8d62432d881b2e99779638b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   damage: 50
 --- !u!212 &21200000
 SpriteRenderer:
