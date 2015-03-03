@@ -71,8 +71,8 @@ MonoBehaviour:
   maxHitpoints: 100
   hitpointsLightDamage: 75
   hitpointsHeavyDamage: 40
-  spriteLightDamage: {fileID: 21300022, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
 --- !u!212 &21238116
 SpriteRenderer:
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1024582385
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300022, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  m_Sprite: {fileID: 21300050, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
