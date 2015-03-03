@@ -60,9 +60,9 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0f)
         {
             if (_playerControl.Equals(shooter))
-                GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(_playerControl.controller.Number, 1);
+                GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(_playerControl.controller.Number, -1);
             else if (shooter != null)
-                GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(shooter.controller.Number, -1);
+                GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(shooter.controller.Number, 1);
             // Find all of the colliders on the gameobject and set them all to be triggers.
             Collider2D[] cols = GetComponents<Collider2D>();
             foreach (Collider2D c in cols)

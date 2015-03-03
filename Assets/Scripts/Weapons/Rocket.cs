@@ -7,14 +7,15 @@ public class Rocket : MonoBehaviour
     public float Radius;
     public float ExplosionForce;
     public int Damage;
-        
+    public int TimeToLive = 4;   
+
     [HideInInspector]
     public PlayerControl Player;
 
 	void Start () 
 	{
 		// Destroy the rocket after 4 seconds if it doesn't get destroyed before then.
-        Invoke("OnExplode", 4);
+        Invoke("OnExplode", TimeToLive);
         //Destroy(gameObject, 4);
 	}
 	
