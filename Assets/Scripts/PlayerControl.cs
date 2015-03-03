@@ -64,14 +64,14 @@ public class PlayerControl : MonoBehaviour
 
         var sliding = false;
 
-        if (controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(-0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+        if (controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(-0.65f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
         {
             walljump = 1;
             anim.SetBool("Slide", true);
             sliding = true;
         }
 
-        else if (controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(0.5f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+        else if (controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(0.65f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
         {
             walljump = 2;
             anim.SetBool("Slide", true);
@@ -107,9 +107,9 @@ public class PlayerControl : MonoBehaviour
 			rigidbody2D.AddForce(Vector2.right * h * moveForce);
 
 		// If the player's horizontal velocity is greater than the maxSpeed...
-		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed)
+		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed * Mathf.Abs(h))
 			// ... set the player's velocity to the maxSpeed in the x axis.
-			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
+			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed * Mathf.Abs(h), rigidbody2D.velocity.y);
 
 		// If the input is moving the player right and the player is facing left...
 		if(h > 0 && !facingRight)
