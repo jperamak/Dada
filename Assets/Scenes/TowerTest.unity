@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &5984825
 GameObject:
@@ -32103,8 +32102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitpoints: 150
-  hitpointsLightDamage: 120
-  hitpointsHeavyDamage: 60
+  hitpointsLightDamage: 100
+  hitpointsHeavyDamage: 50
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}

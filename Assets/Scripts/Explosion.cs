@@ -17,7 +17,8 @@ public class Explosion : MonoBehaviour {
         {
             dir = Quaternion.AngleAxis(step*0.5f + step*i,Vector3.forward)*Vector2.up;
             RaycastHit2D[] hits = Physics2D.LinecastAll(position, position + dir * radius, LayerMask.GetMask(new string[] { "Enemy", "Player", "Ground", "BackgroundBlock", "Rubble" }));
-            foreach (RaycastHit2D hit in hits)
+
+			foreach (RaycastHit2D hit in hits)
             {
                 if (hit.rigidbody)
                     hit.rigidbody.AddForce(dir * 10 * explosionForce);
@@ -31,14 +32,14 @@ public class Explosion : MonoBehaviour {
 
                 // Otherwise if the player manages to shoot himself...
                 else if (hit.collider.gameObject.tag == "Player")
-                {
+				{	Debug.Log("Player hit by explosion");
 
                     // Instantiate the explosion and destroy the rocket.
                     PlayerHealth pH = hit.collider.gameObject.GetComponent<PlayerHealth>();
                     pH.TakeDamage(source);
                 }
                 // dont hit things behind solid blocks
-                if (hit.transform.gameObject.layer == LayerMask.GetMask("Ground"))
+				if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     break;
             }
         }
