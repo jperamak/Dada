@@ -27,6 +27,18 @@ TextureImporter:
     21300044: Wide_block_high_damage
     21300046: Wide_block_window
     21300048: Wide_block_door
+    21300050: Stone_block_fg
+    21300052: Stone_Block_light_damage_fg
+    21300054: Stone_Block_heavy_damage_fg
+    21300056: Wide_block_fg
+    21300058: Wide_block_low_damage_fg
+    21300060: Wide_block_high_damage_fg
+    21300062: Rubble_rock01_fg
+    21300064: Rubble_rock03_fg
+    21300066: Rubble_rock05_fg
+    21300068: Rubble_rock04_fg
+    21300070: Rubble_rock02_fg
+    21300072: Rubble_rock06_fg
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -62,7 +74,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 47
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -285,6 +297,126 @@ TextureImporter:
         y: 181
         width: 104
         height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stone_block_fg
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 316
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stone_Block_light_damage_fg
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 316
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stone_Block_heavy_damage_fg
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 316
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wide_block_fg
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 242
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wide_block_low_damage_fg
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 181
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wide_block_high_damage_fg
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 120
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock01_fg
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 270
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock03_fg
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 290
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock05_fg
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 278
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock04_fg
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 265
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock02_fg
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 242
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rubble_rock06_fg
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 241
+        width: 31
+        height: 33
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
