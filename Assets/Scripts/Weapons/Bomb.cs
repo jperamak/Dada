@@ -10,8 +10,7 @@ public class Bomb : MonoBehaviour
 	public float fuseTime = 1.5f;
 	public GameObject explosion;			// Prefab of explosion effect.
 
-
-	private LayBombs layBombs;				// Reference to the player's LayBombs script.
+	public LayBombs layBombs;				// Reference to the player's LayBombs script.
 	//private PickupSpawner pickupSpawner;	// Reference to the PickupSpawner script.
 	private ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
@@ -21,8 +20,9 @@ public class Bomb : MonoBehaviour
 		// Setting up references.
 		explosionFX = GameObject.FindGameObjectWithTag("ExplosionFX").GetComponent<ParticleSystem>();
 		//pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
-		if(GameObject.FindGameObjectWithTag("Player"))
-			layBombs = GameObject.FindGameObjectWithTag("Player").GetComponent<LayBombs>();
+		//if(GameObject.FindGameObjectWithTag("Player"))
+		//	layBombs = GameObject.FindGameObjectWithTag("Player").GetComponent<LayBombs>();
+            
 	}
 
 	void Start ()

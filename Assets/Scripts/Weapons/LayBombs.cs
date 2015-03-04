@@ -35,7 +35,8 @@ public class LayBombs : MonoBehaviour
 			//AudioSource.PlayClipAtPoint(bombsAway,transform.position);
 
 			// Instantiate the bomb prefab.
-			Instantiate(bomb, transform.position, transform.rotation);
+			var b = Instantiate(bomb, transform.position, transform.rotation) as GameObject;
+            b.GetComponent<Bomb>().layBombs = this;
 		}
 
 	}

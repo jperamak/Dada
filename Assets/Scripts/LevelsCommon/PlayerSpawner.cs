@@ -62,7 +62,6 @@ public class PlayerSpawner : MonoBehaviour {
                 if (sr.gameObject.name == "body")
                     sr.sprite = PlayerSprites[contr.Number];
             }
-
 		}
     }
 
