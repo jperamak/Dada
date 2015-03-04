@@ -176,6 +176,7 @@ MonoBehaviour:
   Radius: 3
   ExplosionForce: 7
   Damage: 80
+  TimeToLive: 4
   Player: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:

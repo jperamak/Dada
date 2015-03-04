@@ -6,7 +6,7 @@ using System.Collections;
 abstract public class Damageable : MonoBehaviour {
 
 	public float maxHitpoints = 10.0f;				// hitpoints when undamaged
-	protected float currentHitpoints = 10.0f;
+	public float currentHitpoints = 10.0f;
 
 
 	void Awake () {

@@ -131,6 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad5256e064aeb34493152d5beb640bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParticlePrefab: {fileID: 184368, guid: 347d018870bc6fd4fb0697805c630d38, type: 2}
+  NumOfRays: 42
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
