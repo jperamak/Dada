@@ -68,12 +68,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 150
-  hitpointsLightDamage: 120
-  hitpointsHeavyDamage: 60
+  maxHitpoints: 100
+  hitpointsLightDamage: 75
+  hitpointsHeavyDamage: 40
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
 --- !u!212 &21238116
 SpriteRenderer:
   m_ObjectHideFlags: 1

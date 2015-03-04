@@ -31,8 +31,8 @@ public class Explosion : MonoBehaviour {
 					// calculate the basic damage
 					float rayDamage = (float)damage * invDiv;
 					// apply dampening
-					if (numTimesDamped > 0)
-						rayDamage = rayDamage * Mathf.Pow(0.75f, numTimesDamped);
+					//if (numTimesDamped > 0)
+					//	rayDamage = rayDamage * Mathf.Pow(0.75f, numTimesDamped);
                     // inflict the damage
                     hit.collider.gameObject.GetComponent<Damageable>().TakeDamage(rayDamage);
                 }
