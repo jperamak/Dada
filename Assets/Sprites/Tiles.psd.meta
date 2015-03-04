@@ -39,6 +39,7 @@ TextureImporter:
     21300068: Rubble_rock04_fg
     21300070: Rubble_rock02_fg
     21300072: Rubble_rock06_fg
+    21300074: Stone_Roof
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -303,7 +304,7 @@ TextureImporter:
     - name: Stone_block_fg
       rect:
         serializedVersion: 2
-        x: 251
+        x: 250
         y: 316
         width: 53
         height: 53
@@ -419,6 +420,16 @@ TextureImporter:
         height: 33
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stone_Roof
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 179
+        width: 61
+        height: 55
+      alignment: 9
+      pivot: {x: .681207061, y: .352173716}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

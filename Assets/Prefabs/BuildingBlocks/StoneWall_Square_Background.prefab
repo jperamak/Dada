@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitpoints: 75
+  currentHitpoints: 75
   hitpointsLightDamage: 50
   hitpointsHeavyDamage: 25
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
