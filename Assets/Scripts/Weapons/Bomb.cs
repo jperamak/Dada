@@ -52,7 +52,7 @@ public class Bomb : MonoBehaviour
 		
 		// The player is now free to lay bombs when he has them.
 		layBombs.bombLaid = false;
-
+        
 		// Make the pickup spawner start to deliver a new pickup.
 		//pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
 
@@ -83,8 +83,8 @@ public class Bomb : MonoBehaviour
 		explosionFX.Play();
 
 		// Instantiate the explosion prefab.
-		Instantiate(explosion,transform.position, Quaternion.identity);
-
+        var expl = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+        expl.GetComponent<Explosion>().Explode(null, bombRadius, bombForce, (int)bombForce);
 		// Play the explosion sound effect.
 		AudioSource.PlayClipAtPoint(boom, transform.position);
 

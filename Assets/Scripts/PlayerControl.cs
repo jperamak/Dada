@@ -32,7 +32,7 @@ public class PlayerControl : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag != "player")
+        if (other.gameObject.tag != "player" && other.gameObject.layer != LayerMask.NameToLayer("ExplosionParticle"))
         {
             Rigidbody2D o = other.gameObject.GetComponent<Rigidbody2D>();
 

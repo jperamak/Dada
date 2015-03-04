@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
   Radius: 3
-  ExplosionForce: 200
+  ExplosionForce: 10
   Damage: 80
   TimeToLive: 4
   Player: {fileID: 0}

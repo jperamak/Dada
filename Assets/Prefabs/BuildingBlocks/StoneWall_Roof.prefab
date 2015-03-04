@@ -9,11 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 438116}
   - 212: {fileID: 21238116}
-  - 61: {fileID: 6138116}
   - 50: {fileID: 5038116}
   - 114: {fileID: 11469694}
-  m_Layer: 13
-  m_Name: StoneWall_Rectangle_Background
+  - 60: {fileID: 6087624}
+  m_Layer: 12
+  m_Name: StoneWall_Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .624000013, y: 19.8799992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,8 +46,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6138116
-BoxCollider2D:
+--- !u!60 &6087624
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,8 +55,17 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2, y: 1}
-  m_Center: {x: 0, y: 0}
+  m_Poly:
+    m_Paths:
+    - - {x: .361572802, y: -.369930267}
+      - {x: .375473559, y: -.158622742}
+      - {x: .370766222, y: .584411621}
+      - {x: .0772454739, y: .595703125}
+      - {x: .0718858242, y: .586948395}
+      - {x: .00529670715, y: .555464208}
+      - {x: -.538486481, y: .0252845287}
+      - {x: -.841932297, y: -.29212904}
+      - {x: -.872613907, y: -.377600431}
 --- !u!114 &11469694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,13 +77,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 80
-  currentHitpoints: 80
-  hitpointsLightDamage: 60
-  hitpointsHeavyDamage: 30
-  spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
-  leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  maxHitpoints: 60
+  currentHitpoints: 60
+  hitpointsLightDamage: 40
+  hitpointsHeavyDamage: 20
+  spriteLightDamage: {fileID: 0}
+  spriteHeavyDamage: {fileID: 0}
+  leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
 --- !u!212 &21238116
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -93,9 +102,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1535931219
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300028, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  m_SortingLayerID: 1024582385
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300074, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

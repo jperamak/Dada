@@ -39,7 +39,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 138116}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitpoints: 100
+  currentHitpoints: 100
   hitpointsLightDamage: 75
   hitpointsHeavyDamage: 40
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
