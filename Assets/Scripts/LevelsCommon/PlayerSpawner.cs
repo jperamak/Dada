@@ -51,14 +51,14 @@ public class PlayerSpawner : MonoBehaviour {
 			_assignedHealth[contr.Number] = newPlayer.GetComponent<PlayerHealth>();
 
 			//choose random spawn point
-			if(SpawnPoints.Length < _joinedPlayers){
+			//if(SpawnPoints.Length < _joinedPlayers){
 				int random = Random.Range(0,SpawnPoints.Length);
 				newPlayer.transform.position = SpawnPoints[random].position;
-			}
-			else
-            {
-				newPlayer.transform.position = SpawnPoints[_joinedPlayers-1].position;
-			}
+			//}
+			//else
+            //{
+			//	newPlayer.transform.position = SpawnPoints[_joinedPlayers-1].position;
+			//}
 		}
     }
 
