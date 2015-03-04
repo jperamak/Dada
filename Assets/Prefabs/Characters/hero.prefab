@@ -923,7 +923,7 @@ MonoBehaviour:
   Aiming: {fileID: 124390}
   Speed: 25
   Cooldown: .5
-  Angle: 5
+  Angle: 10
   AimingDegPerSec: 30
   MinAngle: -80
   MaxAngle: 90
