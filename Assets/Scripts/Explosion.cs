@@ -20,7 +20,7 @@ public class Explosion : MonoBehaviour {
             dir = Quaternion.AngleAxis(step*0.5f + step*i,Vector3.forward)*Vector2.up;
 
             GameObject ep = Instantiate(ParticlePrefab) as GameObject;
-            ep.rigidbody2D.AddForce(dir * explosionForce*100);
+            ep.rigidbody2D.AddForce(dir * explosionForce*100*radius);
             ep.transform.position = transform.position;
             var ep2 = ep.GetComponent<ExplosionParticle>();
             ep2.source = source;
@@ -48,8 +48,8 @@ public class Explosion : MonoBehaviour {
 					// calculate the basic damage
 					float rayDamage = (float)damage * invDiv;
 					// apply dampening
-					//if (numTimesDamped > 0)
-					//	rayDamage = rayDamage * Mathf.Pow(0.75f, numTimesDamped);
+					if (numTimesDamped > 0)
+						rayDamage = rayDamage * Mathf.Pow(0.75f, numTimesDamped);
                     // inflict the damage
                     hit.collider.gameObject.GetComponent<Damageable>().TakeDamage(rayDamage);
                 }
