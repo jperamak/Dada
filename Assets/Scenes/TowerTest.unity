@@ -290,7 +290,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 13511326}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -391,7 +391,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 14927728}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -641,7 +641,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: ce18a38f723434ff38f819eeeeea8194, type: 2}
       propertyPath: m_RootOrder
-      value: 93
+      value: 92
       objectReference: {fileID: 0}
     - target: {fileID: 6138116, guid: ce18a38f723434ff38f819eeeeea8194, type: 2}
       propertyPath: m_Size.y
@@ -723,7 +723,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 33540753}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -896,7 +896,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 38095657}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -1131,7 +1131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: ce18a38f723434ff38f819eeeeea8194, type: 2}
       propertyPath: m_RootOrder
-      value: 91
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6138116, guid: ce18a38f723434ff38f819eeeeea8194, type: 2}
       propertyPath: m_Size.y
@@ -1213,7 +1213,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 48736150}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -1415,7 +1415,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 51815793}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -1516,7 +1516,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 52239445}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -1790,7 +1790,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 66653484}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -2159,7 +2159,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
       propertyPath: m_RootOrder
-      value: 88
+      value: 87
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
       propertyPath: m_LocalScale.x
@@ -2457,7 +2457,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 112623263}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -2558,7 +2558,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 122022984}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -2659,7 +2659,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 124072032}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -3001,7 +3001,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 135123227}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -3407,7 +3407,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 143355154}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -3508,7 +3508,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 146213358}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -3681,7 +3681,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 152412354}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -3904,7 +3904,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: ce18a38f723434ff38f819eeeeea8194, type: 2}
       propertyPath: m_RootOrder
-      value: 90
+      value: 89
       objectReference: {fileID: 0}
     - target: {fileID: 6138116, guid: ce18a38f723434ff38f819eeeeea8194, type: 2}
       propertyPath: m_Size.y
@@ -4109,7 +4109,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 177188485}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -4311,7 +4311,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 189368268}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -4412,7 +4412,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 195122537}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -4513,7 +4513,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 198106953}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -4614,7 +4614,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 200259068}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -4791,7 +4791,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 214471898}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -4892,7 +4892,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 215035750}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -4993,7 +4993,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 215340310}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -5094,7 +5094,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 216048326}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -5195,7 +5195,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 218369793}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -5747,7 +5747,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 250696189}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -5860,7 +5860,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 256236483}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -5961,7 +5961,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 270534729}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -6062,7 +6062,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 272669839}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -6151,7 +6151,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 273773513}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -6264,7 +6264,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 278508648}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -6554,7 +6554,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 295629001}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -6791,7 +6791,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 298280548}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -6880,7 +6880,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 303260664}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -6993,7 +6993,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 311476907}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -7311,7 +7311,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 326771036}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -7879,7 +7879,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 349857644}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -8293,7 +8293,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 380283118}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -8579,7 +8579,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 386827671}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -8668,7 +8668,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 388720972}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -8882,7 +8882,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 396977253}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -9059,7 +9059,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 403501723}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -9160,7 +9160,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 404788673}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -9564,7 +9564,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 420061765}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -9665,7 +9665,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 420439424}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -10319,7 +10319,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 458065243}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -10852,7 +10852,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 486191072}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -10953,7 +10953,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 489762885}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -11126,7 +11126,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 493553004}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -11295,7 +11295,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 505569759}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -11528,7 +11528,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 510148266}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -11629,7 +11629,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 511796042}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -11730,7 +11730,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 513816636}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -11809,7 +11809,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
       propertyPath: m_RootOrder
-      value: 92
+      value: 91
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
@@ -11976,7 +11976,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 529420617}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -12246,7 +12246,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 537042193}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -12520,7 +12520,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 544473592}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -12621,7 +12621,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 547465831}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -12854,7 +12854,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 556844296}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -13930,7 +13930,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 596486879}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -14220,7 +14220,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 603545924}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -14321,7 +14321,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 610050234}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -14422,7 +14422,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 611178504}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -15379,7 +15379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
       propertyPath: m_RootOrder
-      value: 94
+      value: 93
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
@@ -15517,7 +15517,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 675693501}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -15618,7 +15618,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 676118881}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -15719,7 +15719,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 685321704}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -16012,7 +16012,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 709380770}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -16113,7 +16113,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 710034464}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -16282,7 +16282,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 716851193}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -16383,7 +16383,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 721052818}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -16484,7 +16484,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 722676343}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -16585,7 +16585,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 729504456}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -16963,7 +16963,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 740998473}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -17152,7 +17152,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 743704375}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -17658,7 +17658,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 762955999}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -17919,7 +17919,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 789944721}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -18710,7 +18710,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 833922761}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -18789,7 +18789,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
       propertyPath: m_RootOrder
-      value: 84
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
       propertyPath: m_LocalScale.x
@@ -19075,7 +19075,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 859064338}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -19431,7 +19431,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: ce18a38f723434ff38f819eeeeea8194, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6138116, guid: ce18a38f723434ff38f819eeeeea8194, type: 2}
       propertyPath: m_Size.y
@@ -19513,7 +19513,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 872310129}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -19702,7 +19702,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 880184428}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -19875,7 +19875,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 883557725}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -20429,7 +20429,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 911871955}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -20848,7 +20848,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 930929398}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -21161,7 +21161,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 942115343}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -21338,7 +21338,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 943802215}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -21439,7 +21439,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 946188296}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -21846,7 +21846,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 954366370}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -22073,7 +22073,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 965378145}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -22289,7 +22289,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 979921150}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -22476,7 +22476,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 984051344}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -22628,7 +22628,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 992014198}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -22729,7 +22729,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 992333470}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -23075,7 +23075,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1005602859}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -23176,7 +23176,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1010077155}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -23345,7 +23345,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1012258097}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -23623,7 +23623,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1017910965}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -23724,7 +23724,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1020653075}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -23825,7 +23825,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1021670723}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -24198,7 +24198,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1039562808}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -24277,7 +24277,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
       propertyPath: m_RootOrder
-      value: 89
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 138116, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
       propertyPath: m_IsActive
@@ -24367,7 +24367,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1043029407}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -24528,7 +24528,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1058174763}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -24629,7 +24629,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1059569795}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -24794,7 +24794,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1067425802}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -24983,7 +24983,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1071445614}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -25156,7 +25156,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1082936055}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -25501,7 +25501,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1103129495}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -26036,7 +26036,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1118160813}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -26209,7 +26209,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1125559866}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -26378,7 +26378,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1130806790}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -26567,7 +26567,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1132999850}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -26769,7 +26769,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1137742146}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -26870,7 +26870,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1139172851}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -26959,7 +26959,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1145474912}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -27317,7 +27317,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1153004073}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -28646,7 +28646,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1160409547}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -28879,7 +28879,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1174796178}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -28980,7 +28980,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1175433089}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -29221,7 +29221,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1187466975}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -29534,7 +29534,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1203342540}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -29635,7 +29635,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1207183251}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -29724,7 +29724,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1210216177}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -29909,7 +29909,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1212148016}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -30010,7 +30010,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1213209088}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -30284,7 +30284,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1215420206}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -30554,7 +30554,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1221640722}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -30828,7 +30828,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1238921666}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -30929,7 +30929,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1242624788}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -31377,7 +31377,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1251113529}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -31550,7 +31550,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1252701228}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -31900,7 +31900,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1257532315}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -32001,7 +32001,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1258246000}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -32366,7 +32366,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1268933425}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -32467,7 +32467,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1269802403}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -32568,7 +32568,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1280108779}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -32669,7 +32669,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1284649086}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -32820,7 +32820,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 02fc0f86ac91c4810a229c2018f6e2ef, type: 2}
       propertyPath: m_RootOrder
-      value: 97
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 02fc0f86ac91c4810a229c2018f6e2ef, type: 2}
       propertyPath: m_LocalScale.x
@@ -32918,7 +32918,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1306700278}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -33019,7 +33019,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1321662103}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -33120,7 +33120,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1323622673}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -33209,7 +33209,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1337508520}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -33510,7 +33510,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1343256607}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -33885,7 +33885,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1369162487}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -34218,7 +34218,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1377747395}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -34407,7 +34407,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1395191114}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -34486,7 +34486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 02fc0f86ac91c4810a229c2018f6e2ef, type: 2}
       propertyPath: m_RootOrder
-      value: 96
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 02fc0f86ac91c4810a229c2018f6e2ef, type: 2}
       propertyPath: m_LocalScale.x
@@ -34584,7 +34584,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1401585007}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -34685,7 +34685,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1411412067}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -34837,7 +34837,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1415161498}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -35033,7 +35033,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1426117503}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -35190,7 +35190,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1429310084}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -35839,7 +35839,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1476500509}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -36028,7 +36028,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1479230069}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -36337,7 +36337,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1494638794}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -36438,7 +36438,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1497346363}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -36716,7 +36716,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1505078780}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -36977,7 +36977,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1518747852}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -37440,7 +37440,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1554167369}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -37541,7 +37541,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1557602909}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -37702,7 +37702,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1569098808}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -37803,7 +37803,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1572822212}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -37980,7 +37980,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1580610064}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -38093,7 +38093,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1581429776}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -38367,7 +38367,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1588380220}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -38582,7 +38582,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: ea6214135e2b39e42a009bc4e1f4b2c2, type: 2}
       propertyPath: m_RootOrder
-      value: 87
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: ea6214135e2b39e42a009bc4e1f4b2c2, type: 2}
       propertyPath: m_LocalScale.x
@@ -39242,7 +39242,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1622676217}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -39444,7 +39444,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1638521555}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -39734,7 +39734,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1644768605}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -40115,7 +40115,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1657903358}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -40300,7 +40300,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1667202075}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -40401,7 +40401,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1671222478}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -40730,7 +40730,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1681545967}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -40809,7 +40809,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 02fc0f86ac91c4810a229c2018f6e2ef, type: 2}
       propertyPath: m_RootOrder
-      value: 85
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 02fc0f86ac91c4810a229c2018f6e2ef, type: 2}
       propertyPath: m_LocalScale.x
@@ -40907,7 +40907,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1699493530}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -41008,7 +41008,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1709280124}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -41109,7 +41109,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1715815924}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -41393,7 +41393,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1724336816}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -41494,7 +41494,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1742841292}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -41595,7 +41595,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1743697445}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -41712,7 +41712,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1754901724}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -41825,7 +41825,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1755519322}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -41926,7 +41926,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1758354631}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -42027,7 +42027,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1768782872}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -42128,7 +42128,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1770486127}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -42673,7 +42673,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1814022492}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -42774,7 +42774,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1817698625}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -43124,7 +43124,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1837811601}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -43394,7 +43394,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1843920220}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -43495,7 +43495,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1855786507}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -43574,7 +43574,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 02fc0f86ac91c4810a229c2018f6e2ef, type: 2}
       propertyPath: m_RootOrder
-      value: 86
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 02fc0f86ac91c4810a229c2018f6e2ef, type: 2}
       propertyPath: m_LocalScale.x
@@ -44552,7 +44552,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1882880041}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -44729,7 +44729,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1893462124}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -44918,7 +44918,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1901132035}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -45120,7 +45120,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1904809063}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -45221,7 +45221,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1914762665}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -45394,7 +45394,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1932462811}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -45715,7 +45715,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1937847964}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -45917,7 +45917,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1945658855}
   m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -46018,7 +46018,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1947382011}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -46339,7 +46339,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1965966687}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -46550,7 +46550,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1977610267}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -46995,7 +46995,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2003737626}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -47108,7 +47108,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2014793642}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -47694,7 +47694,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2040045025}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -47795,7 +47795,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2041067047}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -47997,7 +47997,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2042960255}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -48098,7 +48098,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2045759783}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -48199,7 +48199,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2047623383}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -48372,7 +48372,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2051913599}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -48473,7 +48473,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2055962623}
   m_Mass: 50
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -48806,7 +48806,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2071653238}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -49051,7 +49051,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2081352718}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -49364,7 +49364,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2095793871}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -49902,7 +49902,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2123039246}
   m_Mass: 25
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
