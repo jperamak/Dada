@@ -69,10 +69,10 @@ TextureImporter:
     - name: Egg
       rect:
         serializedVersion: 2
-        x: 49
-        y: 360
-        width: 71
-        height: 97
+        x: 34
+        y: 367
+        width: 105
+        height: 75
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
