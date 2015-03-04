@@ -7,6 +7,8 @@ public class Gun : MonoBehaviour
 	public GameObject Aiming;
 	public float Speed = 20f;				// The speed the rocket will fire at.
     public float Cooldown;
+	public int maxAmmo;
+	public float rechargeTimePerAmmo;
 	public float Angle = 5f;
 	
 	public float AimingDegPerSec = 30f;
@@ -17,6 +19,8 @@ public class Gun : MonoBehaviour
 	private PlayerControl _playerCtrl;		// Reference to the PlayerControl script.
 	private Animator _anim;					// Reference to the Animator component.
     private float _time;
+	private int _numAmmo;
+	private float _nextRecharge;
 
 	void Awake()
 	{
@@ -24,6 +28,7 @@ public class Gun : MonoBehaviour
 		_anim = transform.root.gameObject.GetComponent<Animator>();
 		_playerCtrl = transform.root.GetComponent<PlayerControl>();
         _time = Cooldown;
+		_numAmmo = maxAmmo;
 	}
 
 
@@ -44,9 +49,19 @@ public class Gun : MonoBehaviour
 		Angle = Aiming.transform.eulerAngles.z; //Mathf.Rad2Deg * Mathf.Asin(y);
         transform.eulerAngles = new Vector3(0, 0, Angle);
 
-		if(_playerCtrl.controller.GetButtonDown(VirtualKey.SHOOT) && _time > Cooldown)
+		if (Time.time >= _nextRecharge && _numAmmo < maxAmmo)
+		{
+			_numAmmo++;
+			_nextRecharge = Time.time + rechargeTimePerAmmo;
+		}
+
+		if(_playerCtrl.controller.GetButtonDown(VirtualKey.SHOOT) && _time > Cooldown && _numAmmo > 0)
 		{
             _time = 0;
+			if (_numAmmo == maxAmmo)
+				_nextRecharge = Time.time + rechargeTimePerAmmo;
+
+			_numAmmo--;
 			// ... set the animator Shoot trigger parameter and play the audioclip.
 			_anim.SetTrigger("Shoot");
 			audio.Play();

@@ -922,7 +922,9 @@ MonoBehaviour:
   Rocket: {fileID: 5000000, guid: bac8ba5c6c7ef495b867c6223008aab3, type: 2}
   Aiming: {fileID: 124390}
   Speed: 25
-  Cooldown: .5
+  Cooldown: .100000001
+  maxAmmo: 5
+  rechargeTimePerAmmo: 1
   Angle: 10
   AimingDegPerSec: 30
   MinAngle: -80
@@ -942,6 +944,8 @@ MonoBehaviour:
   Aiming: {fileID: 124390}
   Speed: 30
   Cooldown: .5
+  maxAmmo: 0
+  rechargeTimePerAmmo: 0
   Angle: 5
   AimingDegPerSec: 30
   MinAngle: -80
