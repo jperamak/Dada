@@ -48449,9 +48449,9 @@ MonoBehaviour:
   xSmooth: 8
   ySmooth: 8
   maxXAndY: {x: 60, y: 13}
-  minXAndY: {x: -60, y: -3}
+  minXAndY: {x: -60, y: -13}
   maxZoom: 20
-  minZoom: 20
+  minZoom: 10
   average: {x: 0, y: 0}
   players: []
 --- !u!124 &1972830849

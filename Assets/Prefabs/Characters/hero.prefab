@@ -857,10 +857,7 @@ MonoBehaviour:
   jump: 0
   moveForce: 150
   maxSpeed: 8
-  jumpClips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  jumpClips: []
   jumpForce: 1100
   taunts:
   - {fileID: 0}
