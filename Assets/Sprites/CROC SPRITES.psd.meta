@@ -63,15 +63,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CROC SPRITES_2
+    - name: 
       rect:
         serializedVersion: 2
         x: 374
         y: 570
-        width: 125
-        height: 124
+        width: 123
+        height: 123
       alignment: 9
-      pivot: {x: .573375225, y: .411239624}
+      pivot: {x: .578886449, y: .409280419}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CROC SPRITES_5
       rect:

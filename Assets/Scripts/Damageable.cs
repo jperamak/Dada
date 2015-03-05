@@ -3,7 +3,7 @@ using System.Collections;
 
 
 
-abstract public class Damageable : MonoBehaviour {
+public class Damageable : MonoBehaviour {
 
 	public float maxHitpoints = 10.0f;				// hitpoints when undamaged
 	public float currentHitpoints = 10.0f;
