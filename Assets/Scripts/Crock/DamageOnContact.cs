@@ -21,7 +21,6 @@ public class DamageOnContact : MonoBehaviour {
 		
 		PlayerHealth health = coll.gameObject.GetComponent<PlayerHealth>();
 		if(health != null){
-			Debug.Log("Damage "+id+" "+health.name);
 			health.TakeDamage(null);
 			_hits[id] = Time.time;
 		}

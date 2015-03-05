@@ -7,11 +7,15 @@ public class PlayerSpawner : MonoBehaviour {
 	public GameObject PlayerPrefab;
 	public Transform[] SpawnPoints;
     public Sprite[] PlayerSprites;
+	
+	public GameObject[] RandomSpawn;
+	public float RandomSpawnInterval = 20.0f;
 
 
 	private PlayerHealth[] _assignedHealth;
     private int[] _scores;
 	private int _joinedPlayers = 0;
+	private float _lastRandom = 0;
 
 	void Start () {
 		_assignedHealth = new PlayerHealth[DadaInput.ConrtollerCount];
@@ -24,6 +28,7 @@ public class PlayerSpawner : MonoBehaviour {
             ConnectPlayers();
         }
         CheckPlayerHealths();
+		SpawnThings();
 	}
 
     void CheckPlayerHealths()
@@ -34,7 +39,6 @@ public class PlayerSpawner : MonoBehaviour {
             {
                 _assignedHealth[i] = null;
                 _joinedPlayers--;
-                Debug.Log(i + " died");
             }
         }
     }
@@ -63,6 +67,19 @@ public class PlayerSpawner : MonoBehaviour {
             }
 		}
     }
+
+	private void SpawnThings(){
+		if(Time.time > _lastRandom + RandomSpawnInterval){
+			_lastRandom = Time.time;
+			GameObject randThing = RandomSpawn[Random.Range(0,RandomSpawn.Length)];
+			Transform randPoint = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
+
+			GameObject thingInst = Instantiate(randThing,randPoint.position, randPoint.rotation) as GameObject;
+			thingInst.transform.localScale = new Vector3(0.5f,0.5f,1);
+
+		}
+
+	}
 
     public void AddPoint(int playerNum, int amount)
     {

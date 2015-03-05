@@ -859,6 +859,9 @@ MonoBehaviour:
   maxSpeed: 8
   jumpClips: []
   jumpForce: 1100
+  JumpOn:
+    serializedVersion: 2
+    m_Bits: 151552
   taunts:
   - {fileID: 0}
   - {fileID: 0}

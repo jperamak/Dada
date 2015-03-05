@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11436190}
   - 95: {fileID: 9537268}
   m_Layer: 17
-  m_Name: Crock
+  m_Name: CrockRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ GameObject:
   - 50: {fileID: 5064984}
   - 60: {fileID: 6064980}
   - 233: {fileID: 23364986}
-  m_Layer: 12
+  m_Layer: 17
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - 4: {fileID: 464978}
   - 212: {fileID: 21264984}
   - 60: {fileID: 6064988}
-  m_Layer: 12
+  m_Layer: 17
   m_Name: BodyArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - 4: {fileID: 464980}
   - 212: {fileID: 21264986}
   - 60: {fileID: 6064992}
-  m_Layer: 12
+  m_Layer: 17
   m_Name: TailArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 464990}
   - 60: {fileID: 6010400}
-  m_Layer: 12
+  m_Layer: 17
   m_Name: HeadArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - 4: {fileID: 464992}
   - 212: {fileID: 21264992}
   - 60: {fileID: 6064994}
-  m_Layer: 12
+  m_Layer: 17
   m_Name: BodyArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,6 +1132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d10e41840163d9408d9c9032c6a0be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxUpsideDown: 2.5
+  FlipForce: 50
 --- !u!114 &11441700
 MonoBehaviour:
   m_ObjectHideFlags: 1

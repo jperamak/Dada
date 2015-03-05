@@ -15,6 +15,7 @@ public class PlayerControl : MonoBehaviour
 	public float maxSpeed = 3f;				// The fastest the player can travel in the x axis.
 	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
+	public LayerMask JumpOn;
 	public AudioClip[] taunts;				// Array of clips for when the player taunts.
 	public float tauntProbability = 50f;	// Chance of a taunt happening.
 	public float tauntDelay = 1f;			// Delay for when the taunt should happen.
@@ -60,7 +61,7 @@ public class PlayerControl : MonoBehaviour
 	void Update()
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, LayerMask.GetMask(new string[] { "Ground", "Rubble" }));
+		grounded = Physics2D.Linecast(transform.position, groundCheck.position, JumpOn);//LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
 
         var sliding = false;
 
