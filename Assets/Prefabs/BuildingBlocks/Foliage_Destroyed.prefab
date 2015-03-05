@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5060222}
   - 60: {fileID: 6060222}
   - 114: {fileID: 11427642}
+  - 114: {fileID: 11417128}
   m_Layer: 13
   m_Name: Rubble4
   m_TagString: Untagged
@@ -31,6 +32,7 @@ GameObject:
   - 50: {fileID: 5060224}
   - 60: {fileID: 6060224}
   - 114: {fileID: 11497932}
+  - 114: {fileID: 11400126}
   m_Layer: 13
   m_Name: Rubble3
   m_TagString: Untagged
@@ -50,6 +52,7 @@ GameObject:
   - 50: {fileID: 5060226}
   - 60: {fileID: 6060226}
   - 114: {fileID: 11470744}
+  - 114: {fileID: 11411266}
   m_Layer: 13
   m_Name: Rubble2
   m_TagString: Untagged
@@ -69,6 +72,7 @@ GameObject:
   - 50: {fileID: 5060228}
   - 60: {fileID: 6060228}
   - 114: {fileID: 11499494}
+  - 114: {fileID: 11450212}
   m_Layer: 13
   m_Name: Rubble1
   m_TagString: Untagged
@@ -289,6 +293,45 @@ PolygonCollider2D:
       - {x: .140610427, y: -.182653159}
       - {x: .183190078, y: .0440123379}
       - {x: .053005904, y: .24172619}
+--- !u!114 &11400126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4702c1ee49146c7bb339f728933f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToStartFading: 1
+  secondsForFading: 2
+--- !u!114 &11411266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4702c1ee49146c7bb339f728933f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToStartFading: 1
+  secondsForFading: 2
+--- !u!114 &11417128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4702c1ee49146c7bb339f728933f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToStartFading: 1
+  secondsForFading: 2
 --- !u!114 &11427642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,6 +350,19 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+--- !u!114 &11450212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4702c1ee49146c7bb339f728933f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToStartFading: 1
+  secondsForFading: 2
 --- !u!114 &11470744
 MonoBehaviour:
   m_ObjectHideFlags: 1
