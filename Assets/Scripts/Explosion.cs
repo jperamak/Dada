@@ -4,7 +4,6 @@ using System.Collections;
 public class Explosion : MonoBehaviour {
 
     public GameObject ParticlePrefab;
-	public LayerMask CanHit;
     public int NumOfRays = 15;
 
     public void Explode(PlayerControl source, float radius, float explosionForce, int damage)
@@ -31,7 +30,7 @@ public class Explosion : MonoBehaviour {
 			int numTimesDamped = 0; // How many times the ray has hit a object that dampens the explosion
 
             // hitting only background tiles, foreground dampens
-			RaycastHit2D[] hits = Physics2D.LinecastAll(position, position + dir * radius, CanHit);
+            RaycastHit2D[] hits = Physics2D.LinecastAll(position, position + dir * radius, LayerMask.GetMask(new string[] { "Ground", "BackgroundBlock" }));
             foreach (RaycastHit2D hit in hits)
             {
                 // Solid objects in foreground dampen the explosion

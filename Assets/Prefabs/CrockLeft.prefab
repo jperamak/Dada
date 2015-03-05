@@ -261,7 +261,6 @@ GameObject:
   - 4: {fileID: 460828}
   - 212: {fileID: 21260820}
   - 50: {fileID: 5060828}
-  - 235: {fileID: 23560830}
   - 58: {fileID: 5860830}
   - 60: {fileID: 6060832}
   m_Layer: 17
@@ -315,7 +314,6 @@ GameObject:
   - 4: {fileID: 460834}
   - 212: {fileID: 21260830}
   - 50: {fileID: 5060834}
-  - 235: {fileID: 23560832}
   - 58: {fileID: 5860834}
   - 60: {fileID: 6060834}
   m_Layer: 17
@@ -349,8 +347,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.0100002, y: -15.7600002, z: -1}
-  m_LocalScale: {x: 1.34812605, y: 1.34812546, z: 1.34812546}
+  m_LocalPosition: {x: 10.1226873, y: -11.6253958, z: -1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 460802}
   - {fileID: 460804}
@@ -367,8 +365,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160804}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1500001, y: .970000029, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .173648298, w: -.98480773}
+  m_LocalPosition: {x: -2.1500001, y: .96999979, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 460816}
@@ -1107,8 +1105,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1.20769048, y: .235527501}
-  m_Center: {x: .103901565, y: .0193301961}
+  m_Size: {x: 1.34827948, y: .274011612}
+  m_Center: {x: .174196422, y: 8.82670283e-05}
 --- !u!95 &9560836
 Animator:
   serializedVersion: 3
@@ -1135,8 +1133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc9bf519d0362240851c5f1e83028ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
-  CooldownTime: 1
+  Damage: 50
+  CooldownTime: .150000006
 --- !u!114 &11460834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1148,8 +1146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc9bf519d0362240851c5f1e83028ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
-  CooldownTime: 1
+  Damage: 50
+  CooldownTime: .150000006
 --- !u!114 &11460836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1163,6 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxUpsideDown: 2.5
   FlipForce: 50
+  CrocoHp: 100
 --- !u!212 &21260808
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1626,46 +1625,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -10
     m_UpperAngle: 10
---- !u!235 &23560830
-WheelJoint2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160828}
-  m_Enabled: 0
-  m_CollideConnected: 0
-  m_ConnectedRigidBody: {fileID: 5060824}
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -.00400000811, y: -.423000336}
-  m_Suspension:
-    serializedVersion: 2
-    m_DampingRatio: .699999988
-    m_Frequency: 10
-    m_Angle: 90
-  m_UseMotor: 1
-  m_Motor:
-    m_MotorSpeed: 400
-    m_MaximumMotorForce: 600
---- !u!235 &23560832
-WheelJoint2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160834}
-  m_Enabled: 0
-  m_CollideConnected: 0
-  m_ConnectedRigidBody: {fileID: 5060830}
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -.0149999857, y: -.433000565}
-  m_Suspension:
-    serializedVersion: 2
-    m_DampingRatio: .699999988
-    m_Frequency: 10
-    m_Angle: 90
-  m_UseMotor: 1
-  m_Motor:
-    m_MotorSpeed: 400
-    m_MaximumMotorForce: 600
 --- !u!235 &23560834
 WheelJoint2D:
   m_ObjectHideFlags: 1
@@ -1684,7 +1643,7 @@ WheelJoint2D:
     m_Angle: 90
   m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 400
+    m_MotorSpeed: 150
     m_MaximumMotorForce: 600
 --- !u!235 &23560836
 WheelJoint2D:
@@ -1704,7 +1663,7 @@ WheelJoint2D:
     m_Angle: 90
   m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 400
+    m_MotorSpeed: 150
     m_MaximumMotorForce: 600
 --- !u!1001 &100100000
 Prefab:
