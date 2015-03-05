@@ -132,6 +132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParticlePrefab: {fileID: 184368, guid: 347d018870bc6fd4fb0697805c630d38, type: 2}
+  CanHit:
+    serializedVersion: 2
+    m_Bits: 143360
   NumOfRays: 30
 --- !u!212 &21200000
 SpriteRenderer:

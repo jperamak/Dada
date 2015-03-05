@@ -112,11 +112,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombRadius: 5
-  bombForce: 40
+  bombForce: 10
   boom: {fileID: 8300000, guid: 8b4e61c51941a46d1aac273472c814fd, type: 3}
   fuse: {fileID: 8300000, guid: 238da4efc08184aee919af254edb2ef1, type: 3}
   fuseTime: 1.5
   explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
+  layBombs: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
