@@ -29,6 +29,10 @@ public class PlayerSpawner : MonoBehaviour {
         }
         CheckPlayerHealths();
 		SpawnThings();
+
+		if(DadaInput.Controller.GetButtonDown(VirtualKey.CANCEL)){
+			Application.LoadLevel(Application.loadedLevel);
+		}
 	}
 
     void CheckPlayerHealths()

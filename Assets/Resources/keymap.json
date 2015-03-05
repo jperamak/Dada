@@ -25,7 +25,7 @@
         "BACK": [{"KeyName": "button 1"}],
         "PAUSE": [{"KeyName": "button 7"}],
         "SUBMIT": [{"KeyName": "button 0"}],
-        "CANCEL": [{"KeyName": "button 1"}],
+        "CANCEL": [{"KeyName": "button 6"}],
         "X_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
         "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
         "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
