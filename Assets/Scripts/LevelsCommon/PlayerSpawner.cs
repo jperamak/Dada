@@ -18,6 +18,7 @@ public class PlayerSpawner : MonoBehaviour {
 	private float _lastRandom = 0;
 
 	void Start () {
+		_lastRandom = 0;
 		_assignedHealth = new PlayerHealth[DadaInput.ConrtollerCount];
         _scores = new int[4] { 0,0,0,0};
 	}
@@ -33,6 +34,7 @@ public class PlayerSpawner : MonoBehaviour {
 		if(DadaInput.Controller.GetButtonDown(VirtualKey.CANCEL)){
 			Application.LoadLevel(Application.loadedLevel);
 		}
+
 	}
 
     void CheckPlayerHealths()
@@ -80,9 +82,7 @@ public class PlayerSpawner : MonoBehaviour {
 
 			GameObject thingInst = Instantiate(randThing,randPoint.position, randPoint.rotation) as GameObject;
 			thingInst.transform.localScale = new Vector3(0.5f,0.5f,1);
-
 		}
-
 	}
 
     public void AddPoint(int playerNum, int amount)
