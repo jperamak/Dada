@@ -24,6 +24,12 @@ public class DamageOnContact : MonoBehaviour {
 			health.TakeDamage(null);
 			_hits[id] = Time.time;
 		}
+
+		if (coll.gameObject.GetComponent<Damageable>() != null) {
+			coll.gameObject.GetComponent<Damageable>().TakeDamage(Damage);
+			_hits[id] = Time.time;
+		}
+
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
