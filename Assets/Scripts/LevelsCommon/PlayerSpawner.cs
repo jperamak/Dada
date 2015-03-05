@@ -6,6 +6,8 @@ public class PlayerSpawner : MonoBehaviour {
 
 	public GameObject PlayerPrefab;
 	public Transform[] SpawnPoints;
+    public Sprite[] PlayerSprites;
+
 
 	private PlayerHealth[] _assignedHealth;
     private int[] _scores;
@@ -50,14 +52,15 @@ public class PlayerSpawner : MonoBehaviour {
 			_assignedHealth[contr.Number] = newPlayer.GetComponent<PlayerHealth>();
 
 			//choose random spawn point
-			//if(SpawnPoints.Length < _joinedPlayers){
-				int random = Random.Range(0,SpawnPoints.Length);
-				newPlayer.transform.position = SpawnPoints[random].position;
-			//}
-			//else
-            //{
-			//	newPlayer.transform.position = SpawnPoints[_joinedPlayers-1].position;
-			//}
+			int random = Random.Range(0,SpawnPoints.Length);
+			newPlayer.transform.position = SpawnPoints[random].position;
+            
+            SpriteRenderer[] r = newPlayer.GetComponentsInChildren<SpriteRenderer>();
+            foreach (SpriteRenderer sr in r)
+            {
+                if (sr.gameObject.name == "body")
+                    sr.sprite = PlayerSprites[contr.Number];
+            }
 		}
     }
 
