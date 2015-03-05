@@ -148,9 +148,11 @@ public class PlayerControl : MonoBehaviour
             anim.SetBool("Slide", false);
             anim.SetTrigger("Jump");
             // Play a random jump audio clip.
-            int i = Random.Range(0, jumpClips.Length);
-            AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
-
+            if (jumpClips.Length > 0)
+			{
+                int i = Random.Range(0, jumpClips.Length);
+                AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
+            }
             // Add a vertical force to the player.
             if (walljump == 1)
             {
