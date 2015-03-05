@@ -13,7 +13,6 @@ public class PlayerSpawner : MonoBehaviour {
 
 	void Start () {
 		_assignedHealth = new PlayerHealth[DadaInput.ConrtollerCount];
-		Debug.Log("There are "+DadaInput.ConrtollerCount);
         _scores = new int[4] { 0,0,0,0};
 	}
 

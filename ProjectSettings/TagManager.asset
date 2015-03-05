@@ -30,7 +30,7 @@ TagManager:
   User Layer 14: Rubble
   User Layer 15: Melee
   User Layer 16: ExplosionParticle
-  User Layer 17: 
+  User Layer 17: Crocodyle
   User Layer 18: 
   User Layer 19: 
   User Layer 20: 
@@ -65,6 +65,10 @@ TagManager:
   - name: Foreground
     userID: 3
     uniqueID: 1024582385
+    locked: 0
+  - name: Crocodile
+    userID: 6
+    uniqueID: 3251728075
     locked: 0
   - name: UI
     userID: 5

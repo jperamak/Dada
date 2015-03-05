@@ -1,7 +1,17 @@
 fileFormatVersion: 2
 guid: 71f107e754dfa4d4f9270ade4ea43938
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: CROC SPRITES_1
+    21300002: CROC SPRITES_2
+    21300004: CROC SPRITES_5
+    21300006: CROC SPRITES_6
+    21300008: CROC SPRITES_9
+    21300010: CROC SPRITES_10
+    21300012: CROC SPRITES_11
+    21300014: CROC SPRITES_12
+    21300016: CROC SPRITES_13
+    21300018: CROC SPRITES_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +35,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +52,106 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: CROC SPRITES_1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 651
+        width: 65
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 570
+        width: 125
+        height: 124
+      alignment: 9
+      pivot: {x: .573375225, y: .411239624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 578
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_6
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 589
+        width: 184
+        height: 84
+      alignment: 9
+      pivot: {x: .0334798135, y: .411626905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 503
+        width: 146
+        height: 59
+      alignment: 9
+      pivot: {x: .135636657, y: .608819485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_10
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 468
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_11
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 454
+        width: 149
+        height: 70
+      alignment: 9
+      pivot: {x: .918583632, y: .68343854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_12
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 336
+        width: 155
+        height: 107
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_13
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 360
+        width: 131
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CROC SPRITES_14
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 349
+        width: 118
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
