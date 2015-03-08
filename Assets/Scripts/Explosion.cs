@@ -20,7 +20,7 @@ public class Explosion : MonoBehaviour {
             dir = Quaternion.AngleAxis(step*0.5f + step*i,Vector3.forward)*Vector2.up;
 
             GameObject ep = Instantiate(ParticlePrefab) as GameObject;
-            ep.rigidbody2D.AddForce(dir * explosionForce*100*radius);
+            ep.GetComponent<Rigidbody2D>().AddForce(dir * explosionForce*100*radius);
             ep.transform.position = transform.position;
             var ep2 = ep.GetComponent<ExplosionParticle>();
             ep2.source = source;

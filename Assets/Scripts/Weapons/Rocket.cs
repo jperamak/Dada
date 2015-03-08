@@ -43,7 +43,7 @@ public class Rocket : MonoBehaviour
             OnExplode();
         else
         {
-            gameObject.rigidbody2D.velocity = -gameObject.rigidbody2D.velocity;
+            gameObject.GetComponent<Rigidbody2D>().velocity = -gameObject.GetComponent<Rigidbody2D>().velocity;
         }
     }
 }

@@ -13,6 +13,7 @@ public class DamageableBlock : Damageable {
 
 	public GameObject leftWhenDestroyed = null;  // When hitpoints reach zero, the gameObject is replaced with this one
 
+	public bool damageFromCollisions;
 
 	public override void TakeDamage( float hitpoints ) {
 
@@ -32,6 +33,23 @@ public class DamageableBlock : Damageable {
 
 		
 		
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (!damageFromCollisions)
+			return;
+
+		if (other.gameObject.layer == LayerMask.NameToLayer("Ground") || 
+		    other.gameObject.layer == LayerMask.NameToLayer("BackgroundBlock") ||
+		    other.gameObject.layer == LayerMask.NameToLayer("Rubble") 
+		    )
+		{
+			Rigidbody2D o = other.gameObject.GetComponent<Rigidbody2D>();
+			
+			if (o != null && other.relativeVelocity.magnitude > 15f)
+				TakeDamage(1000);
+		}
 	}
 
 	private void LeaveRuins() {

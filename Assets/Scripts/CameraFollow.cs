@@ -73,11 +73,11 @@ public class CameraFollow : MonoBehaviour
 
 
         if (x < minZoom && y < minZoom)
-            camera.orthographicSize = minZoom;
+            GetComponent<Camera>().orthographicSize = minZoom;
         else //if (x > camera.orthographicSize || y > camera.orthographicSize)
         {
-            camera.orthographicSize = x > y ? x : y;
-            camera.orthographicSize = camera.orthographicSize < maxZoom ? camera.orthographicSize : maxZoom;
+            GetComponent<Camera>().orthographicSize = x > y ? x : y;
+            GetComponent<Camera>().orthographicSize = GetComponent<Camera>().orthographicSize < maxZoom ? GetComponent<Camera>().orthographicSize : maxZoom;
             //camera.orthographicSize *= 0.8f;
         }
     }

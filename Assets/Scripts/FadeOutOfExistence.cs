@@ -7,34 +7,35 @@ public class FadeOutOfExistence : MonoBehaviour {
 	public float secondsForFading;
 
 	private SpriteRenderer spriteRend;
+	private float awakeTime;
 
 	void Awake () 
 	{
-		//Invoke ("StartFading", secondsToStartFading);
-		SpriteRenderer spriteRend = GetComponent<SpriteRenderer>();
-		Debug.Log (spriteRend.color);
-	
+		awakeTime = Time.time;
+		Invoke ("DestroyGameObject", secondsToStartFading + secondsForFading);
+		spriteRend = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (spriteRend != null)
-			SetAlpha( 0.1f);
-	
+		float timeIntoFading = Time.time - awakeTime - secondsToStartFading;
+
+		if (timeIntoFading > 0.0f && secondsForFading > 0.0f)
+			SetAlpha( 1.0f - timeIntoFading/secondsForFading);
 	}
 
-	void StartFading()
+	void DestroyGameObject()
 	{
-
 		Destroy (gameObject);
 	}
 
 	void SetAlpha( float value ) // from 0 .. 1
 	{
-		//spriteRend.material.color.a = value;
-		//Color color = new Color( 0f,0f,0f); //spriteRend.color.r, spriteRend.color.g, spriteRend.color.b, value);
-		//spriteRend.material.color = color;
+		if (spriteRend == null)
+				return;
+		Color color = new Color( spriteRend.color.r, spriteRend.color.g, spriteRend.color.b, value);
+		spriteRend.material.color = color;
 	}
 			             
 

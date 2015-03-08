@@ -64,7 +64,7 @@ public class Gun : MonoBehaviour
 			_numAmmo--;
 			// ... set the animator Shoot trigger parameter and play the audioclip.
 			_anim.SetTrigger("Shoot");
-			audio.Play();
+			GetComponent<AudioSource>().Play();
 
 			Transform spawnPoint = transform.Find("RocketSpawnPoint");
 

@@ -27,7 +27,7 @@ public class Croco : MonoBehaviour {
 
 	void Update(){
 
-		if(_head != null && _head.rigidbody2D != null){
+		if(_head != null && _head.GetComponent<Rigidbody2D>() != null){
 			float zAngle = _head.transform.rotation.eulerAngles.z;
 			if(zAngle > 100 && zAngle < 260)
 				_timeUpsideDown += Time.deltaTime;
@@ -50,6 +50,6 @@ public class Croco : MonoBehaviour {
 	void Flip(){
 		float multiplier = Mathf.Clamp((int)(_timeUpsideDown/MaxUpsideDown) * 20.0f * transform.localScale.x,0,100.0f);
 
-		_head.rigidbody2D.AddForce(-_head.transform.up * (FlipForce+multiplier), ForceMode2D.Impulse);
+		_head.GetComponent<Rigidbody2D>().AddForce(-_head.transform.up * (FlipForce+multiplier), ForceMode2D.Impulse);
 	}
 }
