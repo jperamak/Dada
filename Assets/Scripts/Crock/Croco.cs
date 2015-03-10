@@ -41,7 +41,7 @@ public class Croco : MonoBehaviour {
 		}
 	}
 
-	void PartDestroyed(){
+	void PartDestroyed(PlayerControl notUsed){
 		_parts--;
 		if(_parts <= 0)
 			Destroy(gameObject);

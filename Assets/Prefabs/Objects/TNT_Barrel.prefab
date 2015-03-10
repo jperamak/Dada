@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6138116}
   - 50: {fileID: 5038116}
   - 114: {fileID: 11469694}
+  - 114: {fileID: 11412660}
   m_Layer: 18
   m_Name: TNT_Barrel
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.26999998, y: -20.1599998, z: 0}
+  m_LocalPosition: {x: 29, y: -13.7600002, z: 0}
   m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,6 +60,21 @@ BoxCollider2D:
   m_Offset: {x: -.00333639304, y: .0204438437}
   serializedVersion: 2
   m_Size: {x: .799730182, y: .885680079}
+--- !u!114 &11412660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d79fa4ed82a48e0ad29f47ce040958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
+  Radius: 6
+  ExplosionForce: 400
+  Damage: 1000
 --- !u!114 &11469694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,7 +92,7 @@ MonoBehaviour:
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
-  leftWhenDestroyed: {fileID: 124658, guid: 805df0e491a99403ebb1297532858a1b, type: 2}
+  leftWhenDestroyed: {fileID: 0}
   damageFromCollisions: 1
 --- !u!212 &21238116
 SpriteRenderer:

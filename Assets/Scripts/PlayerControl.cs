@@ -29,7 +29,7 @@ public class PlayerControl : MonoBehaviour
     private int points = 0;
 
     private CameraFollow _camera;
-
+	
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -39,8 +39,9 @@ public class PlayerControl : MonoBehaviour
 
             if (o && o.GetPointVelocity(transform.position).magnitude > 15f && o.mass > 5)
                 //Debug.Log(o.GetPointVelocity(transform.position));
-                GetComponent<PlayerHealth>().TakeDamage(null);
-        }
+        //        GetComponent<PlayerHealth>().TakeDamage(null);
+			GetComponent<Damageable>().TakeDamage(10, null);
+		}
     }
 
 	void Awake()
@@ -55,6 +56,8 @@ public class PlayerControl : MonoBehaviour
 
 		if(controller == null)
 			controller = DadaInput.Controller;
+
+		GetComponent<Damageable>().Destroyed = StartDying;
 	}
 
 
@@ -184,6 +187,38 @@ public class PlayerControl : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	public void StartDying(PlayerControl killer)
+	{
+		if (this.Equals(killer) || killer == null)
+			GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(controller.Number, -1);
+		else if (killer != null)
+			GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(killer.controller.Number, 1);
+		// Find all of the colliders on the gameobject and set them all to be triggers.
+		Collider2D[] cols = GetComponents<Collider2D>();
+		foreach (Collider2D c in cols)
+		{
+			c.isTrigger = true;
+		}
+		
+		// Move all sprite parts of the player to the front
+		SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
+		foreach (SpriteRenderer s in spr)
+		{
+			s.sortingLayerName = "UI";
+		}
+		
+		// ... disable user Player Control script
+		enabled = false;
+		
+		// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
+		GetComponentInChildren<Gun>().enabled = false;
+		
+		// ... Trigger the 'Die' animation state
+		anim.SetTrigger("Die");
+		Invoke("Die", 2);
+	
 	}
 
     public void Die()

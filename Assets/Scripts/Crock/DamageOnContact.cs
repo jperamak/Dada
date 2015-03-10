@@ -18,15 +18,16 @@ public class DamageOnContact : MonoBehaviour {
 		//target already hit
 		if(_hits.ContainsKey(id) && _hits[id] > Time.time - CooldownTime)
 			return;
-		
+
+		/*
 		PlayerHealth health = coll.gameObject.GetComponent<PlayerHealth>();
 		if(health != null){
 			health.TakeDamage(null);
 			_hits[id] = Time.time;
-		}
+		}*/
 
 		if (coll.gameObject.GetComponent<Damageable>() != null) {
-			coll.gameObject.GetComponent<Damageable>().TakeDamage(Damage);
+			coll.gameObject.GetComponent<Damageable>().TakeDamage(Damage, null);
 			_hits[id] = Time.time;
 		}
 

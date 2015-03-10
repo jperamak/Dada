@@ -15,9 +15,9 @@ public class DamageableBlock : Damageable {
 
 	public bool damageFromCollisions;
 
-	public override void TakeDamage( float hitpoints ) {
+	public override void TakeDamage( float hitpoints, PlayerControl dealer ) {
 
-		base.TakeDamage( hitpoints ); // also destroys object on 0 hp
+		base.TakeDamage( hitpoints, dealer ); // also destroys object on 0 hp
 
 		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
 
@@ -48,7 +48,7 @@ public class DamageableBlock : Damageable {
 			Rigidbody2D o = other.gameObject.GetComponent<Rigidbody2D>();
 			
 			if (o != null && other.relativeVelocity.magnitude > 15f)
-				TakeDamage(1000);
+				TakeDamage(1000, null);
 		}
 	}
 

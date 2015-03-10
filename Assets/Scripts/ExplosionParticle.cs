@@ -16,15 +16,16 @@ public class ExplosionParticle : MonoBehaviour {
         if (other.gameObject.GetComponent<Damageable>() != null)
         {
             // calculate the basic damage
-            other.gameObject.GetComponent<Damageable>().TakeDamage(damage);
+            other.gameObject.GetComponent<Damageable>().TakeDamage(damage, source);
         }
 
+		/*
         // If a player is hit before the explosion is dampened... 
         if (other.collider.gameObject.tag == "Player")
         {
             // Instantiate the explosion and destroy the rocket.
             PlayerHealth pH = other.gameObject.GetComponent<PlayerHealth>();
             pH.TakeDamage(source);
-        }
+        }*/
     }
 }

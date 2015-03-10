@@ -21,15 +21,15 @@ public class MeleeStrike : MonoBehaviour {
 		
 		// If the hit object is damageable...
 		if (col.gameObject.GetComponent<Damageable>() != null) {
-			// ...give it 10 hitpointd of damage
-			col.gameObject.GetComponent<Damageable>().TakeDamage(damage);
+			// ...give it the damage
+			col.gameObject.GetComponent<Damageable>().TakeDamage(damage, Player);
 		}
-		
+		/*
 		// BUG: Does damage to self also
 		if(col.gameObject.tag == "Player")
 		{
 			PlayerHealth pH = col.gameObject.GetComponent<PlayerHealth>();
 			pH.TakeDamage(Player);
-		}
+		}*/
 	}
 }

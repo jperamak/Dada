@@ -41,26 +41,35 @@ public class Explosion : MonoBehaviour {
                 
                 if (hit.rigidbody)
                     hit.rigidbody.AddForce(dir * 100 * explosionForce);
-                
-                // If the hit object is damageable...
-                if (hit.collider.gameObject.GetComponent<Damageable>() != null && hit.transform.gameObject.layer != LayerMask.NameToLayer("Ground"))
-                {
-					// calculate the basic damage
-					float rayDamage = (float)damage * invDiv;
-					// apply dampening
-					if (numTimesDamped > 0)
-						rayDamage = rayDamage * Mathf.Pow(0.75f, numTimesDamped);
-                    // inflict the damage
-                    hit.collider.gameObject.GetComponent<Damageable>().TakeDamage(rayDamage);
-                }
 
-                // If a player is hit before the explosion is dampened... 
+				Damageable damageable = hit.collider.gameObject.GetComponent<Damageable>();
+
+				if (damageable == null)
+					continue;
+
+				if (hit.collider.gameObject.tag == "Player" && numTimesDamped > 0)
+					continue;
+
+                if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
+					continue;
+
+
+				// calculate the basic damage
+				float rayDamage = (float)damage * invDiv;
+				// apply dampening
+				if (numTimesDamped > 0)
+					rayDamage = rayDamage * Mathf.Pow(0.75f, numTimesDamped);
+                // inflict the damage
+               damageable.TakeDamage(rayDamage, source);
+                
+
+                /*// If a player is hit before the explosion is dampened... 
                 if (hit.collider.gameObject.tag == "Player" && numTimesDamped == 0)
 				{	
                     // Instantiate the explosion and destroy the rocket.
                     PlayerHealth pH = hit.collider.gameObject.GetComponent<PlayerHealth>();
                     pH.TakeDamage(source);
-                }
+                }*/
             }
         }
     }
