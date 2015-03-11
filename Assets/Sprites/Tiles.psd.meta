@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d5d93ef458eb941638b4b87cb29f5b0c
-timeCreated: 1425904068
+timeCreated: 1426098172
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -43,6 +43,8 @@ TextureImporter:
     21300072: Rubble_rock06_fg
     21300074: Stone_Roof
     21300076: TNT_Barrel
+    21300078: ChainSide
+    21300080: ChainTop
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -445,6 +447,26 @@ TextureImporter:
         y: 370
         width: 39
         height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChainSide
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 375
+        width: 31
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChainTop
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 377
+        width: 17
+        height: 60
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

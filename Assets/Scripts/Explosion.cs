@@ -33,6 +33,7 @@ public class Explosion : MonoBehaviour {
             RaycastHit2D[] hits = Physics2D.LinecastAll(position, position + dir * radius, LayerMask.GetMask(new string[] { "Ground", "BackgroundBlock" }));
             foreach (RaycastHit2D hit in hits)
             {
+
                 // Solid objects in foreground dampen the explosion
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
                 {
@@ -61,7 +62,7 @@ public class Explosion : MonoBehaviour {
 					rayDamage = rayDamage * Mathf.Pow(0.75f, numTimesDamped);
                 // inflict the damage
                damageable.TakeDamage(rayDamage, source);
-                
+
 
                 /*// If a player is hit before the explosion is dampened... 
                 if (hit.collider.gameObject.tag == "Player" && numTimesDamped == 0)
