@@ -62,6 +62,7 @@ GameObject:
   - 60: {fileID: 6060044}
   - 233: {fileID: 23341036}
   - 111: {fileID: 11193530}
+  - 114: {fileID: 11476814}
   m_Layer: 17
   m_Name: LizardHead
   m_TagString: Untagged
@@ -364,6 +365,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 50
   CooldownTime: .150000006
+--- !u!114 &11476814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitpoints: 100
+  currentHitpoints: 100
+  destroyOnZeroHp: 1
 --- !u!212 &21239274
 SpriteRenderer:
   m_ObjectHideFlags: 1

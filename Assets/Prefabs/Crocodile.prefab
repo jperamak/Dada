@@ -252,6 +252,8 @@ GameObject:
   - 60: {fileID: 6014016}
   - 233: {fileID: 23365046}
   - 111: {fileID: 11182780}
+  - 114: {fileID: 11456508}
+  - 114: {fileID: 11411486}
   m_Layer: 17
   m_Name: LizardHead
   m_TagString: Untagged
@@ -267,6 +269,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 417534}
+  - 114: {fileID: 11495160}
   m_Layer: 12
   m_Name: Crocodile
   m_TagString: Untagged
@@ -1185,6 +1188,19 @@ MonoBehaviour:
   maxHitpoints: 100
   currentHitpoints: 100
   destroyOnZeroHp: 1
+--- !u!114 &11411486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b15b3205d78643e59c892c38f9ce782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxUpsideDown: 2.5
+  FlipForce: 2
 --- !u!114 &11416892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1296,6 +1312,20 @@ MonoBehaviour:
   maxHitpoints: 30
   currentHitpoints: 30
   destroyOnZeroHp: 1
+--- !u!114 &11456508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitpoints: 100
+  currentHitpoints: 100
+  destroyOnZeroHp: 1
 --- !u!114 &11460348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1351,6 +1381,17 @@ MonoBehaviour:
   maxHitpoints: 10
   currentHitpoints: 10
   destroyOnZeroHp: 1
+--- !u!114 &11495160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce055b6c64b494b81a6c267fafe3a298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21207948
 SpriteRenderer:
   m_ObjectHideFlags: 1
