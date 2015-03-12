@@ -57,7 +57,7 @@ public class PlayerControl : MonoBehaviour
 		if(controller == null)
 			controller = DadaInput.Controller;
 
-		GetComponent<Damageable>().Destroyed = StartDying;
+		GetComponent<Damageable>().OnDestroy = StartDying;
 	}
 
 
@@ -189,35 +189,9 @@ public class PlayerControl : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-	public void StartDying(PlayerControl killer)
+	public void StartDying(GameObject victim, GameObject killer)
 	{
-		if (this.Equals(killer) || killer == null)
-			GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(controller.Number, -1);
-		else if (killer != null)
-			GameObject.Find("LevelManager").GetComponent<PlayerSpawner>().AddPoint(killer.controller.Number, 1);
-		// Find all of the colliders on the gameobject and set them all to be triggers.
-		Collider2D[] cols = GetComponents<Collider2D>();
-		foreach (Collider2D c in cols)
-		{
-			c.isTrigger = true;
-		}
-		
-		// Move all sprite parts of the player to the front
-		SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
-		foreach (SpriteRenderer s in spr)
-		{
-			s.sortingLayerName = "UI";
-		}
-		
-		// ... disable user Player Control script
-		enabled = false;
-		
-		// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
-		GetComponentInChildren<Gun>().enabled = false;
-		
-		// ... Trigger the 'Die' animation state
-		anim.SetTrigger("Die");
-		Invoke("Die", 2);
+
 	
 	}
 

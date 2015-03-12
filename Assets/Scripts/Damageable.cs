@@ -1,37 +1,42 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public delegate void Callback(PlayerControl dealer);
+
 
 public class Damageable : MonoBehaviour {
 
 	public float maxHitpoints = 10.0f;				// hitpoints when undamaged
-	public float currentHitpoints = 10.0f;
-	public bool destroyOnZeroHp = true;
-	public Callback Destroyed;
+	public KilledCallback OnDestroy;
+
+	protected float _currentHitpoints;
+	private GameObject _lastHitFrom;
+
+
 
 	void Awake () {
-		currentHitpoints = maxHitpoints;
+		_currentHitpoints = maxHitpoints;
 	}
 
-	// If dealer == null, no one is responsible
-	public virtual void TakeDamage( float hitpoints, PlayerControl dealer ) {
-		currentHitpoints -= hitpoints;
+	public virtual void TakeDamage( float hitpoints ) {
+		TakeDamage(hitpoints,null);
+	}
 
-		// If there is no hitpoints left, destroy the object.
-		if (currentHitpoints <= 0.0) {
-			OnDestroyed(dealer);
+	public virtual void TakeDamage( float hitpoints, GameObject dealer) {
+
+		if(_currentHitpoints > 0){
+			_currentHitpoints -= hitpoints;
+			_lastHitFrom = dealer;
+			// If there is no hitpoints left, destroy the object.
+			if (_currentHitpoints <= 0) {
+				OnDestroyed();
+			}
 		}
-
 	}
 
-	protected virtual void OnDestroyed(PlayerControl dealer) {
-		if(Destroyed != null)
-			Destroyed(dealer);
-
-		if (destroyOnZeroHp)
-			Destroy(gameObject);
-
+	protected virtual void OnDestroyed() {
+		if(OnDestroy != null)
+			OnDestroy(this.gameObject,_lastHitFrom);
+		Destroy(gameObject);
 	}
 
 

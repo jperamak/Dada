@@ -15,19 +15,19 @@ public class DamageableBlock : Damageable {
 
 	public bool damageFromCollisions;
 
-	public override void TakeDamage( float hitpoints, PlayerControl dealer ) {
+	public override void TakeDamage( float hitpoints, GameObject dealer ) {
 
 		base.TakeDamage( hitpoints, dealer ); // also destroys object on 0 hp
 
 		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
 
 		// Change sprite according to hitpoints left
-		if (currentHitpoints <= hitpointsHeavyDamage && spriteHeavyDamage != null)
+		if (_currentHitpoints <= hitpointsHeavyDamage && spriteHeavyDamage != null)
 			sr.sprite = spriteHeavyDamage;
-		else if (currentHitpoints <= hitpointsLightDamage && spriteLightDamage != null)
+		else if (_currentHitpoints <= hitpointsLightDamage && spriteLightDamage != null)
 			sr.sprite = spriteLightDamage;
 
-		if (currentHitpoints <= 0.0f && leftWhenDestroyed != null) {
+		if (_currentHitpoints <= 0.0f && leftWhenDestroyed != null) {
 			LeaveRuins();
 		}
 

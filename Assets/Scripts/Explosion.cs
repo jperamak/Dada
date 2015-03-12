@@ -61,7 +61,7 @@ public class Explosion : MonoBehaviour {
 				if (numTimesDamped > 0)
 					rayDamage = rayDamage * Mathf.Pow(0.75f, numTimesDamped);
                 // inflict the damage
-               damageable.TakeDamage(rayDamage, source);
+               damageable.TakeDamage(rayDamage, source.gameObject);
 
 
                 /*// If a player is hit before the explosion is dampened... 

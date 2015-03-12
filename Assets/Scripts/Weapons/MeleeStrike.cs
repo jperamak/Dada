@@ -22,7 +22,7 @@ public class MeleeStrike : MonoBehaviour {
 		// If the hit object is damageable...
 		if (col.gameObject.GetComponent<Damageable>() != null) {
 			// ...give it the damage
-			col.gameObject.GetComponent<Damageable>().TakeDamage(damage, Player);
+			col.gameObject.GetComponent<Damageable>().TakeDamage(damage, Player.gameObject);
 		}
 		/*
 		// BUG: Does damage to self also

@@ -13,7 +13,12 @@
         "X_AXIS": [{"KeyName": "RightArrow"},{"KeyName": "LeftArrow", "Inverted": true}],
         "Y_AXIS": [{"KeyName": "UpArrow"},{"KeyName": "DownArrow", "Inverted": true}],
         "MOVE_AXIS": [{"KeyName": "RightArrow"},{"KeyName": "LeftArrow", "Inverted": true}],
-        "AIM_AXIS": [{"KeyName": "UpArrow"},{"KeyName": "DownArrow", "Inverted": true}]
+        "AIM_AXIS": [{"KeyName": "UpArrow"},{"KeyName": "DownArrow", "Inverted": true}],
+        "UP": [{"KeyName": "UpArrow"}],
+        "DOWN": [{"KeyName": "DownArrow"}],
+        "LEFT": [{"KeyName": "LeftArrow"}],
+        "RIGHT": [{"KeyName": "RightArrow"}],
+        
     },
     "Controller (XBOX 360 For Windows)": {
         "MELEE": [{"KeyName": "button 1"}],
@@ -25,11 +30,16 @@
         "BACK": [{"KeyName": "button 1"}],
         "PAUSE": [{"KeyName": "button 7"}],
         "SUBMIT": [{"KeyName": "button 0"}],
-        "CANCEL": [{"KeyName": "button 6"}],
+        "CANCEL": [{"KeyName": "button 1"}],
         "X_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
         "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
         "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
-        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}]
+        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
+        "UP": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
+        "DOWN": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
+        "RIGHT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
+        "LEFT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
+        
     },
         "©Microsoft Corporation Controller": {
         "MELEE": [{"KeyName": "button 17"}],
@@ -45,7 +55,11 @@
         "X_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
         "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
         "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
-        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}]
+        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
+        "UP": [{"KeyName": "axis 7",  "KeyTriggerCondition":"ONE"}],
+        "DOWN": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
+        "RIGHT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
+        "LEFT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
     },
     "Logitech Dual Action": {
         "MELEE": [{"KeyName": "button 2"}],
@@ -61,8 +75,13 @@
         "X_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 5","IsAxis": true}],
         "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 6","IsAxis": true}],
         "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 5","IsAxis": true}],
-        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 6","IsAxis": true}]
+        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 6","IsAxis": true}],
+        "UP": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
+        "DOWN": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
+        "RIGHT": [{"KeyName": "axis 5", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
+        "LEFT": [{"KeyName": "axis 5", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
     },
+    
     "JoystickDefault": {
         "MELEE": [{"KeyName": "button 1"}],
         "SHOOT": [{"KeyName": "button 2"}],

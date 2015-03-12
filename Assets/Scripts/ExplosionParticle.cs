@@ -16,7 +16,7 @@ public class ExplosionParticle : MonoBehaviour {
         if (other.collider.gameObject.GetComponent<Damageable>() != null)
         {
             // calculate the basic damage
-            other.collider.gameObject.GetComponent<Damageable>().TakeDamage(damage, source);
+            other.collider.gameObject.GetComponent<Damageable>().TakeDamage(damage, source.gameObject);
 
         }
 
