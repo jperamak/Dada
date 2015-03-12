@@ -28,7 +28,6 @@ public class FlipIfUpsideDown : MonoBehaviour {
 	
 	void Flip(){
 		float multiplier = Mathf.Clamp((int)(_timeUpsideDown/MaxUpsideDown) * 20.0f * transform.localScale.x,0,100.0f);
-		
 		transform.GetComponent<Rigidbody2D>().AddForce(-transform.up * (FlipForce+multiplier), ForceMode2D.Impulse);
 	}
 }

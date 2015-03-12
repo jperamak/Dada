@@ -7,7 +7,8 @@ public class RangedWeapon : Weapon {
 	public int MaxBullets = 10;
 	public float RechargeEvery = 0.5f;
 	public float PushForce = 20.0f;
-	
+	public AudioClip OutOfAmmo;
+
 	protected Transform _spawnPoint;
 	protected int _currentBullets;
 
@@ -18,10 +19,10 @@ public class RangedWeapon : Weapon {
 	}
 
 	public override void OnTriggerDown (){
-		if(Time.time - _lastShoot > CooldownTime){
-			Shoot();
-			_lastShoot = Time.time;
-		}
+		if(_currentBullets == 0 && OutOfAmmo != null)
+			DadaAudio.PlaySound(OutOfAmmo);
+
+		base.OnTriggerDown ();
 	}
 
 	protected override void Shoot(){

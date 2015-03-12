@@ -487,6 +487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitpoints: 1030
+  DamageSound: []
+  DestroySound: {fileID: 8300000, guid: b442e25400fca4a14b831dfe237d5ce3, type: 3}
   ShieldAfterRespawn: 2
   ShieldAfterDamage: .349999994
   ShieldDelay: .200000003
@@ -507,7 +509,11 @@ MonoBehaviour:
   JumpOn:
     serializedVersion: 2
     m_Bits: 151552
-  jumpClips: []
+  JumpClips:
+  - {fileID: 8300000, guid: d9f93eccf5cfe40abbc658677b9d7909, type: 3}
+  - {fileID: 8300000, guid: 6c78d41be81dc43bb9b32480d2bd301c, type: 3}
+  - {fileID: 8300000, guid: 8aec47e0344ae4084a6edfca3f476b74, type: 3}
+  - {fileID: 8300000, guid: 30b8d48b92aea4fd6a2a613ad92073f3, type: 3}
 --- !u!212 &21212374
 SpriteRenderer:
   m_ObjectHideFlags: 1

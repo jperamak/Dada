@@ -12,7 +12,7 @@ public class Hero : MonoBehaviour {
 	public float MaxSpeed = 3f;				// The fastest the player can travel in the x axis.
 	public float JumpForce = 1000f;			// Amount of force added when the player jumps.
 	public LayerMask JumpOn;				// Layermask that specify the elements the player can jump on
-	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
+	public AudioClip[] JumpClips;			// Array of clips for when the player jumps.
 
 	//class private attributes
 	private AbstractController _controller;	// Controller used to query the player's input
@@ -137,11 +137,9 @@ public class Hero : MonoBehaviour {
 			_anim.SetTrigger("Jump");
 			
 			// Play a random jump audio clip.
-			if (jumpClips.Length > 0)
-			{
-				int i = Random.Range(0, jumpClips.Length);
-				AudioSource.PlayClipAtPoint(jumpClips[i], transform.  position);
-			}
+			if (JumpClips.Length > 0)
+				DadaAudio.PlayRandom(JumpClips);
+
 			
 			// Add a vertical force to the player.
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
@@ -153,12 +151,11 @@ public class Hero : MonoBehaviour {
 		{
 			_anim.SetBool("Slide", false);
 			_anim.SetTrigger("Jump");
+
 			// Play a random jump audio clip.
-			if (jumpClips.Length > 0)
-			{
-				int i = Random.Range(0, jumpClips.Length);
-				AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
-			}
+			if (JumpClips.Length > 0)
+				DadaAudio.PlayRandom(JumpClips);
+
 			// Add a vertical force to the player.
 			if (JumpForce == 1)
 			{

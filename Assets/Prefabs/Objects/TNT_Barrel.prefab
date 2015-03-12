@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21238116}
   - 61: {fileID: 6138116}
   - 50: {fileID: 5038116}
-  - 114: {fileID: 11469694}
-  - 114: {fileID: 11412660}
+  - 114: {fileID: 11405468}
+  - 114: {fileID: 11445176}
   m_Layer: 18
   m_Name: TNT_Barrel
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29, y: -13.7600002, z: 0}
+  m_LocalPosition: {x: -28.1299992, y: -13.3299999, z: 0}
   m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,10 +57,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.00333639304, y: .0204438437}
+  m_Offset: {x: .0241573043, y: -.240226895}
   serializedVersion: 2
-  m_Size: {x: .799730182, y: .885680079}
---- !u!114 &11412660
+  m_Size: {x: 1.87666166, y: 1.26981735}
+--- !u!114 &11405468
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -68,32 +68,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 138116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d79fa4ed82a48e0ad29f47ce040958, type: 3}
+  m_Script: {fileID: 11500000, guid: 4123052a11a64164c9fd4a9ed65571a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
-  Radius: 6
+  MaxHitpoints: 10
+  DamageSound: []
+  DestroySound: {fileID: 0}
+--- !u!114 &11445176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32376dc705b99694396f11175ebb864c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisualEffect: {fileID: 0}
+  DamageOwner: 1
+  DamageAmount: 1000
+  Radius: 15
   ExplosionForce: 400
-  Damage: 1000
---- !u!114 &11469694
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitpoints: 1
-  currentHitpoints: 1
-  hitpointsLightDamage: 0
-  hitpointsHeavyDamage: 0
-  spriteLightDamage: {fileID: 0}
-  spriteHeavyDamage: {fileID: 0}
-  leftWhenDestroyed: {fileID: 0}
-  damageFromCollisions: 1
+  NumOfRays: 20
+  ParticleLifetime: .200000003
+  ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
 --- !u!212 &21238116
 SpriteRenderer:
   m_ObjectHideFlags: 1

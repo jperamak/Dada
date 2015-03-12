@@ -11,7 +11,6 @@ public class Damage : Effect {
 		if(_targets != null){
 			for(int i=0; i<_targets.Length; i++){
 
-				Debug.Log("Damage execute to "+_targets[i].name);
 				//don't apply damage to owner if the option is checked
 				if(DamageOwner || _targets[i] != Owner){
 					Damageable dmg = _targets[i].GetComponent<Damageable>();

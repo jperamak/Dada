@@ -12,8 +12,8 @@ public class Remover : MonoBehaviour
 		// If the player hits the trigger...
         if (col.gameObject.tag == "Player")
         {
-            PlayerControl pc = col.gameObject.GetComponent<PlayerControl>();
-            pc.Die();
+			HeroHealth pc = col.gameObject.GetComponent<HeroHealth>();
+            pc.Kill();
         }
         else
         {
@@ -27,8 +27,8 @@ public class Remover : MonoBehaviour
 			return;
 		if(col.gameObject.tag == "Player")
 		{
-			PlayerControl pc = col.gameObject.GetComponent<PlayerControl>();
-			pc.Die();
+			HeroHealth pc = col.gameObject.GetComponent<HeroHealth>();
+			pc.Kill();
 		}
 		else
 		{

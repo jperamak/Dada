@@ -97,11 +97,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CooldownTime: .200000003
-  FireSound: {fileID: 0}
+  FireSound:
+  - {fileID: 8300000, guid: 2bee3bd3220094a3694f400dbe6a6590, type: 3}
+  - {fileID: 8300000, guid: df161f8063f9f435eaf2a0cffe53ec8a, type: 3}
+  - {fileID: 8300000, guid: 051b8b36f3d134dc8b45322a1afdbc07, type: 3}
   Bullet: {fileID: 11459342, guid: 3f7c6f1c0dc275c44a64d9603b7465a1, type: 2}
   MaxBullets: 5
   RechargeEvery: 1
   PushForce: 23
+  OutOfAmmo: {fileID: 8300000, guid: 90c09bf4ba20a442b8c1fc758913fb1c, type: 3}
 --- !u!212 &21237610
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -124,8 +128,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1783731295
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300002, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

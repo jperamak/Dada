@@ -26,7 +26,7 @@ public abstract class AbstractController {
 
 		public AbstractController(KeyMap keymap, string name, int number){
 
-			Debug.Log("Created joystick "+number+": "+name);
+			//Debug.Log("Created joystick "+number+": "+name);
 
 			Name = name;
 			Number = number;

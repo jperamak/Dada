@@ -5,7 +5,7 @@ public abstract class Weapon : MonoBehaviour {
 
 
 	public float CooldownTime = 0.2f;
-	public AudioClip FireSound;
+	public AudioClip[] FireSound;
 	
 	protected GameObject _owner;
 	protected Player _player;
@@ -27,8 +27,8 @@ public abstract class Weapon : MonoBehaviour {
 	public virtual void OnTriggerDown (){
 		if(Time.time - _lastShoot > CooldownTime){
 
-			if(FireSound != null)
-				DadaGame.PlaySound(FireSound);
+			if(FireSound != null && FireSound.Length > 0)
+				DadaAudio.PlayRandom(FireSound);
 
 			Shoot();
 			_lastShoot = Time.time;

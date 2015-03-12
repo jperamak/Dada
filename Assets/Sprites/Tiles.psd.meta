@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d5d93ef458eb941638b4b87cb29f5b0c
-timeCreated: 1426098172
+timeCreated: 1426187447
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -45,6 +45,7 @@ TextureImporter:
     21300076: TNT_Barrel
     21300078: ChainSide
     21300080: ChainTop
+    21300082: Tiles_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -443,18 +444,18 @@ TextureImporter:
     - name: TNT_Barrel
       rect:
         serializedVersion: 2
-        x: 13
-        y: 370
-        width: 39
-        height: 43
+        x: 139
+        y: 83
+        width: 90
+        height: 87
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ChainSide
       rect:
         serializedVersion: 2
-        x: 70
-        y: 375
+        x: 115
+        y: 377
         width: 31
         height: 62
       alignment: 0
@@ -463,8 +464,8 @@ TextureImporter:
     - name: ChainTop
       rect:
         serializedVersion: 2
-        x: 105
-        y: 377
+        x: 149
+        y: 378
         width: 17
         height: 60
       alignment: 0

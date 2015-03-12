@@ -5,7 +5,7 @@ public class ExplosionParticle : MonoBehaviour {
 
 	// Use this for initialization
     public float damage;
-    public PlayerControl source;
+    public GameObject source;
 
 	void Start () {
         Destroy(gameObject, 0.2f);
@@ -16,7 +16,7 @@ public class ExplosionParticle : MonoBehaviour {
         if (other.collider.gameObject.GetComponent<Damageable>() != null)
         {
             // calculate the basic damage
-            other.collider.gameObject.GetComponent<Damageable>().TakeDamage(damage, source.gameObject);
+            other.collider.gameObject.GetComponent<Damageable>().TakeDamage(damage, source);
 
         }
 

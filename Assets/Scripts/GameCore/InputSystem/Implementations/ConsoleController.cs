@@ -5,7 +5,6 @@ namespace Dada.InputSystem{
 public class ConsoleController : AbstractController {
 
 		private string suffix;
-		private Dictionary<VirtualKey, float> _btnOccurrence = new Dictionary<VirtualKey, float>();
 
 		private List<VirtualKey> _btnsDown = new List<VirtualKey>();
 		private List<VirtualKey> _downThisframe = new List<VirtualKey>();
@@ -55,7 +54,6 @@ public class ConsoleController : AbstractController {
 			if(!isDown && _btnsDown.Contains(key)){
 				_btnsDown.Remove(key);
 				_upThisframe.Add(key);
-				Debug.Log("down: "+key+ "UP");
 				return false;
 			}
 			
@@ -66,7 +64,6 @@ public class ConsoleController : AbstractController {
 
 			//button down
 			if(isDown && !_btnsDown.Contains(key)){
-				Debug.Log("down: "+key+ "DOWN");
 				_btnsDown.Add(key);
 				_downThisframe.Add(key);
 				return true;
@@ -87,7 +84,6 @@ public class ConsoleController : AbstractController {
 			if(isDown && !_btnsDown.Contains(key)){
 				_btnsDown.Add(key);
 				_downThisframe.Add(key);
-				Debug.Log("up: "+key+ "DOWN");
 				return false;
 			}
 
@@ -97,7 +93,6 @@ public class ConsoleController : AbstractController {
 			
 			//button up
 			if(!isDown && _btnsDown.Contains(key)){
-				Debug.Log("up: "+key+ "UP");
 				_btnsDown.Remove(key);
 				_upThisframe.Add(key);
 				return true;

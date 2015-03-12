@@ -25,14 +25,12 @@ public class Grenade : Projectile {
 		//start the countdown at the first contact.
 		//no need for collisions when DetonateOnContact is false
 		if(DetonateOnContact && _contactTime == 0){
-			Debug.Log(name+" collided with "+coll.gameObject.name);
 			_contactTime = Time.time;
 			StartCoroutine(TickTack());
 		}
 	}
 
 	private void Explode(){
-		Debug.Log("Granade of "+Owner.name+" exploded");
 		TriggerEffects();
 		exploded = true;
 	}

@@ -30,7 +30,6 @@ public sealed class Resource {
 
 	//An instance of a resource can conveniently load itself and cache for frequent access
 	public GameObject Prefab{get{
-			Debug.Log("Getting prefab "+Name+": "+_objCache);
 			if(_objCache == null){
 				_objCache = Resources.Load(Path) as GameObject;
 			}

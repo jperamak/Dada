@@ -7,6 +7,9 @@ public class HeroHealth : Damageable {
 	public float ShieldAfterDamage = 1.5f;
 	public float ShieldDelay = 0.2f;
 	
+	public void Kill(GameObject killer = null){
+		base.TakeDamage(MaxHitpoints, killer);
+	}
 
 	public override void TakeDamage (float hitpoints, GameObject dealer){
 

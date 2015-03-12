@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MeleeStrike : MonoBehaviour {
 
-    public PlayerControl Player;
+    public GameObject Player;
 
 	public float damage;
 	// Use this for initialization
@@ -22,7 +22,7 @@ public class MeleeStrike : MonoBehaviour {
 		// If the hit object is damageable...
 		if (col.gameObject.GetComponent<Damageable>() != null) {
 			// ...give it the damage
-			col.gameObject.GetComponent<Damageable>().TakeDamage(damage, Player.gameObject);
+			col.gameObject.GetComponent<Damageable>().TakeDamage(damage, Player);
 		}
 		/*
 		// BUG: Does damage to self also

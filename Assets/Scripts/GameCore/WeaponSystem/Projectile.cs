@@ -49,7 +49,6 @@ public class Projectile : MonoBehaviour {
 	protected void OnEffectFinshed(){
 
 		_activeEffects--;
-		Debug.Log(name+ " activeEffects: "+_activeEffects);
 		if(_activeEffects == 0)
 			Destroy(this.gameObject);
 	}

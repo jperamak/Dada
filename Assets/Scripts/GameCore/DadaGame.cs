@@ -20,10 +20,6 @@ public class DadaGame {
 		_players.Sort((x, y) => x.Number.CompareTo(y.Number));
 	}
 
-	public static void PlaySound(AudioClip clip){
-		AudioSource.PlayClipAtPoint(clip, Vector2.zero, 1.0f);
-	}
-
 	public static void Reset(){
 		_players.Clear();
 		_players = null;

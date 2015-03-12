@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class LevelManager : MonoBehaviour {
 
 	public float RespawnTime = 2.0f;
+	public AudioClip RespawnSound;
 
 	protected List<Player> _players;
 	protected List<Transform> _spawnPoints;
@@ -101,6 +102,9 @@ public class LevelManager : MonoBehaviour {
 		//place the hero in the scene
 		int randomSpawn = Random.Range(0, _spawnPoints.Count-1);
 		hero.transform.position = _spawnPoints[randomSpawn].position;
+
+		if(RespawnSound != null)
+			DadaAudio.PlaySound(RespawnSound);
 
 	}
 
