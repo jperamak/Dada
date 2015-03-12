@@ -54,7 +54,7 @@ public class DadaInput {
 
 	public static void AutoInit(){
 		if(_inst == null){
-			TextAsset txt = (TextAsset)Resources.Load("keymap", typeof(TextAsset));
+			TextAsset txt = (TextAsset)Resources.Load("_Core/keymap", typeof(TextAsset));
 			string json = txt.text;
 			
 			Dictionary<string,KeyMap> keyMapConfig = KeyMap.JsonToKeyConfiguration(json);
@@ -129,27 +129,42 @@ public class DadaInput {
 			break;
 #endif
 		case InputMethod.JOYSTICK:
+			List<ConsoleController> gamepads = new List<ConsoleController>();
 			if(_controllerNames.Length == 0){
 				_joy = new NullController(0);
 			}
 			else if(_controllerNames.Length == 1){
 				kMap = MakeMap(_controllerNames[0]);
-				_joy = new ConsoleController(kMap,_controllerNames[0]);
+				ConsoleController gamepad = new ConsoleController(kMap,_controllerNames[0]);
+				gamepads.Add(gamepad);
+				_joy = gamepad;
 			}
 			else{
 				for(int i=0;i<_controllerNames.Length;i++){
 					kMap = MakeMap(_controllerNames[i]);
-					_joyList.Add(new ConsoleController(kMap,_controllerNames[i],i));
-					_joy = new CompositeController(_joyList);
+					ConsoleController gamepad = new ConsoleController(kMap,_controllerNames[i],i);
+					_joyList.Add(gamepad);
+					gamepads.Add(gamepad);
 				}
+				_joy = new CompositeController(_joyList);
 			}
+
+			if(gamepads.Count > 0)
+				GamepadSync.Initialize(gamepads);
+
+
 			break;
 		case InputMethod.COMPOSITE:
 		case InputMethod.AUTO:
+			List<ConsoleController> controllers = new List<ConsoleController>();
 			for(int i=0;i<_controllerNames.Length;i++){
 				kMap = MakeMap(_controllerNames[i]);
-				_joyList.Add(new ConsoleController(kMap,_controllerNames[i],i));
+				ConsoleController c = new ConsoleController(kMap,_controllerNames[i],i);
+				controllers.Add(c);
+				_joyList.Add(c);
 			}
+			if(controllers.Count > 0)
+				GamepadSync.Initialize(controllers);
 #if UNITY_EDITOR
 			_joyList.Add(new KeyboardController(_rawKeyMaps["Keyboard"],_joyList.Count));
 #endif
@@ -170,7 +185,7 @@ public class DadaInput {
 
 		return _rawKeyMaps["JoystickDefault"];
 	}
-	
+
 	private static bool ArraysEqual<T>(T[] a1, T[] a2){
 		if (ReferenceEquals(a1,a2))
 			return true;

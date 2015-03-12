@@ -7,6 +7,10 @@ public class ConsoleController : AbstractController {
 		private string suffix;
 		private Dictionary<VirtualKey, float> _btnOccurrence = new Dictionary<VirtualKey, float>();
 
+		private List<VirtualKey> _btnsDown = new List<VirtualKey>();
+		private List<VirtualKey> _downThisframe = new List<VirtualKey>();
+		private List<VirtualKey> _upThisframe = new List<VirtualKey>();
+
 		public override float XAxis{get{ return GetAxis(VirtualKey.X_AXIS);}}
 		public override float YAxis{get{ return GetAxis(VirtualKey.Y_AXIS);}}
 		public override bool AnyKey{get{return UnityEngine.Input.anyKey;}}
@@ -16,6 +20,11 @@ public class ConsoleController : AbstractController {
 			suffix = "J"+number+" ";
 		}
 
+		//clear button information for this frame
+		public void RefreshFrameInfo(){
+			_downThisframe.Clear();
+			_upThisframe.Clear();
+		}
 
 		public override float GetAxis(VirtualKey key){
 
@@ -31,34 +40,76 @@ public class ConsoleController : AbstractController {
 			if(val == 0)
 				return false;
 
-			_btnOccurrence[key] = Time.time;
 			return true;
 		}
 
 		public override bool GetButtonDown(VirtualKey key){
 
-			//BUG!! The last occurrence is registered correctly only if GetButtonDown is called af every frame.
-			//For other cases it may fail hard....!
+			//already checked for button down this frame, no need to do it again
+			if(_downThisframe.Contains(key))
+				return true;
 
-			/*
-			//get the last occurrence of this key
-			float lastOccurrence = 0;
-			if(_btnOccurrence.ContainsKey(key))
-				lastOccurrence = _btnOccurrence[key];
+			bool isDown = GetButton(key);
 
-			//the button is pressed in this frame
-			if(GetButton(key)){
-				float diff = Mathf.Abs( (_btnOccurrence[key] - lastOccurrence) - Time.deltaTime);
-
-				//the button was pressed also in the previous frame
-				if(diff < 0.00001f)
-					return false;
-				else 
-					return true;
+			//button up
+			if(!isDown && _btnsDown.Contains(key)){
+				_btnsDown.Remove(key);
+				_upThisframe.Add(key);
+				Debug.Log("down: "+key+ "UP");
+				return false;
 			}
+			
+			//was down already before
+			if(isDown && _btnsDown.Contains(key))
+				return false;
+
+
+			//button down
+			if(isDown && !_btnsDown.Contains(key)){
+				Debug.Log("down: "+key+ "DOWN");
+				_btnsDown.Add(key);
+				_downThisframe.Add(key);
+				return true;
+			}
+			
 			return false;
-*/
-			//this version works fine for normal buttons
+		}
+
+		public override bool GetButtonUp(VirtualKey key){
+
+			//already checked for button up this frame, no need to do it again
+			if(_upThisframe.Contains(key))
+				return true;
+
+			bool isDown = GetButton(key);
+
+			//button down
+			if(isDown && !_btnsDown.Contains(key)){
+				_btnsDown.Add(key);
+				_downThisframe.Add(key);
+				Debug.Log("up: "+key+ "DOWN");
+				return false;
+			}
+
+			//was down already before
+			if(isDown && _btnsDown.Contains(key))
+				return false;
+			
+			//button up
+			if(!isDown && _btnsDown.Contains(key)){
+				Debug.Log("up: "+key+ "UP");
+				_btnsDown.Remove(key);
+				_upThisframe.Add(key);
+				return true;
+			}
+			
+			return false;
+		}
+
+		//this version works fine for normal buttons
+		/*public override bool GetButtonDown(VirtualKey key){
+
+
 			List<KeyProperty> keys = _keymap.Get(key);
 			if(keys == null)
 				return false;
@@ -67,29 +118,12 @@ public class ConsoleController : AbstractController {
 				if(UnityEngine.Input.GetButtonDown(suffix+prop.Name))
 					return true;
 			return false;
+
 		}
 
+		//this version works fine for normal buttons
 		public override bool GetButtonUp(VirtualKey key){
 
-			/*
-			//button being pressed
-			if(GetButton(key))
-				return false;
-
-			//button never pressed
-			if(!_btnOccurrence.ContainsKey(key))
-				return false;
-
-			float diff = Mathf.Abs( (Time.time - _btnOccurrence[key]) - Time.deltaTime);
-
-			//the button was pressed in the previous frame but now is not
-			if(diff < 0.00001f)
-				return true;
-
-			return false;
-*/
-
-			//this version works fine for normal buttons
 			List<KeyProperty> keys = _keymap.Get(key);
 			if(keys == null)
 				return false;
@@ -98,7 +132,7 @@ public class ConsoleController : AbstractController {
 				if(UnityEngine.Input.GetButtonUp(suffix+prop.Name))
 					return true;
 			return false;
-		}
+		}*/
 
 		private float ReadFromJoystick(VirtualKey key){
 			List<KeyProperty> keys = _keymap.Get(key);
@@ -120,8 +154,6 @@ public class ConsoleController : AbstractController {
 				if(prop.Inverted)
 					val = -val;
 
-				//Debug.Log(Name+ " read " + prop.Name +" "+val);
-
 				if(prop.TriggerCondition == KeyTriggerCondition.NON_ZERO)
 					sum += val;
 				else if(prop.TriggerCondition == KeyTriggerCondition.POSITIVE && val > 0)
@@ -137,7 +169,7 @@ public class ConsoleController : AbstractController {
 			}
 
 			//avoid false trigger due to hardware imprecisions
-			if( Mathf.Abs(sum) < 0.01f)
+			if( Mathf.Abs(sum) < 0.05f)
 				return 0;
 
 			return Mathf.Clamp(sum,-1,1);
