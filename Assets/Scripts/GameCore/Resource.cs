@@ -10,8 +10,9 @@ public sealed class Resource {
 	public static readonly Resource PHOENIX = new Resource("Phoenix", "Weapons/Phoenix");
 
 	//Melee weapons
-	public static readonly Resource CHICKEN_MELEE = new Resource("Chicken Sword", "Weapons/ChickenSword");
-	public static readonly Resource KATANA_MELEE = new Resource("Boring Katana", "Weapons/Katana");
+	public static readonly Resource ICY_MELEE = new Resource("Ice Cream", "Weapons/IcyKatana");
+	public static readonly Resource FLAME_MELEE = new Resource("Hot Teaspoon", "Weapons/FlameKatana");
+	public static readonly Resource ELECTRIC_MELEE = new Resource("Electric Deer", "Weapons/ElectricKatana");
 
 	//Heroes
 	public static readonly Resource CACTUAR_HERO = new Resource("Cactuar", "Heroes/Cactuar");
@@ -37,7 +38,7 @@ public sealed class Resource {
 		}
 	}
 
-	public static Resource[] MeleeWepons = { Resource.CHICKEN_MELEE, Resource.KATANA_MELEE };
+	public static Resource[] MeleeWepons = { Resource.ICY_MELEE, Resource.FLAME_MELEE, Resource.ELECTRIC_MELEE };
 	public static Resource[] RangedWepons = { Resource.BANANA_RANGE, Resource.CHILI_RANGE, Resource.PHOENIX };
 	public static Resource[] Heroes = { Resource.POTATO_HERO, Resource.CACTUAR_HERO, Resource.MONK_HERO };
 }

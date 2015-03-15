@@ -40,13 +40,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e7c60380a0bb24b8462c0a10a8469a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VisualEffect: {fileID: 0}
   DamageOwner: 0
-  DamageAmount: 5
-  Radius: 10
+  DamageAmount: 100
+  Radius: 3
   InteractWith:
     serializedVersion: 2
-    m_Bits: 4294967295
-  Angle: 140
+    m_Bits: 4294959103
+  Angle: 100
 --- !u!114 &11491016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58fd7be89c63cf498dd4536744a5aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VisualEffectOnTrigger: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -69,4 +71,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 163530}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

@@ -22,14 +22,14 @@ TagManager:
   - UI
   - 
   - 
-  - Bombs
+  - 
   - Player
-  - Enemies
-  - Pickups
+  - 
+  - 
   - Ground
   - BackgroundBlock
   - Rubble
-  - Melee
+  - 
   - ExplosionParticle
   - Crocodyle
   - ForegroundObject

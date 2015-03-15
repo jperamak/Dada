@@ -11,8 +11,8 @@ public class HeroHealth : Damageable {
 		base.TakeDamage(MaxHitpoints, killer);
 	}
 
+	//TODO: Here is where the shield should be applied
 	public override void TakeDamage (float hitpoints, GameObject dealer){
-
 		base.TakeDamage (hitpoints, dealer);
 
 	}

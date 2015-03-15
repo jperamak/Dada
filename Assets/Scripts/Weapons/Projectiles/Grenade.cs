@@ -30,6 +30,13 @@ public class Grenade : Projectile {
 		}
 	}
 
+	//turn the gameobject so it follows the gravity
+	void FixedUpdate (){
+		Vector2 velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+		float angle = Mathf.Atan2( velocity.y, velocity.x );
+		transform.eulerAngles = new Vector3(0, 0, angle *  Mathf.Rad2Deg);
+	}
+
 	private void Explode(){
 		TriggerEffects();
 		exploded = true;

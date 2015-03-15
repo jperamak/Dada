@@ -7,6 +7,7 @@ public class Explosion : Damage {
 	public float ExplosionForce;
 	public int NumOfRays = 15;
 	public float ParticleLifetime = 0.2f;
+	public LayerMask InteractWith;
 	public Projectile ExplosionParticles;
 
 	protected override void Execute (){
@@ -43,28 +44,27 @@ public class Explosion : Damage {
 			int numTimesDamped = 0; // How many times the ray has hit a object that dampens the explosion
 			
 			// hitting only background tiles, foreground dampens
-			RaycastHit2D[] hits = Physics2D.LinecastAll(position, position + dir * Radius, LayerMask.GetMask(new string[] { "Ground", "BackgroundBlock" }));
-			foreach (RaycastHit2D hit in hits)
-			{
+			RaycastHit2D[] hits = Physics2D.RaycastAll(position, position + dir * Radius, InteractWith);
+			for(int j=0;j<hits.Length;j++){
 				
 				// Solid objects in foreground dampen the explosion
-				if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
+				if (hits[j].transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
 				{
 					numTimesDamped++;
 				}
 				
-				if (hit.rigidbody)
-					hit.rigidbody.AddForce(dir * 100 * ExplosionForce);
+				if (hits[j].rigidbody)
+					hits[j].rigidbody.AddForce(dir * 100 * ExplosionForce);
 				
-				Damageable damageable = hit.collider.gameObject.GetComponent<Damageable>();
+				Damageable damageable = hits[j].collider.gameObject.GetComponent<Damageable>();
 				
 				if (damageable == null)
 					continue;
 				
-				if (hit.collider.gameObject.tag == "Player" && numTimesDamped > 0)
-					continue;
+				/*if (hits[j].collider.gameObject.tag == "Player" && numTimesDamped > 0)
+					continue;*/
 				
-				if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
+				if (hits[j].transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
 					continue;
 				
 				

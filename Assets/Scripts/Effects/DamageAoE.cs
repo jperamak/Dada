@@ -38,7 +38,6 @@ public class DamageAoE : Damage {
 
 		GameObject[] newTargets = new GameObject[coll.Length];
 		for(int i=0;i<coll.Length;i++){
-			Debug.Log("get targets in area: "+coll[i].name);
 			newTargets[i] = coll[i].gameObject;
 		}
 		return newTargets;

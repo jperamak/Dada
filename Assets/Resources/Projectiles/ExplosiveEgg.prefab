@@ -212,6 +212,9 @@ MonoBehaviour:
   ExplosionForce: 10
   NumOfRays: 15
   ParticleLifetime: .200000003
+  InteractWith:
+    serializedVersion: 2
+    m_Bits: 4294967295
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
 --- !u!114 &11459342
 MonoBehaviour:
@@ -224,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9509a9b2aac79d042a6c38889f40c533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VisualEffectOnTrigger: {fileID: 0}
   DetonateOnContact: 1
   DetonationDelay: 0
 --- !u!114 &11474918

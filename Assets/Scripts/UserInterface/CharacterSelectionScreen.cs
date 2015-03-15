@@ -14,7 +14,7 @@ public class CharacterSelectionScreen : MonoBehaviour {
 		//If you are debugging and you start directly from the character selection screen, 
 		//this gives you at least one player to play with
 		if(DadaGame.PlayersNum == 0)
-			DadaGame.PlayersNum = 2;
+			DadaGame.PlayersNum = 1;
 
 		//Assign the controllers to specific sub-windows, so players can choose their characer indipendently.
 		//Disable windows without a player

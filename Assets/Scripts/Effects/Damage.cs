@@ -14,8 +14,9 @@ public class Damage : Effect {
 				//don't apply damage to owner if the option is checked
 				if(DamageOwner || _targets[i] != Owner){
 					Damageable dmg = _targets[i].GetComponent<Damageable>();
-					if(dmg != null)
+					if(dmg != null){
 						dmg.TakeDamage(DamageAmount,Owner);
+					}
 				}
 			}
 		}
