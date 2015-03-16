@@ -508,7 +508,7 @@ MonoBehaviour:
   JumpForce: 1100
   JumpOn:
     serializedVersion: 2
-    m_Bits: 151552
+    m_Bits: 413696
   JumpClips:
   - {fileID: 8300000, guid: d9f93eccf5cfe40abbc658677b9d7909, type: 3}
   - {fileID: 8300000, guid: 6c78d41be81dc43bb9b32480d2bd301c, type: 3}

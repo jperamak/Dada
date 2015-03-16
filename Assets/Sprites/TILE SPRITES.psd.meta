@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: fc6a3c055f9374a419a5a9a6a6826122
+timeCreated: 1426548872
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bedrock_square
+    21300002: Bedrock_triangle
+    21300004: Bedrock_triangle_background
+    21300006: Bedrock_square_bacground
+    21300008: Earth_square
+    21300010: Earth_with_Grass
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 256
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Bedrock_square
+      rect:
+        serializedVersion: 2
+        x: 3186
+        y: 625
+        width: 286
+        height: 286
+      alignment: 9
+      pivot: {x: .500312805, y: .493589729}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedrock_triangle
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 630
+        width: 281
+        height: 271
+      alignment: 9
+      pivot: {x: .486706942, y: .509648979}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedrock_triangle_background
+      rect:
+        serializedVersion: 2
+        x: 2678
+        y: 117
+        width: 282
+        height: 274
+      alignment: 9
+      pivot: {x: .488338381, y: .506501555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedrock_square_bacground
+      rect:
+        serializedVersion: 2
+        x: 3188
+        y: 115
+        width: 284
+        height: 281
+      alignment: 9
+      pivot: {x: .493317932, y: .501191676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_square
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 127
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_with_Grass
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 511
+        width: 258
+        height: 272
+      alignment: 9
+      pivot: {x: .500234663, y: .474336952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
