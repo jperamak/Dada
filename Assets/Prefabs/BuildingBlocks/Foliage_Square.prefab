@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21238116}
   - 61: {fileID: 6138116}
   - 114: {fileID: 11469694}
+  - 114: {fileID: 11430640}
   m_Layer: 12
   m_Name: Foliage_Square
   m_TagString: Untagged
@@ -43,6 +44,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11430640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc4eaba75fbb47629a94dc57657be92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regenerateDelay: 8
 --- !u!114 &11469694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 30
+  DestroyOnZeroHp: 0
   DamageSound:
   - {fileID: 8300000, guid: 8862704f600d5414ab348284fe6b7419, type: 3}
   DestroySound: {fileID: 8300000, guid: 52057b563f4144a6798e915037c9f6b3, type: 3}

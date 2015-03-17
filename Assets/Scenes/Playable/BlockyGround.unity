@@ -579,7 +579,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -1257,6 +1258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -1420,6 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -1529,6 +1532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -1638,6 +1642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -1747,6 +1752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -2736,6 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -2895,6 +2902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 80
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
@@ -3054,6 +3062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -3313,6 +3322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -3568,6 +3578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -3731,6 +3742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 66
@@ -3990,6 +4002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -4168,6 +4181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -4377,6 +4391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -4586,6 +4601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -4745,6 +4761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -5042,6 +5059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -5493,6 +5511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -5602,6 +5621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 80
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
@@ -5943,6 +5963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -6326,6 +6347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 80
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
@@ -6692,6 +6714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -7321,6 +7344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -7430,6 +7454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -7741,6 +7766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -8138,6 +8164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -8297,6 +8324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -8756,6 +8784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -8919,6 +8948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -9382,6 +9412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -9591,6 +9622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -9996,6 +10028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -10209,6 +10242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -10318,6 +10352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -10727,6 +10762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -10936,6 +10972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -11045,6 +11082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -11269,6 +11307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -11464,6 +11503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -11688,6 +11728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -11783,6 +11824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -12082,6 +12124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -12365,6 +12408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -12963,7 +13007,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
@@ -13320,6 +13364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -13471,6 +13516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -13603,6 +13649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -14176,6 +14223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -14285,6 +14333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -15252,6 +15301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -15349,6 +15399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -15716,6 +15767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -15875,6 +15927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -16234,6 +16287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -16493,6 +16547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -16602,6 +16657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -17357,6 +17413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -17466,6 +17523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -17711,6 +17769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -18028,6 +18087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -18237,6 +18297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -18881,6 +18942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -19232,6 +19294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -19695,6 +19758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
@@ -19886,6 +19950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -20295,6 +20360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -20486,6 +20552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -20722,6 +20789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -20863,6 +20931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -21402,6 +21471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -21588,6 +21658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -21775,6 +21846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -22919,6 +22991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -23028,6 +23101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -23137,6 +23211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -23625,6 +23700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -23803,6 +23879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -24333,6 +24410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -24442,6 +24520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -25453,6 +25532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -25666,6 +25746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -25959,6 +26040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -26348,6 +26430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -26557,6 +26640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -27262,6 +27346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -27559,6 +27644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -27922,6 +28008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -28031,6 +28118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -28398,6 +28486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -29087,6 +29176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -29654,6 +29744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -30131,7 +30222,7 @@ Transform:
   - {fileID: 142317961}
   - {fileID: 1694482229}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1001 &1631522912
 Prefab:
   m_ObjectHideFlags: 0
@@ -30426,6 +30517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -30535,6 +30627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -30644,6 +30737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -30903,6 +30997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -31492,6 +31587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -31701,6 +31797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -32014,6 +32111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -32269,6 +32367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 75
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 50
@@ -32632,6 +32731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -32724,7 +32824,7 @@ Transform:
   m_Children:
   - {fileID: 1453886370}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &1753961490
 GameObject:
   m_ObjectHideFlags: 0
@@ -32769,6 +32869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -33944,6 +34045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -34057,6 +34159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -34350,6 +34453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -34587,6 +34691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -34696,6 +34801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -34924,6 +35030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -35169,6 +35276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -35432,6 +35540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -35767,6 +35876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -36026,6 +36136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -36158,6 +36269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -36253,6 +36365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -36455,7 +36568,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
@@ -36527,6 +36640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -36622,6 +36736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -36835,6 +36950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -37321,6 +37437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -37657,6 +37774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -37767,7 +37885,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
@@ -37816,6 +37934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -38445,6 +38564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -38554,6 +38674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -38821,6 +38942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -38930,6 +39052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -39131,6 +39254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -39635,6 +39759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120

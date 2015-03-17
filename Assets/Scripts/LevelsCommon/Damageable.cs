@@ -6,7 +6,10 @@ using System.Collections;
 public class Damageable : MonoBehaviour {
 
 	public float MaxHitpoints = 10.0f;				// hitpoints when undamaged
+	public bool DestroyOnZeroHp = true;
 	public KilledCallback OnDestroy;
+
+
 
 	public AudioClip[] DamageSound;
 	public AudioClip DestroySound;
@@ -38,9 +41,14 @@ public class Damageable : MonoBehaviour {
 
 			// If there is no hitpoints left, destroy the object.
 			if (_currentHitpoints <= 0) {
+				gameObject.SendMessage("OnZeroHp");
 				OnDestroyed();
 			}
 		}
+	}
+
+	public virtual void RestoreToMaxHp() {
+		_currentHitpoints = MaxHitpoints;
 	}
 
 	protected virtual void OnDestroyed() {
@@ -49,7 +57,9 @@ public class Damageable : MonoBehaviour {
 
 		if(OnDestroy != null)
 			OnDestroy(this.gameObject,_lastHitFrom);
-		Destroy(gameObject);
+
+		if (DestroyOnZeroHp)
+			Destroy(gameObject);
 	}
 
 

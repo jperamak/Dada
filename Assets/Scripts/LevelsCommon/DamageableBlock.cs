@@ -15,17 +15,19 @@ public class DamageableBlock : Damageable {
 
 	public bool damageFromCollisions;
 
+	private Sprite _spriteNoDamage = null;
+
+	void Start() {
+		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+		if (sr != null)
+			_spriteNoDamage = sr.sprite;
+	}
+
 	public override void TakeDamage( float hitpoints, GameObject dealer ) {
 
 		base.TakeDamage( hitpoints, dealer ); // also destroys object on 0 hp
 
-		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
-
-		// Change sprite according to hitpoints left
-		if (_currentHitpoints <= hitpointsHeavyDamage && spriteHeavyDamage != null)
-			sr.sprite = spriteHeavyDamage;
-		else if (_currentHitpoints <= hitpointsLightDamage && spriteLightDamage != null)
-			sr.sprite = spriteLightDamage;
+		UpdateSprite();
 
 		if (_currentHitpoints <= 0.0f && leftWhenDestroyed != null) {
 			LeaveRuins();
@@ -33,6 +35,11 @@ public class DamageableBlock : Damageable {
 
 		
 		
+	}
+
+	public override void RestoreToMaxHp() {
+		base.RestoreToMaxHp();
+		UpdateSprite();
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -51,6 +58,20 @@ public class DamageableBlock : Damageable {
 				TakeDamage(1000, null);
 		}
 	}
+
+	// change sprite according to how damaged the object is
+	private void UpdateSprite() {
+		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+		
+	
+		if (_currentHitpoints <= hitpointsHeavyDamage && spriteHeavyDamage != null)
+			sr.sprite = spriteHeavyDamage;
+		else if (_currentHitpoints <= hitpointsLightDamage && spriteLightDamage != null)
+			sr.sprite = spriteLightDamage;
+		else
+			sr.sprite = _spriteNoDamage;
+	}
+
 
 	private void LeaveRuins() {
 
