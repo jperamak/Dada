@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fc6a3c055f9374a419a5a9a6a6826122
-timeCreated: 1426548872
+timeCreated: 1426587869
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,10 @@ TextureImporter:
     21300006: Bedrock_square_bacground
     21300008: Earth_square
     21300010: Earth_with_Grass
+    21300012: Earth_square_bg
+    21300014: Earth_triangle_background
+    21300016: EarthWithGrass_triangle
+    21300018: Earth_triangle
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -58,12 +62,12 @@ TextureImporter:
     - name: Bedrock_square
       rect:
         serializedVersion: 2
-        x: 3186
-        y: 625
+        x: 2289
+        y: 623
         width: 286
         height: 286
       alignment: 9
-      pivot: {x: .500312805, y: .493589729}
+      pivot: {x: .5, y: .507342756}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Bedrock_triangle
       rect:
@@ -88,12 +92,12 @@ TextureImporter:
     - name: Bedrock_square_bacground
       rect:
         serializedVersion: 2
-        x: 3188
-        y: 115
+        x: 2287
+        y: 111
         width: 284
         height: 281
       alignment: 9
-      pivot: {x: .493317932, y: .501191676}
+      pivot: {x: .509563625, y: .515028715}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Earth_square
       rect:
@@ -114,6 +118,46 @@ TextureImporter:
         height: 272
       alignment: 9
       pivot: {x: .500234663, y: .474336952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_square_bg
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 895
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_triangle_background
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 895
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EarthWithGrass_triangle
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 464
+        width: 258
+        height: 320
+      alignment: 9
+      pivot: {x: .500000954, y: .548978627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_triangle
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 127
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
