@@ -142,7 +142,7 @@ public class LevelManager : MonoBehaviour {
 
 		Player p1 = new Player(DadaInput.GetJoystick(0));
 		p1.Hero = Resource.MONK_HERO;
-		p1.FirstWeapon = Resource.BANANA_RANGE;
+		p1.FirstWeapon = Resource.PHOENIX;
 		p1.SecondWeapon = Resource.FLAME_MELEE;
 
 		fake.Add(p1);

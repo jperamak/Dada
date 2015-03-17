@@ -12,7 +12,7 @@ public class FadeOutOfExistence : MonoBehaviour {
 	void Awake () 
 	{
 		awakeTime = Time.time;
-		Invoke ("DestroyGameObject", secondsToStartFading + secondsForFading);
+        Destroy(gameObject.transform.parent.gameObject, secondsToStartFading + secondsForFading);
 		spriteRend = GetComponent<SpriteRenderer>();
 	}
 	
@@ -25,10 +25,6 @@ public class FadeOutOfExistence : MonoBehaviour {
 			SetAlpha( 1.0f - timeIntoFading/secondsForFading);
 	}
 
-	void DestroyGameObject()
-	{
-		Destroy (gameObject);
-	}
 
 	void SetAlpha( float value ) // from 0 .. 1
 	{
