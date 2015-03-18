@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21238116}
   - 60: {fileID: 6044542}
   - 114: {fileID: 11480010}
+  - 114: {fileID: 11446884}
   m_Layer: 12
   m_Name: Earth_Triangle
   m_TagString: Untagged
@@ -47,6 +48,19 @@ PolygonCollider2D:
       - {x: .489303589, y: .493848801}
       - {x: .342765808, y: .440006256}
       - {x: -.489547729, y: -.470226288}
+--- !u!114 &11446884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a366b1aa04f894dbb965df04aeafc9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 160230, guid: 77652b280bf89492c817c277675620df, type: 2}
 --- !u!114 &11480010
 MonoBehaviour:
   m_ObjectHideFlags: 1
