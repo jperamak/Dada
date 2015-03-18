@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 438116}
   - 212: {fileID: 21238116}
   - 61: {fileID: 6138116}
+  - 114: {fileID: 11433658}
   m_Layer: 12
   m_Name: Earth_withGrass_square
   m_TagString: Untagged
@@ -42,6 +43,27 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11433658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHitpoints: 5
+  DestroyOnZeroHp: 1
+  DamageSound: []
+  DestroySound: {fileID: 0}
+  hitpointsLightDamage: 8
+  hitpointsHeavyDamage: 4
+  spriteLightDamage: {fileID: 0}
+  spriteHeavyDamage: {fileID: 0}
+  leftWhenDestroyed: {fileID: 138116, guid: 4030344ca07e540ac9098bb65f8e9205, type: 2}
+  damageFromCollisions: 0
 --- !u!212 &21238116
 SpriteRenderer:
   m_ObjectHideFlags: 1

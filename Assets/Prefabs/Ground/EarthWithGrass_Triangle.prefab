@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 438116}
   - 212: {fileID: 21238116}
   - 60: {fileID: 6044542}
+  - 114: {fileID: 11471064}
   m_Layer: 12
   m_Name: EarthWithGrass_Triangle
   m_TagString: Untagged
@@ -46,6 +47,27 @@ PolygonCollider2D:
       - {x: .489303589, y: .493848801}
       - {x: .342765808, y: .440006256}
       - {x: -.489547729, y: -.470226288}
+--- !u!114 &11471064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHitpoints: 5
+  DestroyOnZeroHp: 1
+  DamageSound: []
+  DestroySound: {fileID: 0}
+  hitpointsLightDamage: 8
+  hitpointsHeavyDamage: 4
+  spriteLightDamage: {fileID: 0}
+  spriteHeavyDamage: {fileID: 0}
+  leftWhenDestroyed: {fileID: 138116, guid: fb118545a79bb4dea95c5da829ef839f, type: 2}
+  damageFromCollisions: 0
 --- !u!212 &21238116
 SpriteRenderer:
   m_ObjectHideFlags: 1

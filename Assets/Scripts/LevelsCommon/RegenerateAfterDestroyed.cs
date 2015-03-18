@@ -17,17 +17,19 @@ public class RegenerateAfterDestroyed : MonoBehaviour {
 		if (dam != null) 
 			dam.RestoreToMaxHp();
 			
-		StartCoroutine("FadeIn");
+		StartCoroutine("Appear");
 	}
 
 
-	IEnumerator FadeIn() {
+	// Makes the object appear by increasing its scale
+	IEnumerator Appear() {
 		for (float scale = 0f; scale < 1f; scale += 0.03f) {
 			transform.localScale = _originalScale * scale;
 			yield return null;
 		}
 		transform.localScale = _originalScale;
 	}
+
 
 	void OnZeroHp() {
 		Invoke ("Regenerate", regenerateDelay );
