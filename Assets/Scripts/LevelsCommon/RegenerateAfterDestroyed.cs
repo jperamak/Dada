@@ -6,16 +6,21 @@ public class RegenerateAfterDestroyed : MonoBehaviour {
 	public float regenerateDelay;
 	private Vector3 _originalScale;
 
+	private Damageable _damageable;
+
 	void Start () {
 		_originalScale = transform.localScale;
+		_damageable = gameObject.GetComponent<Damageable>();
+
+		_damageable.OnDestroy += OnZeroHp;
 	}
 	
 
 	void Regenerate() {
-		Damageable dam = gameObject.GetComponent<Damageable>();
+
 		gameObject.SetActive(true);
-		if (dam != null) 
-			dam.RestoreToMaxHp();
+		if (_damageable != null) 
+			_damageable.RestoreToMaxHp();
 			
 		StartCoroutine("Appear");
 	}
@@ -31,7 +36,7 @@ public class RegenerateAfterDestroyed : MonoBehaviour {
 	}
 
 
-	void OnZeroHp() {
+	void OnZeroHp(GameObject notneeded, GameObject notneeded2) {
 		Invoke ("Regenerate", regenerateDelay );
 		gameObject.SetActive(false);
 

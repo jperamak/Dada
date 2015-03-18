@@ -41,7 +41,7 @@ public class Damageable : MonoBehaviour {
 
 			// If there is no hitpoints left, destroy the object.
 			if (_currentHitpoints <= 0) {
-				gameObject.SendMessage("OnZeroHp");
+			//	SendMessage("OnZeroHp", SendMessageOptions.DontRequireReceiver);
 				OnDestroyed();
 			}
 		}
