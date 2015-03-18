@@ -116,15 +116,21 @@ public class LevelManager : MonoBehaviour {
 	protected void OnPlayerKilled(GameObject victim, GameObject killer = null){
 
 		Player v = victim.GetComponent<Hero>().PlayerInstance;
-
+        Player k = killer.GetComponent<Hero>().PlayerInstance;
 		//player suicided or killed for something else
-		if(killer == null || victim == killer){
+
+        if (FriendlyFire(v, k))
+        {
+            _scores[k.Number]--;
+            _scores[v.Number]--;
+        }
+        else if(killer == null || victim == killer ){
 			_scores[v.Number]--;
 		}
 
 		//player killed by another player
 		else{
-			Player k = killer.GetComponent<Hero>().PlayerInstance;
+			//Player k = killer.GetComponent<Hero>().PlayerInstance;
 			_scores[k.Number]++;
 		}
 
@@ -132,9 +138,17 @@ public class LevelManager : MonoBehaviour {
 		StartCoroutine(RespawnCountdown(v.Number));
 	}
 
+    private bool FriendlyFire(Player victim, Player killer)
+    {
+        if (victim != null && killer != null)
+            if ( victim != killer)
+                return victim.TeamNumber == killer.TeamNumber;
+        return false;
+    }
+
 	private void UpdateScore(){
 		for(int i=0; i< _players.Count; i++)
-			_scoreText[i].text = "Player "+_players[i].Number+": "+_scores[i];
+			_scoreText[i].text = "Player "+(_players[i].Number+ 1)+": "+_scores[i];
 	}
 
 	private List<Player> CreateDebugPlayers(){

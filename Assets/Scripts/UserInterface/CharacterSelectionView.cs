@@ -9,8 +9,7 @@ public class CharacterSelectionView : MonoBehaviour {
 	public Transform SpawnPoint;
 
 	private GameObject _coverPanel;
-	private Resource _hero, _melee, _range;
-	private int _iHero, _iMelee, _iRange;
+	private int _iHero, _iMelee, _iRange, _iTeam;
 	private int _btnSelected;
 
 	private AbstractController _controller;
@@ -26,6 +25,7 @@ public class CharacterSelectionView : MonoBehaviour {
 		_iHero = 0;
 		_iMelee = 0;
 		_iRange = 0;
+        _iTeam = 0;
 		_btnSelected = 0;
 		UpdateBtnSelection();
 		//_buttons[_btnSelected].Select();
@@ -47,7 +47,6 @@ public class CharacterSelectionView : MonoBehaviour {
 	private void AssemblePlayer(){
 
 		//update UI text to show the current selection
-		UpdateBtnText();
 
 		if(_currentHero != null)
 			Destroy(_currentHero.gameObject);
@@ -56,6 +55,10 @@ public class CharacterSelectionView : MonoBehaviour {
 		_player.Hero = Resource.Heroes[_iHero]; 
 		_player.FirstWeapon = Resource.RangedWepons[_iRange];
 		_player.SecondWeapon = Resource.MeleeWepons[_iMelee];
+        _player.TeamNumber = _iTeam;
+
+
+        UpdateBtnText();
 
 		//create an instance of the hero so the player can try it out in the selection screen
 		Hero hero = (Instantiate(_player.Hero.Prefab) as GameObject).GetComponent<Hero>();
@@ -105,7 +108,7 @@ public class CharacterSelectionView : MonoBehaviour {
 			_btnSelected--;
 			UpdateBtnSelection();
 		}
-		else if(_controller.GetButtonDown(VirtualKey.DOWN) && _btnSelected < 2){
+		else if(_controller.GetButtonDown(VirtualKey.DOWN) && _btnSelected < 3){
 			_btnSelected++;
 			UpdateBtnSelection();
 		}
@@ -128,6 +131,11 @@ public class CharacterSelectionView : MonoBehaviour {
 				_iMelee--;
 				AssemblePlayer();
 			}
+            else if (_btnSelected == 3 && _iTeam > 0)
+            {
+                _iTeam--;
+                AssemblePlayer();
+            }
 		}
 
 		//change selection. Same thing as before, but 
@@ -143,7 +151,12 @@ public class CharacterSelectionView : MonoBehaviour {
 			else if(_btnSelected == 2 && _iMelee < Resource.MeleeWepons.Length-1){
 				_iMelee++;
 				AssemblePlayer();
-			} 
+			}
+            else if (_btnSelected == 3 && _iTeam < Resource.Teams.Length - 1)
+            {
+                _iTeam++;
+                AssemblePlayer();
+            }
 		}
 	}
 
@@ -161,6 +174,8 @@ public class CharacterSelectionView : MonoBehaviour {
 			_buttons[i].enabled = false;
 
 		_buttons[_btnSelected].enabled = true;
+
+
 	}
 
 	private void UpdateBtnText(){
@@ -176,6 +191,13 @@ public class CharacterSelectionView : MonoBehaviour {
 		_btnText[0].text = Resource.Heroes[_iHero].Name;
 		_btnText[1].text = Resource.RangedWepons[_iRange].Name;
 		_btnText[2].text = Resource.MeleeWepons[_iMelee].Name;
+        _btnText[3].text = Resource.Teams[_iTeam].Name;
+
+        Image background = GetComponent<Image>();
+        Color newColor = _player.TeamColor;
+        newColor.a = 0.5f;
+        background.color = newColor;
+        Debug.Log(_player.TeamNumber);
 
 	}
 }

@@ -19,6 +19,10 @@ public sealed class Resource {
 	public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/Monk");
 	public static readonly Resource POTATO_HERO = new Resource("Mr. Potato", "Heroes/MrPotato");
 
+    public static readonly Resource TEAM_1 = new Resource("Team 1", "");
+    public static readonly Resource TEAM_2 = new Resource("Team 2", "");
+    public static readonly Resource TEAM_3 = new Resource("Team 3", "");
+    public static readonly Resource TEAM_4 = new Resource("Team 4", "");
 
 	public string Name{get; private set;}
 	public string Path{get; private set;}
@@ -41,4 +45,5 @@ public sealed class Resource {
 	public static Resource[] MeleeWepons = { Resource.ICY_MELEE, Resource.FLAME_MELEE, Resource.ELECTRIC_MELEE };
 	public static Resource[] RangedWepons = { Resource.BANANA_RANGE, Resource.CHILI_RANGE, Resource.PHOENIX };
 	public static Resource[] Heroes = { Resource.POTATO_HERO, Resource.CACTUAR_HERO, Resource.MONK_HERO };
+    public static Resource[] Teams = { Resource.TEAM_1, Resource.TEAM_2, Resource.TEAM_3, Resource.TEAM_4 };
 }
