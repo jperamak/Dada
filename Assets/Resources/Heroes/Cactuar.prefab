@@ -159,6 +159,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &159306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 429470}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &168274
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +183,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 468274}
   m_Layer: 0
-  m_Name: GroundCheck
+  m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,14 +221,15 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.21701407, y: -21.8029041, z: 0}
+  m_LocalPosition: {x: -6.21989155, y: 14.7423306, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 428732}
   - {fileID: 428734}
   - {fileID: 428736}
-  - {fileID: 468274}
+  - {fileID: 429470}
   - {fileID: 418930}
+  - {fileID: 468274}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &428732
@@ -304,6 +320,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 428732}
   m_RootOrder: 3
+--- !u!4 &429470
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.709999979, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 428730}
+  m_RootOrder: 3
 --- !u!4 &468274
 Transform:
   m_ObjectHideFlags: 1
@@ -311,11 +339,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.709999979, z: 0}
+  m_LocalPosition: {x: .649999976, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 428730}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!50 &5028744
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -325,7 +353,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -375,6 +403,8 @@ MonoBehaviour:
   MoveForce: 365
   MaxSpeed: 3
   JumpForce: 1000
+  JumpAirModifier: .0250000004
+  JumpLength: .5
   JumpOn:
     serializedVersion: 2
     m_Bits: 20480
@@ -395,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 8300000, guid: b442e25400fca4a14b831dfe237d5ce3, type: 3}
   ShieldAfterRespawn: 3.5

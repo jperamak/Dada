@@ -287,6 +287,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &147434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 469736}
+  m_Layer: 0
+  m_Name: WallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &418924
 Transform:
   m_ObjectHideFlags: 1
@@ -510,7 +525,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .58437562, y: -18.8217068, z: 0}
+  m_LocalPosition: {x: -2.76355553, y: 14.5314121, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442720}
@@ -518,8 +533,21 @@ Transform:
   - {fileID: 442724}
   - {fileID: 441250}
   - {fileID: 418924}
+  - {fileID: 469736}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &469736
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .649999976, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 442728}
+  m_RootOrder: 5
 --- !u!50 &5042700
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -529,7 +557,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -570,7 +598,7 @@ Animator:
   m_GameObject: {fileID: 142728}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 48b15c45aca265a42954dafb1004b8ba, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -601,6 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
+  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 8300000, guid: b442e25400fca4a14b831dfe237d5ce3, type: 3}
   ShieldAfterRespawn: 3.5
@@ -620,9 +649,11 @@ MonoBehaviour:
   MoveForce: 365
   MaxSpeed: 3
   JumpForce: 1000
+  JumpAirModifier: .0250000004
+  JumpLength: .5
   JumpOn:
     serializedVersion: 2
-    m_Bits: 20480
+    m_Bits: 413696
   JumpClips:
   - {fileID: 8300000, guid: d9f93eccf5cfe40abbc658677b9d7909, type: 3}
   - {fileID: 8300000, guid: 6c78d41be81dc43bb9b32480d2bd301c, type: 3}
