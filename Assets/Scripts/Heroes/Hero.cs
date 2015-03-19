@@ -11,13 +11,16 @@ public class Hero : MonoBehaviour {
 	public float MoveForce = 365.0f;		// Amount of force added to move the player left and right.
 	public float MaxSpeed = 3f;				// The fastest the player can travel in the x axis.
 	public float JumpForce = 1000f;			// Amount of force added when the player jumps.
-	public LayerMask JumpOn;				// Layermask that specify the elements the player can jump on
+    public float JumpAirModifier = 0.02f;
+    public float JumpLength = 0.5f;         // Length of the jump
+    public LayerMask JumpOn;				// Layermask that specify the elements the player can jump on
 	public AudioClip[] JumpClips;			// Array of clips for when the player jumps.
 
 	//class private attributes
 	private AbstractController _controller;	// Controller used to query the player's input
 	private Transform _groundCheck;			// A position marking where to check if the player is grounded.
-	private Transform _crossairPivot;		// The point where the crossair is attached to
+    private Transform _wallCheck;			// A position marking where to check if the player is grounded.
+    private Transform _crossairPivot;		// The point where the crossair is attached to
 	private Transform _crossair; 			// Crossair's transform, useful for calculating the shoot direction
 	private Transform _rangeWeaponHand;		// The hand that holds the ranged weapon
 
@@ -29,16 +32,19 @@ public class Hero : MonoBehaviour {
 	private bool _grounded = false;			// Whether or not the player is grounded.
 	private int _walljump = 0;              // whether or not the player can walljump
 	private bool _facingRight = true;		// For determining which way the player is currently facing.
-	private bool _jump = false;
-
+	private bool _jumpStart = false;
+    private bool _jump = false;
+    private float _jumpStartTime;
 
 	// Setting up initial references.
 	void Awake(){
 		_rangeWeaponHand = transform.Find("Hand1");
 		_groundCheck 	 = transform.Find("GroundCheck");
+        _wallCheck       = transform.Find("WallCheck");
 		_crossairPivot 	 = transform.Find("CrossairPivot");
 		_crossair 		 = _crossairPivot.Find("Crossair");
 		_anim = GetComponent<Animator>();
+
 	}
 
 	// The player soul is incarnated in the hero's body. Get its controller and find weapon references
@@ -130,7 +136,7 @@ public class Hero : MonoBehaviour {
 		//	_anim.SetBool("Slide", false);
 		
 		// If the player should jump...
-		if(_jump)
+		if(_jumpStart)
 		{
 			// Set the Jump animator trigger parameter.
 			//_anim.SetBool("Slide", false);
@@ -145,8 +151,12 @@ public class Hero : MonoBehaviour {
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
 			
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
-			_jump = false;
+			_jumpStart = false;
 		}
+        if (_jump)
+        {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce * JumpAirModifier));
+        }
 		if (_walljump > 0 && !_grounded)
 		{
 			//_anim.SetBool("Slide", false);
@@ -174,14 +184,14 @@ public class Hero : MonoBehaviour {
 
 		var sliding = false;
 		
-		if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(-0.65f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+		if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, _wallCheck.position, 1 << LayerMask.NameToLayer("Ground")))
 		{
 			_walljump = 1;
 			//_anim.SetBool("Slide", true);
 			sliding = true;
 		}
 		
-		else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + new Vector3(0.65f, 0, 0), 1 << LayerMask.NameToLayer("Ground")))
+		else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, _wallCheck.position , 1 << LayerMask.NameToLayer("Ground")))
 		{
 			_walljump = 2;
 			//_anim.SetBool("Slide", true);
@@ -194,8 +204,14 @@ public class Hero : MonoBehaviour {
 			//	_anim.SetBool("Slide", false);
 		}
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(_controller.GetButtonDown(VirtualKey.JUMP) && _grounded)
-			_jump = true;
+        if (_controller.GetButtonDown(VirtualKey.JUMP) && _grounded)
+        {
+            _jumpStartTime = Time.time;
+            _jumpStart = true;
+            _jump = true;
+        }
+        else if (_controller.GetButtonUp(VirtualKey.JUMP) || Time.time - _jumpStartTime > JumpLength )
+            _jump = false;
 	}
 
 	void Flip (){

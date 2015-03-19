@@ -42,7 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
   DamageOwner: 0
-  DamageAmount: 100
+  DamageAmount: 10
   Radius: 3
   InteractWith:
     serializedVersion: 2
