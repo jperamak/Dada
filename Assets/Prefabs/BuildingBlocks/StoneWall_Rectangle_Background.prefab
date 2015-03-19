@@ -38,7 +38,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_Mass: 50
-  m_LinearDrag: 0
+  m_LinearDrag: 100
   m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
@@ -70,8 +70,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 80
-  currentHitpoints: 80
+  MaxHitpoints: 10
+  DestroyOnZeroHp: 1
+  DamageSound: []
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
   hitpointsHeavyDamage: 30
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
