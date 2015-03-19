@@ -191,7 +191,7 @@ public class Hero : MonoBehaviour {
 			sliding = true;
 		}
 		
-		else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, _wallCheck.position , 1 << LayerMask.NameToLayer("Ground")))
+		else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, -_wallCheck.position , 1 << LayerMask.NameToLayer("Ground")))
 		{
 			_walljump = 2;
 			//_anim.SetBool("Slide", true);
