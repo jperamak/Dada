@@ -101,34 +101,6 @@ public class ConsoleController : AbstractController {
 			return false;
 		}
 
-		//this version works fine for normal buttons
-		/*public override bool GetButtonDown(VirtualKey key){
-
-
-			List<KeyProperty> keys = _keymap.Get(key);
-			if(keys == null)
-				return false;
-
-			foreach(KeyProperty prop in keys)
-				if(UnityEngine.Input.GetButtonDown(suffix+prop.Name))
-					return true;
-			return false;
-
-		}
-
-		//this version works fine for normal buttons
-		public override bool GetButtonUp(VirtualKey key){
-
-			List<KeyProperty> keys = _keymap.Get(key);
-			if(keys == null)
-				return false;
-			
-			foreach(KeyProperty prop in keys)
-				if(UnityEngine.Input.GetButtonUp(suffix+prop.Name))
-					return true;
-			return false;
-		}*/
-
 		private float ReadFromJoystick(VirtualKey key){
 			List<KeyProperty> keys = _keymap.Get(key);
 
@@ -164,7 +136,7 @@ public class ConsoleController : AbstractController {
 			}
 
 			//avoid false trigger due to hardware imprecisions
-			if( Mathf.Abs(sum) < 0.05f)
+			if( Mathf.Abs(sum) < DeadZone)
 				return 0;
 
 			return Mathf.Clamp(sum,-1,1);

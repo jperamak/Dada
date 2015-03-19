@@ -16,6 +16,7 @@ public abstract class AbstractController {
 
 		public virtual bool Inverted{get; set;}
 		public virtual float Sensibility{get;set;}
+		public virtual float DeadZone{get;set;} 
 
 		public abstract float GetAxis(VirtualKey key);
 		public abstract bool GetButton(VirtualKey key);
@@ -32,7 +33,7 @@ public abstract class AbstractController {
 			Number = number;
 			Inverted = false;
 			Sensibility = 1;
-
+			DeadZone = 0.25f;
 			_keymap = new KeyMap();
 
 			if(keymap != null)
