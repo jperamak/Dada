@@ -167,7 +167,7 @@ public class Hero : MonoBehaviour {
 				DadaAudio.PlayRandom(JumpClips);
 
 			// Add a vertical force to the player.
-			if (JumpForce == 1)
+            if (_walljump == 1)
 			{
 				GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 				GetComponent<Rigidbody2D>().AddForce(new Vector2(JumpForce, JumpForce));
