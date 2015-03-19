@@ -116,9 +116,11 @@ public class LevelManager : MonoBehaviour {
 	protected void OnPlayerKilled(GameObject victim, GameObject killer = null){
 
 		Player v = victim.GetComponent<Hero>().PlayerInstance;
-        Player k = killer.GetComponent<Hero>().PlayerInstance;
-		//player suicided or killed for something else
+		Player k = null;
+		if(killer != null)
+        	k = killer.GetComponent<Hero>().PlayerInstance;
 
+		//player suicided or killed for something else
         if (FriendlyFire(v, k))
         {
             _scores[k.Number]--;

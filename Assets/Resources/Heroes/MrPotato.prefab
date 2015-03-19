@@ -629,10 +629,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 8300000, guid: b442e25400fca4a14b831dfe237d5ce3, type: 3}
-  ShieldAfterRespawn: 3.5
+  ShieldAfterRespawn: 2
   ShieldAfterDamage: 1.5
   ShieldDelay: .200000003
 --- !u!114 &11442704

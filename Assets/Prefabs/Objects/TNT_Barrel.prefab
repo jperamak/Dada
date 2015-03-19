@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.1299992, y: -13.3299999, z: 0}
+  m_LocalPosition: {x: -25.4400005, y: -19.9500008, z: 0}
   m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,10 +88,13 @@ MonoBehaviour:
   VisualEffect: {fileID: 0}
   DamageOwner: 1
   DamageAmount: 1000
-  Radius: 15
-  ExplosionForce: 400
+  Radius: 6
+  ExplosionForce: 100
   NumOfRays: 20
   ParticleLifetime: .200000003
+  InteractWith:
+    serializedVersion: 2
+    m_Bits: 4294696959
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
 --- !u!212 &21238116
 SpriteRenderer:

@@ -8,6 +8,7 @@ public sealed class Resource {
 	public static readonly Resource BANANA_RANGE = new Resource("BananaZooka", "Weapons/BananaZooka");
 	public static readonly Resource CHILI_RANGE = new Resource("Chilling Chili", "Weapons/ChiliZooka");
 	public static readonly Resource PHOENIX = new Resource("Phoenix", "Weapons/Phoenix");
+	public static readonly Resource FIRE_RANGE = new Resource("Aaaaah!", "Weapons/FireStaff");
 
 	//Melee weapons
 	public static readonly Resource ICY_MELEE = new Resource("Ice Cream", "Weapons/IcyKatana");
@@ -19,10 +20,11 @@ public sealed class Resource {
 	public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/Monk");
 	public static readonly Resource POTATO_HERO = new Resource("Mr. Potato", "Heroes/MrPotato");
 
-    public static readonly Resource TEAM_1 = new Resource("Team 1", "");
-    public static readonly Resource TEAM_2 = new Resource("Team 2", "");
-    public static readonly Resource TEAM_3 = new Resource("Team 3", "");
-    public static readonly Resource TEAM_4 = new Resource("Team 4", "");
+	//Teams
+    public static readonly Resource TEAM_1 = new Resource("The Bastards", "");
+    public static readonly Resource TEAM_2 = new Resource("team_name", "");
+    public static readonly Resource TEAM_3 = new Resource("Curry Soup", "");
+    public static readonly Resource TEAM_4 = new Resource("Dolly Blues", "");
 
 	public string Name{get; private set;}
 	public string Path{get; private set;}
@@ -43,7 +45,7 @@ public sealed class Resource {
 	}
 
 	public static Resource[] MeleeWepons = { Resource.ICY_MELEE, Resource.FLAME_MELEE, Resource.ELECTRIC_MELEE };
-	public static Resource[] RangedWepons = { Resource.BANANA_RANGE, Resource.CHILI_RANGE, Resource.PHOENIX };
+	public static Resource[] RangedWepons = { Resource.BANANA_RANGE, Resource.CHILI_RANGE, Resource.PHOENIX, Resource.FIRE_RANGE };
 	public static Resource[] Heroes = { Resource.POTATO_HERO, Resource.CACTUAR_HERO, Resource.MONK_HERO };
     public static Resource[] Teams = { Resource.TEAM_1, Resource.TEAM_2, Resource.TEAM_3, Resource.TEAM_4 };
 }

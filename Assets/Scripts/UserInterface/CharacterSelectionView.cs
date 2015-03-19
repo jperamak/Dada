@@ -46,7 +46,7 @@ public class CharacterSelectionView : MonoBehaviour {
 
 	private void AssemblePlayer(){
 
-		//update UI text to show the current selection
+
 
 		if(_currentHero != null)
 			Destroy(_currentHero.gameObject);
@@ -57,7 +57,7 @@ public class CharacterSelectionView : MonoBehaviour {
 		_player.SecondWeapon = Resource.MeleeWepons[_iMelee];
         _player.TeamNumber = _iTeam;
 
-
+		//update UI text to show the current selection
         UpdateBtnText();
 
 		//create an instance of the hero so the player can try it out in the selection screen
@@ -131,8 +131,7 @@ public class CharacterSelectionView : MonoBehaviour {
 				_iMelee--;
 				AssemblePlayer();
 			}
-            else if (_btnSelected == 3 && _iTeam > 0)
-            {
+            else if (_btnSelected == 3 && _iTeam > 0){
                 _iTeam--;
                 AssemblePlayer();
             }
@@ -152,8 +151,7 @@ public class CharacterSelectionView : MonoBehaviour {
 				_iMelee++;
 				AssemblePlayer();
 			}
-            else if (_btnSelected == 3 && _iTeam < Resource.Teams.Length - 1)
-            {
+            else if (_btnSelected == 3 && _iTeam < Resource.Teams.Length - 1){
                 _iTeam++;
                 AssemblePlayer();
             }
@@ -197,7 +195,6 @@ public class CharacterSelectionView : MonoBehaviour {
         Color newColor = _player.TeamColor;
         newColor.a = 0.5f;
         background.color = newColor;
-        Debug.Log(_player.TeamNumber);
 
 	}
 }

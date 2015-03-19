@@ -12,7 +12,7 @@ public class DamageableBlock : Damageable {
 	public Sprite spriteHeavyDamage = null;		// sprite for heavily damaged object
 
 	public GameObject leftWhenDestroyed = null;  // When hitpoints reach zero, the gameObject is replaced with this one
-
+	public bool DestroyOnZeroHp = true;
 	public bool damageFromCollisions;
 
 	private Sprite _spriteNoDamage = null;
@@ -32,9 +32,6 @@ public class DamageableBlock : Damageable {
 		if (_currentHitpoints <= 0.0f && leftWhenDestroyed != null) {
 			LeaveRuins();
 		}
-
-		
-		
 	}
 
 	public override void RestoreToMaxHp() {
@@ -74,13 +71,19 @@ public class DamageableBlock : Damageable {
 
 
 	private void LeaveRuins() {
-
-			GameObject ruin = Instantiate(leftWhenDestroyed, transform.position, transform.rotation) as GameObject;
-			ruin.transform.localScale = transform.localScale;
-
+		GameObject ruin = Instantiate(leftWhenDestroyed, transform.position, transform.rotation) as GameObject;
+		ruin.transform.localScale = transform.localScale;
 	}
 
+	protected override void OnDestroyed (){
 
+		if(DestroySound != null)
+			DadaAudio.PlaySound(DestroySound);
+		
+		if(OnDestroy != null)
+			OnDestroy(this.gameObject,_lastHitFrom);
+		if(DestroyOnZeroHp)
+			Destroy(gameObject);
 
-	            
+	}	            
 }

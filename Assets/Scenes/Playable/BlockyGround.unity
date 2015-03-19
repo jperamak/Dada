@@ -2085,7 +2085,11 @@ Transform:
   - {fileID: 1513734590}
   - {fileID: 958597355}
   m_Father: {fileID: 0}
+<<<<<<< ours
+  m_RootOrder: 29
+=======
   m_RootOrder: 31
+>>>>>>> theirs
 --- !u!1001 &80987934
 Prefab:
   m_ObjectHideFlags: 0
@@ -2180,7 +2184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -2188,6 +2191,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &89864887
 Rigidbody2D:
@@ -2450,7 +2454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -2458,6 +2461,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &97149036
 Rigidbody2D:
@@ -2724,7 +2728,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -2732,6 +2735,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &102869722
 Rigidbody2D:
@@ -2834,7 +2838,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -2842,6 +2845,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &107421580
 Rigidbody2D:
@@ -2944,7 +2948,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -2952,6 +2955,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &112062451
 Rigidbody2D:
@@ -3054,7 +3058,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -3062,6 +3065,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &113084609
 Rigidbody2D:
@@ -4823,7 +4827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -4831,6 +4834,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &172519639
 Rigidbody2D:
@@ -4983,7 +4987,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 80
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
@@ -4991,6 +4994,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300004, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300006, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: f051f9327ea064079a92813c714aad2d, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!50 &179749186
 Rigidbody2D:
@@ -5143,7 +5147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -5151,6 +5154,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &186136335
 Rigidbody2D:
@@ -5659,7 +5663,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -5667,6 +5670,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &203684078
 Rigidbody2D:
@@ -5823,7 +5827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 66
@@ -5831,6 +5834,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300004, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300006, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: f051f9327ea064079a92813c714aad2d, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &208249483
 Rigidbody2D:
@@ -6083,7 +6087,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -6091,6 +6094,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &215179284
 Rigidbody2D:
@@ -6389,7 +6393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -6397,6 +6400,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &229936585
 Rigidbody2D:
@@ -6599,7 +6603,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -6607,6 +6610,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &234605816
 Rigidbody2D:
@@ -6809,7 +6813,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -6817,6 +6820,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &239649345
 Rigidbody2D:
@@ -6969,7 +6973,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -6977,6 +6980,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &245245297
 Rigidbody2D:
@@ -7377,7 +7381,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -7385,6 +7388,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &262058216
 Rigidbody2D:
@@ -7487,7 +7491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -7495,6 +7498,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &262530481
 Rigidbody2D:
@@ -7640,7 +7644,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -7648,6 +7651,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &267555217
 Rigidbody2D:
@@ -8723,7 +8727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -8731,6 +8734,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &304886188
 Rigidbody2D:
@@ -8833,7 +8837,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 80
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
@@ -8841,6 +8844,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: f051f9327ea064079a92813c714aad2d, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &305573130
 Rigidbody2D:
@@ -9175,7 +9179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -9183,6 +9186,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &315473854
 Rigidbody2D:
@@ -9669,7 +9673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 80
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
@@ -9677,6 +9680,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: f051f9327ea064079a92813c714aad2d, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &363110041
 Rigidbody2D:
@@ -10036,7 +10040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -10044,6 +10047,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &380004510
 Rigidbody2D:
@@ -10895,7 +10899,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -10903,6 +10906,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &424581658
 Rigidbody2D:
@@ -11270,7 +11274,11 @@ Transform:
   - {fileID: 267555215}
   - {fileID: 1968867362}
   m_Father: {fileID: 0}
+<<<<<<< ours
+  m_RootOrder: 24
+=======
   m_RootOrder: 26
+>>>>>>> theirs
 --- !u!1001 &436647884
 Prefab:
   m_ObjectHideFlags: 0
@@ -11823,7 +11831,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -11831,6 +11838,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &470377329
 Rigidbody2D:
@@ -11933,7 +11941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -11941,6 +11948,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &472967759
 Rigidbody2D:
@@ -12093,7 +12101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -12101,6 +12108,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &476482637
 Rigidbody2D:
@@ -12203,7 +12211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -12211,6 +12218,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &477989116
 Rigidbody2D:
@@ -12983,7 +12991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -12991,6 +12998,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &507895494
 Rigidbody2D:
@@ -13353,7 +13361,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -13361,6 +13368,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &511847428
 Rigidbody2D:
@@ -13777,7 +13785,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -13785,6 +13792,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &525563993
 Rigidbody2D:
@@ -14097,7 +14105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -14105,6 +14112,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &536583727
 Rigidbody2D:
@@ -14943,7 +14951,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -14951,6 +14958,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &567293627
 Rigidbody2D:
@@ -15157,7 +15165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -15165,6 +15172,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &576910023
 Rigidbody2D:
@@ -15267,7 +15275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -15275,6 +15282,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &579652814
 Rigidbody2D:
@@ -15787,7 +15795,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -15795,6 +15802,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &600210066
 Rigidbody2D:
@@ -15997,7 +16005,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -16005,6 +16012,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &601934506
 Rigidbody2D:
@@ -16107,7 +16115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -16115,6 +16122,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &605388170
 Rigidbody2D:
@@ -16451,7 +16459,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -16459,6 +16466,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &617336629
 Rigidbody2D:
@@ -16757,7 +16765,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -16765,6 +16772,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &628199021
 Rigidbody2D:
@@ -16982,7 +16990,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -16990,6 +16997,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &645634578
 Rigidbody2D:
@@ -17538,7 +17546,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -17546,6 +17553,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &664997105
 Rigidbody2D:
@@ -17932,7 +17940,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -17940,6 +17947,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &670732312
 Rigidbody2D:
@@ -19218,7 +19226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -19226,6 +19233,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &708213943
 Rigidbody2D:
@@ -19370,7 +19378,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -19378,6 +19385,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &721342524
 Rigidbody2D:
@@ -19503,7 +19511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -19511,6 +19518,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &723765562
 Rigidbody2D:
@@ -20517,7 +20525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -20525,6 +20532,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &752415598
 Rigidbody2D:
@@ -20627,7 +20635,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -20635,6 +20642,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300004, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300006, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: f051f9327ea064079a92813c714aad2d, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &757660127
 Rigidbody2D:
@@ -21812,7 +21820,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -21820,6 +21827,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &813707043
 Rigidbody2D:
@@ -22290,7 +22298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -22298,6 +22305,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &839745536
 Rigidbody2D:
@@ -22560,7 +22568,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -22568,6 +22575,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &844818418
 Rigidbody2D:
@@ -22920,7 +22928,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -22928,6 +22935,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &871160313
 Rigidbody2D:
@@ -23290,7 +23298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -23298,6 +23305,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &878503210
 Rigidbody2D:
@@ -23400,7 +23408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -23408,6 +23415,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &884787790
 Rigidbody2D:
@@ -23993,7 +24001,11 @@ Transform:
   - {fileID: 1112161947}
   - {fileID: 702396531}
   m_Father: {fileID: 0}
+<<<<<<< ours
+  m_RootOrder: 19
+=======
   m_RootOrder: 21
+>>>>>>> theirs
 --- !u!1 &906713104
 GameObject:
   m_ObjectHideFlags: 0
@@ -24029,7 +24041,11 @@ Transform:
   - {fileID: 1269360679}
   - {fileID: 501793103}
   m_Father: {fileID: 0}
+<<<<<<< ours
+  m_RootOrder: 25
+=======
   m_RootOrder: 27
+>>>>>>> theirs
 --- !u!1001 &909508827
 Prefab:
   m_ObjectHideFlags: 0
@@ -24266,7 +24282,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -24274,6 +24289,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &924983127
 Rigidbody2D:
@@ -24376,7 +24392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -24384,6 +24399,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &926093481
 Rigidbody2D:
@@ -24622,7 +24638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -24630,6 +24645,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &941975274
 Rigidbody2D:
@@ -24782,14 +24798,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
   hitpointsHeavyDamage: 60
+<<<<<<< ours
+  spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
+=======
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+>>>>>>> theirs
   damageFromCollisions: 1
 --- !u!50 &948399453
 Rigidbody2D:
@@ -25379,7 +25401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -25387,6 +25408,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &975006926
 Rigidbody2D:
@@ -25878,7 +25900,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -25886,6 +25907,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &981814317
 Rigidbody2D:
@@ -26354,7 +26376,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -26362,6 +26383,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &989845733
 Rigidbody2D:
@@ -26816,7 +26838,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -26824,6 +26845,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1003192261
 Rigidbody2D:
@@ -27390,7 +27412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
@@ -27398,6 +27419,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1020649263
 Rigidbody2D:
@@ -27692,7 +27714,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -27700,6 +27721,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1046252587
 Rigidbody2D:
@@ -28212,7 +28234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -28220,6 +28241,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1067076215
 Rigidbody2D:
@@ -28514,7 +28536,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -28522,6 +28543,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1078626422
 Rigidbody2D:
@@ -28861,7 +28883,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -28869,6 +28890,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1092120481
 Rigidbody2D:
@@ -29003,7 +29025,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -29011,6 +29032,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1094198279
 Rigidbody2D:
@@ -29543,7 +29565,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -29551,6 +29572,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1105346488
 Rigidbody2D:
@@ -29730,7 +29752,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -29738,6 +29759,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1114384084
 Rigidbody2D:
@@ -31063,7 +31085,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -31071,6 +31092,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1188197499
 Rigidbody2D:
@@ -31173,7 +31195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -31181,6 +31202,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1189099146
 Rigidbody2D:
@@ -31283,7 +31305,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -31291,6 +31312,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1191908252
 Rigidbody2D:
@@ -32258,7 +32280,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -32266,6 +32287,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1260031880
 Rigidbody2D:
@@ -32437,7 +32459,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -32445,6 +32466,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1272562271
 Rigidbody2D:
@@ -32787,7 +32809,11 @@ Transform:
   - {fileID: 2091796101}
   - {fileID: 1249190913}
   m_Father: {fileID: 0}
+<<<<<<< ours
+  m_RootOrder: 28
+=======
   m_RootOrder: 30
+>>>>>>> theirs
 --- !u!1001 &1293999507
 Prefab:
   m_ObjectHideFlags: 0
@@ -33188,7 +33214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -33196,6 +33221,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300004, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300006, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: f051f9327ea064079a92813c714aad2d, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1316276126
 Rigidbody2D:
@@ -33298,7 +33324,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -33306,6 +33331,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1318298716
 Rigidbody2D:
@@ -34524,7 +34550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -34532,6 +34557,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1387469573
 Rigidbody2D:
@@ -35531,7 +35557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -35539,6 +35564,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1415329411
 Rigidbody2D:
@@ -35818,7 +35844,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -35826,6 +35851,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1427947418
 Rigidbody2D:
@@ -36147,7 +36173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -36155,6 +36180,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1437464251
 Rigidbody2D:
@@ -36917,7 +36943,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -36925,6 +36950,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1484941628
 Rigidbody2D:
@@ -37325,7 +37351,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -37333,6 +37358,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1502313057
 Rigidbody2D:
@@ -37803,7 +37829,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -37811,6 +37836,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1524606083
 Rigidbody2D:
@@ -37913,7 +37939,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -37921,6 +37946,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1526755323
 Rigidbody2D:
@@ -38281,7 +38307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -38289,6 +38314,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1546561092
 Rigidbody2D:
@@ -39191,7 +39217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -39199,6 +39224,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1584056241
 Rigidbody2D:
@@ -39979,7 +40005,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -39987,6 +40012,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1605916213
 Rigidbody2D:
@@ -40831,6 +40857,9 @@ Transform:
   - {fileID: 142317961}
   - {fileID: 1694482229}
   m_Father: {fileID: 0}
+<<<<<<< ours
+  m_RootOrder: 6
+=======
   m_RootOrder: 7
 --- !u!1 &1630718391
 GameObject:
@@ -40942,6 +40971,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300028, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> theirs
 --- !u!1001 &1631522912
 Prefab:
   m_ObjectHideFlags: 0
@@ -41456,7 +41486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -41464,6 +41493,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1659274894
 Rigidbody2D:
@@ -41566,7 +41596,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -41574,6 +41603,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1660386095
 Rigidbody2D:
@@ -41676,7 +41706,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -41684,6 +41713,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1661588867
 Rigidbody2D:
@@ -41936,7 +41966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -41944,6 +41973,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1677515080
 Rigidbody2D:
@@ -42746,7 +42776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -42754,6 +42783,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1694982557
 Rigidbody2D:
@@ -43066,7 +43096,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -43074,6 +43103,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1716797019
 Rigidbody2D:
@@ -43490,7 +43520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -43498,6 +43527,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1728748489
 Rigidbody2D:
@@ -43856,7 +43886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 75
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 50
@@ -43864,6 +43893,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1743544250
 Rigidbody2D:
@@ -44220,7 +44250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -44228,6 +44257,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1751532478
 Rigidbody2D:
@@ -44313,7 +44343,11 @@ Transform:
   m_Children:
   - {fileID: 1453886370}
   m_Father: {fileID: 0}
+<<<<<<< ours
+  m_RootOrder: 7
+=======
   m_RootOrder: 8
+>>>>>>> theirs
 --- !u!1 &1753961490
 GameObject:
   m_ObjectHideFlags: 0
@@ -44358,7 +44392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -44366,6 +44399,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1753961493
 Rigidbody2D:
@@ -45881,7 +45915,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -45889,6 +45922,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1838456389
 Rigidbody2D:
@@ -45995,7 +46029,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -46003,6 +46036,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1843682279
 Rigidbody2D:
@@ -46289,7 +46323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -46297,6 +46330,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1850349776
 Rigidbody2D:
@@ -46637,7 +46671,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -46645,6 +46678,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1857519795
 Rigidbody2D:
@@ -46857,7 +46891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -46865,6 +46898,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1861166330
 Rigidbody2D:
@@ -47086,7 +47120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -47094,6 +47127,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1864124063
 Rigidbody2D:
@@ -47332,7 +47366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -47340,6 +47373,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1869077374
 Rigidbody2D:
@@ -47596,7 +47630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -47604,6 +47637,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1878106978
 Rigidbody2D:
@@ -47932,7 +47966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -47940,6 +47973,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1886327598
 Rigidbody2D:
@@ -48302,7 +48336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -48310,6 +48343,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1907419818
 Rigidbody2D:
@@ -48655,7 +48689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -48663,6 +48696,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1916369725
 Rigidbody2D:
@@ -48751,7 +48785,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -48759,6 +48792,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1921513151
 Rigidbody2D:
@@ -49026,7 +49060,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -49034,6 +49067,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1930387316
 Rigidbody2D:
@@ -49122,7 +49156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -49130,6 +49163,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1930648247
 Rigidbody2D:
@@ -49336,7 +49370,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -49344,6 +49377,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1942875627
 Rigidbody2D:
@@ -50052,7 +50086,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 60
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 40
@@ -50060,6 +50093,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1968540645
 Rigidbody2D:
@@ -50149,7 +50183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -50157,6 +50190,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300024, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300026, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1968867364
 Rigidbody2D:
@@ -50742,7 +50776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -50750,6 +50783,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &1998127331
 Rigidbody2D:
@@ -51012,7 +51046,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -51020,6 +51053,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &2013618193
 Rigidbody2D:
@@ -52142,7 +52176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -52150,6 +52183,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &2071850262
 Rigidbody2D:
@@ -52630,7 +52664,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -52638,6 +52671,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &2089518539
 Rigidbody2D:
@@ -52740,7 +52774,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
@@ -52748,6 +52781,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &2089558663
 Rigidbody2D:
@@ -53052,7 +53086,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -53060,6 +53093,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &2096150184
 Rigidbody2D:
@@ -53486,7 +53520,11 @@ Transform:
   - {fileID: 902634659}
   - {fileID: 869430480}
   m_Father: {fileID: 0}
+<<<<<<< ours
+  m_RootOrder: 11
+=======
   m_RootOrder: 12
+>>>>>>> theirs
 --- !u!1001 &2112795619
 Prefab:
   m_ObjectHideFlags: 0
@@ -53904,7 +53942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 150
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 120
@@ -53912,6 +53949,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300042, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300044, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!50 &2136153774
 Rigidbody2D:

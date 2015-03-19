@@ -1,8 +1,12 @@
 fileFormatVersion: 2
-guid: 72fdc3c0c16301241b31ddaaaa27093c
+guid: e7b72633bcc93d74bb44b626de6b2085
+timeCreated: 1426776346
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rubber_chicken_0
+    21300000: FireBall_4
+    21300002: FireBall_8
+    21300004: FireBall_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,7 +30,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 2048
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -48,15 +52,35 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: rubber_chicken_0
+    - name: FireBall_4
       rect:
         serializedVersion: 2
-        x: 26
-        y: 25
-        width: 890
-        height: 651
-      alignment: 9
-      pivot: {x: .838449776, y: .184049189}
+        x: 0
+        y: 72
+        width: 65
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FireBall_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 72
+        width: 65
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FireBall_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 72
+        width: 65
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

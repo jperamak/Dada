@@ -6,7 +6,6 @@ using System.Collections;
 public class Damageable : MonoBehaviour {
 
 	public float MaxHitpoints = 10.0f;				// hitpoints when undamaged
-	public bool DestroyOnZeroHp = true;
 	public KilledCallback OnDestroy;
 
 
@@ -17,7 +16,7 @@ public class Damageable : MonoBehaviour {
 	protected float _currentHitpoints;
 	protected float _lastTimePlayAudio = 0;
 	protected float _playAudioDelay = 0.25f;
-	private GameObject _lastHitFrom;
+	protected GameObject _lastHitFrom;
 
 	
 	void Awake () {
@@ -58,8 +57,7 @@ public class Damageable : MonoBehaviour {
 		if(OnDestroy != null)
 			OnDestroy(this.gameObject,_lastHitFrom);
 
-		if (DestroyOnZeroHp)
-			Destroy(gameObject);
+		Destroy(gameObject);
 	}
 
 
