@@ -385,7 +385,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1.5
+  m_GravityScale: 2.5
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -532,9 +532,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveForce: 150
-  MaxSpeed: 8
+  MaxSpeed: 12
   JumpForce: 1000
-  JumpAirModifier: .0250000004
+  JumpAirModifier: .0299999993
   JumpLength: .5
   JumpOn:
     serializedVersion: 2
