@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Playable/TowersAndTreesNew.unity
   - enabled: 1
     path: Assets/Scenes/TowersWithEmbrasures.unity
+  - enabled: 1
+    path: Assets/Scenes/Playable/BlockyGround.unity
