@@ -19,6 +19,8 @@ public class Hero : MonoBehaviour {
 	//class private attributes
 	private AbstractController _controller;	// Controller used to query the player's input
 	private Transform _groundCheck;			// A position marking where to check if the player is grounded.
+    private Transform _groundCheckLeft;			// A position marking where to check if the player is grounded.
+    private Transform _groundCheckRight;			// A position marking where to check if the player is grounded.
     private Transform _wallCheck;			// A position marking where to check if the player is grounded.
     private Transform _crossairPivot;		// The point where the crossair is attached to
 	private Transform _crossair; 			// Crossair's transform, useful for calculating the shoot direction
@@ -39,7 +41,9 @@ public class Hero : MonoBehaviour {
 	// Setting up initial references.
 	void Awake(){
 		_rangeWeaponHand = transform.Find("Hand1");
-		_groundCheck 	 = transform.Find("GroundCheck");
+        _groundCheck     = transform.Find("GroundCheck");
+        _groundCheckLeft = transform.Find("GroundCheckLeft");
+        _groundCheckRight = transform.Find("GroundCheckRight");
         _wallCheck       = transform.Find("WallCheck");
 		_crossairPivot 	 = transform.Find("CrossairPivot");
 		_crossair 		 = _crossairPivot.Find("Crossair");
@@ -130,7 +134,7 @@ public class Hero : MonoBehaviour {
 			Flip();
 
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		_grounded = Physics2D.Linecast(transform.position, _groundCheck.position, JumpOn);//LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
+        _grounded = Physics2D.Linecast(transform.position, _groundCheck.position, JumpOn) || Physics2D.Linecast(transform.position, _groundCheckLeft.position, JumpOn) || Physics2D.Linecast(transform.position, _groundCheckRight.position, JumpOn);//LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
 
 		//if (_grounded)
 		//	_anim.SetBool("Slide", false);
@@ -170,29 +174,35 @@ public class Hero : MonoBehaviour {
             if (_walljump == 1)
 			{
 				GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-				GetComponent<Rigidbody2D>().AddForce(new Vector2(JumpForce, JumpForce));
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(JumpForce, JumpForce));
 			}
 			else
 			{
-				GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-				GetComponent<Rigidbody2D>().AddForce(new Vector2(-JumpForce, JumpForce));
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(-JumpForce, JumpForce));
 			}
+            _walljump = 0;
 		}
 	}
 	
 	void ProcessJump(){
 
 		var sliding = false;
-		
-		if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, _wallCheck.position, 1 << LayerMask.NameToLayer("Ground")))
+
+        if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position  - _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
 		{
-			_walljump = 1;
+            _jumpStartTime = Time.time;
+            _jump = true; 
+            _walljump = 1;
 			//_anim.SetBool("Slide", true);
 			sliding = true;
 		}
-		
-		else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, -_wallCheck.position , 1 << LayerMask.NameToLayer("Ground")))
+
+        else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
 		{
+            _jumpStartTime = Time.time;
+            _jump = true;
+
 			_walljump = 2;
 			//_anim.SetBool("Slide", true);
 			sliding = true;
