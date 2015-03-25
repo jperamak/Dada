@@ -60,7 +60,17 @@ public class Hero : MonoBehaviour {
 		_ranged = GetComponentInChildren<RangedWeapon>();
 		name = "Player "+player.Number;
 	}
-	
+
+	public void GiveWeapon(Weapon weapon)
+    {
+        Destroy(_ranged.gameObject);
+        _ranged = weapon;
+        _ranged.transform.position = _rangeWeaponHand.position;
+        _ranged.transform.rotation = _rangeWeaponHand.rotation;
+        if (!_facingRight)
+            _ranged.transform.localScale = new Vector3(1, 1, -1);
+    }
+
 	void Update () {
 
 		//no controller, no party

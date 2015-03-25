@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6cfcdfda3bb3742b6a6146da3c4711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitpoints: 100
+  MaxHitpoints: 10
   DamageSound: []
   DestroySound: {fileID: 8300000, guid: b442e25400fca4a14b831dfe237d5ce3, type: 3}
   ShieldAfterRespawn: 2
