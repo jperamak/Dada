@@ -21,6 +21,7 @@ public class Hero : MonoBehaviour {
 	private Transform _groundCheck;			// A position marking where to check if the player is grounded.
     private Transform _groundCheckLeft;			// A position marking where to check if the player is grounded.
     private Transform _groundCheckRight;			// A position marking where to check if the player is grounded.
+    private Transform _slopeCheck;
     private Transform _wallCheck;			// A position marking where to check if the player is grounded.
     private Transform _crossairPivot;		// The point where the crossair is attached to
 	private Transform _crossair; 			// Crossair's transform, useful for calculating the shoot direction
@@ -44,7 +45,8 @@ public class Hero : MonoBehaviour {
         _groundCheck     = transform.Find("GroundCheck");
         _groundCheckLeft = transform.Find("GroundCheckLeft");
         _groundCheckRight = transform.Find("GroundCheckRight");
-        _wallCheck       = transform.Find("WallCheck");
+        _slopeCheck = transform.Find("SlopeCheck");
+        _wallCheck = transform.Find("WallCheck");
 		_crossairPivot 	 = transform.Find("CrossairPivot");
 		_crossair 		 = _crossairPivot.Find("Crossair");
 		_anim = GetComponent<Animator>();
@@ -133,7 +135,19 @@ public class Hero : MonoBehaviour {
 		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > MaxSpeed * Mathf.Abs(h))
 			// ... set the player's velocity to the maxSpeed in the x axis.
 			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * MaxSpeed * Mathf.Abs(h), GetComponent<Rigidbody2D>().velocity.y);
-		
+        if (_grounded && Physics2D.Linecast(
+            transform.position + new Vector3(0, -0.5f, 0), transform.position + new Vector3(0, -0.5f, 0) - _wallCheck.localPosition, LayerMask.GetMask("Ground")))
+        {
+            Debug.Log("slope left");
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * -h * MoveForce);
+        }
+        if (_grounded && Physics2D.Linecast(
+            transform.position + new Vector3(0, -0.5f, 0), transform.position + new Vector3(0, -0.5f, 0) + _wallCheck.localPosition, LayerMask.GetMask("Ground")))
+        {
+            Debug.Log("slope right");
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * h * MoveForce);
+        }
+
 		// If the input is moving the player right and the player is facing left...
 		if(h > 0 && !_facingRight)
 			// ... flip the player.

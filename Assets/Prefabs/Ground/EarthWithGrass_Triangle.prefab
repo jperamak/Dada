@@ -24,8 +24,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106709}
+  m_LocalPosition: {x: -18, y: -19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -45,7 +45,6 @@ PolygonCollider2D:
     m_Paths:
     - - {x: .515956879, y: -.475476265}
       - {x: .489303589, y: .493848801}
-      - {x: .342765808, y: .440006256}
       - {x: -.489547729, y: -.470226288}
 --- !u!114 &11471064
 MonoBehaviour:
@@ -59,7 +58,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 5
-  DestroyOnZeroHp: 1
   DamageSound: []
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 8
@@ -67,6 +65,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 138116, guid: fb118545a79bb4dea95c5da829ef839f, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!212 &21238116
 SpriteRenderer:
