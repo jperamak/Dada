@@ -15,7 +15,8 @@ public class Hero : MonoBehaviour {
     public float JumpAirModifier = 0.02f;
     public float JumpLength = 0.5f;         // Length of the jump
     public LayerMask JumpOn;				// Layermask that specify the elements the player can jump on
-	public AudioClip[] JumpClips;			// Array of clips for when the player jumps.
+    public SoundEffect JumpSound;
+
 
 	//class private attributes
 	private AbstractController _controller;	// Controller used to query the player's input
@@ -53,6 +54,8 @@ public class Hero : MonoBehaviour {
 		_crossair 		 = _crossairPivot.Find("Crossair");
 		_anim = GetComponent<Animator>();
 		_rigidbody = GetComponent<Rigidbody2D>();
+
+        JumpSound = DadaAudio.GetSoundEffect(JumpSound);
 
 	}
 
@@ -140,13 +143,13 @@ public class Hero : MonoBehaviour {
 		if(Mathf.Abs(_rigidbody.velocity.x) > MaxSpeed * Mathf.Abs(h))
 			// ... set the player's velocity to the maxSpeed in the x axis.
 			_rigidbody.velocity = new Vector2(Mathf.Sign(_rigidbody.velocity.x) * MaxSpeed * Mathf.Abs(h), _rigidbody.velocity.y);
-        if (_grounded && Physics2D.Linecast(
+        if (_grounded && !_jump && Physics2D.Linecast(
              transform.position + _slopeCheck.localPosition, transform.position + _slopeCheck.localPosition - _wallCheck.localPosition, LayerMask.GetMask("Ground")))
         {
            // Debug.Log("slope left");
             _rigidbody.AddForce(transform.up * -h * SlopeForce);
         }
-        if (_grounded && Physics2D.Linecast(
+        if (_grounded && !_jump && Physics2D.Linecast(
             transform.position + _slopeCheck.localPosition, transform.position + _slopeCheck.localPosition + _wallCheck.localPosition, LayerMask.GetMask("Ground")))
         {
            // Debug.Log("slope right");
@@ -176,9 +179,10 @@ public class Hero : MonoBehaviour {
 			//_anim.SetTrigger("Jump");
 			
 			// Play a random jump audio clip.
-			if (JumpClips.Length > 0)
-				DadaAudio.PlayRandom(JumpClips);
-
+			//if (JumpClips.Length > 0)
+			//	DadaAudio.PlayRandom(JumpClips);
+            if (JumpSound != null)
+                JumpSound.PlayEffect();
 			
 			// Add a vertical force to the player.
 			_rigidbody.AddForce(transform.up * JumpForce);
@@ -196,8 +200,10 @@ public class Hero : MonoBehaviour {
 			//_anim.SetTrigger("Jump");
 
 			// Play a random jump audio clip.
-			if (JumpClips.Length > 0)
-				DadaAudio.PlayRandom(JumpClips);
+			//if (JumpClips.Length > 0)
+			//	DadaAudio.PlayRandom(JumpClips);
+            if (JumpSound != null)
+                JumpSound.PlayEffect();
 
 			// Add a vertical force to the player.
             if (_walljump == 1)

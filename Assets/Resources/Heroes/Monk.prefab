@@ -129,22 +129,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &135704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 452044}
-  - 61: {fileID: 6177046}
-  m_Layer: 0
-  m_Name: GroundCheckBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &143952
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,11 +299,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .375, y: -.899999976, z: 0}
+  m_LocalPosition: {x: .375, y: -.734000027, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434926}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!4 &429830
 Transform:
   m_ObjectHideFlags: 1
@@ -344,7 +328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434926}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!4 &434926
 Transform:
   m_ObjectHideFlags: 1
@@ -352,13 +336,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.3323421, y: -2.23945665, z: -1}
+  m_LocalPosition: {x: -23.9500008, y: -13.3690004, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427786}
   - {fileID: 462158}
   - {fileID: 429830}
-  - {fileID: 452044}
   - {fileID: 490582}
   - {fileID: 497044}
   - {fileID: 459718}
@@ -379,18 +362,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 427786}
   m_RootOrder: 2
---- !u!4 &452044
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.686999977, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 434926}
-  m_RootOrder: 3
 --- !u!4 &454908
 Transform:
   m_ObjectHideFlags: 1
@@ -398,11 +369,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.375, y: -.899999976, z: 0}
+  m_LocalPosition: {x: -.375, y: -.734000027, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434926}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!4 &458660
 Transform:
   m_ObjectHideFlags: 1
@@ -426,7 +397,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434926}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &462158
 Transform:
   m_ObjectHideFlags: 1
@@ -464,7 +435,7 @@ Transform:
   m_Children:
   - {fileID: 458660}
   m_Father: {fileID: 434926}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &497044
 Transform:
   m_ObjectHideFlags: 1
@@ -476,7 +447,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434926}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &497292
 Transform:
   m_ObjectHideFlags: 1
@@ -530,19 +501,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: .0299999993}
   serializedVersion: 2
   m_Size: {x: .75999999, y: 1.04999995}
---- !u!61 &6177046
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135704}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: .75999999, y: .379999995}
 --- !u!82 &8287432
 AudioSource:
   m_ObjectHideFlags: 1
@@ -641,8 +599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 10
-  DamageSound: []
-  DestroySound: {fileID: 8300000, guid: b442e25400fca4a14b831dfe237d5ce3, type: 3}
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 11431582, guid: 8a10a3aa136f7d64a84563bd9959ca53, type: 2}
   ShieldAfterRespawn: 2
   ShieldAfterDamage: 1.5
   ShieldDelay: .200000003
@@ -658,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveForce: 150
-  SlopeForce: 90
+  SlopeForce: 70
   MaxSpeed: 12
   JumpForce: 1000
   JumpAirModifier: .0500000007
@@ -666,11 +624,7 @@ MonoBehaviour:
   JumpOn:
     serializedVersion: 2
     m_Bits: 413696
-  JumpClips:
-  - {fileID: 8300000, guid: d9f93eccf5cfe40abbc658677b9d7909, type: 3}
-  - {fileID: 8300000, guid: 6c78d41be81dc43bb9b32480d2bd301c, type: 3}
-  - {fileID: 8300000, guid: 8aec47e0344ae4084a6edfca3f476b74, type: 3}
-  - {fileID: 8300000, guid: 30b8d48b92aea4fd6a2a613ad92073f3, type: 3}
+  JumpSound: {fileID: 11471052, guid: 6a4fc9b53f92c0e499ecf8e38d985e6a, type: 2}
 --- !u!212 &21212374
 SpriteRenderer:
   m_ObjectHideFlags: 1

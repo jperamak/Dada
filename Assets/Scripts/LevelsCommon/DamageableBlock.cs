@@ -78,7 +78,7 @@ public class DamageableBlock : Damageable {
 	protected override void OnDestroyed (){
 
 		if(DestroySound != null)
-			DadaAudio.PlaySound(DestroySound);
+			DestroySound.PlayEffect();
 		
 		if(OnDestroy != null)
 			OnDestroy(this.gameObject,_lastHitFrom);
