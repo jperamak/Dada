@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.9699993, y: -2.3499999, z: 0}
+  m_LocalPosition: {x: 26.7689991, y: -12.5799999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: .000370025635, y: -.000471353531}
   serializedVersion: 2
-  m_Size: {x: 2.98282599, y: .231228352}
+  m_Size: {x: 2.5, y: .231228352}
 --- !u!114 &11469694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound:
   - {fileID: 8300000, guid: ca4fb6483d3a040a9904544409225b36, type: 3}
   DestroySound: {fileID: 0}
@@ -80,6 +79,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!212 &21238116
 SpriteRenderer:

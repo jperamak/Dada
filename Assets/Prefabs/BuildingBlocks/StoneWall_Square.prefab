@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6138116}
   - 50: {fileID: 5038116}
   - 114: {fileID: 11469694}
+  - 114: {fileID: 11417466}
   m_Layer: 12
   m_Name: StoneWall_Square
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.0378895, y: -6.71630621, z: 0}
+  m_LocalPosition: {x: 25, y: -17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38,7 +39,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_Mass: 25
-  m_LinearDrag: 1
+  m_LinearDrag: 0
   m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
@@ -59,6 +60,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11417466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51caa3988a0e04dbc82fd9c8cc9a7d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gluedObjects:
+  - {fileID: 0}
 --- !u!114 &11469694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,7 +85,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound:
   - {fileID: 8300000, guid: ca4fb6483d3a040a9904544409225b36, type: 3}
   DestroySound: {fileID: 8300000, guid: 96bd187bcf8de44dba5e7522a40abf39, type: 3}
@@ -80,6 +93,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 21300002, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   spriteHeavyDamage: {fileID: 21300004, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!212 &21238116
 SpriteRenderer:
@@ -104,7 +118,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1024582385
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

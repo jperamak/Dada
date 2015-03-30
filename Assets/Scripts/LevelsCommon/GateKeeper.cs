@@ -12,7 +12,7 @@ public class GateKeeper : MonoBehaviour {
 	void Start () {
 		_portcullis = transform.parent.FindChild("Portcullis").gameObject;
 
-
+		/*
 		if (ownedByTeamNumber == 0)
 			_portcullis.GetComponent<SpriteRenderer>().color = Color.red;
 		else if (ownedByTeamNumber == 1)
@@ -21,7 +21,7 @@ public class GateKeeper : MonoBehaviour {
 			_portcullis.GetComponent<SpriteRenderer>().color = Color.green;
 		else if (ownedByTeamNumber == 3)
 			_portcullis.GetComponent<SpriteRenderer>().color = Color.yellow;
-
+*/
 	}
 
 

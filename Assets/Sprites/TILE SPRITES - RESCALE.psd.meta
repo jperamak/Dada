@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e2e5e6d53f4f574cb9f71541b4a27fa
-timeCreated: 1427708089
+timeCreated: 1427717469
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,8 +8,8 @@ TextureImporter:
     21300002: StoneWall_Square_LightDam
     21300004: StoneWall_Square_HeavyDam
     21300006: SupportBeam
-    21300008: Floor_2units
-    21300010: Floor_3
+    21300008: Floor_short
+    21300010: Floor_long
     21300012: Stonewall_Rect_Bg_nd
     21300014: Stonewall_rect_bg_ld
     21300016: Stonewall_rect_bg_hd
@@ -37,6 +37,8 @@ TextureImporter:
     21300060: TILE SPRITES - RESCALE_21
     21300062: TILE SPRITES - RESCALE_22
     21300064: TILE SPRITES - RESCALE_23
+    21300066: Embrasure_Top_nd
+    21300068: Embrasure_Bottom_nd
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -115,30 +117,30 @@ TextureImporter:
     - name: SupportBeam
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 643
-        width: 65
-        height: 62
+        x: 1152
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Floor_2units
+    - name: Floor_short
       rect:
         serializedVersion: 2
-        x: 1729
-        y: 674
-        width: 257
+        x: 640
+        y: 241
+        width: 193
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Floor_3
+    - name: Floor_long
       rect:
         serializedVersion: 2
-        x: 1601
-        y: 610
-        width: 382
-        height: 30
+        x: 896
+        y: 241
+        width: 320
+        height: 31
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,6 +413,26 @@ TextureImporter:
         height: 67
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Embrasure_Top_nd
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 823
+        width: 120
+        height: 143
+      alignment: 9
+      pivot: {x: .929610193, y: .511027753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Embrasure_Bottom_nd
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 566
+        width: 114
+        height: 149
+      alignment: 9
+      pivot: {x: .931838751, y: .497049838}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

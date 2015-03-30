@@ -12,7 +12,9 @@ GameObject:
   - 61: {fileID: 6138116}
   - 50: {fileID: 5038116}
   - 114: {fileID: 11469694}
-  m_Layer: 12
+  - 114: {fileID: 11454518}
+  - 114: {fileID: 11437426}
+  m_Layer: 18
   m_Name: SupportBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.9799995, y: -3, z: 0}
+  m_LocalPosition: {x: 31.1410007, y: -12.9499998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38,7 +40,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_Mass: 15
-  m_LinearDrag: 1
+  m_LinearDrag: 0
   m_AngularDrag: .300000012
   m_GravityScale: 1
   m_FixedAngle: 0
@@ -56,9 +58,35 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .00727653503, y: .00484991074}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .519872487, y: .485921025}
+  m_Size: {x: .5, y: .5}
+--- !u!114 &11437426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51caa3988a0e04dbc82fd9c8cc9a7d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gluedObjects:
+  - {fileID: 0}
+--- !u!114 &11454518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51caa3988a0e04dbc82fd9c8cc9a7d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gluedObjects:
+  - {fileID: 0}
 --- !u!114 &11469694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,7 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DestroyOnZeroHp: 1
   DamageSound:
   - {fileID: 8300000, guid: ca4fb6483d3a040a9904544409225b36, type: 3}
   DestroySound: {fileID: 0}
@@ -80,6 +107,7 @@ MonoBehaviour:
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!212 &21238116
 SpriteRenderer:
