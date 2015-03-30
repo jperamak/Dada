@@ -27,6 +27,7 @@ public class Hero : MonoBehaviour {
 	private Transform _crossair; 			// Crossair's transform, useful for calculating the shoot direction
 	private Transform _rangeWeaponHand;		// The hand that holds the ranged weapon
 
+	private Rigidbody2D _rigidbody;
 	private Animator _anim;					// Reference to the player's animator component.
 	private Weapon _melee;					// Reference to the assigned melee weapon
 	private Weapon _ranged;					// Reference to the assigned ranged weapon
@@ -50,6 +51,7 @@ public class Hero : MonoBehaviour {
 		_crossairPivot 	 = transform.Find("CrossairPivot");
 		_crossair 		 = _crossairPivot.Find("Crossair");
 		_anim = GetComponent<Animator>();
+		_rigidbody = GetComponent<Rigidbody2D>();
 
 	}
 
@@ -84,18 +86,20 @@ public class Hero : MonoBehaviour {
 
 		//Aim
 		float yAxis = _controller.YAxis;
-		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis);
+		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
 		Vector3 newRotation = new Vector3(0, 0, aimAngle);
-
-		//rotate crossair and ranged weapon accordingly to current aim
 		_crossairPivot.eulerAngles 	 = newRotation;
 		_rangeWeaponHand.eulerAngles = newRotation;
+		_crossair.eulerAngles = newRotation;
+
+		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
+		if(!_facingRight){
+			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
+			newRotation = new Vector3(0, 0, aimAngle);
+			newRotation.z = 180 - newRotation.z;
+		}
 
 		//correct crossair rotation due to negative scale of the x axis
-		if(!_facingRight)
-			newRotation.z = 180 - newRotation.z;
-
-		//we can now correctly pass the crossair transform to the weapon to spawn projectiles
 		_crossair.eulerAngles = newRotation;
 
 
@@ -127,25 +131,25 @@ public class Hero : MonoBehaviour {
 		//_anim.SetFloat("Speed", _grounded ? Mathf.Abs(h) : 0);
 		
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-		if(h * GetComponent<Rigidbody2D>().velocity.x < MaxSpeed)
+		if(h * _rigidbody.velocity.x < MaxSpeed)
 			// ... add a force to the player.
-			GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * MoveForce);
+			_rigidbody.AddForce(transform.right * h * MoveForce);
 		
 		// If the player's horizontal velocity is greater than the maxSpeed...
-		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > MaxSpeed * Mathf.Abs(h))
+		if(Mathf.Abs(_rigidbody.velocity.x) > MaxSpeed * Mathf.Abs(h))
 			// ... set the player's velocity to the maxSpeed in the x axis.
-			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * MaxSpeed * Mathf.Abs(h), GetComponent<Rigidbody2D>().velocity.y);
+			_rigidbody.velocity = new Vector2(Mathf.Sign(_rigidbody.velocity.x) * MaxSpeed * Mathf.Abs(h), _rigidbody.velocity.y);
         if (_grounded && Physics2D.Linecast(
             transform.position + new Vector3(0, -0.5f, 0), transform.position + new Vector3(0, -0.5f, 0) - _wallCheck.localPosition, LayerMask.GetMask("Ground")))
         {
-            Debug.Log("slope left");
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * -h * MoveForce);
+           // Debug.Log("slope left");
+            _rigidbody.AddForce(transform.up * -h * MoveForce);
         }
         if (_grounded && Physics2D.Linecast(
             transform.position + new Vector3(0, -0.5f, 0), transform.position + new Vector3(0, -0.5f, 0) + _wallCheck.localPosition, LayerMask.GetMask("Ground")))
         {
-            Debug.Log("slope right");
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * h * MoveForce);
+           // Debug.Log("slope right");
+            _rigidbody.AddForce(transform.up * h * MoveForce);
         }
 
 		// If the input is moving the player right and the player is facing left...
@@ -176,14 +180,14 @@ public class Hero : MonoBehaviour {
 
 			
 			// Add a vertical force to the player.
-			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce));
+			_rigidbody.AddForce(transform.up * JumpForce);
 			
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			_jumpStart = false;
 		}
         if (_jump)
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, JumpForce * JumpAirModifier));
+			_rigidbody.AddForce( transform.up * JumpForce * JumpAirModifier);
         }
 		if (_walljump > 0 && !_grounded)
 		{
@@ -197,13 +201,13 @@ public class Hero : MonoBehaviour {
 			// Add a vertical force to the player.
             if (_walljump == 1)
 			{
-				GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(JumpForce, JumpForce));
+				_rigidbody.velocity = Vector2.zero;
+                _rigidbody.AddForce(new Vector2(JumpForce, JumpForce));
 			}
 			else
 			{
-                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(-JumpForce, JumpForce));
+                _rigidbody.velocity = Vector2.zero;
+                _rigidbody.AddForce(new Vector2(-JumpForce, JumpForce));
 			}
             _walljump = 0;
 		}

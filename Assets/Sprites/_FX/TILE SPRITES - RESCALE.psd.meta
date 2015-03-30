@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: 6407597a7b9375142be675bbaeb5bf6c
+timeCreated: 1427666279
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: TILE SPRITES - RESCALE_0
+    21300002: TILE SPRITES - RESCALE_1
+    21300004: TILE SPRITES - RESCALE_2
+    21300006: TILE SPRITES - RESCALE_3
+    21300008: TILE SPRITES - RESCALE_4
+    21300010: TILE SPRITES - RESCALE_5
+    21300012: TILE SPRITES - RESCALE_6
+    21300014: TILE SPRITES - RESCALE_7
+    21300016: TILE SPRITES - RESCALE_8
+    21300018: TILE SPRITES - RESCALE_9
+    21300020: TILE SPRITES - RESCALE_10
+    21300022: TILE SPRITES - RESCALE_11
+    21300024: TILE SPRITES - RESCALE_12
+    21300026: TILE SPRITES - RESCALE_13
+    21300028: TILE SPRITES - RESCALE_14
+    21300030: TILE SPRITES - RESCALE_15
+    21300032: TILE SPRITES - RESCALE_16
+    21300034: TILE SPRITES - RESCALE_17
+    21300036: TILE SPRITES - RESCALE_18
+    21300038: TILE SPRITES - RESCALE_19
+    21300040: TILE SPRITES - RESCALE_20
+    21300042: TILE SPRITES - RESCALE_21
+    21300044: TILE SPRITES - RESCALE_22
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: TILE SPRITES - RESCALE_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 820
+        width: 156
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 867
+        width: 75
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 819
+        width: 156
+        height: 153
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_3
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 867
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_4
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 818
+        width: 156
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 728
+        width: 69
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 748
+        width: 52
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 724
+        width: 81
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_8
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 728
+        width: 87
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_9
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 643
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_10
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 674
+        width: 255
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_11
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 610
+        width: 382
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_12
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 610
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_13
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 312
+        width: 146
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_14
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 316
+        width: 140
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_15
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_16
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_17
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 232
+        width: 130
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_18
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 254
+        width: 133
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_19
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 56
+        width: 146
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_20
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 59
+        width: 140
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_21
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 63
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TILE SPRITES - RESCALE_22
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 63
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
