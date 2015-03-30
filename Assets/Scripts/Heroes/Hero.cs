@@ -16,6 +16,8 @@ public class Hero : MonoBehaviour {
     public float JumpLength = 0.5f;         // Length of the jump
     public LayerMask JumpOn;				// Layermask that specify the elements the player can jump on
 	public AudioClip[] JumpClips;			// Array of clips for when the player jumps.
+    public SoundEffect JumpSound;
+
 
 	//class private attributes
 	private AbstractController _controller;	// Controller used to query the player's input
@@ -53,6 +55,8 @@ public class Hero : MonoBehaviour {
 		_crossair 		 = _crossairPivot.Find("Crossair");
 		_anim = GetComponent<Animator>();
 		_rigidbody = GetComponent<Rigidbody2D>();
+
+        JumpSound = Instantiate(JumpSound) as SoundEffect;
 
 	}
 
@@ -176,9 +180,10 @@ public class Hero : MonoBehaviour {
 			//_anim.SetTrigger("Jump");
 			
 			// Play a random jump audio clip.
-			if (JumpClips.Length > 0)
-				DadaAudio.PlayRandom(JumpClips);
-
+			//if (JumpClips.Length > 0)
+			//	DadaAudio.PlayRandom(JumpClips);
+            if (JumpSound != null)
+                JumpSound.PlayEffect();
 			
 			// Add a vertical force to the player.
 			_rigidbody.AddForce(transform.up * JumpForce);
@@ -196,8 +201,10 @@ public class Hero : MonoBehaviour {
 			//_anim.SetTrigger("Jump");
 
 			// Play a random jump audio clip.
-			if (JumpClips.Length > 0)
-				DadaAudio.PlayRandom(JumpClips);
+			//if (JumpClips.Length > 0)
+			//	DadaAudio.PlayRandom(JumpClips);
+            if (JumpSound != null)
+                JumpSound.PlayEffect();
 
 			// Add a vertical force to the player.
             if (_walljump == 1)

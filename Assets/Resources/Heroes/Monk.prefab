@@ -671,6 +671,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6c78d41be81dc43bb9b32480d2bd301c, type: 3}
   - {fileID: 8300000, guid: 8aec47e0344ae4084a6edfca3f476b74, type: 3}
   - {fileID: 8300000, guid: 30b8d48b92aea4fd6a2a613ad92073f3, type: 3}
+  JumpSound: {fileID: 11471052, guid: 6a4fc9b53f92c0e499ecf8e38d985e6a, type: 2}
 --- !u!212 &21212374
 SpriteRenderer:
   m_ObjectHideFlags: 1
