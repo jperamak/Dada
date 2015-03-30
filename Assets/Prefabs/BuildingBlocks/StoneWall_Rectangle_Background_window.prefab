@@ -70,13 +70,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 80
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: []
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 60
   hitpointsHeavyDamage: 30
   spriteLightDamage: {fileID: 21300004, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300006, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: f051f9327ea064079a92813c714aad2d, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!212 &21238116
 SpriteRenderer:
@@ -102,7 +104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1535931219
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300046, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  m_Sprite: {fileID: 21300026, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

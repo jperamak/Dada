@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e2e5e6d53f4f574cb9f71541b4a27fa
-timeCreated: 1427706649
+timeCreated: 1427708089
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -225,12 +225,12 @@ TextureImporter:
     - name: Roof_nd
       rect:
         serializedVersion: 2
-        x: 1593
-        y: 562
-        width: 154
-        height: 179
+        x: 1570
+        y: 560
+        width: 177
+        height: 181
       alignment: 9
-      pivot: {x: .462791532, y: .435976863}
+      pivot: {x: .532132745, y: .442855924}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Stonewall_Square_bg_hd
       rect:
