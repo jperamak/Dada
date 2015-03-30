@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e2e5e6d53f4f574cb9f71541b4a27fa
-timeCreated: 1426763999
+timeCreated: 1427705512
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,9 @@ TextureImporter:
     21300006: SupportBeam
     21300008: Floor_2units
     21300010: Floor_3
+    21300012: Stonewall_Rect_Bg_nd
+    21300014: Stonewall_rect_bg_ld
+    21300016: Stonewall_rect_bg_hd
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -114,6 +117,36 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stonewall_Rect_Bg_nd
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 564
+        width: 288
+        height: 156
+      alignment: 9
+      pivot: {x: .493382782, y: .487783968}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stonewall_rect_bg_ld
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 307
+        width: 291
+        height: 158
+      alignment: 9
+      pivot: {x: .494743228, y: .485476732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stonewall_rect_bg_hd
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 55
+        width: 288
+        height: 154
+      alignment: 9
+      pivot: {x: .502699733, y: .473073244}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
