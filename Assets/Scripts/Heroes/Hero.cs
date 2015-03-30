@@ -56,7 +56,8 @@ public class Hero : MonoBehaviour {
 		_anim = GetComponent<Animator>();
 		_rigidbody = GetComponent<Rigidbody2D>();
 
-        JumpSound = Instantiate(JumpSound) as SoundEffect;
+        if (JumpSound != null)
+            JumpSound = Instantiate(JumpSound) as SoundEffect;
 
 	}
 
@@ -144,13 +145,13 @@ public class Hero : MonoBehaviour {
 		if(Mathf.Abs(_rigidbody.velocity.x) > MaxSpeed * Mathf.Abs(h))
 			// ... set the player's velocity to the maxSpeed in the x axis.
 			_rigidbody.velocity = new Vector2(Mathf.Sign(_rigidbody.velocity.x) * MaxSpeed * Mathf.Abs(h), _rigidbody.velocity.y);
-        if (_grounded && Physics2D.Linecast(
+        if (_grounded && !_jump && Physics2D.Linecast(
              transform.position + _slopeCheck.localPosition, transform.position + _slopeCheck.localPosition - _wallCheck.localPosition, LayerMask.GetMask("Ground")))
         {
            // Debug.Log("slope left");
             _rigidbody.AddForce(transform.up * -h * SlopeForce);
         }
-        if (_grounded && Physics2D.Linecast(
+        if (_grounded && !_jump && Physics2D.Linecast(
             transform.position + _slopeCheck.localPosition, transform.position + _slopeCheck.localPosition + _wallCheck.localPosition, LayerMask.GetMask("Ground")))
         {
            // Debug.Log("slope right");

@@ -15,13 +15,17 @@ public class LevelManager : MonoBehaviour {
 
 	public static LevelManager Current{get; private set;}
 
+    private CameraFollow _camera;
+
 	protected void Awake(){
 		Current = this;
 	}
 
 	protected void Start(){
 
-		//save reference to player array
+        _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
+        
+        //save reference to player array
 		_players = DadaGame.Players;
 
 		//********** FOR DEBUG ONLY!! **************
@@ -106,6 +110,7 @@ public class LevelManager : MonoBehaviour {
 		if(RespawnSound != null)
 			DadaAudio.PlaySound(RespawnSound);
 
+        _camera.AddPlayer(hero.transform);
 	}
 
 	protected virtual IEnumerator RespawnCountdown(int playerNumber){
@@ -114,6 +119,7 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	protected void OnPlayerKilled(GameObject victim, GameObject killer = null){
+
 
 		Player v = victim.GetComponent<Hero>().PlayerInstance;
 		Player k = null;
@@ -137,6 +143,7 @@ public class LevelManager : MonoBehaviour {
 		}
 
 		UpdateScore();
+        _camera.RemovePlayer(victim.transform);
 		StartCoroutine(RespawnCountdown(v.Number));
 	}
 

@@ -39,10 +39,7 @@ public class SoundEffect : MonoBehaviour
                 _currentClip++;
                 break;
             case ClipCyclingMode.Random:
-
-                int n = Random.Range(0, _audioClips.Count);
-                Debug.Log(n + " " + _audioClips.Count);
-                PlayEffect(_audioClips[n]);
+                PlayEffect(_audioClips[Random.Range(0, _audioClips.Count)]);
                 break;
         }
     }
@@ -56,8 +53,6 @@ public class SoundEffect : MonoBehaviour
     {
         if ( effect != null )
         {
-            //effect.volume = Random.Range(minVolume, maxVolume);
-            //effect.pitch = Random.Range(minPitch, maxPitch);
             effect.Play();
         }
     }   

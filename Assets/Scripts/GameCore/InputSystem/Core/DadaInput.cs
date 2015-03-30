@@ -62,7 +62,7 @@ public class DadaInput {
 			#if UNITY_EDITOR
 			DadaInput.Initialize(keyMapConfig);
 			#else
-			DadaInputInput.Initialize(keyMapConfig,InputMethod.JOYSTICK);
+			DadaInput.Initialize(keyMapConfig,InputMethod.JOYSTICK);
 			#endif
 		}
 	}
