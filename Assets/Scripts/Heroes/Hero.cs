@@ -9,7 +9,8 @@ public class Hero : MonoBehaviour {
 
 	//Public attributes
 	public float MoveForce = 365.0f;		// Amount of force added to move the player left and right.
-	public float MaxSpeed = 3f;				// The fastest the player can travel in the x axis.
+    public float SlopeForce = 365.0f;	
+    public float MaxSpeed = 3f;				// The fastest the player can travel in the x axis.
 	public float JumpForce = 1000f;			// Amount of force added when the player jumps.
     public float JumpAirModifier = 0.02f;
     public float JumpLength = 0.5f;         // Length of the jump
@@ -140,16 +141,16 @@ public class Hero : MonoBehaviour {
 			// ... set the player's velocity to the maxSpeed in the x axis.
 			_rigidbody.velocity = new Vector2(Mathf.Sign(_rigidbody.velocity.x) * MaxSpeed * Mathf.Abs(h), _rigidbody.velocity.y);
         if (_grounded && Physics2D.Linecast(
-            transform.position + new Vector3(0, -0.5f, 0), transform.position + new Vector3(0, -0.5f, 0) - _wallCheck.localPosition, LayerMask.GetMask("Ground")))
+             transform.position + _slopeCheck.localPosition, transform.position + _slopeCheck.localPosition - _wallCheck.localPosition, LayerMask.GetMask("Ground")))
         {
            // Debug.Log("slope left");
-            _rigidbody.AddForce(transform.up * -h * MoveForce);
+            _rigidbody.AddForce(transform.up * -h * SlopeForce);
         }
         if (_grounded && Physics2D.Linecast(
-            transform.position + new Vector3(0, -0.5f, 0), transform.position + new Vector3(0, -0.5f, 0) + _wallCheck.localPosition, LayerMask.GetMask("Ground")))
+            transform.position + _slopeCheck.localPosition, transform.position + _slopeCheck.localPosition + _wallCheck.localPosition, LayerMask.GetMask("Ground")))
         {
            // Debug.Log("slope right");
-            _rigidbody.AddForce(transform.up * h * MoveForce);
+            _rigidbody.AddForce(transform.up * h * SlopeForce);
         }
 
 		// If the input is moving the player right and the player is facing left...
