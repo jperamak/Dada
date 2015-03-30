@@ -6,7 +6,7 @@ public abstract class Weapon : MonoBehaviour {
 
 	public float CooldownTime = 0.2f;
 	public GameObject VisualEffect;
-	public AudioClip[] FireSound;
+    public SoundEffect FireSound;
 	
 	protected GameObject _owner;
 	protected Player _player;
@@ -18,6 +18,11 @@ public abstract class Weapon : MonoBehaviour {
 	protected Vector2 _overriddenPos;
 	protected Quaternion _overriddenRot;
 	protected bool _useOverriddenProp = false;
+
+    void Awake()
+    {
+        FireSound = DadaAudio.GetSoundEffect(FireSound);
+    }
 
 	public void SetOwner(GameObject owner){
 		_owner = owner;
@@ -33,8 +38,8 @@ public abstract class Weapon : MonoBehaviour {
 	public virtual void OnTriggerDown (){
 		if(Time.time - _lastShoot > CooldownTime){
 
-			if(FireSound != null && FireSound.Length > 0)
-				DadaAudio.PlayRandom(FireSound);
+            if (FireSound != null)
+                FireSound.PlayEffect();
 
 
 			Shoot();

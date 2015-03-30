@@ -10,9 +10,8 @@ public class Damageable : MonoBehaviour {
 
 
 
-	public AudioClip[] DamageSound;
-	public AudioClip DestroySound;
-
+    public SoundEffect DamageSound;
+    public SoundEffect DestroySound;
 	protected float _currentHitpoints;
 	protected float _lastTimePlayAudio = 0;
 	protected float _playAudioDelay = 0.25f;
@@ -21,6 +20,8 @@ public class Damageable : MonoBehaviour {
 	
 	void Awake () {
 		_currentHitpoints = MaxHitpoints;
+        DestroySound = DadaAudio.GetSoundEffect(DestroySound);
+        DamageSound = DadaAudio.GetSoundEffect(DamageSound);
 	}
 
 	public virtual void TakeDamage( float hitpoints ) {
@@ -28,13 +29,12 @@ public class Damageable : MonoBehaviour {
 	}
 
 	public virtual void TakeDamage( float hitpoints, GameObject dealer) {
-
 		if(_currentHitpoints > 0){
 			_currentHitpoints -= hitpoints;
 			_lastHitFrom = dealer;
 
-			if(DamageSound.Length > 0 && _currentHitpoints > 0 && Time.time > _lastTimePlayAudio+_playAudioDelay){
-				DadaAudio.PlayRandom(DamageSound);
+			if(DamageSound != null > 0 && _currentHitpoints > 0 && Time.time > _lastTimePlayAudio+_playAudioDelay){
+                DamageSound.PlayEffect();
 				_lastTimePlayAudio = Time.time;
 			}
 
@@ -51,8 +51,8 @@ public class Damageable : MonoBehaviour {
 	}
 
 	protected virtual void OnDestroyed() {
-		if(DestroySound != null)
-			DadaAudio.PlaySound(DestroySound);
+        if (DestroySound != null)
+            DestroySound.PlayEffect();
 
 		if(OnDestroy != null)
 			OnDestroy(this.gameObject,_lastHitFrom);

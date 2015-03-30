@@ -15,7 +15,6 @@ public class Hero : MonoBehaviour {
     public float JumpAirModifier = 0.02f;
     public float JumpLength = 0.5f;         // Length of the jump
     public LayerMask JumpOn;				// Layermask that specify the elements the player can jump on
-	public AudioClip[] JumpClips;			// Array of clips for when the player jumps.
     public SoundEffect JumpSound;
 
 
@@ -56,8 +55,7 @@ public class Hero : MonoBehaviour {
 		_anim = GetComponent<Animator>();
 		_rigidbody = GetComponent<Rigidbody2D>();
 
-        if (JumpSound != null)
-            JumpSound = Instantiate(JumpSound) as SoundEffect;
+        JumpSound = DadaAudio.GetSoundEffect(JumpSound);
 
 	}
 

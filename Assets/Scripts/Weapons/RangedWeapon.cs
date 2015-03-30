@@ -7,7 +7,7 @@ public class RangedWeapon : Weapon {
 	public int MaxBullets = 10;
 	public float RechargeEvery = 0.5f;
 	public float PushForce = 20.0f;
-	public AudioClip OutOfAmmo;
+	public SoundEffect OutOfAmmo;
 
 	protected Transform _spawnPoint;
 	protected int _currentBullets;
@@ -16,11 +16,12 @@ public class RangedWeapon : Weapon {
 		_spawnPoint = transform.FindChild("Spawner");
 		_currentBullets = MaxBullets;
 		InvokeRepeating("Recharge",0,RechargeEvery);
+        OutOfAmmo = DadaAudio.GetSoundEffect(OutOfAmmo);
 	}
 
 	public override void OnTriggerDown (){
-		if(_currentBullets == 0 && OutOfAmmo != null)
-			DadaAudio.PlaySound(OutOfAmmo);
+        if (_currentBullets == 0 && OutOfAmmo != null)
+            OutOfAmmo.PlayEffect();
 
 		base.OnTriggerDown ();
 	}

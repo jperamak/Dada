@@ -15,14 +15,13 @@ public class SoundEffect : MonoBehaviour
     public float minVolume = 1f;
     public float maxVolume = 1f;
 
-    public ClipCyclingMode Mode = ClipCyclingMode.Single;
+    public ClipCyclingMode Mode = ClipCyclingMode.Random;
 
     private int _currentClip;
 
     void Start()
     {
-        if (_audioClips.Count == 0)
-            _audioClips = GetComponents<AudioSource>().ToList<AudioSource>();
+        _audioClips = GetComponents<AudioSource>().ToList<AudioSource>();
     }
 
     public void PlayEffect()
