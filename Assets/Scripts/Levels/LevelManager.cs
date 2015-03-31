@@ -67,8 +67,8 @@ public class LevelManager : MonoBehaviour {
 
 		InitLevel();
 	}
-
-	public virtual void InitLevel(){
+    
+    public virtual void InitLevel(){
 
 		_scores = new int[_players.Count];
 

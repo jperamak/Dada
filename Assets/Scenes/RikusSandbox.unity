@@ -29673,7 +29673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespawnTime: 2
   RespawnSound: {fileID: 0}
-  MaxScore: 10
+  MaxScore: 5
 --- !u!4 &986617387
 Transform:
   m_ObjectHideFlags: 0
@@ -60738,19 +60738,19 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1972830846}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a1ff7ff4ce484f1aad8887efed74b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xMargin: 1
   yMargin: 1
-  xSmooth: 8
-  ySmooth: 8
-  maxXAndY: {x: 60, y: 13}
-  minXAndY: {x: -60, y: -13}
-  maxZoom: 20
-  minZoom: 10
+  xSmooth: 4
+  ySmooth: 4
+  maxXAndY: {x: 25, y: 7}
+  minXAndY: {x: -25, y: -7}
+  maxZoom: 24.3999996
+  minZoom: 16.4799995
   average: {x: 0, y: 0}
   players: []
 --- !u!4 &1973763249

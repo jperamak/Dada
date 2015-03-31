@@ -130,7 +130,9 @@ public class Hero : MonoBehaviour {
 
 		// Cache the horizontal input.
 		float h = _controller.XAxis;
-		
+
+        h = Mathf.Abs(h) < 0.25f ? 0 : h;
+
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		//_anim.SetFloat("Speed", _grounded ? Mathf.Abs(h) : 0);
 		
