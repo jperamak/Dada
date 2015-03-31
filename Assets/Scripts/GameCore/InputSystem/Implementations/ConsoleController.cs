@@ -136,7 +136,7 @@ public class ConsoleController : AbstractController {
 			}
 
 			//avoid false trigger due to hardware imprecisions
-			if( Mathf.Abs(sum) < DeadZone)
+            if( Mathf.Abs(sum) < DeadZone)
 				return 0;
 
 			return Mathf.Clamp(sum,-1,1);
