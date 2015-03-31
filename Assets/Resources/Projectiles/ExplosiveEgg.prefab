@@ -60,8 +60,9 @@ GameObject:
   - 4: {fileID: 459340}
   - 50: {fileID: 5059340}
   - 114: {fileID: 11459342}
-  - 114: {fileID: 11459340}
   - 58: {fileID: 5820398}
+  - 114: {fileID: 11440126}
+  - 114: {fileID: 11489092}
   m_Layer: 0
   m_Name: ExplosiveEgg
   m_TagString: Untagged
@@ -194,7 +195,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11459340
+--- !u!114 &11440126
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -202,21 +203,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 159342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32376dc705b99694396f11175ebb864c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0416d432010fb44d7a5776a2a147f2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
-  DamageOwner: 1
+  DamageOwner: 0
   DamageAmount: 80
-  Radius: 3
-  ExplosionForce: 10
-  NumOfRays: 15
+  ExplosionForce: 60
   ParticleLifetime: .200000003
   InteractWith:
     serializedVersion: 2
     m_Bits: 4294901759
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
-  ExplosionPushForce: 0
+  NumOfParticles: 15
 --- !u!114 &11459342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,6 +242,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingLayerName: Foreground
+--- !u!114 &11489092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab7f39702fb04a5caffee1846a134f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisualEffect: {fileID: 0}
+  DamageOwner: 0
+  DamageAmount: 40
+  Radius: 2.5
+  NumOfRays: 15
+  InteractWith:
+    serializedVersion: 2
+    m_Bits: 4294901759
+  ExplosionPushForce: 0
 --- !u!198 &19893056
 ParticleSystem:
   m_ObjectHideFlags: 1
