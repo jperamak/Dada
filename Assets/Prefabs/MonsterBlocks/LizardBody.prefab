@@ -251,9 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 100
-  currentHitpoints: 100
-  destroyOnZeroHp: 1
+  MaxHitpoints: 40
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
 --- !u!114 &11474946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,9 +265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 50
-  currentHitpoints: 50
-  destroyOnZeroHp: 1
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
 --- !u!114 &11476822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,9 +279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 30
-  currentHitpoints: 30
-  destroyOnZeroHp: 1
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
 --- !u!212 &21208746
 SpriteRenderer:
   m_ObjectHideFlags: 1
