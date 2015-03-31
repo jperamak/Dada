@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e2e5e6d53f4f574cb9f71541b4a27fa
-timeCreated: 1427717469
+timeCreated: 1427816013
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -417,22 +417,22 @@ TextureImporter:
     - name: Embrasure_Top_nd
       rect:
         serializedVersion: 2
-        x: 1808
-        y: 823
-        width: 120
-        height: 143
+        x: 1780
+        y: 808
+        width: 169
+        height: 169
       alignment: 9
-      pivot: {x: .929610193, y: .511027753}
+      pivot: {x: .82795018, y: .518503428}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Embrasure_Bottom_nd
       rect:
         serializedVersion: 2
-        x: 1814
-        y: 566
-        width: 114
-        height: 149
+        x: 1779
+        y: 561
+        width: 174
+        height: 165
       alignment: 9
-      pivot: {x: .931838751, y: .497049838}
+      pivot: {x: .811318576, y: .475612581}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
