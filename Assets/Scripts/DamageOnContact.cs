@@ -5,15 +5,19 @@ public class DamageOnContact : MonoBehaviour {
 
 	public float Damage;
 	public float CooldownTime;
-
+    public SoundEffect HitDamage;
 	private Dictionary<int, float> _hits;
 
 	void Start(){
+        HitDamage = DadaAudio.GetSoundEffect(HitDamage);
 		_hits = new Dictionary<int, float>();
 	}
 
 	void ApplyDamage(Collision2D coll){
-		int id = coll.gameObject.GetInstanceID();
+        if (HitDamage != null)
+            HitDamage.PlayEffect();
+        
+        int id = coll.gameObject.GetInstanceID();
 		
 		//target already hit
 		if(_hits.ContainsKey(id) && _hits[id] > Time.time - CooldownTime)
