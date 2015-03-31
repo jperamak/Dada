@@ -43,8 +43,10 @@ public class RangedWeapon : Weapon {
 
 			//add velocity instead of force
 			if(bulletInst.GetComponent<Rigidbody2D>() != null)
-				bulletInst.GetComponent<Rigidbody2D>().velocity = (_referencePoint.right * PushForce);
-
+			{
+                bulletInst.GetComponent<Rigidbody2D>().velocity = (_referencePoint.right * PushForce);
+                bulletInst.GetComponent<Rigidbody2D>().velocity += gameObject.transform.parent.parent.gameObject.GetComponent<Rigidbody2D>().velocity / 2;
+            }
 				//bulletInst.GetComponent<Rigidbody2D>().AddForce(_referencePoint.right * PushForce,ForceMode2D.Impulse);
 
 		}
