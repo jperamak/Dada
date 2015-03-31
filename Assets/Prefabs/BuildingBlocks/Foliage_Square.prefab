@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.219999999, y: 1.29999995, z: 0}
+  m_LocalPosition: {x: -2, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc4eaba75fbb47629a94dc57657be92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regenerateDelay: 8
+  regenerateDelay: 15
 --- !u!114 &11469694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,15 +68,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 30
-  DestroyOnZeroHp: 0
-  DamageSound:
-  - {fileID: 8300000, guid: 8862704f600d5414ab348284fe6b7419, type: 3}
-  DestroySound: {fileID: 8300000, guid: 52057b563f4144a6798e915037c9f6b3, type: 3}
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 20
   hitpointsHeavyDamage: 10
   spriteLightDamage: {fileID: 21300052, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300054, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: dbc8219b8b19d4957bffbbb5ae456958, type: 2}
+  DestroyOnZeroHp: 0
   damageFromCollisions: 0
 --- !u!212 &21238116
 SpriteRenderer:
