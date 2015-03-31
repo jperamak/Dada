@@ -32,7 +32,7 @@ public class GateKeeper : MonoBehaviour {
 		if (hero == null)
 			return;
 
-		if (hero.PlayerInstance.TeamNumber == ownedByTeamNumber)
+		if (hero.PlayerInstance.TeamNumber + 1 == ownedByTeamNumber)
 			_portcullis.SetActive(false);
 
 	}
@@ -43,7 +43,7 @@ public class GateKeeper : MonoBehaviour {
 		if (hero == null)
 			return;
 	
-		if (hero.PlayerInstance.TeamNumber == ownedByTeamNumber)
+		if (hero.PlayerInstance.TeamNumber + 1 == ownedByTeamNumber)
 			_portcullis.SetActive(true);
 	
 	}
