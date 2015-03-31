@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Scenes/TowersWithEmbrasures.unity
   - enabled: 1
     path: Assets/Scenes/Playable/BlockyGround.unity
+  - enabled: 1
+    path: Assets/Scenes/RikusSandbox.unity
