@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 34, y: -11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,15 +68,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitpoints: 40
-  DestroyOnZeroHp: 1
-  DamageSound: []
+  MaxHitpoints: 800
+  DamageSound: {fileID: 0}
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 138116, guid: ddf94173c6ee7446681b06568b8126c6, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!212 &21238116
 SpriteRenderer:

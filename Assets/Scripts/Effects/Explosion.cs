@@ -9,12 +9,14 @@ public class Explosion : Damage {
 	public float ParticleLifetime = 0.2f;
 	public LayerMask InteractWith;
 	public Projectile ExplosionParticles;
+	public float ExplosionPushForce;
 
 	protected override void Execute (){
 		
 		Vector2 dir;
 		Vector2 position = new Vector2(transform.position.x, transform.position.y);
-		
+
+
 		float divider = NumOfRays;
 		float invDiv = 1 / divider;
 		float step = 360f * invDiv;
@@ -22,7 +24,7 @@ public class Explosion : Damage {
 		for (int i = 0; i < divider; i++)
 		{
 			dir = Quaternion.AngleAxis(step*0.5f + step*i,Vector3.forward)*Vector2.up;
-			
+
 			Projectile ep = Instantiate(ExplosionParticles) as Projectile;
 			ep.Owner = Owner;
 
@@ -44,9 +46,10 @@ public class Explosion : Damage {
 			int numTimesDamped = 0; // How many times the ray has hit a object that dampens the explosion
 			
 			// hitting only background tiles, foreground dampens
-			RaycastHit2D[] hits = Physics2D.RaycastAll(position, position + dir * Radius, InteractWith);
+		//	RaycastHit2D[] hits = Physics2D.RaycastAll(position, position + dir * Radius, InteractWith);
+			RaycastHit2D[] hits = Physics2D.RaycastAll(position, dir, Radius, InteractWith);
 			for(int j=0;j<hits.Length;j++){
-				
+
 				// Solid objects in foreground dampen the explosion
 				if (hits[j].transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
 				{
@@ -54,7 +57,7 @@ public class Explosion : Damage {
 				}
 				
 				if (hits[j].rigidbody)
-					hits[j].rigidbody.AddForce(dir * 100 * ExplosionForce);
+					hits[j].rigidbody.AddForce(dir * 100 * ExplosionPushForce);
 				
 				Damageable damageable = hits[j].collider.gameObject.GetComponent<Damageable>();
 				
