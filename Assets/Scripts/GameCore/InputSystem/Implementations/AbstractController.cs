@@ -33,7 +33,7 @@ public abstract class AbstractController {
 			Number = number;
 			Inverted = false;
 			Sensibility = 1;
-			DeadZone = 0.25f;
+			//DeadZone = 0.25f;
 			_keymap = new KeyMap();
 
 			if(keymap != null)
