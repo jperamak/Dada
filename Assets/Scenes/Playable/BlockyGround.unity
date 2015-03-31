@@ -17571,10 +17571,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 115034, guid: 65132ed76d156674686d209b463ed302, type: 2}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65132ed76d156674686d209b463ed302, type: 2}
   m_IsPrefabParent: 0
@@ -26589,6 +26585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespawnTime: 2
   RespawnSound: {fileID: 0}
+  MaxScore: 2
 --- !u!4 &986617387
 Transform:
   m_ObjectHideFlags: 0
