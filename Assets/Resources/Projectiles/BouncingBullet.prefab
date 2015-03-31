@@ -13,7 +13,7 @@ GameObject:
   - 58: {fileID: 5858928}
   - 114: {fileID: 11475794}
   - 114: {fileID: 11411142}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BouncingBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

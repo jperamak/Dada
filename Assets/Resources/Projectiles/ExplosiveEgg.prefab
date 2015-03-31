@@ -158,7 +158,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: .600000024
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -216,6 +216,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294901759
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
+  ExplosionPushForce: 0
 --- !u!114 &11459342
 MonoBehaviour:
   m_ObjectHideFlags: 1
