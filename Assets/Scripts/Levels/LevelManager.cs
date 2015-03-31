@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour {
 
 	public float RespawnTime = 2.0f;
 	public SoundEffect RespawnSound;
+    public int MaxScore = 10;
 
 	protected List<Player> _players;
 	protected List<Transform> _spawnPoints;
@@ -164,7 +165,29 @@ public class LevelManager : MonoBehaviour {
 	private void UpdateScore(){
 		for(int i=0; i< _players.Count; i++)
 			_scoreText[i].text = "Player "+(_players[i].Number+ 1)+": "+_scores[i];
+        for (int i = 0; i < _players.Count; i++)
+            if (_scores[i] >= MaxScore)
+                Finish(i);
 	}
+
+    private void Finish(int winner)
+    {
+        Time.timeScale = 0.5f;
+        Debug.Log(_scoreText.Count);
+
+        Text fin = GameObject.Find("Canvas").transform.FindChild("Fin").GetComponent<Text>();
+        fin.text = "Player " + (_players[winner].Number + 1) + " wins!";
+            fin.color = _players[winner].TeamColor;
+        fin.transform.gameObject.SetActive(true);
+        StartCoroutine("NextLevel");
+    }
+
+    IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(2f);
+        Time.timeScale = 1f;
+        Application.LoadLevel(Application.loadedLevelName);
+    }
 
 	private List<Player> CreateDebugPlayers(){
 		List<Player> fake = new List<Player>();

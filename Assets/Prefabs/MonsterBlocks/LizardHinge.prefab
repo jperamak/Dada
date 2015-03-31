@@ -72,9 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4ac9c2579594957b355a980cc06730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 10
-  currentHitpoints: 10
-  destroyOnZeroHp: 1
+  MaxHitpoints: 40
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
 --- !u!212 &21289364
 SpriteRenderer:
   m_ObjectHideFlags: 1

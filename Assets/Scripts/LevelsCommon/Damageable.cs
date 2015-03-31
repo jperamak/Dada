@@ -33,7 +33,7 @@ public class Damageable : MonoBehaviour {
 			_currentHitpoints -= hitpoints;
 			_lastHitFrom = dealer;
 
-			if(DamageSound != null > 0 && _currentHitpoints > 0 && Time.time > _lastTimePlayAudio+_playAudioDelay){
+			if(DamageSound != null && _currentHitpoints > 0 && Time.time > _lastTimePlayAudio+_playAudioDelay){
                 DamageSound.PlayEffect();
 				_lastTimePlayAudio = Time.time;
 			}
