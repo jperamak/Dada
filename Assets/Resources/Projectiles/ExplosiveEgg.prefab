@@ -214,7 +214,7 @@ MonoBehaviour:
   ParticleLifetime: .200000003
   InteractWith:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294901759
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
 --- !u!114 &11459342
 MonoBehaviour:
