@@ -105,8 +105,13 @@ public class LevelManager : MonoBehaviour {
 
 
 		//place the hero in the scene
-		int randomSpawn = Random.Range(0, _spawnPoints.Count-1);
-		hero.transform.position = _spawnPoints[randomSpawn].position;
+        Transform randomSpawn = _spawnPoints[Random.Range(0, _spawnPoints.Count)];
+        SpawnPoint randomSpawnPoint = randomSpawn.GetComponent<SpawnPoint>();
+        if (randomSpawnPoint == null)
+            hero.transform.position = randomSpawn.position;
+        while ( !randomSpawnPoint.IsValidForTeam(p.TeamNumber))
+            randomSpawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)].GetComponent<SpawnPoint>();
+        hero.transform.position = randomSpawnPoint.transform.position;
 
 		if(RespawnSound != null)
 			RespawnSound.PlayEffect();

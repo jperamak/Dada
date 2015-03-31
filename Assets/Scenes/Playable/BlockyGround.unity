@@ -1019,6 +1019,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 29676548}
+  - 114: {fileID: 29676549}
   m_Layer: 0
   m_Name: Spawn2
   m_TagString: Respawn
@@ -1033,11 +1034,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 29676547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.5, y: -19.8899994, z: 0}
+  m_LocalPosition: {x: 25.5, y: -18.2000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 352026098}
   m_RootOrder: 1
+--- !u!114 &29676549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29676547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149065fb44705904ab6ec8e3dd40371d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team1: 0
+  Team2: 1
+  Team3: 0
+  Team4: 1
 --- !u!1 &31433840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11469694, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: DestroySound
@@ -1665,7 +1681,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 1417ad1b80d86401eb49410016c1e1f9, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11469694, guid: 1417ad1b80d86401eb49410016c1e1f9, type: 2}
       propertyPath: DestroySound
@@ -1917,7 +1933,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 79673c2c87d2741cfa05939a964b4ab2, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 138116, guid: 79673c2c87d2741cfa05939a964b4ab2, type: 2}
       propertyPath: m_Name
@@ -6406,6 +6422,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 219612595}
+  - 114: {fileID: 219612596}
   m_Layer: 0
   m_Name: Spawn5
   m_TagString: Respawn
@@ -6425,6 +6442,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 352026098}
   m_RootOrder: 4
+--- !u!114 &219612596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219612594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149065fb44705904ab6ec8e3dd40371d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team1: 0
+  Team2: 1
+  Team3: 0
+  Team4: 1
 --- !u!1001 &222726907
 Prefab:
   m_ObjectHideFlags: 0
@@ -10655,7 +10687,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417534, guid: dcf503c44a173477dbeff65576bb844d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 158254, guid: dcf503c44a173477dbeff65576bb844d, type: 2}
       propertyPath: m_Name
@@ -17387,7 +17419,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 79673c2c87d2741cfa05939a964b4ab2, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 138116, guid: 79673c2c87d2741cfa05939a964b4ab2, type: 2}
       propertyPath: m_Name
@@ -17497,7 +17529,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22415034, guid: 65132ed76d156674686d209b463ed302, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22415034, guid: 65132ed76d156674686d209b463ed302, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -18867,7 +18899,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 11469694, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: DestroySound
@@ -23780,6 +23812,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 885750557}
+  - 114: {fileID: 885750558}
   m_Layer: 0
   m_Name: Spawn4
   m_TagString: Respawn
@@ -23799,6 +23832,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 352026098}
   m_RootOrder: 3
+--- !u!114 &885750558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885750556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149065fb44705904ab6ec8e3dd40371d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team1: 1
+  Team2: 0
+  Team3: 1
+  Team4: 0
 --- !u!1001 &886506677
 Prefab:
   m_ObjectHideFlags: 0
@@ -25789,6 +25837,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 975561197}
+  - 114: {fileID: 975561198}
   m_Layer: 0
   m_Name: Spawn1
   m_TagString: Respawn
@@ -25808,6 +25857,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 352026098}
   m_RootOrder: 0
+--- !u!114 &975561198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975561196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149065fb44705904ab6ec8e3dd40371d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team1: 1
+  Team2: 0
+  Team3: 1
+  Team4: 0
 --- !u!1 &976307675
 GameObject:
   m_ObjectHideFlags: 0
@@ -30361,7 +30425,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 13e71b68a001e4865b3cb37b35171e16, type: 2}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 138116, guid: 13e71b68a001e4865b3cb37b35171e16, type: 2}
       propertyPath: m_Name
@@ -32446,7 +32510,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: m_BackGroundColor.r
@@ -35530,7 +35594,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11469694, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
       propertyPath: DestroySound
@@ -36365,6 +36429,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1422270208}
+  - 114: {fileID: 1422270209}
   m_Layer: 0
   m_Name: Spawn3
   m_TagString: Respawn
@@ -36384,6 +36449,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 352026098}
   m_RootOrder: 2
+--- !u!114 &1422270209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422270207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149065fb44705904ab6ec8e3dd40371d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team1: 1
+  Team2: 1
+  Team3: 1
+  Team4: 1
 --- !u!1 &1427947415
 GameObject:
   m_ObjectHideFlags: 0
@@ -45771,7 +45851,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 13e71b68a001e4865b3cb37b35171e16, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 138116, guid: 13e71b68a001e4865b3cb37b35171e16, type: 2}
       propertyPath: m_Name
@@ -49842,7 +49922,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 11469694, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: DestroySound
@@ -51881,7 +51961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 438116, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11469694, guid: 2596f791bf18a42e7861c116e3056de5, type: 2}
       propertyPath: DestroySound
