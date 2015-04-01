@@ -4,7 +4,6 @@ using System.Collections;
 public class MeleeWeapon : Weapon {
 
 	public Projectile Strike;
-	public Transform SpawnPoint;
 
 
 	void Start(){

@@ -112,7 +112,7 @@ public class LevelManager : MonoBehaviour {
             hero.transform.position = randomSpawn.position;
 
 		//FIXME: in very unlucky days the game will loop here forever.. or actually for an error in setting the spawnpoints
-     //   while ( !randomSpawnPoint.IsValidForTeam(p.TeamNumber))
+        while ( !randomSpawnPoint.IsValidForTeam(p.TeamNumber))
             randomSpawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)].GetComponent<SpawnPoint>();
 
         hero.transform.position = randomSpawnPoint.transform.position;

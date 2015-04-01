@@ -46,8 +46,6 @@ public class CharacterSelectionView : MonoBehaviour {
 
 	private void AssemblePlayer(){
 
-
-
 		if(_currentHero != null)
 			Destroy(_currentHero.gameObject);
 
@@ -60,26 +58,13 @@ public class CharacterSelectionView : MonoBehaviour {
 		//update UI text to show the current selection
         UpdateBtnText();
 
-        // ugly quick hack for demo purposes
-        if (_player.Hero == Resource.MONK_HERO)
-        {
-            if (_iTeam == 0)
-                _player.Hero = Resource.MONK_HERO_R;
-            if (_iTeam == 1)
-                _player.Hero = Resource.MONK_HERO_B;
-            if (_iTeam == 2)
-                _player.Hero = Resource.MONK_HERO_G;
-            if (_iTeam == 3)
-                _player.Hero = Resource.MONK_HERO_Y;
-
-        }
-
 		//create an instance of the hero so the player can try it out in the selection screen
 		Hero hero = (Instantiate(_player.Hero.Prefab) as GameObject).GetComponent<Hero>();
 		Weapon ranged = (Instantiate(_player.FirstWeapon.Prefab) as GameObject).GetComponent<Weapon>();
 		Weapon melee = (Instantiate(_player.SecondWeapon.Prefab) as GameObject).GetComponent<Weapon>();
 
-
+		//set team number
+		hero.TeamNumber = _iTeam;
 
 		//hero cannot take damage in selection screen
 		Destroy(hero.GetComponent<Damageable>());

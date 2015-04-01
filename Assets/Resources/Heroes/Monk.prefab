@@ -248,7 +248,7 @@ GameObject:
   - 212: {fileID: 21255996}
   - 82: {fileID: 8287432}
   m_Layer: 9
-  m_Name: body 1
+  m_Name: body1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,7 +337,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.1270981, y: -9.94155884, z: -1}
+  m_LocalPosition: {x: 4.10958385, y: 1.18202865, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427786}
@@ -643,6 +643,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   JumpSound: {fileID: 11471052, guid: 6a4fc9b53f92c0e499ecf8e38d985e6a, type: 2}
+  TeamNumber: 0
+  TeamColors:
+  - {fileID: 21300008, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
+  - {fileID: 21300000, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
+  - {fileID: 21300006, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
+  - {fileID: 21300010, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
 --- !u!212 &21212374
 SpriteRenderer:
   m_ObjectHideFlags: 1

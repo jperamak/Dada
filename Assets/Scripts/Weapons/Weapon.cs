@@ -7,6 +7,7 @@ public abstract class Weapon : MonoBehaviour {
 	public float CooldownTime = 0.2f;
 	public GameObject VisualEffect;
     public SoundEffect FireSound;
+	public Transform SpawnPoint;
 	
 	protected GameObject _owner;
 	protected Player _player;

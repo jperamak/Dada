@@ -17,16 +17,10 @@ public sealed class Resource {
 	public static readonly Resource ELECTRIC_MELEE = new Resource("Electric Deer", "Weapons/ElectricKatana");
 
 	//Heroes
-	//public static readonly Resource CACTUAR_HERO = new Resource("Cactuar", "Heroes/Cactuar");
 	public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/Monk");
+	//public static readonly Resource CACTUAR_HERO = new Resource("Cactuar", "Heroes/Cactuar");
 	//public static readonly Resource POTATO_HERO = new Resource("Mr. Potato", "Heroes/MrPotato");
-
-    //Different monks
-    public static readonly Resource MONK_HERO_B = new Resource("Monk Blue", "Heroes/Monk Blue");
-    public static readonly Resource MONK_HERO_R = new Resource("Monk Red", "Heroes/Monk Red");
-    public static readonly Resource MONK_HERO_G = new Resource("Monk Green", "Heroes/Monk Green");
-    public static readonly Resource MONK_HERO_Y = new Resource("Monk Yellow", "Heroes/Monk Yellow");
-
+	
 
 	//Teams
     public static readonly Resource TEAM_1 = new Resource("The Bastards", "");

@@ -8,7 +8,7 @@ public class RangedWeapon : Weapon {
 	public float RechargeEvery = 0.5f;
 	public float PushForce = 20.0f;
 	public SoundEffect OutOfAmmo;
-	public Transform SpawnPoint;
+
 
 	protected int _currentBullets;
 
