@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: -12, z: 0}
+  m_LocalPosition: {x: 25, y: -16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,12 +77,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitpoints: 100
+  MaxHitpoints: 600
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 0}
-  hitpointsLightDamage: 75
+  hitpointsLightDamage: 500
   hitpointsHeavyDamage: 40
-  spriteLightDamage: {fileID: 21300002, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
+  spriteLightDamage: {fileID: 21300068, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   spriteHeavyDamage: {fileID: 21300004, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
   DestroyOnZeroHp: 1
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1024582385
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300068, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
+  m_Sprite: {fileID: 21300066, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

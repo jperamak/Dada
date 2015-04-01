@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e2e5e6d53f4f574cb9f71541b4a27fa
-timeCreated: 1427816013
+timeCreated: 1427899790
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,7 +18,7 @@ TextureImporter:
     21300022: Chain_side
     21300024: Gate_nd
     21300026: Window_nd
-    21300028: Roof_nd
+    21300028: Roof_hd
     21300030: Stonewall_Square_bg_hd
     21300032: Stonewall_Square_bg_ld
     21300034: Stonewall_Square_bg_nd
@@ -37,8 +37,13 @@ TextureImporter:
     21300060: TILE SPRITES - RESCALE_21
     21300062: TILE SPRITES - RESCALE_22
     21300064: TILE SPRITES - RESCALE_23
-    21300066: Embrasure_Top_nd
-    21300068: Embrasure_Bottom_nd
+    21300066: Embrasure_nd
+    21300068: Embrasure_hd
+    21300070: TntBarrels
+    21300072: Ring
+    21300074: Torch
+    21300076: RoofTile
+    21300078: Roof_nd
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -224,13 +229,13 @@ TextureImporter:
       alignment: 9
       pivot: {x: .479722083, y: .487309903}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Roof_nd
+    - name: Roof_hd
       rect:
         serializedVersion: 2
-        x: 1570
+        x: 1591
         y: 560
-        width: 177
-        height: 181
+        width: 156
+        height: 159
       alignment: 9
       pivot: {x: .532132745, y: .442855924}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,7 +419,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Embrasure_Top_nd
+    - name: Embrasure_nd
       rect:
         serializedVersion: 2
         x: 1780
@@ -424,7 +429,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .82795018, y: .518503428}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Embrasure_Bottom_nd
+    - name: Embrasure_hd
       rect:
         serializedVersion: 2
         x: 1779
@@ -433,6 +438,56 @@ TextureImporter:
         height: 165
       alignment: 9
       pivot: {x: .811318576, y: .475612581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TntBarrels
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 37
+        width: 332
+        height: 352
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ring
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 35
+        width: 132
+        height: 136
+      alignment: 9
+      pivot: {x: .510713518, y: .685088336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Torch
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 52
+        width: 59
+        height: 142
+      alignment: 9
+      pivot: {x: .492506117, y: .53528744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RoofTile
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 81
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Roof_nd
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 818
+        width: 156
+        height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
