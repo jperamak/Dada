@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11492750}
   - 114: {fileID: 11439680}
   - 114: {fileID: 11461204}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ExplosiveBanana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413482}
   - 212: {fileID: 21213480}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 1
-  DamageSound: []
+  DamageSound: {fileID: 0}
   DestroySound: {fileID: 0}
 --- !u!114 &11461204
 MonoBehaviour:
@@ -134,6 +134,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
+  ExplosionPushForce: 0
 --- !u!114 &11492750
 MonoBehaviour:
   m_ObjectHideFlags: 1

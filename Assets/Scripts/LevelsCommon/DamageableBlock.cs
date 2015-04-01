@@ -52,8 +52,7 @@ public class DamageableBlock : Damageable {
         }
          if (other.gameObject.layer == LayerMask.NameToLayer("Ground") || 
 		    other.gameObject.layer == LayerMask.NameToLayer("BackgroundBlock") ||
-		    other.gameObject.layer == LayerMask.NameToLayer("Rubble") ||
-		    other.gameObject.tag == "Player")
+		    other.gameObject.layer == LayerMask.NameToLayer("Rubble") )
 		{
 			Rigidbody2D o = other.gameObject.GetComponent<Rigidbody2D>();
 

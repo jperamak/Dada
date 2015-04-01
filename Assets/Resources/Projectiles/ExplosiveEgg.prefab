@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 487496}
   - 212: {fileID: 21278572}
   - 95: {fileID: 9586348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: flame 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 198: {fileID: 19893056}
   - 199: {fileID: 19946076}
   - 114: {fileID: 11474918}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trail 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 459342}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - 58: {fileID: 5820398}
   - 114: {fileID: 11440126}
   - 114: {fileID: 11489092}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ExplosiveEgg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 410266}
   - 212: {fileID: 21274744}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rocket 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -25,13 +25,13 @@ TagManager:
   - 
   - Player
   - 
-  - 
+  - Bullets
   - Ground
   - BackgroundBlock
   - Rubble
   - 
   - ExplosionParticle
-  - Crocodyle
+  - Crocodile
   - ForegroundObject
   - JumpCheck
   - 
