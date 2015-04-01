@@ -30,7 +30,7 @@ GameObject:
   - 114: {fileID: 11483818}
   - 212: {fileID: 21201708}
   - 60: {fileID: 6066574}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rooftile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - 114: {fileID: 11420972}
   - 212: {fileID: 21294148}
   - 60: {fileID: 6084888}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Rooftile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: -7, z: 0}
+  m_LocalPosition: {x: 26.1299992, y: -8.13000011, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 410652}
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.240999997, y: -.172000006, z: 0}
+  m_LocalPosition: {x: -.164000005, y: -.0920000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 438116}
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitpoints: 230
+  MaxHitpoints: 20
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 8
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitpoints: 230
+  MaxHitpoints: 20
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 0}
   hitpointsLightDamage: 8

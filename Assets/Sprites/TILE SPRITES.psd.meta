@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fc6a3c055f9374a419a5a9a6a6826122
-timeCreated: 1426587869
+timeCreated: 1427903075
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -102,10 +102,10 @@ TextureImporter:
     - name: Earth_square
       rect:
         serializedVersion: 2
-        x: 3711
-        y: 127
-        width: 258
-        height: 258
+        x: 3709
+        y: 125
+        width: 262
+        height: 262
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
