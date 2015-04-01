@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 10
-  DamageSound: {fileID: 0}
+  DamageSound: {fileID: 11409862, guid: b3240cd4fb01c413796153dacc0eba90, type: 2}
   DestroySound: {fileID: 0}
 --- !u!114 &11448140
 MonoBehaviour:
@@ -1381,7 +1381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 10
-  DamageSound: {fileID: 0}
+  DamageSound: {fileID: 11409862, guid: b3240cd4fb01c413796153dacc0eba90, type: 2}
   DestroySound: {fileID: 0}
 --- !u!114 &11495160
 MonoBehaviour:
