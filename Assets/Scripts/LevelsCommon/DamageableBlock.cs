@@ -29,9 +29,7 @@ public class DamageableBlock : Damageable {
 
 		UpdateSprite();
 
-		if (_currentHitpoints <= 0.0f && leftWhenDestroyed != null) {
-			LeaveRuins();
-		}
+
 	}
 
 	public override void RestoreToMaxHp() {
@@ -80,9 +78,20 @@ public class DamageableBlock : Damageable {
 	private void LeaveRuins() {
 		GameObject ruin = Instantiate(leftWhenDestroyed, transform.position, transform.rotation) as GameObject;
 		ruin.transform.localScale = transform.localScale;
+		Rigidbody2D[] bodies = ruin.GetComponentsInChildren<Rigidbody2D>();
+
+
+		if (this.GetComponent<Rigidbody2D>() != null) {
+			foreach (Rigidbody2D body in bodies) {
+				body.velocity = this.GetComponent<Rigidbody2D>().velocity;
+			}
+		}
 	}
 
 	protected override void OnDestroyed (){
+		if (_currentHitpoints <= 0.0f && leftWhenDestroyed != null) {
+			LeaveRuins();
+		}
 
 		if(DestroySound != null)
 			DestroySound.PlayEffect();

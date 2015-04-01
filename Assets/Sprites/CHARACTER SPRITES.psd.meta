@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b6af7f1c2861e433baee49ed8b753c14
-timeCreated: 1427799237
+timeCreated: 1427897728
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,8 @@ TextureImporter:
     21300006: GreenMaster
     21300008: RedMaster
     21300010: YellowMaster
+    21300012: FrogBomb_Body
+    21300014: FrogBombLeg
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -112,6 +114,26 @@ TextureImporter:
         y: 514
         width: 134
         height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrogBomb_Body
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 315
+        width: 141
+        height: 177
+      alignment: 9
+      pivot: {x: .5, y: .371339947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrogBombLeg
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 407
+        width: 49
+        height: 81
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
