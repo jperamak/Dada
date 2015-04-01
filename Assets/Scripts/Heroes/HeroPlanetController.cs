@@ -3,46 +3,15 @@ using Dada.InputSystem;
 using System.Collections;
 
 [RequireComponent(typeof(Hero))]
-public class HeroPlanetController : MonoBehaviour {
+public class HeroPlanetController : HeroController {
 	
-	protected Hero _hero;
-	protected Rigidbody2D _rigidbody;
-	
-	//class private attributes
-	protected Transform _groundCheck;			// A position marking where to check if the player is grounded.
-	protected Transform _groundCheckLeft;		// A position marking where to check if the player is grounded.
-	protected Transform _groundCheckRight;	// A position marking where to check if the player is grounded.
-	protected Transform _slopeCheck;
-	protected Transform _wallCheck;			// A position marking where to check if the player is grounded.
-	protected Transform _crossairPivot;		// The point where the crossair is attached to
-	protected Transform _crossair; 			// Crossair's transform, useful for calculating the shoot direction
-	protected Transform _rangeWeaponHand;		// The hand that holds the ranged weapon
-	
-	protected bool _facingRight = true;		// For determining which way the player is currently facing.
-	private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
 	private bool _grounded = false;			// Whether or not the player is grounded.
 	private int _walljump = 0;              // whether or not the player can walljump
 	private bool _jumpStart = false;
 	private bool _jump = false;
 	private float _jumpStartTime;
-	
-	// Setting up initial references.
-	protected virtual void Awake(){
-		
-		_hero 		= GetComponent<Hero>();
-		_rigidbody 	= GetComponent<Rigidbody2D>();
-		
-		_rangeWeaponHand = transform.Find("Hand1");
-		_groundCheck     = transform.Find("GroundCheck");
-		_groundCheckLeft = transform.Find("GroundCheckLeft");
-		_groundCheckRight = transform.Find("GroundCheckRight");
-		_slopeCheck 	 = transform.Find("SlopeCheck");
-		_wallCheck 		 = transform.Find("WallCheck");
-		_crossairPivot 	 = transform.Find("CrossairPivot");
-		_crossair 		 = _crossairPivot.Find("Crossair");
-	}
-	
-	protected virtual void FixedUpdate (){
+
+	protected override void FixedUpdate (){
 		
 		//no controller, no party
 		if(_hero.PlayerInstance == null || _hero.PlayerInstance.Controller == null)
@@ -51,7 +20,7 @@ public class HeroPlanetController : MonoBehaviour {
 		ProcessMovement();
 	}
 	
-	protected virtual void Update () {
+	protected override void Update () {
 		
 		//no controller, no party
 		if(_hero.PlayerInstance == null || _hero.PlayerInstance.Controller == null)
@@ -72,28 +41,9 @@ public class HeroPlanetController : MonoBehaviour {
 		//Weapons
 		ProcessWeapons();
 	}
+
 	
-	protected virtual void ProcessAim(){
-		
-		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
-		float yAxis = _hero.PlayerInstance.Controller.YAxis;
-		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
-		Vector3 newRotation = new Vector3(0, 0, aimAngle);
-		Vector3 crossairRotation = newRotation;
-		
-		//correct crossair rotation due to negative scale of the x axis
-		if(!_facingRight){
-			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
-			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
-		}
-		
-		_crossairPivot.eulerAngles 	 = newRotation;
-		_rangeWeaponHand.eulerAngles = newRotation;
-		_crossair.eulerAngles 		 = crossairRotation;
-		
-	}
-	
-	protected virtual void ProcessWeapons(){
+	protected override void ProcessWeapons(){
 		AbstractController c = _hero.PlayerInstance.Controller;
 		//Use the ranged weapon from the muzzle
 		if(c.GetButtonDown(VirtualKey.SHOOT))
@@ -111,7 +61,7 @@ public class HeroPlanetController : MonoBehaviour {
 	
 	//NOTE: All calculations involving velocity and directions should be done in the hero's local space
 	//because we cannot assume that the hero is aligned with the world x axis
-	protected virtual void ProcessMovement(){
+	protected override void ProcessMovement(){
 		
 		float h = _hero.PlayerInstance.Controller.XAxis;
 		
@@ -180,7 +130,7 @@ public class HeroPlanetController : MonoBehaviour {
 		}
 	}
 	
-	protected virtual  void ProcessSlopes(){
+	protected override  void ProcessSlopes(){
 		
 		float h = _hero.PlayerInstance.Controller.XAxis;
 		
@@ -199,7 +149,7 @@ public class HeroPlanetController : MonoBehaviour {
 	
 	
 	
-	protected virtual void ProcessJump(){
+	protected override void ProcessJump(){
 		bool isBtnJumpDown 	= _hero.PlayerInstance.Controller.GetButtonDown(VirtualKey.JUMP);
 		
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
@@ -231,7 +181,7 @@ public class HeroPlanetController : MonoBehaviour {
 			_jump = false;
 	}
 	
-	protected virtual void ProcessFlip(){
+	protected override void ProcessFlip(){
 		float h = _hero.PlayerInstance.Controller.XAxis;
 		
 		// If the input is moving the player right and the player is facing left flip the player.
@@ -243,7 +193,7 @@ public class HeroPlanetController : MonoBehaviour {
 			Flip();
 	}
 	
-	protected virtual void Flip (){
+	protected override void Flip (){
 		// Switch the way the player is labelled as facing.
 		_facingRight = !_facingRight;
 		

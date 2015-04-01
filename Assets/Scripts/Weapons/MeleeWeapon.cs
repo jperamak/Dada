@@ -4,16 +4,17 @@ using System.Collections;
 public class MeleeWeapon : Weapon {
 
 	public Projectile Strike;
-	protected Transform _spawnPoint;
+	public Transform SpawnPoint;
 
 
 	void Start(){
-		_spawnPoint = transform.FindChild("Spawner");
+		if(SpawnPoint == null)
+			SpawnPoint = transform.FindChild("Spawner");
 	}
 
 	protected override void Shoot(){
 
-		if(Strike == null || _spawnPoint == null)
+		if(Strike == null || SpawnPoint == null)
 			return;
 
 		//looks for any custom spawn point forced externally. otherwise use the standard muzzle
@@ -29,8 +30,8 @@ public class MeleeWeapon : Weapon {
 			referenceRot = _overriddenRot;
 		}
 		else{
-			referencePos = _customSpawnPoint.position;
-			referenceRot = _customSpawnPoint.rotation;
+			referencePos = SpawnPoint.position;
+			referenceRot = SpawnPoint.rotation;
 		}
 
 		//Always apply effects from the owner's position. Ignore spawner position but consider rotation

@@ -17,6 +17,7 @@ public class HeroController : MonoBehaviour {
 	protected Transform _crossairPivot;		// The point where the crossair is attached to
 	protected Transform _crossair; 			// Crossair's transform, useful for calculating the shoot direction
 	protected Transform _rangeWeaponHand;		// The hand that holds the ranged weapon
+	protected Transform _weaponSpawner;		// the default spawn point of the weapon
 	
 	protected bool _facingRight = true;		// For determining which way the player is currently facing.
 	private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
@@ -75,25 +76,35 @@ public class HeroController : MonoBehaviour {
 	}
 	
 	protected virtual void ProcessAim(){
-
-		AbstractController _controller =_hero.PlayerInstance.Controller;
-
-		//Aim
-		float yAxis = _controller.YAxis;
-		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
-		Vector3 newRotation = new Vector3(0, 0, aimAngle);
-		_crossairPivot.eulerAngles 	 = newRotation;
-		_rangeWeaponHand.eulerAngles = newRotation;
-		_crossair.eulerAngles = newRotation;
 		
 		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
+		float yAxis = _hero.PlayerInstance.Controller.YAxis;
+		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
+		Vector3 newRotation = new Vector3(0, 0, aimAngle);
+		Vector3 crossairRotation = newRotation;
+		
+		//correct crossair rotation due to negative scale of the x axis
 		if(!_facingRight){
 			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
-			newRotation = new Vector3(0, 0, aimAngle);
-			newRotation.z = 180 - newRotation.z;
+			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
 		}
-		//correct crossair rotation due to negative scale of the x axis
-		_crossair.eulerAngles = newRotation;
+		
+		_crossairPivot.eulerAngles 	 = newRotation;
+		_rangeWeaponHand.eulerAngles = newRotation;
+		_crossair.eulerAngles 		 = crossairRotation;
+
+		//correct ranged weapon spawnpoint due to scale change
+		if(_hero.RangedWeapon != null)
+			_hero.RangedWeapon.SpawnPoint.eulerAngles = crossairRotation;
+		
+		//correct ranged weapon spawnpoint due to scale change
+		if(_hero.MeleeWeapon != null)
+			_hero.MeleeWeapon.SpawnPoint.eulerAngles = crossairRotation;
+		
+		Debug.DrawLine(_crossairPivot.position,_crossairPivot.position+_crossairPivot.right,Color.yellow);
+		Debug.DrawLine(_rangeWeaponHand.position,_rangeWeaponHand.position+_rangeWeaponHand.right,Color.red);
+		Debug.DrawLine(_crossair.position,_crossair.position+_crossair.right,Color.green);
+		
 	}
 
 	protected virtual void ProcessWeapons(){
@@ -101,13 +112,13 @@ public class HeroController : MonoBehaviour {
 
 		//Use the ranged weapon from the muzzle
 		if(_controller.GetButtonDown(VirtualKey.SHOOT))
-			_hero.RangedWeapon.OnTriggerDown(_crossair);
+			_hero.RangedWeapon.OnTriggerDown();
 		else if(_controller.GetButtonUp(VirtualKey.SHOOT))
 			_hero.RangedWeapon.OnTriggerUp();
 		
 		//use the melee weapon
 		if(_controller.GetButtonDown(VirtualKey.MELEE))
-			_hero.MeleeWeapon.OnTriggerDown(_crossair);
+			_hero.MeleeWeapon.OnTriggerDown();
 		else if(_controller.GetButtonUp(VirtualKey.MELEE))
 			_hero.MeleeWeapon.OnTriggerUp();
 	}
@@ -218,7 +229,7 @@ public class HeroController : MonoBehaviour {
 		}
 	}
 	
-	void ProcessJump(){
+	protected virtual void ProcessJump(){
 
 		AbstractController _controller = _hero.PlayerInstance.Controller;
 		var sliding = false;
@@ -257,8 +268,8 @@ public class HeroController : MonoBehaviour {
 		else if (_controller.GetButtonUp(VirtualKey.JUMP) || Time.time - _jumpStartTime > _hero.JumpLength )
 			_jump = false;
 	}
-	
-	void Flip (){
+
+	protected virtual void Flip (){
 		// Switch the way the player is labelled as facing.
 		_facingRight = !_facingRight;
 		

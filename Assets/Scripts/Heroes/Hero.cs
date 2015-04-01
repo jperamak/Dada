@@ -5,8 +5,8 @@ public class Hero : MonoBehaviour {
 
 	//Utility attributes
 	public Player PlayerInstance{get; private set;}
-	public Weapon MeleeWeapon{get; private set;} 	// Reference to the assigned melee weapon
-	public Weapon RangedWeapon{get; private set;}	// Reference to the assigned range weapon
+	public MeleeWeapon MeleeWeapon{get; private set;} 	// Reference to the assigned melee weapon
+	public RangedWeapon RangedWeapon{get; private set;}	// Reference to the assigned range weapon
 
 	//Public attributes
 	public float MoveForce = 365.0f;		// Amount of force added to move the player left and right.
@@ -40,7 +40,7 @@ public class Hero : MonoBehaviour {
 	public void GiveWeapon(Weapon weapon)
     {
         Destroy(RangedWeapon.gameObject);
-		RangedWeapon = weapon;
+		RangedWeapon = (RangedWeapon)weapon;
 		RangedWeapon.transform.position = _rangeWeaponHand.position;
 		RangedWeapon.transform.rotation = _rangeWeaponHand.rotation;
         if (transform.localScale.x == -1)

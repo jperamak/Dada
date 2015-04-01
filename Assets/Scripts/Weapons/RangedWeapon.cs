@@ -8,12 +8,13 @@ public class RangedWeapon : Weapon {
 	public float RechargeEvery = 0.5f;
 	public float PushForce = 20.0f;
 	public SoundEffect OutOfAmmo;
+	public Transform SpawnPoint;
 
-	protected Transform _spawnPoint;
 	protected int _currentBullets;
 
 	void Start(){
-		_spawnPoint = transform.FindChild("Spawner");
+		if(SpawnPoint == null)
+			SpawnPoint = transform.FindChild("Spawner");
 		_currentBullets = MaxBullets;
 		InvokeRepeating("Recharge",0,RechargeEvery);
         OutOfAmmo = DadaAudio.GetSoundEffect(OutOfAmmo);
@@ -28,13 +29,21 @@ public class RangedWeapon : Weapon {
 
 	protected override void Shoot(){
 
-		if(_currentBullets <= 0 || Bullet == null || _spawnPoint == null)
+		if(_currentBullets <= 0 || Bullet == null || SpawnPoint == null)
 			return;
 
 		//looks for any custom spawn point forced externally. otherwise use the standard muzzle
-		Transform _referencePoint = _customSpawnPoint != null ? _customSpawnPoint : _spawnPoint;
+		Transform _referencePoint = _customSpawnPoint != null ? _customSpawnPoint : SpawnPoint;
 
 		Projectile bulletInst = Instantiate(Bullet, _referencePoint.position, _referencePoint.rotation) as Projectile;
+
+		//HACK: Prevents collision with owner and some onjects
+		GameObject[] collObs = GetAboutCollidingObjects.With(bulletInst.gameObject);
+		foreach (GameObject co in collObs) {
+			if (co.tag == "CanShootThrough")
+				GetAboutCollidingObjects.IgnoreCollisionBetween( bulletInst.gameObject, co);
+		}
+		GetAboutCollidingObjects.IgnoreCollisionBetween( bulletInst.gameObject, _owner);
 
 		//apply force to created projectile
 		if(bulletInst != null){
@@ -56,4 +65,7 @@ public class RangedWeapon : Weapon {
 		if(_currentBullets < MaxBullets)
 			_currentBullets++;
 	}
+
+
+				
 }
