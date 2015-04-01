@@ -3,11 +3,11 @@ using Dada.InputSystem;
 using System.Collections;
 
 [RequireComponent(typeof(Hero))]
-public class HeroController : MonoBehaviour {
-
+public class HeroController : MonoBehaviour { 
+	
 	protected Hero _hero;
 	protected Rigidbody2D _rigidbody;
-
+	
 	//class private attributes
 	protected Transform _groundCheck;			// A position marking where to check if the player is grounded.
 	protected Transform _groundCheckLeft;		// A position marking where to check if the player is grounded.
@@ -17,7 +17,7 @@ public class HeroController : MonoBehaviour {
 	protected Transform _crossairPivot;		// The point where the crossair is attached to
 	protected Transform _crossair; 			// Crossair's transform, useful for calculating the shoot direction
 	protected Transform _rangeWeaponHand;		// The hand that holds the ranged weapon
-
+	
 	protected bool _facingRight = true;		// For determining which way the player is currently facing.
 	private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
 	private bool _grounded = false;			// Whether or not the player is grounded.
@@ -25,13 +25,13 @@ public class HeroController : MonoBehaviour {
 	private bool _jumpStart = false;
 	private bool _jump = false;
 	private float _jumpStartTime;
-
+	
 	// Setting up initial references.
 	protected virtual void Awake(){
-
+		
 		_hero 		= GetComponent<Hero>();
 		_rigidbody 	= GetComponent<Rigidbody2D>();
-
+		
 		_rangeWeaponHand = transform.Find("Hand1");
 		_groundCheck     = transform.Find("GroundCheck");
 		_groundCheckLeft = transform.Find("GroundCheckLeft");
@@ -41,6 +41,7 @@ public class HeroController : MonoBehaviour {
 		_crossairPivot 	 = transform.Find("CrossairPivot");
 		_crossair 		 = _crossairPivot.Find("Crossair");
 	}
+
 
 	protected virtual void FixedUpdate (){
 		
@@ -52,101 +53,132 @@ public class HeroController : MonoBehaviour {
 	}
 	
 	protected virtual void Update () {
-
+		
 		//no controller, no party
 		if(_hero.PlayerInstance == null || _hero.PlayerInstance.Controller == null)
 			return;
-
+		
 		//Jump
 		ProcessJump();
-
+		
 		//Slopes
 		ProcessSlopes();
 		
 		//Flip
 		ProcessFlip();
-
+		
 		//Aim
 		ProcessAim();
-
+		
 		//Weapons
 		ProcessWeapons();
 	}
-
+	
 	protected virtual void ProcessAim(){
 
-		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
-		float yAxis = _hero.PlayerInstance.Controller.YAxis;
+		AbstractController _controller =_hero.PlayerInstance.Controller;
+
+		//Aim
+		float yAxis = _controller.YAxis;
 		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
 		Vector3 newRotation = new Vector3(0, 0, aimAngle);
-		Vector3 crossairRotation = newRotation;
-
-		//correct crossair rotation due to negative scale of the x axis
-		if(!_facingRight){
-			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
-			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
-		}
-
 		_crossairPivot.eulerAngles 	 = newRotation;
 		_rangeWeaponHand.eulerAngles = newRotation;
-		_crossair.eulerAngles 		 = crossairRotation;
-	
+		_crossair.eulerAngles = newRotation;
+		
+		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
+		if(!_facingRight){
+			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
+			newRotation = new Vector3(0, 0, aimAngle);
+			newRotation.z = 180 - newRotation.z;
+		}
+		//correct crossair rotation due to negative scale of the x axis
+		_crossair.eulerAngles = newRotation;
 	}
 
 	protected virtual void ProcessWeapons(){
-		AbstractController c = _hero.PlayerInstance.Controller;
+		AbstractController _controller =_hero.PlayerInstance.Controller;
+
 		//Use the ranged weapon from the muzzle
-		if(c.GetButtonDown(VirtualKey.SHOOT))
+		if(_controller.GetButtonDown(VirtualKey.SHOOT))
 			_hero.RangedWeapon.OnTriggerDown(_crossair);
-		else if(c.GetButtonUp(VirtualKey.SHOOT))
+		else if(_controller.GetButtonUp(VirtualKey.SHOOT))
 			_hero.RangedWeapon.OnTriggerUp();
 		
 		//use the melee weapon
-		if(c.GetButtonDown(VirtualKey.MELEE))
+		if(_controller.GetButtonDown(VirtualKey.MELEE))
 			_hero.MeleeWeapon.OnTriggerDown(_crossair);
-		else if(c.GetButtonUp(VirtualKey.MELEE))
+		else if(_controller.GetButtonUp(VirtualKey.MELEE))
 			_hero.MeleeWeapon.OnTriggerUp();
 	}
-	
-	
-	//NOTE: All calculations involving velocity and directions should be done in the hero's local space
-	//because we cannot assume that the hero is aligned with the world x axis
-	protected virtual void ProcessMovement(){
 
+	protected virtual  void ProcessSlopes(){
 		float h = _hero.PlayerInstance.Controller.XAxis;
 
-		//Time for a new joystick? :P
+		// If the player's horizontal velocity is greater than the _hero.MaxSpeed...
+		if(Mathf.Abs(_rigidbody.velocity.x) > _hero.MaxSpeed * Mathf.Abs(h))
+			// ... set the player's velocity to the _hero.MaxSpeed in the x axis.
+			_rigidbody.velocity = new Vector2(Mathf.Sign(_rigidbody.velocity.x) * _hero.MaxSpeed * Mathf.Abs(h), _rigidbody.velocity.y);
+		if (_grounded && !_jump && Physics2D.Linecast(
+			transform.position + _slopeCheck.localPosition, transform.position + _slopeCheck.localPosition - _wallCheck.localPosition, LayerMask.GetMask("Ground")))
+		{
+			// Debug.Log("slope left");
+			_rigidbody.AddForce(transform.up * -h * _hero.SlopeForce);
+		}
+		if (_grounded && !_jump && Physics2D.Linecast(
+			transform.position + _slopeCheck.localPosition, transform.position + _slopeCheck.localPosition + _wallCheck.localPosition, LayerMask.GetMask("Ground")))
+		{
+			// Debug.Log("slope right");
+			_rigidbody.AddForce(transform.up * h * _hero.SlopeForce);
+		}
+	}
+
+	protected virtual void ProcessFlip(){
+		float h = _hero.PlayerInstance.Controller.XAxis;
+
+		// If the input is moving the player right and the player is facing left...
+		if(h > 0 && !_facingRight)
+			// ... flip the player.
+			Flip();
+		// Otherwise if the input is moving the player left and the player is facing right...
+		else if(h < 0 && _facingRight)
+			// ... flip the player.
+			Flip();
+	}
+
+	protected virtual void ProcessMovement (){
+
+		
+		// Cache the horizontal input.
+		float h = _hero.PlayerInstance.Controller.XAxis;
+		
 		h = Mathf.Abs(h) < 0.25f ? 0 : h;
 		
-		//calculate velocity in local space
-		Vector2 localVelocity = transform.InverseTransformVector(_rigidbody.velocity);
+		// The Speed animator parameter is set to the absolute value of the horizontal input.
+		//_anim.SetFloat("Speed", _grounded ? Mathf.Abs(h) : 0);
 		
-		//player is moving
-		if(h != 0){
-			
-			//Apply movement only if the total velocity does not exceed the maximum speed (both to the left and to the right)
-			if(h > 0){
-				if(h * localVelocity.x < _hero.MaxSpeed)
-					_rigidbody.AddForce(transform.right * h * _hero.MoveForce);
-			}
-			else{
-				if(h * localVelocity.x > -_hero.MaxSpeed)
-					_rigidbody.AddForce(transform.right * h * _hero.MoveForce);
-			}
-		}
+		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached _hero.MaxSpeed yet...
+		if(h * _rigidbody.velocity.x < _hero.MaxSpeed)
+			// ... add a force to the player.
+			_rigidbody.AddForce(transform.right * h * _hero.MoveForce,ForceMode2D.Force);
+
 		
-		//FIXME: it does not behave well with attractor points, it cancels part of the horizontal attraction 
-		// If the player's horizontal velocity is greater than the maxSpeed
-		// set the player's velocity to the maxSpeed in the x axis.
-		if(Mathf.Abs(localVelocity.x) > _hero.MaxSpeed * Mathf.Abs(h)){
-			localVelocity.x = Mathf.Sign(localVelocity.x) * _hero.MaxSpeed * Mathf.Abs(h);
-			_rigidbody.velocity = transform.TransformVector(localVelocity);
-		}
+		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
+		_grounded = Physics2D.Linecast(transform.position, _groundCheck.position, _hero.JumpOn) || Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) || Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn);//LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
+		
+		//if (_grounded)
+		//	_anim.SetBool("Slide", false);
 		
 		// If the player should jump...
-		if(_jumpStart){
+		if(_jumpStart)
+		{
+			// Set the Jump animator trigger parameter.
+			//_anim.SetBool("Slide", false);
+			//_anim.SetTrigger("Jump");
 			
 			// Play a random jump audio clip.
+			//if (JumpClips.Length > 0)
+			//	DadaAudio.PlayRandom(JumpClips);
 			if (_hero.JumpSound != null)
 				_hero.JumpSound.PlayEffect();
 			
@@ -156,12 +188,18 @@ public class HeroController : MonoBehaviour {
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			_jumpStart = false;
 		}
-		if (_jump){
+		if (_jump)
+		{
 			_rigidbody.AddForce( transform.up * _hero.JumpForce * _hero.JumpAirModifier);
 		}
-		if (_walljump > 0 && !_grounded){
+		if (_walljump > 0 && !_grounded)
+		{
+			//_anim.SetBool("Slide", false);
+			//_anim.SetTrigger("Jump");
 			
 			// Play a random jump audio clip.
+			//if (JumpClips.Length > 0)
+			//	DadaAudio.PlayRandom(JumpClips);
 			if (_hero.JumpSound != null)
 				_hero.JumpSound.PlayEffect();
 			
@@ -180,70 +218,47 @@ public class HeroController : MonoBehaviour {
 		}
 	}
 	
-	protected virtual  void ProcessSlopes(){
+	void ProcessJump(){
 
-		float h = _hero.PlayerInstance.Controller.XAxis;
-
-		if (_grounded && !_jump && Physics2D.Linecast(_slopeCheck.position,_slopeCheck.position - _wallCheck.localPosition, _hero.WalkOnSlopes))
-		{
-			// Debug.Log("slope left");
-			_rigidbody.AddForce(transform.up * -h * _hero.SlopeForce);
-		}
-		if (_grounded && !_jump && Physics2D.Linecast(
-			_slopeCheck.position, _slopeCheck.position + _wallCheck.localPosition, _hero.WalkOnSlopes))
-		{
-			// Debug.Log("slope right");
-			_rigidbody.AddForce(transform.up * h * _hero.SlopeForce);
-		}
-	}
-	
-	
-	
-	protected virtual void ProcessJump(){
-		bool isBtnJumpDown 	= _hero.PlayerInstance.Controller.GetButtonDown(VirtualKey.JUMP);
-
-		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		_grounded = Physics2D.OverlapPoint(_groundCheck.position, _hero.JumpOn) || 
-			Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) || 
-				Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn);
+		AbstractController _controller = _hero.PlayerInstance.Controller;
+		var sliding = false;
 		
-		if (isBtnJumpDown && Physics2D.Linecast(transform.position, transform.position  - _wallCheck.localPosition, _hero.JumpOnWalls.value)){
+		if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position  - _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
+		{
 			_jumpStartTime = Time.time;
 			_jump = true; 
 			_walljump = 1;
+			//_anim.SetBool("Slide", true);
+			sliding = true;
 		}
 		
-		else if (isBtnJumpDown && Physics2D.Linecast(transform.position, transform.position + _wallCheck.localPosition, _hero.JumpOnWalls.value)){
+		else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
+		{
 			_jumpStartTime = Time.time;
 			_jump = true;
+			
 			_walljump = 2;
+			//_anim.SetBool("Slide", true);
+			sliding = true;
 		}
 		else
+		{
 			_walljump = 0;
-		
+			//if (!sliding)
+			//	_anim.SetBool("Slide", false);
+		}
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if (isBtnJumpDown && _grounded){
+		if (_controller.GetButtonDown(VirtualKey.JUMP) && _grounded)
+		{
 			_jumpStartTime = Time.time;
 			_jumpStart = true;
 			_jump = true;
 		}
-		else if (isBtnJumpDown || Time.time - _jumpStartTime > _hero.JumpLength )
+		else if (_controller.GetButtonUp(VirtualKey.JUMP) || Time.time - _jumpStartTime > _hero.JumpLength )
 			_jump = false;
 	}
 	
-	protected virtual void ProcessFlip(){
-		float h = _hero.PlayerInstance.Controller.XAxis;
-
-		// If the input is moving the player right and the player is facing left flip the player.
-		if(h > 0 && !_facingRight)
-			Flip();
-		
-		// Otherwise if the input is moving the player left and the player is facing right flip the player.
-		else if(h < 0 && _facingRight)
-			Flip();
-	}
-	
-	protected virtual void Flip (){
+	void Flip (){
 		// Switch the way the player is labelled as facing.
 		_facingRight = !_facingRight;
 		

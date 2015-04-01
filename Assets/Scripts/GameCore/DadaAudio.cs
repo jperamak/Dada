@@ -26,6 +26,5 @@ public class DadaAudio : MonoBehaviour {
             return r.GetComponent<SoundEffect>();
         else 
             return Instantiate(e) as SoundEffect;
-        return null;
     }
 }
