@@ -55,14 +55,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 5
-  DestroyOnZeroHp: 1
-  DamageSound: []
-  DestroySound: {fileID: 0}
+  DamageSound: {fileID: 11441630, guid: 7195abbb756ac480d88d982d71d47210, type: 2}
+  DestroySound: {fileID: 11441630, guid: 7195abbb756ac480d88d982d71d47210, type: 2}
   hitpointsLightDamage: 8
   hitpointsHeavyDamage: 4
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 138116, guid: 4030344ca07e540ac9098bb65f8e9205, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!212 &21238116
 SpriteRenderer:

@@ -97,7 +97,8 @@ public class HeroController : MonoBehaviour {
 		AbstractController c = _hero.PlayerInstance.Controller;
 		//Use the ranged weapon from the muzzle
 		if(c.GetButtonDown(VirtualKey.SHOOT))
-			_hero.RangedWeapon.OnTriggerDown(_crossair);
+			//_hero.RangedWeapon.OnTriggerDown(_crossair);
+			_hero.RangedWeapon.OnTriggerDown();
 		else if(c.GetButtonUp(VirtualKey.SHOOT))
 			_hero.RangedWeapon.OnTriggerUp();
 		

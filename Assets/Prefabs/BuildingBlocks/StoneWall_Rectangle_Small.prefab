@@ -70,13 +70,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 100
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 11402292, guid: 4d2be5e066265b3468389a4623e6946d, type: 2}
+  DestroySound: {fileID: 11499632, guid: 232a5b7663c494b47ad061bd030cbb3a, type: 2}
   hitpointsLightDamage: 75
   hitpointsHeavyDamage: 40
   spriteLightDamage: {fileID: 21300058, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   spriteHeavyDamage: {fileID: 21300060, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   leftWhenDestroyed: {fileID: 114158, guid: 21101e315466f4649b326d8af2ee9e04, type: 2}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!212 &21238116
 SpriteRenderer:

@@ -4,17 +4,20 @@ using System.Collections;
 public class WeaponPickup : MonoBehaviour {
 
     public GameObject WeaponPrefab;
-    
-    void OnTriggerEnter2D(Collider2D other)
+
+    void OnCollisionEnter2D(Collision2D c)
     {
-        Debug.Log("waappen");
-        var h = other.gameObject.GetComponent<Hero>();
-        Weapon w = (Instantiate(WeaponPrefab) as GameObject).GetComponent<Weapon>();
-        w.transform.parent = h.gameObject.transform.FindChild("Hand1");
-        w.transform.localPosition = Vector2.zero;
-        w.SetOwner(h.gameObject);
-        h.GiveWeapon(w);
-        Destroy(this.gameObject);
+
+        if (c.collider.gameObject.tag == "Player")
+        {
+            var h = c.collider.gameObject.GetComponent<Hero>();
+            Weapon w = (Instantiate(WeaponPrefab) as GameObject).GetComponent<Weapon>();
+            w.transform.parent = h.gameObject.transform.FindChild("Hand1");
+            w.transform.localPosition = Vector2.zero;
+            w.SetOwner(h.gameObject);
+            h.GiveWeapon(w);
+            Destroy(this.gameObject);
+        }
     }
 
 	// Use this for initialization
