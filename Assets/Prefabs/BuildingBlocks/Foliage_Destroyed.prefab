@@ -351,13 +351,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 5
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11450212
 MonoBehaviour:
@@ -383,13 +385,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 5
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11497932
 MonoBehaviour:
@@ -402,13 +406,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 5
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11499494
 MonoBehaviour:
@@ -421,13 +427,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 5
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!212 &21260222
 SpriteRenderer:
