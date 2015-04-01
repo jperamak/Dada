@@ -59,11 +59,9 @@ public class DadaInput {
 			
 			Dictionary<string,KeyMap> keyMapConfig = KeyMap.JsonToKeyConfiguration(json);
 			
-			#if UNITY_EDITOR
+
 			DadaInput.Initialize(keyMapConfig);
-			#else
-			DadaInput.Initialize(keyMapConfig,InputMethod.JOYSTICK);
-			#endif
+
 		}
 	}
 
@@ -120,60 +118,24 @@ public class DadaInput {
 	private void Configure(InputMethod forceMethod){
 
 		KeyMap kMap;
-
-		switch(forceMethod){
-
-#if UNITY_EDITOR
-		case InputMethod.KEYBOARD:
-			_joy = new KeyboardController(_rawKeyMaps["Keyboard"],0);
-			break;
-#endif
-		case InputMethod.JOYSTICK:
-			List<ConsoleController> gamepads = new List<ConsoleController>();
-			if(_controllerNames.Length == 0){
-				_joy = new NullController(0);
-			}
-			else if(_controllerNames.Length == 1){
-				kMap = MakeMap(_controllerNames[0]);
-				ConsoleController gamepad = new ConsoleController(kMap,_controllerNames[0]);
-				gamepads.Add(gamepad);
-				_joy = gamepad;
-			}
-			else{
-				for(int i=0;i<_controllerNames.Length;i++){
-					kMap = MakeMap(_controllerNames[i]);
-					ConsoleController gamepad = new ConsoleController(kMap,_controllerNames[i],i);
-					_joyList.Add(gamepad);
-					gamepads.Add(gamepad);
-				}
-				_joy = new CompositeController(_joyList);
-			}
-
-			if(gamepads.Count > 0)
-				GamepadSync.Initialize(gamepads);
-
-
-			break;
-		case InputMethod.COMPOSITE:
-		case InputMethod.AUTO:
-			List<ConsoleController> controllers = new List<ConsoleController>();
-			for(int i=0;i<_controllerNames.Length;i++){
-				kMap = MakeMap(_controllerNames[i]);
-				ConsoleController c = new ConsoleController(kMap,_controllerNames[i],i);
-				controllers.Add(c);
-				_joyList.Add(c);
-			}
-			if(controllers.Count > 0)
-				GamepadSync.Initialize(controllers);
-#if UNITY_EDITOR
-			_joyList.Add(new KeyboardController(_rawKeyMaps["Keyboard"],_joyList.Count));
-#endif
-			_joy = new CompositeController(_joyList);
-			break;
-		default:
-			_joy = new NullController(0);
-			break;
+	
+		List<ConsoleController> controllers = new List<ConsoleController>();
+		for(int i=0;i<_controllerNames.Length;i++){
+			kMap = MakeMap(_controllerNames[i]);
+			ConsoleController c = new ConsoleController(kMap,_controllerNames[i],i);
+			controllers.Add(c);
+			_joyList.Add(c);
 		}
+		if(controllers.Count > 0)
+			GamepadSync.Initialize(controllers);
+#if UNITY_EDITOR
+		_joyList.Add(new KeyboardController(_rawKeyMaps["Keyboard"],_joyList.Count));
+#endif
+		if(_joyList.Count > 0)
+			_joy = new CompositeController(_joyList);
+		else
+			_joy = new NullController(0);
+
 	}
 
 	private KeyMap MakeMap(string name){

@@ -20,7 +20,7 @@ public class CharacterSelectionScreen : MonoBehaviour {
 		//Disable windows without a player
 		for(int i=0;i<4;i++){
 			views[i] = canvas.transform.GetChild(i).GetComponent<CharacterSelectionView>();
-			if(i < DadaGame.PlayersNum){
+			if(i < DadaGame.PlayersNum && i < DadaInput.ConrtollerCount){
 				views[i].OnPlayerReady = PlayerReady;	
 				views[i].SetController(DadaInput.GetJoystick(i));
 			}
@@ -36,7 +36,7 @@ public class CharacterSelectionScreen : MonoBehaviour {
 
 		DadaGame.RegisterPlayer(player);
 		if(_playersReady == DadaGame.PlayersNum)
-			Application.LoadLevel("BlockyGround");
+			Application.LoadLevel("RikusSandbox");
 	}
 	
 
