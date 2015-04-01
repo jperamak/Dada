@@ -19,6 +19,7 @@ public class Hero : MonoBehaviour {
 	public LayerMask JumpOnWalls;			// Layermask that specify the walls the player can jump on
 	public LayerMask WalkOnSlopes;			// Layermask that specify the walls the player can jump on
     public SoundEffect JumpSound;
+	public Sprite[] TeamColors;
 
 	private Transform _rangeWeaponHand;		// The hand that holds the ranged weapon
 

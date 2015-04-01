@@ -54,7 +54,7 @@ public class CharacterSelectionView : MonoBehaviour {
 		//save user's current selection into player class
 		_player.Hero = Resource.Heroes[_iHero]; 
 		_player.FirstWeapon = Resource.RangedWepons[_iRange];
-		_player.SecondWeapon = Resource.MeleeWepons[_iMelee];
+		_player.SecondWeapon = Resource.LAYBOMB_MELEE;// Resource.MeleeWepons[_iMelee];
         _player.TeamNumber = _iTeam;
 
 		//update UI text to show the current selection
@@ -124,7 +124,7 @@ public class CharacterSelectionView : MonoBehaviour {
 			_btnSelected--;
 			UpdateBtnSelection();
 		}
-		else if(_controller.GetButtonDown(VirtualKey.DOWN) && _btnSelected < 3){
+		else if(_controller.GetButtonDown(VirtualKey.DOWN) && _btnSelected < _buttons.Length-1){
 			_btnSelected++;
 			UpdateBtnSelection();
 		}
@@ -143,11 +143,11 @@ public class CharacterSelectionView : MonoBehaviour {
 				AssemblePlayer();
 			}
 			//melee weapon changed
-			else if(_btnSelected == 2 && _iMelee > 0){
+			/*else if(_btnSelected == 2 && _iMelee > 0){
 				_iMelee--;
 				AssemblePlayer();
-			}
-            else if (_btnSelected == 3 && _iTeam > 0){
+			}*/
+            else if (_btnSelected == 2 && _iTeam > 0){
                 _iTeam--;
                 AssemblePlayer();
             }
@@ -163,11 +163,11 @@ public class CharacterSelectionView : MonoBehaviour {
 				_iRange++;
 				AssemblePlayer();
 			}
-			else if(_btnSelected == 2 && _iMelee < Resource.MeleeWepons.Length-1){
+			/*else if(_btnSelected == 2 && _iMelee < Resource.MeleeWepons.Length-1){
 				_iMelee++;
 				AssemblePlayer();
-			}
-            else if (_btnSelected == 3 && _iTeam < Resource.Teams.Length - 1){
+			}*/
+            else if (_btnSelected == 2 && _iTeam < Resource.Teams.Length - 1){
                 _iTeam++;
                 AssemblePlayer();
             }
@@ -204,8 +204,8 @@ public class CharacterSelectionView : MonoBehaviour {
 		//set the new text for the buttons to show the current selection
 		_btnText[0].text = Resource.Heroes[_iHero].Name;
 		_btnText[1].text = Resource.RangedWepons[_iRange].Name;
-		_btnText[2].text = Resource.MeleeWepons[_iMelee].Name;
-        _btnText[3].text = Resource.Teams[_iTeam].Name;
+		//_btnText[2].text = Resource.MeleeWepons[_iMelee].Name;
+        _btnText[2].text = Resource.Teams[_iTeam].Name;
 
         Image background = GetComponent<Image>();
         Color newColor = _player.TeamColor;

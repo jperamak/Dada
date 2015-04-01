@@ -16,7 +16,8 @@ public class RangedWeapon : Weapon {
 		if(SpawnPoint == null)
 			SpawnPoint = transform.FindChild("Spawner");
 		_currentBullets = MaxBullets;
-		InvokeRepeating("Recharge",0,RechargeEvery);
+		if(RechargeEvery > 0)
+			InvokeRepeating("Recharge",0,RechargeEvery);
         OutOfAmmo = DadaAudio.GetSoundEffect(OutOfAmmo);
 	}
 

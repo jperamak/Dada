@@ -1,10 +1,6 @@
 fileFormatVersion: 2
 guid: b6af7f1c2861e433baee49ed8b753c14
-<<<<<<< HEAD
-timeCreated: 1427891109
-=======
 timeCreated: 1427897728
->>>>>>> 6711592e0429502857d584b2e16f4095b1ad1234
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,14 +10,8 @@ TextureImporter:
     21300006: GreenMaster
     21300008: RedMaster
     21300010: YellowMaster
-<<<<<<< HEAD
-    21300012: ToadBomb
-    21300014: ToadLegRight
-    21300016: ToadLegLeft
-=======
     21300012: FrogBomb_Body
     21300014: FrogBombLeg
->>>>>>> 6711592e0429502857d584b2e16f4095b1ad1234
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -127,35 +117,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-    - name: ToadBomb
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 318
-        width: 129
-        height: 172
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ToadLegRight
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 408
-        width: 40
-        height: 77
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ToadLegLeft
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 315
-        width: 44
-        height: 79
-=======
     - name: FrogBomb_Body
       rect:
         serializedVersion: 2
@@ -173,7 +134,6 @@ TextureImporter:
         y: 407
         width: 49
         height: 81
->>>>>>> 6711592e0429502857d584b2e16f4095b1ad1234
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
