@@ -14,7 +14,7 @@ GameObject:
   - 60: {fileID: 6004364}
   m_Layer: 12
   m_Name: Embrasure_Bottom
-  m_TagString: Untagged
+  m_TagString: CanShootThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,9 +78,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 100
-  DamageSound:
-  - {fileID: 8300000, guid: ca4fb6483d3a040a9904544409225b36, type: 3}
-  DestroySound: {fileID: 8300000, guid: 96bd187bcf8de44dba5e7522a40abf39, type: 3}
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 75
   hitpointsHeavyDamage: 40
   spriteLightDamage: {fileID: 21300002, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
