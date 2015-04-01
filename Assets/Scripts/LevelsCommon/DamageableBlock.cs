@@ -44,15 +44,23 @@ public class DamageableBlock : Damageable {
 		if (!damageFromCollisions)
 			return;
 
-		if (other.gameObject.layer == LayerMask.NameToLayer("Ground") || 
+        if (other.gameObject.tag == "Player")
+        {
+            if (this.GetComponent<Rigidbody2D>() != null && this.GetComponent<Rigidbody2D>().velocity.magnitude > 15)
+                other.gameObject.GetComponent<HeroHealth>().TakeDamage(10);
+           
+        }
+         if (other.gameObject.layer == LayerMask.NameToLayer("Ground") || 
 		    other.gameObject.layer == LayerMask.NameToLayer("BackgroundBlock") ||
-		    other.gameObject.layer == LayerMask.NameToLayer("Rubble") 
-		    )
+		    other.gameObject.layer == LayerMask.NameToLayer("Rubble") ||
+		    other.gameObject.tag == "Player")
 		{
 			Rigidbody2D o = other.gameObject.GetComponent<Rigidbody2D>();
-			
-			if (o != null && other.relativeVelocity.magnitude > 15f)
-				TakeDamage(1000, null);
+
+            if (o != null && other.relativeVelocity.magnitude > 15f)
+            {
+                TakeDamage(1000, null);
+            }
 		}
 	}
 

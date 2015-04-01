@@ -21,11 +21,11 @@ public class DadaAudio : MonoBehaviour {
     {
         if (e == null)
             return null;
-        var r = GameObject.Find(e.name);
+        var r = GameObject.Find(e.name + "(Clone)");
         if (r != null)
             return r.GetComponent<SoundEffect>();
-        else if (e != null)
-                return Instantiate(e) as SoundEffect;
+        else 
+            return Instantiate(e) as SoundEffect;
         return null;
     }
 }
