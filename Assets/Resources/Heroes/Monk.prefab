@@ -91,6 +91,7 @@ GameObject:
   - 95: {fileID: 9597376}
   - 114: {fileID: 11465578}
   - 114: {fileID: 11425960}
+  - 114: {fileID: 11458666}
   m_Layer: 0
   m_Name: Monk
   m_TagString: Player
@@ -604,6 +605,17 @@ MonoBehaviour:
   ShieldAfterRespawn: 2
   ShieldAfterDamage: 1.5
   ShieldDelay: .200000003
+--- !u!114 &11458666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d6d29804fba884f934c79331b01405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11465578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -623,7 +635,13 @@ MonoBehaviour:
   JumpLength: .5
   JumpOn:
     serializedVersion: 2
-    m_Bits: 413696
+    m_Bits: 414208
+  JumpOnWalls:
+    serializedVersion: 2
+    m_Bits: 4096
+  WalkOnSlopes:
+    serializedVersion: 2
+    m_Bits: 4096
   JumpSound: {fileID: 11471052, guid: 6a4fc9b53f92c0e499ecf8e38d985e6a, type: 2}
 --- !u!212 &21212374
 SpriteRenderer:

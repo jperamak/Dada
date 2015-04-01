@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class AlignWithAttractorPoint : MonoBehaviour {
 
+	public int Count{get{return _points.Count;}}
 	private List<Transform> _points = new List<Transform>();
 	private Rigidbody2D _rigidbody;
 	private float _prevGravityScale;
@@ -25,19 +26,24 @@ public class AlignWithAttractorPoint : MonoBehaviour {
 		}
 	}
 
-	public void RemovePoint(Transform point){
+	public int RemovePoint(Transform point){
 		if(_points.Contains(point)){
 			_points.Remove(point);
 
 
 			//If there aren't gravity fields, put back the earth's gravity
 			if(_points.Count == 0){
-				//Debug.Log("Reset "+name+" to gravity "+_prevGravityScale);
+
 				_rigidbody.gravityScale = _prevGravityScale;
 				transform.rotation = Quaternion.Euler (0,0,0);
 				//transform.rotation = Quaternion.FromToRotation (transform.up, Vector2.up);
+
+				//and destroy this script
+				Destroy(this);
+
 			}
 		}
+		return _points.Count;
 	}
 
 	void Update () {
@@ -53,8 +59,8 @@ public class AlignWithAttractorPoint : MonoBehaviour {
 
 
 		Quaternion targetRotation = Quaternion.FromToRotation (Vector2.up, down);
-		transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation, 10*Time.deltaTime);
-		//transform.rotation = targetRotation;
+//		transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation, 10*Time.deltaTime);
+		transform.rotation = targetRotation;
 
 	}
 }
