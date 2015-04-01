@@ -14,7 +14,7 @@ GameObject:
   - 60: {fileID: 6012924}
   m_Layer: 12
   m_Name: Embrasure_Top
-  m_TagString: Untagged
+  m_TagString: CanShootThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

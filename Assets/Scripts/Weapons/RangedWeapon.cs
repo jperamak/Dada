@@ -36,6 +36,13 @@ public class RangedWeapon : Weapon {
 
 		Projectile bulletInst = Instantiate(Bullet, _referencePoint.position, _referencePoint.rotation) as Projectile;
 
+		GameObject[] collObs = GetAboutCollidingObjects.With(bulletInst.gameObject);
+		foreach (GameObject co in collObs) {
+			if (co.tag == "CanShootThrough")
+				IgnoreCollisionBetween( bulletInst.gameObject, co);
+		}
+		IgnoreCollisionBetween( bulletInst.gameObject, _owner);
+
 		//apply force to created projectile
 		if(bulletInst != null){
 			_currentBullets--;
@@ -56,4 +63,16 @@ public class RangedWeapon : Weapon {
 		if(_currentBullets < MaxBullets)
 			_currentBullets++;
 	}
+
+	void IgnoreCollisionBetween(GameObject a, GameObject b) {
+		Collider2D[] aCols = a.GetComponents<Collider2D>();
+		Collider2D[] bCols = b.GetComponents<Collider2D>();
+
+		foreach (Collider2D aCol in aCols) {
+			foreach (Collider2D bCol in bCols) {
+				Physics2D.IgnoreCollision(aCol, bCol);
+			}
+		}
+	}
+				
 }

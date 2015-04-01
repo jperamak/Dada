@@ -13,6 +13,7 @@ TagManager:
   - BombPickup
   - ExplosionFX
   - HealthBar
+  - CanShootThrough
   layers:
   - Default
   - TransparentFX
