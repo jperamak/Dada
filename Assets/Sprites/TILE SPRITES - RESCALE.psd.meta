@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e2e5e6d53f4f574cb9f71541b4a27fa
-timeCreated: 1427899790
+timeCreated: 1427963696
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -44,6 +44,7 @@ TextureImporter:
     21300074: Torch
     21300076: RoofTile
     21300078: Roof_nd
+    21300080: SmokeTrail
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -486,6 +487,16 @@ TextureImporter:
         y: 818
         width: 156
         height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SmokeTrail
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 60
+        width: 128
+        height: 125
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
