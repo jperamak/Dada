@@ -11865,6 +11865,16 @@ Prefab:
       propertyPath: m_Motor.m_MaximumMotorForce
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 11473590, guid: dcf503c44a173477dbeff65576bb844d, type: 2}
+      propertyPath: HitDamage
+      value: 
+      objectReference: {fileID: 11409862, guid: b3240cd4fb01c413796153dacc0eba90,
+        type: 2}
+    - target: {fileID: 11420452, guid: dcf503c44a173477dbeff65576bb844d, type: 2}
+      propertyPath: HitDamage
+      value: 
+      objectReference: {fileID: 11409862, guid: b3240cd4fb01c413796153dacc0eba90,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcf503c44a173477dbeff65576bb844d, type: 2}
   m_IsPrefabParent: 0
@@ -11978,6 +11988,97 @@ Transform:
   - {fileID: 652081551}
   m_Father: {fileID: 1987622047}
   m_RootOrder: 1
+--- !u!1 &399462735
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+  m_PrefabInternal: {fileID: 1243540802}
+--- !u!114 &399462742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399462735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a44c22a533a67045abe7c6090146aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 0}
+  minPitch: 1
+  maxPitch: 1
+  minVolume: 1
+  maxVolume: 1
+  Mode: 2
+--- !u!82 &399462743
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399462735}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f575748354d50487182a00fb6584dadb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .400000006
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &401798705
 Prefab:
   m_ObjectHideFlags: 0
@@ -67084,6 +67185,76 @@ Prefab:
       propertyPath: m_Motor.m_MaximumMotorForce
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 11469794, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DamageSound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11469794, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DestroySound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11433880, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DamageSound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11433880, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DestroySound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11483878, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DamageSound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11483878, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DestroySound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11478118, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DamageSound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11478118, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DestroySound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11422074, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DamageSound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11422074, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DestroySound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11406584, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DamageSound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11406584, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: DestroySound
+      value: 
+      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
+        type: 2}
+    - target: {fileID: 11453486, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: HitDamage
+      value: 
+      objectReference: {fileID: 11409862, guid: b3240cd4fb01c413796153dacc0eba90,
+        type: 2}
+    - target: {fileID: 11402616, guid: a578ec11baea84b2496e18a730788a98, type: 2}
+      propertyPath: HitDamage
+      value: 
+      objectReference: {fileID: 11409862, guid: b3240cd4fb01c413796153dacc0eba90,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a578ec11baea84b2496e18a730788a98, type: 2}
   m_IsPrefabParent: 0
