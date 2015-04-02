@@ -101,9 +101,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160222}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .222000003, y: -.224000007, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .755813241, w: .654787362}
+  m_LocalPosition: {x: .153999999, y: -.131999999, z: 0}
+  m_LocalScale: {x: .699999988, y: .699999988, z: 1}
   m_Children: []
   m_Father: {fileID: 460230}
   m_RootOrder: 3
@@ -113,8 +113,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.237000003, y: -.209999993, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .136224836, w: .990677953}
+  m_LocalPosition: {x: -.204999998, y: -.150000006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 460230}
@@ -126,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .169, y: .238999993, z: 0}
+  m_LocalPosition: {x: .264999986, y: .238999993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 460230}
@@ -150,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 11.3599148, y: -17.0610714, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 460228}
@@ -232,13 +232,13 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.146079898, y: .125334769}
-      - {x: -.226716876, y: -.0125474632}
-      - {x: -.239936829, y: -.0512866974}
-      - {x: -.0784529448, y: -.174374551}
-      - {x: .19993031, y: -.0195855796}
-      - {x: .197500348, y: -.0117234886}
-      - {x: .195762753, y: .184792548}
+    - - {x: -.222036242, y: .121336967}
+      - {x: -.330656886, y: -.104495019}
+      - {x: -.207955241, y: -.199202508}
+      - {x: -.0784529448, y: -.270318002}
+      - {x: .291876912, y: -.0635595024}
+      - {x: .333421826, y: .156178504}
+      - {x: .183770299, y: .240759879}
 --- !u!60 &6060224
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -252,14 +252,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .097942844, y: .105248407}
-      - {x: -.101346478, y: .10554786}
-      - {x: -.161609158, y: .0119180232}
-      - {x: -.0621790737, y: -.112841651}
-      - {x: -.043727383, y: -.10979943}
-      - {x: .10829784, y: -.0567923039}
-      - {x: .150261417, y: .056767419}
-      - {x: .0918011814, y: .107085183}
+    - - {x: .097942844, y: .157217935}
+      - {x: -.141323552, y: .14552398}
+      - {x: -.257554531, y: .0758809596}
+      - {x: -.0941605419, y: -.136828467}
+      - {x: -.0557207912, y: -.169764563}
+      - {x: .120291248, y: -.0967684239}
+      - {x: .190238491, y: .11273475}
+      - {x: .139772907, y: .147061303}
 --- !u!60 &6060226
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -273,14 +273,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.183835357, y: .175772041}
-      - {x: -.221375793, y: -.0952126086}
+    - - {x: -.167845368, y: .227741569}
+      - {x: -.253356576, y: -.0912148058}
       - {x: -.151051849, y: -.217031151}
-      - {x: .0786825716, y: -.252227455}
-      - {x: .237095505, y: -.182843834}
-      - {x: .238806397, y: .179298729}
-      - {x: .109526306, y: .290962547}
-      - {x: -.0131104887, y: .220053047}
+      - {x: .0227149725, y: -.260223061}
+      - {x: .253085494, y: -.0109421313}
+      - {x: .246801734, y: .0753596723}
+      - {x: .225458503, y: .127058357}
+      - {x: .0548499823, y: .260029167}
 --- !u!60 &6060228
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -294,13 +294,13 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.147170335, y: .264190942}
+    - - {x: -.183149606, y: .23620823}
       - {x: -.155495912, y: .264829904}
-      - {x: -.167065889, y: -.204791754}
-      - {x: -.0993931592, y: -.279132575}
-      - {x: .140610427, y: -.182653159}
-      - {x: .183190078, y: .0440123379}
-      - {x: .053005904, y: .24172619}
+      - {x: -.255014688, y: -.116842002}
+      - {x: .0205380619, y: -.275134772}
+      - {x: .20057556, y: -.0507294834}
+      - {x: .239157408, y: .107975274}
+      - {x: .0689961612, y: .261715204}
 --- !u!114 &11422592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,13 +325,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11446340
 MonoBehaviour:
@@ -370,13 +372,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11478498
 MonoBehaviour:
@@ -402,13 +406,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11499494
 MonoBehaviour:
@@ -421,13 +427,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!212 &21260222
 SpriteRenderer:
@@ -453,7 +461,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1024582385
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300066, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 6407597a7b9375142be675bbaeb5bf6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21260224
 SpriteRenderer:
@@ -479,7 +487,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1024582385
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300064, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  m_Sprite: {fileID: 21300012, guid: 6407597a7b9375142be675bbaeb5bf6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21260226
 SpriteRenderer:
@@ -505,7 +513,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1024582385
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300070, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 6407597a7b9375142be675bbaeb5bf6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21260228
 SpriteRenderer:
@@ -531,7 +539,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1024582385
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300062, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 6407597a7b9375142be675bbaeb5bf6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

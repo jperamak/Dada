@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: 9956cabeee3aa504ab4cf885e82f4030
-timeCreated: 1427963661
+timeCreated: 1427966473
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Earth_square_fg
+    21300002: Earth_square_grass_fg
+    21300004: Earth_triangle_fg
+    21300006: Earth_traingle_grass_fg
+    21300008: Earth_square_bg
+    21300010: Earth_triangle_bg
+    21300012: Bedrock_square
+    21300014: Bedrock_triangle
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,25 +38,105 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Earth_square_fg
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 826
+        width: 151
+        height: 143
+      alignment: 9
+      pivot: {x: .51116699, y: .489793897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_square_grass_fg
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 818
+        width: 156
+        height: 183
+      alignment: 9
+      pivot: {x: .525153518, y: .426737815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_triangle_fg
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 824
+        width: 150
+        height: 151
+      alignment: 9
+      pivot: {x: .490182281, y: .475218922}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_traingle_grass_fg
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 827
+        width: 155
+        height: 163
+      alignment: 9
+      pivot: {x: .513277292, y: .425161898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_square_bg
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 562
+        width: 169
+        height: 165
+      alignment: 9
+      pivot: {x: .502504349, y: .475632906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Earth_triangle_bg
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 568
+        width: 147
+        height: 148
+      alignment: 9
+      pivot: {x: .484957933, y: .484097034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedrock_square
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 308
+        width: 144
+        height: 147
+      alignment: 9
+      pivot: {x: .487931669, y: .516747952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bedrock_triangle
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 310
+        width: 139
+        height: 145
+      alignment: 9
+      pivot: {x: .494244903, y: .511034727}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
