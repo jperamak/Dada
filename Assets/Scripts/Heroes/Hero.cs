@@ -45,7 +45,7 @@ public class Hero : MonoBehaviour {
 		MeleeWeapon = _meleeWeaponHand.GetComponentInChildren<Weapon>();
 		RangedWeapon = _rangeWeaponHand.GetComponentInChildren<Weapon>();
 
-		TeamNumber = player.TeamNumber;
+		TeamNumber = player.InTeam.Number;
 		name = "Player "+player.Number;
 
 		if(TeamNumber < TeamColors.Length)
