@@ -442,7 +442,7 @@ MonoBehaviour:
   DamageAmount: 3000
   Radius: 5
   ExplosionForce: 70
-  NumOfRays: 20
+  NumOfRays: 80
   ParticleLifetime: .300000012
   InteractWith:
     serializedVersion: 2
