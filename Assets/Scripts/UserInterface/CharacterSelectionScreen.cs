@@ -36,7 +36,7 @@ public class CharacterSelectionScreen : MonoBehaviour {
 
 		DadaGame.RegisterPlayer(player);
 		if(_playersReady == DadaGame.PlayersNum)
-			Application.LoadLevel("RikusSandbox");
+			Application.LoadLevel("LevelSelection");
 	}
 	
 

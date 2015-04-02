@@ -32,8 +32,9 @@ public class LevelManager : MonoBehaviour {
 		_fin = canvas.transform.FindChild("Fin").GetComponent<Text>();
 		_pauseScreen = canvas.transform.FindChild("PauseScreen");
         _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
-		_teams = DadaGame.Teams;
 
+		_teams = DadaGame.Teams;
+		Debug.Log(_teams.Count+ "team");
 		//********** FOR DEBUG ONLY!! **************
 		if(_teams.Count == 0){
 			DadaGame.RegisterPlayer(CreateDebugPlayers());
@@ -132,7 +133,7 @@ public class LevelManager : MonoBehaviour {
 		bool found = false;
 
 		//pick only certain spawnpoints for teams
-		if(DadaGame.IsTeamPlay){
+		//if(DadaGame.IsTeamPlay){
 			for(int i=0; i<_spawnPoints.Length && !found; i++){
 				if(_spawnPoints[i].IsValidForTeam(p.InTeam.Number)){
 					randomSpawn = _spawnPoints[i];
@@ -140,12 +141,12 @@ public class LevelManager : MonoBehaviour {
 				}
 			}
 			ShuffleSpawnPoints();
-		}
+
 
 		//every spawnpoint is ok for non teamplay
-		else
+		/*else
 			randomSpawn = _spawnPoints[Random.Range(0,_spawnPoints.Length)];
-
+*/
 		hero.transform.position = randomSpawn.transform.position;
 
 		if(RespawnSound != null)
@@ -168,19 +169,18 @@ public class LevelManager : MonoBehaviour {
         	k = killer.GetComponent<Hero>().PlayerInstance;
 
 		//player suicided or killed for something else
-        if (FriendlyFire(v, k))
-        {
-            _scores[k.Number]--;
-            _scores[v.Number]--;
+        if (FriendlyFire(v, k)){
+            _scores[_teams.IndexOf(k.InTeam)]--;
+			_scores[_teams.IndexOf(v.InTeam)]--;
         }
         else if(killer == null || victim == killer ){
-			_scores[v.Number]--;
+			_scores[_teams.IndexOf(v.InTeam)]--;
 		}
 
 		//player killed by another player
 		else{
 			//Player k = killer.GetComponent<Hero>().PlayerInstance;
-			_scores[k.Number]++;
+			_scores[_teams.IndexOf(k.InTeam)]++;
 		}
 
 		UpdateScore();

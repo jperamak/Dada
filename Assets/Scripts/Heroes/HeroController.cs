@@ -123,6 +123,7 @@ public class HeroController : MonoBehaviour {
 
 	protected virtual  void ProcessSlopes(){
 		float h = _hero.PlayerInstance.Controller.XAxis;
+		h = Mathf.Abs(h) < 0.25f ? 0 : h;
 
 		// If the player's horizontal velocity is greater than the _hero.MaxSpeed...
 		if(Mathf.Abs(_rigidbody.velocity.x) > _hero.MaxSpeed * Mathf.Abs(h))
