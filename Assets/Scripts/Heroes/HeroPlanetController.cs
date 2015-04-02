@@ -136,26 +136,4 @@ public class HeroPlanetController : HeroController {
 		else if (isBtnJumpUp || Time.time - _jumpStartTime > _hero.JumpLength )
 			_jump = false;
 	}
-	
-	protected override void ProcessFlip(){
-		float h = _hero.PlayerInstance.Controller.XAxis;
-		
-		// If the input is moving the player right and the player is facing left flip the player.
-		if(h > 0 && !_facingRight)
-			Flip();
-		
-		// Otherwise if the input is moving the player left and the player is facing right flip the player.
-		else if(h < 0 && _facingRight)
-			Flip();
-	}
-	
-	protected override void Flip (){
-		// Switch the way the player is labelled as facing.
-		_facingRight = !_facingRight;
-		
-		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
-	}
 }

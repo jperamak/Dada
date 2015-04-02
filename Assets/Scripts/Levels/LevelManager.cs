@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour {
         _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
 
 		_teams = DadaGame.Teams;
-		Debug.Log(_teams.Count+ "team");
+
 		//********** FOR DEBUG ONLY!! **************
 		if(_teams.Count == 0){
 			DadaGame.RegisterPlayer(CreateDebugPlayers());

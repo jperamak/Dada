@@ -12,10 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playable/CharacterSelection.unity
   - enabled: 1
-    path: Assets/Scenes/Playable/TowersAndTreesNew.unity
+    path: Assets/Scenes/Playable/LevelSelection.unity
   - enabled: 1
-    path: Assets/Scenes/TowersWithEmbrasures.unity
+    path: Assets/Scenes/Playable/RikusSandbox.unity
   - enabled: 1
-    path: Assets/Scenes/Playable/BlockyGround.unity
-  - enabled: 1
-    path: Assets/Scenes/RikusSandbox.unity
+    path: Assets/Scenes/Playable/Planets.unity
