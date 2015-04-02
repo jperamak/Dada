@@ -30564,7 +30564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespawnTime: 2
   RespawnSound: {fileID: 0}
-  MaxScore: 5
+  MaxScore: 6
 --- !u!4 &986617387
 Transform:
   m_ObjectHideFlags: 0
