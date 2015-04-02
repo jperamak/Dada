@@ -8,10 +8,10 @@ public class LevelManager : MonoBehaviour {
 	public float RespawnTime = 2.0f;
 	public SoundEffect RespawnSound;
     public int MaxScore = 10;
-
-	protected List<Player> _players;
-	protected List<Transform> _spawnPoints;
+	
+	protected SpawnPoint[] _spawnPoints;
 	protected int[] _scores;
+	protected List<Team> _teams;
 	protected List<Text> _scoreText; 
 
 	public static LevelManager Current{get; private set;}
@@ -26,41 +26,31 @@ public class LevelManager : MonoBehaviour {
 	protected void Start(){
 
         _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
-        
-        //save reference to player array
-		_players = DadaGame.Players;
+		_teams = DadaGame.Teams;
 
 		//********** FOR DEBUG ONLY!! **************
-		if(_players == null)
-			_players = CreateDebugPlayers();
+		//if(_teams.Count == 0){
+			DadaGame.RegisterPlayer(CreateDebugPlayers());
+			_teams = DadaGame.Teams;
+		//}
 
 		//find all respawn points
-		GameObject[] spawns = GameObject.FindGameObjectsWithTag("Respawn");
+		_spawnPoints = Object.FindObjectsOfType<SpawnPoint>();
 
 		//shuffle the order of spawnpoints, so the players will spawn to different places
-		for(int i=0; i<spawns.Length; i++){
-			int randIndex = Random.Range(0,spawns.Length);
-			GameObject t = spawns[i];
-			spawns[i] = spawns[randIndex];
-			spawns[randIndex] = t;
-		}
-
-		_spawnPoints = new List<Transform>();
-		for(int i=0; i<spawns.Length; i++)
-			_spawnPoints.Add(spawns[i].transform); 
-
+		ShuffleSpawnPoints();
 
 		//find the scores UI and give them the same color of the player
 		Transform canvas = GameObject.Find("Canvas").transform;
 		_scoreText = new List<Text>();
 		for(int i=0; i<canvas.childCount; i++){
 
-			//there is no player for this score: hide the text
-			if( i >= _players.Count)
+			//there is no team for this score: hide the text
+			if(i >= _teams.Count)
 				canvas.GetChild(i).gameObject.SetActive(false);
 			else{
 				_scoreText.Add(canvas.GetChild(i).GetComponent<Text>());
-				_scoreText[i].color = _players[i].TeamColor;
+				_scoreText[i].color = _teams[i].TeamColor;
 			}
 
 		}
@@ -70,18 +60,20 @@ public class LevelManager : MonoBehaviour {
     
     public virtual void InitLevel(){
 
-		_scores = new int[_players.Count];
+		_scores = new int[DadaGame.TeamsNum];
 
 		UpdateScore();
 
-		for(int i=0; i<_players.Count; i++){
+		for(int i=0; i<_scores.Length; i++)
 			_scores[i] = 0;
-			SpawnHero(i);
+	
+		List<Player> players = DadaGame.Players;
+		for(int i=0; i<players.Count; i++){
+			SpawnHero(players[i]);
 		}
 	}
 
-	public virtual void SpawnHero(int number){
-		Player p = _players[number];
+	public virtual void SpawnHero(Player p){
 
 		//create an instance of the hero so the player can try it out in the selection screen
 		Hero hero = (Instantiate(p.Hero.Prefab) as GameObject).GetComponent<Hero>();
@@ -106,16 +98,25 @@ public class LevelManager : MonoBehaviour {
 
 
 		//place the hero in the scene
-        Transform randomSpawn = _spawnPoints[Random.Range(0, _spawnPoints.Count)];
-        SpawnPoint randomSpawnPoint = randomSpawn.GetComponent<SpawnPoint>();
-        if (randomSpawnPoint == null)
-            hero.transform.position = randomSpawn.position;
+		SpawnPoint randomSpawn = null;
+		bool found = false;
 
-		//FIXME: in very unlucky days the game will loop here forever.. or actually for an error in setting the spawnpoints
-        while ( !randomSpawnPoint.IsValidForTeam(p.TeamNumber))
-            randomSpawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)].GetComponent<SpawnPoint>();
+		//pick only certain spawnpoints for teams
+		if(DadaGame.IsTeamPlay){
+			for(int i=0; i<_spawnPoints.Length && !found; i++){
+				if(_spawnPoints[i].IsValidForTeam(p.InTeam.Number)){
+					randomSpawn = _spawnPoints[i];
+					found=true;
+				}
+			}
+			ShuffleSpawnPoints();
+		}
 
-        hero.transform.position = randomSpawnPoint.transform.position;
+		//every spawnpoint is ok for non teamplay
+		else
+			randomSpawn = _spawnPoints[Random.Range(0,_spawnPoints.Length)];
+
+		hero.transform.position = randomSpawn.transform.position;
 
 		if(RespawnSound != null)
 			RespawnSound.PlayEffect();
@@ -123,9 +124,9 @@ public class LevelManager : MonoBehaviour {
         _camera.AddPlayer(hero.transform);
 	}
 
-	protected virtual IEnumerator RespawnCountdown(int playerNumber){
+	protected virtual IEnumerator RespawnCountdown(Player p){
 		yield return new WaitForSeconds(RespawnTime);
-		SpawnHero(playerNumber);
+		SpawnHero(p);
 	}
 
 	protected void OnPlayerKilled(GameObject victim, GameObject killer = null){
@@ -154,56 +155,61 @@ public class LevelManager : MonoBehaviour {
 
 		UpdateScore();
         _camera.RemovePlayer(victim.transform);
-		StartCoroutine(RespawnCountdown(v.Number));
+		StartCoroutine(RespawnCountdown(v));
 	}
 
     private bool FriendlyFire(Player victim, Player killer)
     {
         if (victim != null && killer != null)
             if ( victim != killer)
-                return victim.TeamNumber == killer.TeamNumber;
+                return victim.InTeam.Number == killer.InTeam.Number;
         return false;
     }
 
 	private void UpdateScore(){
-		for(int i=0; i< _players.Count; i++)
-			_scoreText[i].text = "Player "+(_players[i].Number+ 1)+": "+_scores[i];
-        for (int i = 0; i < _players.Count; i++)
-            if (_scores[i] >= MaxScore)
-                Finish(i);
+
+		for(int i=0; i< DadaGame.Teams.Count; i++)
+			_scoreText[i].text = Team.Teams[i].Name+": "+_scores[i];
+
+		for (int i = 0; i < DadaGame.Teams.Count; i++)
+			if (_scores[i] >= MaxScore)
+				Finish(i);
 	}
 
     private void Finish(int winner)
     {
         Time.timeScale = 0.5f;
-        Debug.Log(_scoreText.Count);
 
         Text fin = GameObject.Find("Canvas").transform.FindChild("Fin").GetComponent<Text>();
-        fin.text = "Player " + (_players[winner].Number + 1) + " wins!";
-            fin.color = _players[winner].TeamColor;
+        fin.text = "Team " + _teams[winner].Name + " wins!";
+		fin.color = _teams[winner].TeamColor;
         fin.transform.gameObject.SetActive(true);
-        StartCoroutine("NextLevel");
+        Invoke("NextLevel",2);
     }
 
-    IEnumerator NextLevel()
-    {
-        yield return new WaitForSeconds(2f);
+    private void NextLevel(){
         Time.timeScale = 1f;
         Application.LoadLevel(Application.loadedLevelName);
     }
 
-	private List<Player> CreateDebugPlayers(){
-		List<Player> fake = new List<Player>();
+	private void ShuffleSpawnPoints(){
+		for(int i=0; i<_spawnPoints.Length; i++){
+			int randIndex = Random.Range(0,_spawnPoints.Length);
+			SpawnPoint t = _spawnPoints[i];
+			_spawnPoints[i] = _spawnPoints[randIndex];
+			_spawnPoints[randIndex] = t;
+		}
+	}
+
+	private Player CreateDebugPlayers(){
 
 		Player p1 = new Player(DadaInput.GetJoystick(0));
 		p1.Hero = Resource.MONK_HERO;
 		p1.FirstWeapon = Resource.PHOENIX;
-		p1.SecondWeapon = Resource.FLAME_MELEE;
+		p1.SecondWeapon = Resource.LAYBOMB_MELEE;
+		p1.InTeam = Team.TEAM_1;
 
-		fake.Add(p1);
-		return fake;
+		return p1;
 	}
-	
-	public void Pause(){}
-	public void UnPause(){}
+
 }

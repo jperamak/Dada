@@ -39,7 +39,7 @@ public class CharacterSelectionView : MonoBehaviour {
 	
 		//Color the screen panel with the player's color
 		Image background = GetComponent<Image>();
-		Color newColor = _player.TeamColor;
+		Color newColor = _player.InTeam.TeamColor;
 		newColor.a = 0.5f;
 		background.color = newColor;
 	}
@@ -53,7 +53,7 @@ public class CharacterSelectionView : MonoBehaviour {
 		_player.Hero = Resource.Heroes[_iHero]; 
 		_player.FirstWeapon = Resource.RangedWepons[_iRange];
 		_player.SecondWeapon = Resource.LAYBOMB_MELEE;// Resource.MeleeWepons[_iMelee];
-        _player.TeamNumber = _iTeam;
+        _player.InTeam = Team.Teams[_iTeam];
 
 		//update UI text to show the current selection
         UpdateBtnText();
@@ -84,9 +84,6 @@ public class CharacterSelectionView : MonoBehaviour {
 
 		_currentHero = hero;
 	}
-
-	private void TryPlayer(){}
-	private void ConfirmPlayer(){}
 
 	void Update () {
 
@@ -152,7 +149,7 @@ public class CharacterSelectionView : MonoBehaviour {
 				_iMelee++;
 				AssemblePlayer();
 			}*/
-            else if (_btnSelected == 2 && _iTeam < Resource.Teams.Length - 1){
+			else if (_btnSelected == 2 && _iTeam < Team.Teams.Length - 1){
                 _iTeam++;
                 AssemblePlayer();
             }
@@ -190,10 +187,10 @@ public class CharacterSelectionView : MonoBehaviour {
 		_btnText[0].text = Resource.Heroes[_iHero].Name;
 		_btnText[1].text = Resource.RangedWepons[_iRange].Name;
 		//_btnText[2].text = Resource.MeleeWepons[_iMelee].Name;
-        _btnText[2].text = Resource.Teams[_iTeam].Name;
+		_btnText[2].text = Team.Teams[_iTeam].Name;
 
         Image background = GetComponent<Image>();
-        Color newColor = _player.TeamColor;
+        Color newColor = _player.InTeam.TeamColor;
         newColor.a = 0.5f;
         background.color = newColor;
 
