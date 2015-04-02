@@ -3721,9 +3721,13 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: players.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .100000001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3755,7 +3759,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: maxXAndY.y
-      value: 10
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: maxXAndY.x
+      value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: minXAndY.x
+      value: -71
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: minXAndY.y
+      value: -47
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: average.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: average.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}

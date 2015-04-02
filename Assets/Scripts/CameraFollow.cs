@@ -17,6 +17,8 @@ public class CameraFollow : MonoBehaviour
     public Vector2 average;
     private Vector2 minPlayer;
     private Vector2 maxPlayer;
+    private float vertExtent;
+    private float horExtent;
 
 	public List<Transform> players;		// Reference to the player's transform.
 
@@ -80,6 +82,9 @@ public class CameraFollow : MonoBehaviour
             GetComponent<Camera>().orthographicSize = GetComponent<Camera>().orthographicSize < maxZoom ? GetComponent<Camera>().orthographicSize : maxZoom;
             //camera.orthographicSize *= 0.8f;
         }
+        vertExtent = Camera.main.orthographicSize;
+        horExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
+
     }
 	
 	void TrackPlayer ()
@@ -115,8 +120,8 @@ public class CameraFollow : MonoBehaviour
             targetY = Mathf.Lerp(transform.position.y, average.y, ySmooth * Time.deltaTime);
 
 		// The target x and y coordinates should not be larger than the maximum or smaller than the minimum.
-		targetX = Mathf.Clamp(targetX, minXAndY.x, maxXAndY.x);
-		targetY = Mathf.Clamp(targetY, minXAndY.y, maxXAndY.y);
+        targetX = Mathf.Clamp(targetX, horExtent + minXAndY.x * 0.5f , maxXAndY.x * 0.5f - horExtent);
+        targetY = Mathf.Clamp(targetY, vertExtent +  minXAndY.y * 0.5f, maxXAndY.y * 0.5f - vertExtent);
 
 		// Set the camera's position to the target position with the same z component.
 		transform.position = new Vector3(targetX, targetY, transform.position.z);
