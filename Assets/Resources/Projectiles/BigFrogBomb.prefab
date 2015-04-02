@@ -88,6 +88,7 @@ GameObject:
   - 114: {fileID: 11415224}
   - 114: {fileID: 11422432}
   - 95: {fileID: 9529436}
+  - 114: {fileID: 11476520}
   m_Layer: 18
   m_Name: BigFrogBomb
   m_TagString: Untagged
@@ -284,7 +285,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109204}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -313,7 +314,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116174}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -342,7 +343,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127496}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -371,7 +372,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183852}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -417,7 +418,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161596}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9509a9b2aac79d042a6c38889f40c533, type: 3}
   m_Name: 
@@ -438,16 +439,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
   DamageOwner: 1
-  DamageAmount: 500
+  DamageAmount: 3000
   Radius: 5
-  ExplosionForce: 20
+  ExplosionForce: 70
   NumOfRays: 20
-  ParticleLifetime: .200000003
+  ParticleLifetime: .300000012
   InteractWith:
     serializedVersion: 2
     m_Bits: 4294696959
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
   ExplosionPushForce: 20
+--- !u!114 &11476520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3738b1aeb5f5a48db918652b776f7206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisualEffectOnTrigger: {fileID: 0}
+  firstPhaseLength: 20
+  secondPhaseLength: 3
 --- !u!212 &21204842
 SpriteRenderer:
   m_ObjectHideFlags: 1

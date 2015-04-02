@@ -238,7 +238,6 @@ public class LevelManager : MonoBehaviour {
 		p1.FirstWeapon = Resource.PHOENIX;
 		p1.SecondWeapon = Resource.LAYBOMB_MELEE;
 		p1.InTeam = Team.TEAM_1;
-
 		return p1;
 	}
 
