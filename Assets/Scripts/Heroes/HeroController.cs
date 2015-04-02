@@ -41,6 +41,9 @@ public class HeroController : MonoBehaviour {
 		_wallCheck 		 = transform.Find("WallCheck");
 		_crossairPivot 	 = transform.Find("CrossairPivot");
 		_crossair 		 = _crossairPivot.Find("Crossair");
+
+		if(transform.localScale.x < 0)
+			_facingRight = false;
 	}
 
 
@@ -100,11 +103,6 @@ public class HeroController : MonoBehaviour {
 		//correct ranged weapon spawnpoint due to scale change
 		if(_hero.MeleeWeapon != null)
 			_hero.MeleeWeapon.SpawnPoint.eulerAngles = crossairRotation;
-		
-		Debug.DrawLine(_crossairPivot.position,_crossairPivot.position+_crossairPivot.right,Color.yellow);
-		Debug.DrawLine(_rangeWeaponHand.position,_rangeWeaponHand.position+_rangeWeaponHand.right,Color.red);
-		Debug.DrawLine(_crossair.position,_crossair.position+_crossair.right,Color.green);
-		
 	}
 
 	protected virtual void ProcessWeapons(){
@@ -146,6 +144,7 @@ public class HeroController : MonoBehaviour {
 
 	protected virtual void ProcessFlip(){
 		float h = _hero.PlayerInstance.Controller.XAxis;
+		h = Mathf.Abs(h) < 0.25f ? 0 : h;
 
 		// If the input is moving the player right and the player is facing left...
 		if(h > 0 && !_facingRight)

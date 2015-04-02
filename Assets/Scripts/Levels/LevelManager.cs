@@ -28,6 +28,7 @@ public class LevelManager : MonoBehaviour {
 
 	protected void Start(){
 		Transform canvas = GameObject.Find("Canvas").transform;
+		Transform scoreText = canvas.Find("Scores");
 		_fin = canvas.transform.FindChild("Fin").GetComponent<Text>();
 		_pauseScreen = canvas.transform.FindChild("PauseScreen");
         _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
@@ -47,13 +48,13 @@ public class LevelManager : MonoBehaviour {
 
 		//find the scores UI and give them the same color of the player
 		_scoreText = new List<Text>();
-		for(int i=0; i<canvas.childCount; i++){
+		for(int i=0; i<scoreText.childCount; i++){
 
 			//there is no team for this score: hide the text
 			if(i >= _teams.Count)
-				canvas.GetChild(i).gameObject.SetActive(false);
+				scoreText.GetChild(i).gameObject.SetActive(false);
 			else{
-				_scoreText.Add(canvas.GetChild(i).GetComponent<Text>());
+				_scoreText.Add(scoreText.GetChild(i).GetComponent<Text>());
 				_scoreText[i].color = _teams[i].TeamColor;
 			}
 

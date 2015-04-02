@@ -25,12 +25,12 @@ public class GravityArea : MonoBehaviour {
 				alignScript.AddPoint(transform);
 
 				//hero has not the ability to walk on the planet
-			/*	if(hero.GetComponent<HeroPlanetController>() == null){
+				if(hero.GetComponent<HeroPlanetController>() == null){
 
 					//disable existing script controller and add the custom one
 					hero.GetComponent<HeroController>().enabled = false;
 					hero.gameObject.AddComponent<HeroPlanetController>();
-				}*/
+				}
 			}
 		}
 
@@ -65,18 +65,18 @@ public class GravityArea : MonoBehaviour {
 			if(_heroesInside.Contains(hero)){
 				_heroesInside.Remove(hero);
 				AlignWithAttractorPoint alignScript = coll.GetComponent<AlignWithAttractorPoint>();
-				if(alignScript != null)
-					alignScript.RemovePoint(transform);
-			}
-			/*
-			//hero exited all the 
-			if(hero.GetComponent<HeroPlanetController>() == null){
-				
-				//disable existing script controller and add the custom one
-				hero.GetComponent<HeroController>().enabled = false;
-				hero.gameObject.AddComponent<HeroPlanetController>();
-			}*/
+				if(alignScript != null){
 
+					//hero is about to exit the last area
+					if(alignScript.Count == 1){
+						
+						//disable existing script controller and add the custom one
+						Destroy(hero.GetComponent<HeroPlanetController>());
+						hero.GetComponent<HeroController>().enabled = true;
+					}
+					alignScript.RemovePoint(transform);
+				}
+			}
 		}
 
 		//if an object was under effect of an area effector

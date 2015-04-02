@@ -4,22 +4,14 @@ using System.Collections;
 
 [RequireComponent(typeof(Hero))]
 public class HeroPlanetController : HeroController {
-	
+
+	private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
 	private bool _grounded = false;			// Whether or not the player is grounded.
 	private int _walljump = 0;              // whether or not the player can walljump
 	private bool _jumpStart = false;
 	private bool _jump = false;
 	private float _jumpStartTime;
 
-	protected override void FixedUpdate (){
-		
-		//no controller, no party
-		if(_hero.PlayerInstance == null || _hero.PlayerInstance.Controller == null)
-			return;
-		
-		ProcessMovement();
-	}
-	
 	protected override void Update () {
 		
 		//no controller, no party
@@ -28,9 +20,6 @@ public class HeroPlanetController : HeroController {
 		
 		//Jump
 		ProcessJump();
-		
-		//Slopes
-		ProcessSlopes();
 		
 		//Flip
 		ProcessFlip();
@@ -42,23 +31,7 @@ public class HeroPlanetController : HeroController {
 		ProcessWeapons();
 	}
 
-	
-	protected override void ProcessWeapons(){
-		AbstractController c = _hero.PlayerInstance.Controller;
-		//Use the ranged weapon from the muzzle
-		if(c.GetButtonDown(VirtualKey.SHOOT))
-			_hero.RangedWeapon.OnTriggerDown(_crossair);
-		else if(c.GetButtonUp(VirtualKey.SHOOT))
-			_hero.RangedWeapon.OnTriggerUp();
-		
-		//use the melee weapon
-		if(c.GetButtonDown(VirtualKey.MELEE))
-			_hero.MeleeWeapon.OnTriggerDown(_crossair);
-		else if(c.GetButtonUp(VirtualKey.MELEE))
-			_hero.MeleeWeapon.OnTriggerUp();
-	}
-	
-	
+
 	//NOTE: All calculations involving velocity and directions should be done in the hero's local space
 	//because we cannot assume that the hero is aligned with the world x axis
 	protected override void ProcessMovement(){
@@ -130,27 +103,10 @@ public class HeroPlanetController : HeroController {
 		}
 	}
 	
-	protected override  void ProcessSlopes(){
-		
-		float h = _hero.PlayerInstance.Controller.XAxis;
-		
-		if (_grounded && !_jump && Physics2D.Linecast(_slopeCheck.position,_slopeCheck.position - _wallCheck.localPosition, _hero.WalkOnSlopes))
-		{
-			// Debug.Log("slope left");
-			_rigidbody.AddForce(transform.up * -h * _hero.SlopeForce);
-		}
-		if (_grounded && !_jump && Physics2D.Linecast(
-			_slopeCheck.position, _slopeCheck.position + _wallCheck.localPosition, _hero.WalkOnSlopes))
-		{
-			// Debug.Log("slope right");
-			_rigidbody.AddForce(transform.up * h * _hero.SlopeForce);
-		}
-	}
-	
-	
 	
 	protected override void ProcessJump(){
 		bool isBtnJumpDown 	= _hero.PlayerInstance.Controller.GetButtonDown(VirtualKey.JUMP);
+		bool isBtnJumpUp 	= _hero.PlayerInstance.Controller.GetButtonUp(VirtualKey.JUMP);
 		
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		_grounded = Physics2D.OverlapPoint(_groundCheck.position, _hero.JumpOn) || 
@@ -177,7 +133,7 @@ public class HeroPlanetController : HeroController {
 			_jumpStart = true;
 			_jump = true;
 		}
-		else if (isBtnJumpDown || Time.time - _jumpStartTime > _hero.JumpLength )
+		else if (isBtnJumpUp || Time.time - _jumpStartTime > _hero.JumpLength )
 			_jump = false;
 	}
 	
