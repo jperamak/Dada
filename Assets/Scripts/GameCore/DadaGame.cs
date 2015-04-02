@@ -9,10 +9,10 @@ public class DadaGame {
 	public static int PlayersNum{get; set;}
 	public static int TeamsNum{get{return _teams.Count;}}
 	public static List<Player> Players{get{return _players;}}
-	public static List<Team> Teams{get{return _teams.Keys.ToList();}}
+	public static List<Team> Teams{get{return _teams == null ? null : _teams.Keys.ToList();}}
 
 	private static List<Player> _players;
-	private static SortedList<Team,List<Player>> _teams = new SortedList<Team, List<Player>>(new TeamComparer());
+	private static SortedList<Team,List<Player>> _teams;
 
 	public static void RegisterPlayer(Player player){
 		if(_players == null)
@@ -23,6 +23,9 @@ public class DadaGame {
 
 		_players.Add(player);
 		_players.Sort((x, y) => x.Number.CompareTo(y.Number));
+
+		if(_teams == null)
+			_teams = new SortedList<Team, List<Player>>(new TeamComparer());
 
 		//player's team doesn't exist yet. create it
 		if(!_teams.ContainsKey(player.InTeam)){
@@ -45,10 +48,12 @@ public class DadaGame {
 
 	public static void Reset(){
 		_players.Clear();
-		_players = null;
-		PlayersNum = 0;
-
 		_teams.Clear();
+
+		_players = null;
+		_teams = null;
+
+		PlayersNum = 0;
 		IsTeamPlay = false;
 	}
 

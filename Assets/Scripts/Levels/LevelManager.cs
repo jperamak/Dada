@@ -84,6 +84,7 @@ public class LevelManager : MonoBehaviour {
 			else if(DadaInput.GetButtonDown(VirtualKey.SELECT)){
 				Time.timeScale = 1;
 				_isPaused = false;
+				DadaGame.Reset();
 				Application.LoadLevel("MainScreen");
 			}
 		}
@@ -199,8 +200,8 @@ public class LevelManager : MonoBehaviour {
 	private void UpdateScore(){
 
 		for(int i=0; i< DadaGame.Teams.Count; i++)
-			_scoreText[i].text = Team.Teams[i].Name+": "+_scores[i];
-
+			_scoreText[i].text = _teams[i].Name+": "+_scores[i];
+		
 		for (int i = 0; i < DadaGame.Teams.Count; i++)
 			if (_scores[i] >= MaxScore)
 				Finish(i);
