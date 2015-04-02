@@ -8,15 +8,18 @@ public class LevelManager : MonoBehaviour {
 	public float RespawnTime = 2.0f;
 	public SoundEffect RespawnSound;
     public int MaxScore = 10;
+	public static LevelManager Current{get; private set;}
 	
 	protected SpawnPoint[] _spawnPoints;
 	protected int[] _scores;
 	protected List<Team> _teams;
 	protected List<Text> _scoreText; 
 
-	public static LevelManager Current{get; private set;}
-
     private CameraFollow _camera;
+	private Text _fin;
+	private Transform _pauseScreen;
+	private bool _isPaused = false;
+
 
 	protected void Awake(){
 		Current = this;
@@ -24,15 +27,17 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	protected void Start(){
-
+		Transform canvas = GameObject.Find("Canvas").transform;
+		_fin = canvas.transform.FindChild("Fin").GetComponent<Text>();
+		_pauseScreen = canvas.transform.FindChild("PauseScreen");
         _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
 		_teams = DadaGame.Teams;
 
 		//********** FOR DEBUG ONLY!! **************
-		//if(_teams.Count == 0){
+		if(_teams.Count == 0){
 			DadaGame.RegisterPlayer(CreateDebugPlayers());
 			_teams = DadaGame.Teams;
-		//}
+		}
 
 		//find all respawn points
 		_spawnPoints = Object.FindObjectsOfType<SpawnPoint>();
@@ -41,7 +46,6 @@ public class LevelManager : MonoBehaviour {
 		ShuffleSpawnPoints();
 
 		//find the scores UI and give them the same color of the player
-		Transform canvas = GameObject.Find("Canvas").transform;
 		_scoreText = new List<Text>();
 		for(int i=0; i<canvas.childCount; i++){
 
@@ -58,6 +62,31 @@ public class LevelManager : MonoBehaviour {
 		InitLevel();
 	}
     
+	void Update(){
+		bool startPressed = DadaInput.GetButtonDown(VirtualKey.START);
+
+
+		//Pause game
+		if(!_isPaused && startPressed){
+			Time.timeScale = 0.0000001f;
+			_isPaused = true;
+			_pauseScreen.gameObject.SetActive(true);
+		}
+		else if(_isPaused){
+			//resume game
+			if(startPressed){
+				Time.timeScale = 1;
+				_isPaused = false;
+				_pauseScreen.gameObject.SetActive(false);
+			}
+			else if(DadaInput.GetButtonDown(VirtualKey.SELECT)){
+				Time.timeScale = 1;
+				_isPaused = false;
+				Application.LoadLevel("MainScreen");
+			}
+		}
+	}
+
     public virtual void InitLevel(){
 
 		_scores = new int[DadaGame.TeamsNum];
@@ -180,10 +209,10 @@ public class LevelManager : MonoBehaviour {
     {
         Time.timeScale = 0.5f;
 
-        Text fin = GameObject.Find("Canvas").transform.FindChild("Fin").GetComponent<Text>();
-        fin.text = "Team " + _teams[winner].Name + " wins!";
-		fin.color = _teams[winner].TeamColor;
-        fin.transform.gameObject.SetActive(true);
+        
+        _fin.text = "Team " + _teams[winner].Name + " wins!";
+		_fin.color = _teams[winner].TeamColor;
+        _fin.transform.gameObject.SetActive(true);
         Invoke("NextLevel",2);
     }
 

@@ -2,7 +2,7 @@
 using Dada.InputSystem;
 using System.Collections.Generic;
 
-public enum VirtualKey{ SHOOT, MELEE, JUMP, SPECIAL, MENU, START, BACK, PAUSE, SUBMIT, CANCEL, X_AXIS, Y_AXIS, MOVE_AXIS, AIM_AXIS, UP, DOWN, LEFT, RIGHT, NONE};
+public enum VirtualKey{ SHOOT, MELEE, JUMP, SPECIAL, MENU, START, BACK, PAUSE, SUBMIT, CANCEL, X_AXIS, Y_AXIS, MOVE_AXIS, AIM_AXIS, UP, DOWN, LEFT, RIGHT, SELECT, NONE};
 public enum InputMethod{ AUTO, JOYSTICK, KEYBOARD, COMPOSITE };
 
 public class DadaInput {
