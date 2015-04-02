@@ -80,7 +80,6 @@ public class CameraFollow : MonoBehaviour
         {
             GetComponent<Camera>().orthographicSize = x > y ? x : y;
             GetComponent<Camera>().orthographicSize = GetComponent<Camera>().orthographicSize < maxZoom ? GetComponent<Camera>().orthographicSize : maxZoom;
-            //camera.orthographicSize *= 0.8f;
         }
         vertExtent = Camera.main.orthographicSize;
         horExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
@@ -103,11 +102,12 @@ public class CameraFollow : MonoBehaviour
         }
 
 
-        AdjustZoom();
 
 		// By default the target x and y coordinates of the camera are it's current x and y coordinates.
 		float targetX = transform.position.x;
 		float targetY = transform.position.y;
+
+        AdjustZoom();
 
 		// If the player has moved beyond the x margin...
 		if(CheckXMargin())
