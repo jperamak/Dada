@@ -18,7 +18,8 @@ public class Explosion : Damage {
     }
 
 	protected override void Execute (){
-        ExplosionSound.PlayEffect();
+        if (ExplosionSound != null)
+            ExplosionSound.PlayEffect();
 		Vector2 dir;
 		Vector2 position = new Vector2(transform.position.x, transform.position.y);
 
