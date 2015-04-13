@@ -8,9 +8,15 @@ public class ParticleExplosion : Damage {
 	public LayerMask InteractWith;
 	public Projectile ExplosionParticles;
 	public int NumOfParticles;
+    public SoundEffect ExplosionSound;
 
+    void Start()
+    {
+        ExplosionSound = DadaAudio.GetSoundEffect(ExplosionSound);
+    }
 	protected override void Execute (){
-		
+        if (ExplosionSound != null)
+            ExplosionSound.PlayEffect();
 		Vector2 dir;
 		Vector2 position = new Vector2(transform.position.x, transform.position.y);
 		
