@@ -45,9 +45,6 @@ public class ParticleExplosion : Damage {
 			ep.GetComponent<Rigidbody2D>().AddForce(dir * ExplosionForce * 100);
 			ep.transform.position = transform.position;
 			Destroy(ep.gameObject,ParticleLifetime);
-		
 		}
-		
 	}
-	
 }
