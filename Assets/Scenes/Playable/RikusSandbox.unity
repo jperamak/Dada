@@ -38661,6 +38661,14 @@ Prefab:
       propertyPath: m_Name
       value: StoneWall_Roof 1
       objectReference: {fileID: 0}
+    - target: {fileID: 463796, guid: bf4acdd83e1f84ee8b7443682cb77c0b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 438116, guid: bf4acdd83e1f84ee8b7443682cb77c0b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf4acdd83e1f84ee8b7443682cb77c0b, type: 2}
   m_IsPrefabParent: 0
@@ -45493,6 +45501,10 @@ Prefab:
     - target: {fileID: 138116, guid: bf4acdd83e1f84ee8b7443682cb77c0b, type: 2}
       propertyPath: m_Name
       value: StoneWall_Roof 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 438116, guid: bf4acdd83e1f84ee8b7443682cb77c0b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf4acdd83e1f84ee8b7443682cb77c0b, type: 2}

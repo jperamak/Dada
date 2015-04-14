@@ -81,17 +81,63 @@ public class HeroController : MonoBehaviour {
 	protected virtual void ProcessAim(){
 		
 		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
+		/*
+		// Option 1: The old way 
 		float yAxis = _hero.PlayerInstance.Controller.YAxis;
 		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
 		Vector3 newRotation = new Vector3(0, 0, aimAngle);
 		Vector3 crossairRotation = newRotation;
-		
+
 		//correct crossair rotation due to negative scale of the x axis
 		if(!_facingRight){
 			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
 			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
+		}*/
+
+
+		// Option 2: Sticky crosshair
+		float yAxis = JoystickDeadzone(_hero.PlayerInstance.Controller.YAxis, 0.5f);
+
+		float aimAngle = _crossairPivot.eulerAngles.z - yAxis * Time.deltaTime*300.0f;
+		if (aimAngle > 90f && aimAngle < 120f)
+			aimAngle = 90f;
+		if (aimAngle > 200f && aimAngle < 270f)
+			aimAngle = 270f;
+
+		Vector3 newRotation = new Vector3(0,0,aimAngle);
+		Vector3 crossairRotation = newRotation;
+		//correct crossair rotation due to negative scale of the x axis
+		if(!_facingRight){
+			//aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
+			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
 		}
-		
+
+		/*
+		// Option 3: Two joysticks
+		float xAxis = _hero.PlayerInstance.Controller.GetAxis(VirtualKey.MOVE_AXIS);
+		float yAxis = _hero.PlayerInstance.Controller.GetAxis(VirtualKey.AIM_AXIS);
+		float aimAngle = Vector2.Angle( Vector2.right, new Vector2(xAxis, yAxis));
+		if (yAxis < 0.0f) aimAngle = -aimAngle;
+
+		if (Mathf.Abs(xAxis) < 0.25f && Mathf.Abs(yAxis) < 0.25f)
+		{
+			if (_facingRight)
+				aimAngle = 0.0f;
+			else
+				aimAngle = 180.0f;
+		}
+
+		Vector3 newRotation = new Vector3(0, 0, aimAngle);
+		Vector3 crossairRotation = newRotation;
+
+	
+		//correct crossair rotation due to negative scale of the x axis
+		if(!_facingRight){
+			newRotation = new Vector3(0,0,180-aimAngle);
+			//crossairRotation = new Vector3(0,0,180-aimAngle);
+		}
+
+*/
 		_crossairPivot.eulerAngles 	 = newRotation;
 		_rangeWeaponHand.eulerAngles = newRotation;
 		_crossair.eulerAngles 		 = crossairRotation;
@@ -163,7 +209,8 @@ public class HeroController : MonoBehaviour {
 		// Cache the horizontal input.
 		float h = _hero.PlayerInstance.Controller.XAxis;
 		
-		h = Mathf.Abs(h) < 0.25f ? 0 : h;
+		//h = Mathf.Abs(h) < 0.25f ? 0 : h;
+		h = JoystickDeadzone(h, 0.25f);
 		
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		//_anim.SetFloat("Speed", _grounded ? Mathf.Abs(h) : 0);
@@ -277,5 +324,22 @@ public class HeroController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	// Adjust joystick input (-1..1) so that input which has absolute value of minimum or smaller will return 0f
+	// and larger values will be scaled so they are in the range -1..1
+	private float JoystickDeadzone(float input, float minimum){
+
+		float result = Mathf.Abs(input);
+		result -= minimum;
+		if (result < 0f)
+			return 0f;
+
+		result = result * (1f/(1f-minimum));
+
+		if (input < 0.0f)
+			return -result;
+
+		return result;
 	}
 }
