@@ -5,10 +5,13 @@ public class Grenade : Projectile {
 
 	public bool DetonateOnContact = true;
 	public float DetonationDelay = 1.5f;
+	public bool DetonateOnApex = false;
 	
 	private SpriteRenderer _renderer;
 	private float _contactTime = 0;
 	private bool exploded = false;
+
+	private bool hadPositiveYVelocity = false;
 
 	void Start(){
 		_renderer = transform.GetComponentInChildren<SpriteRenderer>();
@@ -32,7 +35,14 @@ public class Grenade : Projectile {
 
 	//turn the gameobject so it follows the gravity
 	void FixedUpdate (){
+
 		Vector2 velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+		if (velocity.y > 0.0f)
+				hadPositiveYVelocity = true;
+		if (DetonateOnApex && hadPositiveYVelocity && velocity.y < 0)
+			Explode();
+
+
 		float angle = Mathf.Atan2( velocity.y, velocity.x );
 		transform.eulerAngles = new Vector3(0, 0, angle *  Mathf.Rad2Deg);
 	}
