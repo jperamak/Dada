@@ -81,9 +81,9 @@ public class HeroController : MonoBehaviour {
 	protected virtual void ProcessAim(){
 		
 		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
-		/*
+
 		// Option 1: The old way 
-		float yAxis = _hero.PlayerInstance.Controller.YAxis;
+		float yAxis = -_hero.PlayerInstance.Controller.YAxis;
 		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
 		Vector3 newRotation = new Vector3(0, 0, aimAngle);
 		Vector3 crossairRotation = newRotation;
@@ -92,9 +92,9 @@ public class HeroController : MonoBehaviour {
 		if(!_facingRight){
 			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
 			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
-		}*/
+		}
 
-
+		/*
 		// Option 2: Sticky crosshair
 		float yAxis = JoystickDeadzone(_hero.PlayerInstance.Controller.YAxis, 0.5f);
 
@@ -111,7 +111,7 @@ public class HeroController : MonoBehaviour {
 			//aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
 			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
 		}
-
+*/
 		/*
 		// Option 3: Two joysticks
 		float xAxis = _hero.PlayerInstance.Controller.GetAxis(VirtualKey.MOVE_AXIS);
