@@ -35,9 +35,9 @@ public class LevelManager : MonoBehaviour {
 
 		_teams = DadaGame.Teams;
 
-	
-		//if(_teams.Count == 0){
-		if(_teams == null){
+
+		//********** FOR DEBUG ONLY!! **************
+		if(_teams == null || _teams.Count == 0){
 			DadaGame.RegisterPlayer(CreateDebugPlayers());
 			_teams = DadaGame.Teams;
 		}

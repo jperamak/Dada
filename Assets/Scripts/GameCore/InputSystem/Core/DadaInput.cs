@@ -84,6 +84,19 @@ public class DadaInput {
 	public static void CheckJoysticks(InputMethod forceMethod = InputMethod.AUTO){
 
 		string[] names = UnityEngine.Input.GetJoystickNames();
+		List<string> fixedNames = new List<string>();
+
+		//In some cases Unity detects a non-existing joystick with empty name.
+		//This code fixes that eventuality 
+		foreach(string s in names){
+			if(s.Length != 0)
+				fixedNames.Add(s);
+		}
+
+		names = fixedNames.ToArray();
+
+		Debug.Log("Found "+names.Length+" Joysticks");
+
 		if(Instance._controllerNames == null || !ArraysEqual<string>(names,Instance._controllerNames)){
 			Instance._controllerNames = names;
 			Instance.Configure(forceMethod);
