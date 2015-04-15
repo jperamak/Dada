@@ -83,7 +83,7 @@ public class HeroController : MonoBehaviour {
 		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
 
 		// Option 1: The old way 
-		float yAxis = -_hero.PlayerInstance.Controller.YAxis;
+		float yAxis = _hero.PlayerInstance.Controller.YAxis;
 		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
 		Vector3 newRotation = new Vector3(0, 0, aimAngle);
 		Vector3 crossairRotation = newRotation;
@@ -98,7 +98,7 @@ public class HeroController : MonoBehaviour {
 		// Option 2: Sticky crosshair
 		float yAxis = JoystickDeadzone(_hero.PlayerInstance.Controller.YAxis, 0.5f);
 
-		float aimAngle = _crossairPivot.eulerAngles.z - yAxis * Time.deltaTime*300.0f;
+		float aimAngle = _crossairPivot.eulerAngles.z + yAxis * Time.deltaTime*300.0f;
 		if (aimAngle > 90f && aimAngle < 120f)
 			aimAngle = 90f;
 		if (aimAngle > 200f && aimAngle < 270f)
