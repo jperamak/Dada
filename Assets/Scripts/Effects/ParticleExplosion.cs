@@ -17,9 +17,7 @@ public class ParticleExplosion : Damage {
 	protected override void Execute (){
         if (ExplosionSound != null)
             ExplosionSound.PlayEffect();
-		Vector2 dir;
-		Vector2 position = new Vector2(transform.position.x, transform.position.y);
-		
+		Vector2 dir;		
 		
 		float divider = NumOfParticles;
 		float invDiv = 1 / divider;

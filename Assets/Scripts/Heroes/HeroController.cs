@@ -279,7 +279,6 @@ public class HeroController : MonoBehaviour {
 	protected virtual void ProcessJump(){
 
 		AbstractController _controller = _hero.PlayerInstance.Controller;
-		var sliding = false;
 		
 		if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position  - _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
 		{
@@ -287,7 +286,6 @@ public class HeroController : MonoBehaviour {
 			_jump = true; 
 			_walljump = 1;
 			//_anim.SetBool("Slide", true);
-			sliding = true;
 		}
 		
 		else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
@@ -297,13 +295,10 @@ public class HeroController : MonoBehaviour {
 			
 			_walljump = 2;
 			//_anim.SetBool("Slide", true);
-			sliding = true;
 		}
 		else
 		{
 			_walljump = 0;
-			//if (!sliding)
-			//	_anim.SetBool("Slide", false);
 		}
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if (_controller.GetButtonDown(VirtualKey.JUMP) && _grounded)

@@ -24,6 +24,7 @@ public class HeroHealth : Damageable {
 
 
 		if(!IsShielded){
+			Debug.Log("take "+hitpoints+" damage. --> "+_currentHitpoints);
 			base.TakeDamage (hitpoints, dealer);
 
 			if(!_shieldIsSetting){
@@ -35,11 +36,13 @@ public class HeroHealth : Damageable {
 	}
 
 	private void SetShield(){
+		Debug.Log("shielded");
 		IsShielded = true;
 		_shieldIsSetting = false;
 	}
 
 	private void RemoveShield(){
+		Debug.Log("No shielded");
 		IsShielded = false;
 	}
 

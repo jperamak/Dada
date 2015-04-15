@@ -103,7 +103,7 @@ MonoBehaviour:
   Bullet: {fileID: 11459342, guid: 0188210bdd706415897e63e2094269c5, type: 2}
   MaxBullets: 5
   RechargeEvery: 1
-  PushForce: 35
+  PushForce: 30
   OutOfAmmo: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8, type: 2}
 --- !u!212 &21237610
 SpriteRenderer:

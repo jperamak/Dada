@@ -61,8 +61,8 @@ GameObject:
   - 50: {fileID: 5059340}
   - 114: {fileID: 11459342}
   - 58: {fileID: 5820398}
-  - 114: {fileID: 11440126}
   - 114: {fileID: 11489092}
+  - 114: {fileID: 11484250}
   m_Layer: 11
   m_Name: NapalmEgg
   m_TagString: Untagged
@@ -195,28 +195,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11440126
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0416d432010fb44d7a5776a2a147f2b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VisualEffect: {fileID: 0}
-  DamageOwner: 0
-  DamageAmount: 80
-  ExplosionForce: 60
-  ParticleLifetime: 2
-  InteractWith:
-    serializedVersion: 2
-    m_Bits: 4294901759
-  ExplosionParticles: {fileID: 11475794, guid: c063e7fee2d19415b8d3e98f406b7d31, type: 2}
-  NumOfParticles: 15
-  ExplosionSound: {fileID: 11487134, guid: dd2d4402d3d32a24b83b8ae5fea21570, type: 2}
 --- !u!114 &11459342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,8 +207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VisualEffectOnTrigger: {fileID: 0}
-  DetonateOnContact: 1
-  DetonationDelay: 0
+  DetonateOnContact: 0
+  ExplodeOnContact: 1
+  DetonationDelay: 1
 --- !u!114 &11474918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,6 +222,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingLayerName: Foreground
+--- !u!114 &11484250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c9ca8011fda7a4e9bf6ae9b0b87253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisualEffect: {fileID: 0}
+  DamageOwner: 1
+  DamageAmount: 10
+  ExplosionForce: 60
+  ParticleLifetime: 3
+  InteractWith:
+    serializedVersion: 2
+    m_Bits: 4294901759
+  ExplosionParticles: {fileID: 11455620, guid: c063e7fee2d19415b8d3e98f406b7d31, type: 2}
+  NumOfParticles: 15
+  ExplosionSound: {fileID: 0}
 --- !u!114 &11489092
 MonoBehaviour:
   m_ObjectHideFlags: 1

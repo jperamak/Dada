@@ -95,8 +95,6 @@ public class DadaInput {
 
 		names = fixedNames.ToArray();
 
-		Debug.Log("Found "+names.Length+" Joysticks");
-
 		if(Instance._controllerNames == null || !ArraysEqual<string>(names,Instance._controllerNames)){
 			Instance._controllerNames = names;
 			Instance.Configure(forceMethod);

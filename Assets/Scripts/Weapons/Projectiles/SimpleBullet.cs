@@ -13,15 +13,4 @@ public class SimpleBullet : Projectile {
 			TriggerEffects();
 		}
 	}
-
-	public override void TriggerEffects(){
-		
-		if(_effects != null){
-			for(int i=0;i<_effects.Length;i++){
-				_effects[i].Owner = Owner;
-				_effects[i].OnEnd += OnEffectFinshed;
-				_effects[i].Trigger(_targetHit);
-			}
-		}
-	}
 }

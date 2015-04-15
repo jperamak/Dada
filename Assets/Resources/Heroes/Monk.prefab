@@ -92,7 +92,7 @@ GameObject:
   - 114: {fileID: 11465578}
   - 114: {fileID: 11425960}
   - 114: {fileID: 11458666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Monk
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -602,8 +602,8 @@ MonoBehaviour:
   MaxHitpoints: 10
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 11431582, guid: 8a10a3aa136f7d64a84563bd9959ca53, type: 2}
-  ShieldAfterRespawn: 2
-  ShieldAfterDamage: 1.5
+  ShieldAfterRespawn: 2.5
+  ShieldAfterDamage: 1
   ShieldDelay: .200000003
 --- !u!114 &11458666
 MonoBehaviour:

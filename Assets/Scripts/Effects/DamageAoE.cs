@@ -32,7 +32,7 @@ public class DamageAoE : Damage {
 
 	protected virtual GameObject[] GetTargetsInArea(){
 		Collider2D[] coll = Physics2D.OverlapCircleAll(transform.position, Radius, InteractWith);
-
+		Debug.DrawRay(transform.position, transform.right * Radius);
 		if(coll == null)
 			return null;
 
