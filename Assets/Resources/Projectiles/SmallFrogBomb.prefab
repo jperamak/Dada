@@ -424,6 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffectOnTrigger: {fileID: 0}
   DetonateOnContact: 0
+  ExplodeOnContact: 0
   DetonationDelay: 2
 --- !u!114 &11422432
 MonoBehaviour:
@@ -437,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
-  DamageOwner: 1
+  DamageOwner: 0
   DamageAmount: 250
   Radius: 5
   ExplosionForce: 10
@@ -612,7 +613,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161596}
   m_Enabled: 1
-  m_CollideConnected: 0
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5091134}
   m_Anchor: {x: -1.37150013, y: 0}
   m_ConnectedAnchor: {x: -.0739987642, y: -1.10899985}
@@ -631,7 +632,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161596}
   m_Enabled: 1
-  m_CollideConnected: 0
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5069254}
   m_Anchor: {x: 1.12602782, y: -.930849075}
   m_ConnectedAnchor: {x: .0485847555, y: -.858287334}
@@ -650,7 +651,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161596}
   m_Enabled: 1
-  m_CollideConnected: 0
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5064228}
   m_Anchor: {x: -1.05095923, y: -.9383564}
   m_ConnectedAnchor: {x: .0360729806, y: -.868401408}
@@ -669,7 +670,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161596}
   m_Enabled: 1
-  m_CollideConnected: 0
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5007470}
   m_Anchor: {x: 1.59145284, y: .022521019}
   m_ConnectedAnchor: {x: -.0241316315, y: -.769245327}
