@@ -13,6 +13,7 @@ GameObject:
   - 58: {fileID: 5858928}
   - 114: {fileID: 11475794}
   - 114: {fileID: 11411142}
+  - 114: {fileID: 11465460}
   m_Layer: 16
   m_Name: Napalm
   m_TagString: Untagged
@@ -38,10 +39,10 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152328}
-  m_Mass: 10
-  m_LinearDrag: 1
+  m_Mass: .100000001
+  m_LinearDrag: 2
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: .100000001
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -54,7 +55,7 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152328}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 8cde04eb990d88c4f9321a85dedc3211, type: 2}
+  m_Material: {fileID: 6200000, guid: fa540c7b17eef714aa93e1bde737e2ca, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -74,6 +75,20 @@ MonoBehaviour:
   VisualEffect: {fileID: 0}
   DamageOwner: 1
   DamageAmount: 10
+--- !u!114 &11465460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4702c1ee49146c7bb339f728933f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToStartFading: 0
+  secondsForFading: 1
+  destroy: 0
 --- !u!114 &11475794
 MonoBehaviour:
   m_ObjectHideFlags: 1
