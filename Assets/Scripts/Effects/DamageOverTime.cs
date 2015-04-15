@@ -28,7 +28,6 @@ public class DamageOverTime : DamageAoE {
 		if(_endTime <= Time.time){
 			_executing = false;
 			Terminate();
-			Debug.Log("Terminate");
 			return;
 		}
 
