@@ -8,7 +8,6 @@ public sealed class Resource {
 	public static readonly Resource BANANA_RANGE = new Resource("BananaZooka", "Weapons/BananaZooka");
 	public static readonly Resource CHILI_RANGE = new Resource("Chilling Chili", "Weapons/ChiliZooka");
 	public static readonly Resource PHOENIX = new Resource("Phoenix", "Weapons/Phoenix");
-	public static readonly Resource NAPALM_PHOENIX = new Resource("Napalm Phoenix", "Weapons/NapalmPhoenix");
 	public static readonly Resource FIRE_RANGE = new Resource("Aaaaah!", "Weapons/FireStaff");
 
 	//Melee weapons
@@ -41,6 +40,6 @@ public sealed class Resource {
 	}
 
 	public static Resource[] MeleeWepons = { Resource.LAYBOMB_MELEE, Resource.ICY_MELEE, Resource.FLAME_MELEE, Resource.ELECTRIC_MELEE };
-	public static Resource[] RangedWepons = { Resource.BANANA_RANGE, Resource.CHILI_RANGE, Resource.PHOENIX, Resource.NAPALM_PHOENIX, Resource.FIRE_RANGE };
+	public static Resource[] RangedWepons = { Resource.BANANA_RANGE, Resource.CHILI_RANGE, Resource.PHOENIX, Resource.FIRE_RANGE };
 	public static Resource[] Heroes = { Resource.MONK_HERO };
 }

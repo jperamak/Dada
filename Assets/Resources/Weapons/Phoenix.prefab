@@ -100,7 +100,7 @@ MonoBehaviour:
   VisualEffect: {fileID: 0}
   FireSound: {fileID: 11418900, guid: 19ebc46a63e8a5445b9c3e6702402534, type: 2}
   SpawnPoint: {fileID: 0}
-  Bullet: {fileID: 11459342, guid: 3f7c6f1c0dc275c44a64d9603b7465a1, type: 2}
+  Bullet: {fileID: 11459342, guid: 0188210bdd706415897e63e2094269c5, type: 2}
   MaxBullets: 5
   RechargeEvery: 1
   PushForce: 30

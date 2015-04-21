@@ -9,7 +9,6 @@ public class SoundEffect : MonoBehaviour
     private List<AudioSource> _audioClips = new List<AudioSource> { null }; //initial size 1
     public IEnumerable<AudioSource> AudioClips { get { return _audioClips; } }
 
-	public float PlayCooldown = 0.5f;
     public float minPitch = 1f;
     public float maxPitch = 1f;
 
@@ -19,8 +18,6 @@ public class SoundEffect : MonoBehaviour
     public ClipCyclingMode Mode = ClipCyclingMode.Random;
 
     private int _currentClip;
-	private float _lastPlayed;
-
 
     void Start()
     {
@@ -29,11 +26,6 @@ public class SoundEffect : MonoBehaviour
 
     public void PlayEffect()
     {
-
-		//prevent the audio to play multiple times in a row
-		if(_lastPlayed + PlayCooldown > Time.time)
-			return;
-
         switch (Mode)
         {
             case ClipCyclingMode.Single:
@@ -60,7 +52,6 @@ public class SoundEffect : MonoBehaviour
     {
         if ( effect != null )
         {
-			_lastPlayed = Time.time;
             effect.Play();
         }
     }   
