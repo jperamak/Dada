@@ -337,7 +337,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.2698154, y: -3.76264143, z: -1}
+  m_LocalPosition: {x: -12.1669855, y: -16.7075729, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427786}
@@ -605,6 +605,7 @@ MonoBehaviour:
   ShieldAfterRespawn: 2.5
   ShieldAfterDamage: 1
   ShieldDelay: .200000003
+  FriendlyFireEnabled: 0
 --- !u!114 &11458666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -635,7 +636,7 @@ MonoBehaviour:
   JumpLength: .5
   JumpOn:
     serializedVersion: 2
-    m_Bits: 414208
+    m_Bits: 413696
   JumpOnWalls:
     serializedVersion: 2
     m_Bits: 4096
