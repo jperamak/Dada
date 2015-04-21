@@ -4,7 +4,9 @@ using System.Collections;
 
 [RequireComponent(typeof(Hero))]
 public class HeroController : MonoBehaviour { 
-	
+
+
+
 	protected Hero _hero;
 	protected Rigidbody2D _rigidbody;
 	
@@ -241,15 +243,17 @@ public class HeroController : MonoBehaviour {
 				_hero.JumpSound.PlayEffect();
 			
 			// Add a vertical force to the player.
-			_rigidbody.AddForce(transform.up * _hero.JumpForce);
+		//	_rigidbody.AddForce(transform.up * _hero.JumpForce);
+			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _hero.JumpSpeed);
 			
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			_jumpStart = false;
 		}
-		if (_jump)
-		{
-			_rigidbody.AddForce( transform.up * _hero.JumpForce * _hero.JumpAirModifier);
-		}
+	//	if (_jump)
+	//	{
+	//		_rigidbody.AddForce( transform.up * _hero.JumpForce * _hero.JumpAirModifier);
+	//	}
+		/*
 		if (_walljump > 0 && !_grounded)
 		{
 			//_anim.SetBool("Slide", false);
@@ -273,13 +277,13 @@ public class HeroController : MonoBehaviour {
 				_rigidbody.AddForce(new Vector2(-_hero.JumpForce, _hero.JumpForce));
 			}
 			_walljump = 0;
-		}
+		}*/
 	}
 	
 	protected virtual void ProcessJump(){
 
 		AbstractController _controller = _hero.PlayerInstance.Controller;
-		
+		/*
 		if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position  - _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
 		{
 			_jumpStartTime = Time.time;
@@ -299,16 +303,21 @@ public class HeroController : MonoBehaviour {
 		else
 		{
 			_walljump = 0;
-		}
+		}*/
+		if ( _controller.GetButton(VirtualKey.JUMP) )
+			_rigidbody.gravityScale=1.0f;
+		else
+			_rigidbody.gravityScale=3.0f;
+
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if (_controller.GetButtonDown(VirtualKey.JUMP) && _grounded)
+		if (_controller.GetButton(VirtualKey.JUMP) && _grounded)
 		{
 			_jumpStartTime = Time.time;
 			_jumpStart = true;
 			_jump = true;
 		}
-		else if (_controller.GetButtonUp(VirtualKey.JUMP) || Time.time - _jumpStartTime > _hero.JumpLength )
-			_jump = false;
+		//else if (_controller.GetButtonUp(VirtualKey.JUMP) || Time.time - _jumpStartTime > _hero.JumpLength )
+		//	_jump = false;
 	}
 
 	protected virtual void Flip (){
