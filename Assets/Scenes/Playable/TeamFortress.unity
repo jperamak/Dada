@@ -19016,10 +19016,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
-      propertyPath: ownedByTeamNumber
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
   m_IsPrefabParent: 0
@@ -28450,18 +28446,6 @@ Prefab:
     - target: {fileID: 138116, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
       propertyPath: m_Name
       value: StoneWall_Gate 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 478356, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .200000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 478356, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
-      propertyPath: ownedByTeamNumber
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
@@ -52563,7 +52547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1666035808
 Transform:
   m_ObjectHideFlags: 0

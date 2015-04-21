@@ -29,7 +29,7 @@ GameObject:
   - 4: {fileID: 409850}
   - 61: {fileID: 6155228}
   - 114: {fileID: 11494080}
-  m_Layer: 18
+  m_Layer: 11
   m_Name: GateKeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138116}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: 18, y: -18.5, z: 0}
+  m_LocalPosition: {x: 40, y: -13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 478356}
@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .201000005, y: -.0309999995, z: 0}
+  m_LocalPosition: {x: .200000003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 438116}
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca45e160a9ea43198d647a3b6b70bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownedByTeamNumber: 0
+  ownedByTeamNumber: 1
 --- !u!212 &21210610
 SpriteRenderer:
   m_ObjectHideFlags: 1
