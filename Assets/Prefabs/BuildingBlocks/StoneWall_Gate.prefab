@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHitpoints: 400
   DamageSound: {fileID: 0}
-  DestroySound: {fileID: 0}
+  DestroySound: {fileID: 11499632, guid: 232a5b7663c494b47ad061bd030cbb3a, type: 2}
   hitpointsLightDamage: 66
   hitpointsHeavyDamage: 30
   spriteLightDamage: {fileID: 21300004, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}

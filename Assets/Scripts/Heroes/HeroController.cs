@@ -218,12 +218,12 @@ public class HeroController : MonoBehaviour {
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached _hero.MaxSpeed yet...
 		if(h * _rigidbody.velocity.x < _hero.MaxSpeed)
 			// ... add a force to the player.
-			_rigidbody.AddForce(transform.right * h * _hero.MoveForce,ForceMode2D.Force);
+			_rigidbody.AddForce(transform.right * h * _hero.MoveForce, ForceMode2D.Force);
 
 		
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		_grounded = Physics2D.Linecast(transform.position, _groundCheck.position, _hero.JumpOn) || Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) || Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn);//LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
-		
+
 		//if (_grounded)
 		//	_anim.SetBool("Slide", false);
 		
