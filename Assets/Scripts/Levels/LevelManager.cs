@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour {
 
 	public float RespawnTime = 2.0f;
 	public SoundEffect RespawnSound;
+	public Ghost GhostPrefab;
+	public GameObject SpawnParticlePrefab;
     public int MaxScore = 10;
 	public static LevelManager Current{get; private set;}
 	
@@ -102,11 +104,11 @@ public class LevelManager : MonoBehaviour {
 	
 		List<Player> players = DadaGame.Players;
 		for(int i=0; i<players.Count; i++){
-			SpawnHero(players[i]);
+			SpawnHero(players[i], GetRandomSpawnPoint(players[i]));
 		}
 	}
 
-	public virtual void SpawnHero(Player p){
+	public virtual void SpawnHero(Player p, Vector2 newSpawnPoint){
 
 		//create an instance of the hero so the player can try it out in the selection screen
 		Hero hero = (Instantiate(p.Hero.Prefab) as GameObject).GetComponent<Hero>();
@@ -129,27 +131,11 @@ public class LevelManager : MonoBehaviour {
 		ranged.SetOwner(hero.gameObject);
 		melee.SetOwner(hero.gameObject);
 
+		//place hero  in scene
+		hero.transform.position = newSpawnPoint;
 
-		//place the hero in the scene
-		SpawnPoint randomSpawn = null;
-		bool found = false;
-
-		//pick only certain spawnpoints for teams
-		//if(DadaGame.IsTeamPlay){
-			for(int i=0; i<_spawnPoints.Length && !found; i++){
-				if(_spawnPoints[i].IsValidForTeam(p.InTeam.Number)){
-					randomSpawn = _spawnPoints[i];
-					found=true;
-				}
-			}
-			ShuffleSpawnPoints();
-
-
-		//every spawnpoint is ok for non teamplay
-		/*else
-			randomSpawn = _spawnPoints[Random.Range(0,_spawnPoints.Length)];
-*/
-		hero.transform.position = randomSpawn.transform.position;
+		//spawn a particle effect
+		SpawnParticle(newSpawnPoint,p.InTeam.TeamColor);
 
 		if(RespawnSound != null)
 			RespawnSound.PlayEffect();
@@ -157,9 +143,12 @@ public class LevelManager : MonoBehaviour {
         _camera.AddPlayer(hero.transform);
 	}
 
-	protected virtual IEnumerator RespawnCountdown(Player p){
+	protected virtual IEnumerator RespawnCountdown(Player p, Vector2 newSpawnPoint, Ghost g){
+
 		yield return new WaitForSeconds(RespawnTime);
-		SpawnHero(p);
+		_camera.RemovePlayer(g.transform);
+		Destroy(g.gameObject);
+		SpawnHero(p, newSpawnPoint);
 	}
 
 	protected void OnPlayerKilled(GameObject victim, GameObject killer = null){
@@ -174,6 +163,9 @@ public class LevelManager : MonoBehaviour {
         if (FriendlyFire(v, k)){
             _scores[_teams.IndexOf(k.InTeam)]--;
 			_scores[_teams.IndexOf(v.InTeam)]--;
+
+			if(_scores[_teams.IndexOf(k.InTeam)] < 0)
+				_scores[_teams.IndexOf(k.InTeam)] = 0;
         }
         else if(killer == null || victim == killer ){
 			_scores[_teams.IndexOf(v.InTeam)]--;
@@ -185,9 +177,22 @@ public class LevelManager : MonoBehaviour {
 			_scores[_teams.IndexOf(k.InTeam)]++;
 		}
 
+		if(_scores[_teams.IndexOf(v.InTeam)] < 0)
+			_scores[_teams.IndexOf(v.InTeam)] = 0;
+
 		UpdateScore();
-        _camera.RemovePlayer(victim.transform);
-		StartCoroutine(RespawnCountdown(v));
+        
+		Ghost ghost = Instantiate(GhostPrefab,victim.transform.position,Quaternion.identity) as Ghost;
+
+
+		Vector2 spawnPoint = GetRandomSpawnPoint(v);
+		ghost.Goto(spawnPoint,RespawnTime);
+		ghost.SetColor(v.InTeam.TeamColor);
+
+		_camera.RemovePlayer(victim.transform);
+		_camera.AddPlayer(ghost.transform);
+
+		StartCoroutine(RespawnCountdown(v, spawnPoint, ghost));
 	}
 
     private bool FriendlyFire(Player victim, Player killer)
@@ -219,6 +224,16 @@ public class LevelManager : MonoBehaviour {
         Invoke("NextLevel",2);
     }
 
+	private void SpawnParticle(Vector2 position, Color c){
+		GameObject particles = Instantiate(SpawnParticlePrefab,position, Quaternion.identity) as GameObject;
+
+		ParticleSystem[] systems = particles.GetComponentsInChildren<ParticleSystem>();
+		foreach(ParticleSystem p in systems)
+			p.startColor = c;
+
+		Destroy(particles,5.0f);
+	}
+
     private void NextLevel(){
         Time.timeScale = 1f;
         Application.LoadLevel(Application.loadedLevelName);
@@ -233,6 +248,21 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
+	private Vector2 GetRandomSpawnPoint(Player p){
+
+		Vector2 pos = Vector2.zero;
+		bool found = false;
+
+		for(int i=0; i<_spawnPoints.Length && !found; i++){
+			if(_spawnPoints[i].IsValidForTeam(p.InTeam.Number)){
+				pos = _spawnPoints[i].transform.position;
+				found=true;
+			}
+		}
+		ShuffleSpawnPoints();
+		return pos;
+	}
+	
 	private Player CreateDebugPlayers(){
 
 		Player p1 = new Player(DadaInput.GetJoystick(0));
