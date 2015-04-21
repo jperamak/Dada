@@ -31,8 +31,8 @@ public class SoundEffect : MonoBehaviour
     {
 
 		//prevent the audio to play multiple times in a row
-		if(_lastPlayed + PlayCooldown > Time.time)
-			return;
+	//	if(_lastPlayed + PlayCooldown > Time.time)
+	//		return;
 
         switch (Mode)
         {

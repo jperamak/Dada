@@ -222,7 +222,7 @@ public class HeroController : MonoBehaviour {
 
 		
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		_grounded = Physics2D.Linecast(transform.position, _groundCheck.position, _hero.JumpOn) || Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) || Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn);//LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
+		_grounded = IsGrounded();
 
 		//if (_grounded)
 		//	_anim.SetBool("Slide", false);
@@ -320,6 +320,15 @@ public class HeroController : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	private bool IsGrounded(){
+		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
+		return Physics2D.Linecast(transform.position, _groundCheck.position, _hero.JumpOn) 
+			||  Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) 
+				|| Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn); //LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
+		
+	}  
+
 
 	// Adjust joystick input (-1..1) so that input which has absolute value of minimum or smaller will return 0f
 	// and larger values will be scaled so they are in the range -1..1
