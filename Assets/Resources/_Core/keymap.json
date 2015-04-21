@@ -56,7 +56,7 @@
         "SUBMIT": [{"KeyName": "button 16"}],
         "CANCEL": [{"KeyName": "button 17"}],
         "X_AXIS": [{"KeyName": "axis X","IsAxis": true}],
-        "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true}],
+        "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted":true}],
         "MOVE_AXIS": [{"KeyName": "axis 3","IsAxis": true}],
         "AIM_AXIS": [{"KeyName": "axis 4","IsAxis": true, "Inverted":true}],
         "UP": [{"KeyName": "axis 7",  "KeyTriggerCondition":"ONE"}],
