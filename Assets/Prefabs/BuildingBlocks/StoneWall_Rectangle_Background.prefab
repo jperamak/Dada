@@ -70,10 +70,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitpoints: 400
+  MaxHitpoints: 300
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 11499632, guid: 232a5b7663c494b47ad061bd030cbb3a, type: 2}
-  hitpointsLightDamage: 350
+  hitpointsLightDamage: 250
   hitpointsHeavyDamage: 100
   spriteLightDamage: {fileID: 21300014, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   spriteHeavyDamage: {fileID: 21300016, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}

@@ -12009,7 +12009,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 399462735}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f575748354d50487182a00fb6584dadb, type: 3}
@@ -33092,6 +33092,10 @@ Prefab:
     - target: {fileID: 138116, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
       propertyPath: m_Name
       value: StoneWall_Rectangle_Background 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 438116, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
@@ -59464,18 +59468,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 142912, guid: a5ff75cefd68d434fa54008bc06656e8, type: 2}
   m_PrefabInternal: {fileID: 1875863829}
---- !u!114 &1875863832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1875863831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51caa3988a0e04dbc82fd9c8cc9a7d3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gluedObjects: []
 --- !u!1001 &1877874900
 Prefab:
   m_ObjectHideFlags: 0

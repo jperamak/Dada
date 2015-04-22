@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11412386}
   - 60: {fileID: 6004364}
   - 114: {fileID: 11427236}
+  - 114: {fileID: 11444970}
   m_Layer: 12
   m_Name: Embrasure_Bottom
   m_TagString: CanShootThrough
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18, y: -15, z: 0}
+  m_LocalPosition: {x: 25, y: -16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +63,10 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -.374752045, y: .493083954}
       - {x: -.513122559, y: .4909482}
-      - {x: -.813135147, y: .185428619}
+      - {x: -.931119919, y: .495139122}
+      - {x: -.922977448, y: .261445045}
+      - {x: -1.10033607, y: -.160047531}
+      - {x: -.708593369, y: -.0211200714}
       - {x: -.508298874, y: -.0937595367}
       - {x: -.516126633, y: -.499272346}
       - {x: -.000499725342, y: -.499272346}
@@ -89,6 +93,18 @@ MonoBehaviour:
   DestroyOnZeroHp: 1
   damageFromCollisions: 1
 --- !u!114 &11427236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51caa3988a0e04dbc82fd9c8cc9a7d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gluedObjects: []
+--- !u!114 &11444970
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
