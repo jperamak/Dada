@@ -178,6 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedByTeamNumber: 1
+  OpenSound: {fileID: 11430224, guid: a75eb8000087b4aa59cb007d02d1daed, type: 2}
+  CloseSound: {fileID: 0}
 --- !u!212 &21210610
 SpriteRenderer:
   m_ObjectHideFlags: 1

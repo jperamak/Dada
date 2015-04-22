@@ -4,13 +4,16 @@ using System.Collections;
 public class GateKeeper : MonoBehaviour {
 
 	public int ownedByTeamNumber;
+	public SoundEffect OpenSound;
+	public SoundEffect CloseSound;
 
 	private GameObject _portcullis;
-
 
 	// Use this for initialization
 	void Start () {
 		_portcullis = transform.parent.FindChild("Portcullis").gameObject;
+		OpenSound = DadaAudio.GetSoundEffect(OpenSound);
+		CloseSound = DadaAudio.GetSoundEffect(CloseSound);
 
 		/*
 		if (ownedByTeamNumber == 0)
@@ -29,11 +32,13 @@ public class GateKeeper : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		Hero hero = col.gameObject.GetComponent<Hero>();
 
-		if (hero == null)
+		if (hero == null )
 			return;
 
-		if (hero.PlayerInstance.InTeam.Number + 1 == ownedByTeamNumber)
+		if (hero.PlayerInstance.InTeam.Number + 1 == ownedByTeamNumber && _portcullis.activeSelf == true) {
 			_portcullis.SetActive(false);
+			OpenSound.PlayEffect();
+		}
 
 	}
 
@@ -43,8 +48,9 @@ public class GateKeeper : MonoBehaviour {
 		if (hero == null)
 			return;
 	
-		if (hero.PlayerInstance.InTeam.Number + 1 == ownedByTeamNumber)
+		if (hero.PlayerInstance.InTeam.Number + 1 == ownedByTeamNumber && _portcullis.activeSelf == false)
 			_portcullis.SetActive(true);
+			CloseSound.PlayEffect();
 	
 	}
 
