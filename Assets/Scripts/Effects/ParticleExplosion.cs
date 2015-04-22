@@ -8,12 +8,16 @@ public class ParticleExplosion : Damage {
 	public LayerMask InteractWith;
 	public Projectile ExplosionParticles;
 	public int NumOfParticles;
+    public SoundEffect ExplosionSound;
 
+    void Start()
+    {
+        ExplosionSound = DadaAudio.GetSoundEffect(ExplosionSound);
+    }
 	protected override void Execute (){
-		
-		Vector2 dir;
-		Vector2 position = new Vector2(transform.position.x, transform.position.y);
-		
+        if (ExplosionSound != null)
+            ExplosionSound.PlayEffect();
+		Vector2 dir;		
 		
 		float divider = NumOfParticles;
 		float invDiv = 1 / divider;
@@ -39,9 +43,6 @@ public class ParticleExplosion : Damage {
 			ep.GetComponent<Rigidbody2D>().AddForce(dir * ExplosionForce * 100);
 			ep.transform.position = transform.position;
 			Destroy(ep.gameObject,ParticleLifetime);
-		
 		}
-		
 	}
-	
 }

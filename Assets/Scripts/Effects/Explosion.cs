@@ -10,9 +10,16 @@ public class Explosion : Damage {
 	public LayerMask InteractWith;
 	public Projectile ExplosionParticles;
 	public float ExplosionPushForce;
+    public SoundEffect ExplosionSound;
+
+    void Start()
+    {
+        ExplosionSound = DadaAudio.GetSoundEffect(ExplosionSound);
+    }
 
 	protected override void Execute (){
-		
+        if (ExplosionSound != null)
+            ExplosionSound.PlayEffect();
 		Vector2 dir;
 		Vector2 position = new Vector2(transform.position.x, transform.position.y);
 
@@ -23,7 +30,7 @@ public class Explosion : Damage {
 		
 		for (int i = 0; i < divider; i++)
 		{
-			dir = Quaternion.AngleAxis(step*0.5f + step*i,Vector3.forward)*Vector2.up;
+			dir = Quaternion.AngleAxis(step*i,Vector3.forward)*Vector2.up;
 
 			Projectile ep = Instantiate(ExplosionParticles) as Projectile;
 			ep.Owner = Owner;
@@ -38,8 +45,8 @@ public class Explosion : Damage {
 			}
 
 			ep.gameObject.layer = LayerMask.NameToLayer("ExplosionParticle");
-			ep.GetComponent<Rigidbody2D>().AddForce(dir * ExplosionForce*100*Radius);
-			ep.transform.position = transform.position;
+            ep.transform.position = transform.position;
+            ep.GetComponent<Rigidbody2D>().AddForce(dir * ExplosionForce * 100 * Radius);
 			Destroy(ep.gameObject,ParticleLifetime);
 
 
@@ -47,7 +54,7 @@ public class Explosion : Damage {
 			
 			// hitting only background tiles, foreground dampens
 		//	RaycastHit2D[] hits = Physics2D.RaycastAll(position, position + dir * Radius, InteractWith);
-			RaycastHit2D[] hits = Physics2D.RaycastAll(position, dir, Radius, InteractWith);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(position, dir, Radius, InteractWith);
 			for(int j=0;j<hits.Length;j++){
 
 				// Solid objects in foreground dampen the explosion
@@ -65,11 +72,11 @@ public class Explosion : Damage {
 					continue;
 				
 				/*if (hits[j].collider.gameObject.tag == "Player" && numTimesDamped > 0)
-					continue;*/
+					continue;
 				
 				if (hits[j].transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
 					continue;
-				
+				*/
 				
 				// calculate the basic damage
 				float rayDamage = (float)DamageAmount * invDiv;

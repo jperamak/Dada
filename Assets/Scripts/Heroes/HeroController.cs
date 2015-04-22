@@ -4,7 +4,9 @@ using System.Collections;
 
 [RequireComponent(typeof(Hero))]
 public class HeroController : MonoBehaviour { 
-	
+
+
+
 	protected Hero _hero;
 	protected Rigidbody2D _rigidbody;
 	
@@ -26,6 +28,8 @@ public class HeroController : MonoBehaviour {
 	private bool _jumpStart = false;
 	private bool _jump = false;
 	private float _jumpStartTime;
+
+	private float _jumpPressedLastTime = 0f;
 	
 	// Setting up initial references.
 	protected virtual void Awake(){
@@ -81,17 +85,63 @@ public class HeroController : MonoBehaviour {
 	protected virtual void ProcessAim(){
 		
 		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
+
+		// Option 1: The old way 
 		float yAxis = _hero.PlayerInstance.Controller.YAxis;
 		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
 		Vector3 newRotation = new Vector3(0, 0, aimAngle);
 		Vector3 crossairRotation = newRotation;
-		
+
 		//correct crossair rotation due to negative scale of the x axis
 		if(!_facingRight){
 			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
 			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
 		}
-		
+
+		/*
+		// Option 2: Sticky crosshair
+		float yAxis = JoystickDeadzone(_hero.PlayerInstance.Controller.YAxis, 0.5f);
+
+		float aimAngle = _crossairPivot.eulerAngles.z + yAxis * Time.deltaTime*300.0f;
+		if (aimAngle > 90f && aimAngle < 120f)
+			aimAngle = 90f;
+		if (aimAngle > 200f && aimAngle < 270f)
+			aimAngle = 270f;
+
+		Vector3 newRotation = new Vector3(0,0,aimAngle);
+		Vector3 crossairRotation = newRotation;
+		//correct crossair rotation due to negative scale of the x axis
+		if(!_facingRight){
+			//aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
+			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
+		}
+*/
+		/*
+		// Option 3: Two joysticks
+		float xAxis = _hero.PlayerInstance.Controller.GetAxis(VirtualKey.MOVE_AXIS);
+		float yAxis = _hero.PlayerInstance.Controller.GetAxis(VirtualKey.AIM_AXIS);
+		float aimAngle = Vector2.Angle( Vector2.right, new Vector2(xAxis, yAxis));
+		if (yAxis < 0.0f) aimAngle = -aimAngle;
+
+		if (Mathf.Abs(xAxis) < 0.25f && Mathf.Abs(yAxis) < 0.25f)
+		{
+			if (_facingRight)
+				aimAngle = 0.0f;
+			else
+				aimAngle = 180.0f;
+		}
+
+		Vector3 newRotation = new Vector3(0, 0, aimAngle);
+		Vector3 crossairRotation = newRotation;
+
+	
+		//correct crossair rotation due to negative scale of the x axis
+		if(!_facingRight){
+			newRotation = new Vector3(0,0,180-aimAngle);
+			//crossairRotation = new Vector3(0,0,180-aimAngle);
+		}
+
+*/
 		_crossairPivot.eulerAngles 	 = newRotation;
 		_rangeWeaponHand.eulerAngles = newRotation;
 		_crossair.eulerAngles 		 = crossairRotation;
@@ -159,11 +209,13 @@ public class HeroController : MonoBehaviour {
 
 	protected virtual void ProcessMovement (){
 
+		AbstractController _controller = _hero.PlayerInstance.Controller;
 		
 		// Cache the horizontal input.
 		float h = _hero.PlayerInstance.Controller.XAxis;
 		
-		h = Mathf.Abs(h) < 0.25f ? 0 : h;
+		//h = Mathf.Abs(h) < 0.25f ? 0 : h;
+		h = JoystickDeadzone(h, 0.25f);
 		
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		//_anim.SetFloat("Speed", _grounded ? Mathf.Abs(h) : 0);
@@ -171,18 +223,35 @@ public class HeroController : MonoBehaviour {
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached _hero.MaxSpeed yet...
 		if(h * _rigidbody.velocity.x < _hero.MaxSpeed)
 			// ... add a force to the player.
-			_rigidbody.AddForce(transform.right * h * _hero.MoveForce,ForceMode2D.Force);
+			_rigidbody.AddForce(transform.right * h * _hero.MoveForce, ForceMode2D.Force);
 
 		
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		_grounded = Physics2D.Linecast(transform.position, _groundCheck.position, _hero.JumpOn) || Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) || Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn);//LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
-		
+		_grounded = IsGrounded();
+
+
+		if (_controller.GetButtonDown(VirtualKey.JUMP))
+			_jumpPressedLastTime = Time.time;
+
+		// Jump if the jump button has been pressed in last 0.1s and the character is on solid ground
+		if (Time.time - _jumpPressedLastTime < 0.1f && _grounded)
+		{
+			
+			//_jumpStartTime = Time.time;
+			//_jumpStart = true;
+			//_jump = true;
+			if (_hero.JumpSound != null)
+				_hero.JumpSound.PlayEffect();
+			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _hero.JumpSpeed);
+			
+		}
+
 		//if (_grounded)
 		//	_anim.SetBool("Slide", false);
 		
 		// If the player should jump...
-		if(_jumpStart)
-		{
+		//if(_jumpStart)
+		//{
 			// Set the Jump animator trigger parameter.
 			//_anim.SetBool("Slide", false);
 			//_anim.SetTrigger("Jump");
@@ -190,19 +259,21 @@ public class HeroController : MonoBehaviour {
 			// Play a random jump audio clip.
 			//if (JumpClips.Length > 0)
 			//	DadaAudio.PlayRandom(JumpClips);
-			if (_hero.JumpSound != null)
-				_hero.JumpSound.PlayEffect();
+		//	if (_hero.JumpSound != null)
+		//		_hero.JumpSound.PlayEffect();
 			
 			// Add a vertical force to the player.
-			_rigidbody.AddForce(transform.up * _hero.JumpForce);
+		//	_rigidbody.AddForce(transform.up * _hero.JumpForce);
+		//	_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _hero.JumpSpeed);
 			
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
-			_jumpStart = false;
-		}
-		if (_jump)
-		{
-			_rigidbody.AddForce( transform.up * _hero.JumpForce * _hero.JumpAirModifier);
-		}
+		//	_jumpStart = false;
+		//}
+	//	if (_jump)
+	//	{
+	//		_rigidbody.AddForce( transform.up * _hero.JumpForce * _hero.JumpAirModifier);
+	//	}
+		/*
 		if (_walljump > 0 && !_grounded)
 		{
 			//_anim.SetBool("Slide", false);
@@ -226,21 +297,19 @@ public class HeroController : MonoBehaviour {
 				_rigidbody.AddForce(new Vector2(-_hero.JumpForce, _hero.JumpForce));
 			}
 			_walljump = 0;
-		}
+		}*/
 	}
 	
 	protected virtual void ProcessJump(){
 
 		AbstractController _controller = _hero.PlayerInstance.Controller;
-		var sliding = false;
-		
+		/*
 		if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position  - _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
 		{
 			_jumpStartTime = Time.time;
 			_jump = true; 
 			_walljump = 1;
 			//_anim.SetBool("Slide", true);
-			sliding = true;
 		}
 		
 		else if (_controller.GetButtonDown(VirtualKey.JUMP) && Physics2D.Linecast(transform.position, transform.position + _wallCheck.localPosition, 1 << LayerMask.NameToLayer("Ground")))
@@ -250,23 +319,22 @@ public class HeroController : MonoBehaviour {
 			
 			_walljump = 2;
 			//_anim.SetBool("Slide", true);
-			sliding = true;
 		}
 		else
 		{
 			_walljump = 0;
-			//if (!sliding)
-			//	_anim.SetBool("Slide", false);
-		}
+		}*/
+		if ( _controller.GetButton(VirtualKey.JUMP) )
+			_rigidbody.gravityScale=0.9f;
+		else
+			_rigidbody.gravityScale=3.0f;
+
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if (_controller.GetButtonDown(VirtualKey.JUMP) && _grounded)
-		{
-			_jumpStartTime = Time.time;
-			_jumpStart = true;
-			_jump = true;
-		}
-		else if (_controller.GetButtonUp(VirtualKey.JUMP) || Time.time - _jumpStartTime > _hero.JumpLength )
-			_jump = false;
+		//Debug.Log (_rigidbody.velocity.y);
+	
+
+		//else if (_controller.GetButtonUp(VirtualKey.JUMP) || Time.time - _jumpStartTime > _hero.JumpLength )
+		//	_jump = false;
 	}
 
 	protected virtual void Flip (){
@@ -277,5 +345,31 @@ public class HeroController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	private bool IsGrounded(){
+		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
+		return Physics2D.Linecast(transform.position, _groundCheck.position, _hero.JumpOn) 
+			||  Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) 
+				|| Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn); //LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
+		
+	}  
+
+
+	// Adjust joystick input (-1..1) so that input which has absolute value of minimum or smaller will return 0f
+	// and larger values will be scaled so they are in the range -1..1
+	private float JoystickDeadzone(float input, float minimum){
+
+		float result = Mathf.Abs(input);
+		result -= minimum;
+		if (result < 0f)
+			return 0f;
+
+		result = result * (1f/(1f-minimum));
+
+		if (input < 0.0f)
+			return -result;
+
+		return result;
 	}
 }

@@ -96,13 +96,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7971c55e52482438a451bb6f3e8ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CooldownTime: .200000003
+  CooldownTime: .100000001
   VisualEffect: {fileID: 0}
   FireSound: {fileID: 11418900, guid: 19ebc46a63e8a5445b9c3e6702402534, type: 2}
+  SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11459342, guid: 3f7c6f1c0dc275c44a64d9603b7465a1, type: 2}
   MaxBullets: 5
-  RechargeEvery: 1
-  PushForce: 35
+  RechargeEvery: .699999988
+  PushForce: 30
   OutOfAmmo: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8, type: 2}
 --- !u!212 &21237610
 SpriteRenderer:

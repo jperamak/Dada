@@ -4,15 +4,17 @@ using System.Collections;
 public class Grenade : Projectile {
 
 	public bool DetonateOnContact = true;
+	public bool ExplodeOnContact = false;
 	public float DetonationDelay = 1.5f;
 	
 	private SpriteRenderer _renderer;
+	private Rigidbody2D _rigidbody;
 	private float _contactTime = 0;
 	private bool exploded = false;
 
 	void Start(){
 		_renderer = transform.GetComponentInChildren<SpriteRenderer>();
-
+		_rigidbody = GetComponent<Rigidbody2D>();
 		//start immediately the countdown DetonateOnContact is false
 		if(!DetonateOnContact){
 			_contactTime = Time.time;
@@ -22,17 +24,21 @@ public class Grenade : Projectile {
 
 	void OnCollisionEnter2D(Collision2D coll){
 
+		if(ExplodeOnContact)
+			Explode();
+
 		//start the countdown at the first contact.
 		//no need for collisions when DetonateOnContact is false
-		if(DetonateOnContact && _contactTime == 0){
+		else if(DetonateOnContact && _contactTime == 0){
 			_contactTime = Time.time;
 			StartCoroutine(TickTack());
 		}
 	}
 
 	//turn the gameobject so it follows the gravity
-	void FixedUpdate (){
-		Vector2 velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+	protected virtual void FixedUpdate (){
+
+		Vector2 velocity = _rigidbody.velocity;
 		float angle = Mathf.Atan2( velocity.y, velocity.x );
 		transform.eulerAngles = new Vector3(0, 0, angle *  Mathf.Rad2Deg);
 	}

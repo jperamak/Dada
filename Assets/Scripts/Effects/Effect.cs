@@ -14,6 +14,7 @@ public abstract class Effect : MonoBehaviour {
 		DoVisualEffect();
 		Terminate();
 	}
+
 	public virtual void Trigger(GameObject target){
 		_targets = new GameObject[]{target};
 		Trigger();

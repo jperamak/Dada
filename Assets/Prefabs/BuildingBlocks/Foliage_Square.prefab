@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHitpoints: 30
-  DamageSound: {fileID: 11430224, guid: c08387ff0e1e05047aad7b53df439552, type: 2}
+  DamageSound: {fileID: 0}
   DestroySound: {fileID: 11472460, guid: a1c821fa0d3edcf46a266338cb183715, type: 2}
   hitpointsLightDamage: 20
   hitpointsHeavyDamage: 10
@@ -99,7 +99,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1043239221
+  m_SortingLayerID: 1024582385
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300050, guid: d5d93ef458eb941638b4b87cb29f5b0c, type: 3}
   m_Color: {r: .480644464, g: .933823526, b: .558778822, a: 1}

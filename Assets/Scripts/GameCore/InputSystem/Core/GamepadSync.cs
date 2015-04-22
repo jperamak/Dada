@@ -20,7 +20,6 @@ namespace Dada.InputSystem{
 			GameObject go = new GameObject("GamepadSync");
 			Instance = go.AddComponent<GamepadSync>();
 			_controllers = c;
-			Debug.Log("Sync init "+c.Count);
 			DontDestroyOnLoad(Instance);
 		}
 

@@ -5,14 +5,15 @@ public class FadeOutOfExistence : MonoBehaviour {
 
 	public float secondsToStartFading;
 	public float secondsForFading;
-
+    public bool destroy = true;
 	private SpriteRenderer spriteRend;
 	private float awakeTime;
 
 	void Awake () 
 	{
 		awakeTime = Time.time;
-        Destroy(gameObject.transform.parent.gameObject, secondsToStartFading + secondsForFading);
+        if ( destroy)
+            Destroy(gameObject.transform.parent.gameObject, secondsToStartFading + secondsForFading);
 		spriteRend = GetComponent<SpriteRenderer>();
 	}
 	

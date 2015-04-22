@@ -85,7 +85,6 @@ GameObject:
   - 233: {fileID: 23346062}
   - 233: {fileID: 23391816}
   - 233: {fileID: 23317862}
-  - 114: {fileID: 11415224}
   - 114: {fileID: 11422432}
   - 95: {fileID: 9529436}
   - 114: {fileID: 11476520}
@@ -157,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.109999999, y: -11.96, z: 0}
+  m_LocalPosition: {x: -.0392952636, y: .464336663, z: 0}
   m_LocalScale: {x: .699999988, y: .699999988, z: 1}
   m_Children:
   - {fileID: 482162}
@@ -412,20 +411,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11415224
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161596}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9509a9b2aac79d042a6c38889f40c533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VisualEffectOnTrigger: {fileID: 0}
-  DetonateOnContact: 0
-  DetonationDelay: 20
 --- !u!114 &11422432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -442,13 +427,14 @@ MonoBehaviour:
   DamageAmount: 3000
   Radius: 5
   ExplosionForce: 70
-  NumOfRays: 80
+  NumOfRays: 160
   ParticleLifetime: .300000012
   InteractWith:
     serializedVersion: 2
-    m_Bits: 4294696959
+    m_Bits: 4294631423
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
   ExplosionPushForce: 20
+  ExplosionSound: {fileID: 11418440, guid: cd6c344a139c34da0b58abbef60ec5d9, type: 2}
 --- !u!114 &11476520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -653,7 +639,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -110
     m_UpperAngle: 30

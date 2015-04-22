@@ -59,10 +59,10 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.542808533, y: .487895012}
-      - {x: -.532579422, y: .121251106}
-      - {x: -.683120728, y: -.222564697}
-      - {x: -.683122635, y: -.237894058}
+    - - {x: -.963129044, y: .510016441}
+      - {x: -1.14093781, y: -.15158844}
+      - {x: -.708929062, y: -.0529613495}
+      - {x: -.57988739, y: -.230520248}
       - {x: -.516126633, y: -.499272346}
       - {x: -.000499725342, y: -.499272346}
       - {x: .00539779663, y: .490907669}
@@ -79,11 +79,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHitpoints: 600
   DamageSound: {fileID: 0}
-  DestroySound: {fileID: 0}
-  hitpointsLightDamage: 500
+  DestroySound: {fileID: 11499632, guid: 232a5b7663c494b47ad061bd030cbb3a, type: 2}
+  hitpointsLightDamage: 400
   hitpointsHeavyDamage: 40
-  spriteLightDamage: {fileID: 21300002, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
-  spriteHeavyDamage: {fileID: 21300004, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
+  spriteLightDamage: {fileID: 21300068, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
+  spriteHeavyDamage: {fileID: 21300068, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 296966f2d8a1546c987f7bf7f4ce2b78, type: 2}
   DestroyOnZeroHp: 1
   damageFromCollisions: 1

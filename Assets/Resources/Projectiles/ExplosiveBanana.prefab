@@ -135,6 +135,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
   ExplosionPushForce: 0
+  ExplosionSound: {fileID: 11487134, guid: dd2d4402d3d32a24b83b8ae5fea21570, type: 2}
 --- !u!114 &11492750
 MonoBehaviour:
   m_ObjectHideFlags: 1

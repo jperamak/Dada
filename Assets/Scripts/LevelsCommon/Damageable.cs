@@ -8,8 +8,6 @@ public class Damageable : MonoBehaviour {
 	public float MaxHitpoints = 10.0f;				// hitpoints when undamaged
 	public KilledCallback OnDestroy;
 
-
-
     public SoundEffect DamageSound;
     public SoundEffect DestroySound;
 	protected float _currentHitpoints;

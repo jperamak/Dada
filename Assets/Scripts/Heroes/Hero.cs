@@ -15,6 +15,7 @@ public class Hero : MonoBehaviour {
 	public float JumpForce = 1000f;			// Amount of force added when the player jumps.
     public float JumpAirModifier = 0.02f;
     public float JumpLength = 0.5f;         // Length of the jump
+	public float JumpSpeed = 3f;
 	public LayerMask JumpOn;				// Layermask that specify the elements the player can jump on
 	public LayerMask JumpOnWalls;			// Layermask that specify the walls the player can jump on
 	public LayerMask WalkOnSlopes;			// Layermask that specify the walls the player can jump on
