@@ -521,6 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioClips:
   - {fileID: 0}
+  PlayCooldown: .5
   minPitch: 1
   maxPitch: 1
   minVolume: 1
