@@ -28,6 +28,8 @@ public class HeroController : MonoBehaviour {
 	private bool _jumpStart = false;
 	private bool _jump = false;
 	private float _jumpStartTime;
+
+	private float _jumpPressedLastTime = 0f;
 	
 	// Setting up initial references.
 	protected virtual void Awake(){
@@ -207,6 +209,7 @@ public class HeroController : MonoBehaviour {
 
 	protected virtual void ProcessMovement (){
 
+		AbstractController _controller = _hero.PlayerInstance.Controller;
 		
 		// Cache the horizontal input.
 		float h = _hero.PlayerInstance.Controller.XAxis;
@@ -226,12 +229,29 @@ public class HeroController : MonoBehaviour {
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		_grounded = IsGrounded();
 
+
+		if (_controller.GetButtonDown(VirtualKey.JUMP))
+			_jumpPressedLastTime = Time.time;
+
+		// Jump if the jump button has been pressed in last 0.1s and the character is on solid ground
+		if (Time.time - _jumpPressedLastTime < 0.1f && _grounded)
+		{
+			
+			//_jumpStartTime = Time.time;
+			//_jumpStart = true;
+			//_jump = true;
+			if (_hero.JumpSound != null)
+				_hero.JumpSound.PlayEffect();
+			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _hero.JumpSpeed);
+			
+		}
+
 		//if (_grounded)
 		//	_anim.SetBool("Slide", false);
 		
 		// If the player should jump...
-		if(_jumpStart)
-		{
+		//if(_jumpStart)
+		//{
 			// Set the Jump animator trigger parameter.
 			//_anim.SetBool("Slide", false);
 			//_anim.SetTrigger("Jump");
@@ -239,16 +259,16 @@ public class HeroController : MonoBehaviour {
 			// Play a random jump audio clip.
 			//if (JumpClips.Length > 0)
 			//	DadaAudio.PlayRandom(JumpClips);
-			if (_hero.JumpSound != null)
-				_hero.JumpSound.PlayEffect();
+		//	if (_hero.JumpSound != null)
+		//		_hero.JumpSound.PlayEffect();
 			
 			// Add a vertical force to the player.
 		//	_rigidbody.AddForce(transform.up * _hero.JumpForce);
-			_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _hero.JumpSpeed);
+		//	_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _hero.JumpSpeed);
 			
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
-			_jumpStart = false;
-		}
+		//	_jumpStart = false;
+		//}
 	//	if (_jump)
 	//	{
 	//		_rigidbody.AddForce( transform.up * _hero.JumpForce * _hero.JumpAirModifier);
@@ -305,17 +325,14 @@ public class HeroController : MonoBehaviour {
 			_walljump = 0;
 		}*/
 		if ( _controller.GetButton(VirtualKey.JUMP) )
-			_rigidbody.gravityScale=1.0f;
+			_rigidbody.gravityScale=0.9f;
 		else
 			_rigidbody.gravityScale=3.0f;
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if (_controller.GetButton(VirtualKey.JUMP) && _grounded)
-		{
-			_jumpStartTime = Time.time;
-			_jumpStart = true;
-			_jump = true;
-		}
+		//Debug.Log (_rigidbody.velocity.y);
+	
+
 		//else if (_controller.GetButtonUp(VirtualKey.JUMP) || Time.time - _jumpStartTime > _hero.JumpLength )
 		//	_jump = false;
 	}
