@@ -1,46 +1,46 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &113716
+--- !u!1 &179552
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 492764}
-  - 114: {fileID: 11487134}
-  - 82: {fileID: 8201256}
+  - 4: {fileID: 450130}
+  - 82: {fileID: 8278130}
+  - 114: {fileID: 11402292}
   m_Layer: 0
-  m_Name: RocketExplode
+  m_Name: FrogAboutToExplode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &492764
+--- !u!4 &450130
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113716}
+  m_GameObject: {fileID: 179552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!82 &8201256
+--- !u!82 &8278130
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113716}
+  m_GameObject: {fileID: 179552}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ae63c625f5e154c14a8d02cc1ae29135, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a0e94c10cfc0543e580d7cd6a3129b01, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .829999983
+  m_Volume: .649999976
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -98,12 +98,12 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11487134
+--- !u!114 &11402292
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113716}
+  m_GameObject: {fileID: 179552}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a44c22a533a67045abe7c6090146aad, type: 3}
@@ -125,5 +125,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 113716}
+  m_RootGameObject: {fileID: 179552}
   m_IsPrefabParent: 1

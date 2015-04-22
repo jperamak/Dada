@@ -6,6 +6,10 @@ public class FrogBomb : Projectile {
 	public float firstPhaseLength = 5.0f;
 	public float secondPhaseLength = 2.0f;
 
+
+	public SoundEffect CroakSound;
+	public SoundEffect AboutToExplodeSound;
+
 	private SpriteRenderer _renderer;
 	private bool exploded = false;
 
@@ -13,20 +17,32 @@ public class FrogBomb : Projectile {
 
 
 	void Start(){
+		CroakSound = DadaAudio.GetSoundEffect(CroakSound);
+		AboutToExplodeSound = DadaAudio.GetSoundEffect(AboutToExplodeSound);
+
 		_renderer = transform.GetComponentInChildren<SpriteRenderer>();
 		_detonationTime = Time.time + firstPhaseLength + secondPhaseLength;
 		Invoke( "AboutToDetonate", firstPhaseLength );
+		StartCoroutine( Croak() );
 
 	}
 	
 
 	private void AboutToDetonate(){
 		StartCoroutine(TickTack());
+		AboutToExplodeSound.PlayEffect();
 	}
 
 	private void Explode(){
 		TriggerEffects();
 		exploded = true;
+	}
+
+	private IEnumerator Croak(){
+		while(!exploded){
+			CroakSound.PlayEffect();
+			yield return new WaitForSeconds(2.0f);
+		}
 	}
 	
 	private IEnumerator TickTack(){

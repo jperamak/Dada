@@ -37,7 +37,8 @@ public class GateKeeper : MonoBehaviour {
 
 		if (hero.PlayerInstance.InTeam.Number + 1 == ownedByTeamNumber && _portcullis.activeSelf == true) {
 			_portcullis.SetActive(false);
-			OpenSound.PlayEffect();
+			if (OpenSound != null)
+				OpenSound.PlayEffect();
 		}
 
 	}
@@ -50,7 +51,8 @@ public class GateKeeper : MonoBehaviour {
 	
 		if (hero.PlayerInstance.InTeam.Number + 1 == ownedByTeamNumber && _portcullis.activeSelf == false)
 			_portcullis.SetActive(true);
-			CloseSound.PlayEffect();
+			if (CloseSound != null)
+				CloseSound.PlayEffect();
 	
 	}
 
