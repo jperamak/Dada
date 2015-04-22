@@ -39,7 +39,7 @@ public class RangedWeapon : Weapon {
 		Projectile bulletInst = Instantiate(Bullet, _referencePoint.position, _referencePoint.rotation) as Projectile;
 
 		//HACK: Prevents collision with owner and some onjects
-		GameObject[] collObs = GetAboutCollidingObjects.With(bulletInst.gameObject);
+		GameObject[] collObs = GetAboutCollidingObjects.WithinRadius(bulletInst.gameObject, 0.5f);
 		foreach (GameObject co in collObs) {
 			if (co.tag == "CanShootThrough")
 				GetAboutCollidingObjects.IgnoreCollisionBetween( bulletInst.gameObject, co);

@@ -73,8 +73,8 @@ MonoBehaviour:
   MaxHitpoints: 350
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 11499632, guid: 232a5b7663c494b47ad061bd030cbb3a, type: 2}
-  hitpointsLightDamage: 50
-  hitpointsHeavyDamage: 25
+  hitpointsLightDamage: 300
+  hitpointsHeavyDamage: 100
   spriteLightDamage: {fileID: 21300032, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   spriteHeavyDamage: {fileID: 21300030, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
   leftWhenDestroyed: {fileID: 160230, guid: 87c664ef8ae0243f58ded088b1e04d8a, type: 2}
