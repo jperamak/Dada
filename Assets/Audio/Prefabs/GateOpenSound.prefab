@@ -11,7 +11,7 @@ GameObject:
   - 82: {fileID: 8236002}
   - 114: {fileID: 11430224}
   m_Layer: 0
-  m_Name: GateOpenound
+  m_Name: GateOpenSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8f88ef57a3918474c896c54839e5be82, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .500999987
   m_Pitch: 1
   Loop: 0
   Mute: 0
