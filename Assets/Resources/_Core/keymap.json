@@ -28,7 +28,7 @@
         "SPECIAL": [{"KeyName": "button 3"}],
         "MENU": [{"KeyName": "button 7"}],
         "START": [{"KeyName": "button 7"}],
-        "SELECT": [{"KeyName": "button 8"}],
+        "SELECT": [{"KeyName": "button 6"}],
         "BACK": [{"KeyName": "button 1"}],
         "PAUSE": [{"KeyName": "button 7"}],
         "SUBMIT": [{"KeyName": "button 0"}],
