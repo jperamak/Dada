@@ -22,7 +22,7 @@ public class SoundEffect : MonoBehaviour
 	private float _lastPlayed;
 
 
-    void Start()
+    void Awake()
     {
         _audioClips = GetComponents<AudioSource>().ToList<AudioSource>();
     }
