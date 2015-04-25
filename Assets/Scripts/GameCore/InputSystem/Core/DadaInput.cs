@@ -89,8 +89,9 @@ public class DadaInput {
 		//In some cases Unity detects a non-existing joystick with empty name.
 		//This code fixes that eventuality 
 		foreach(string s in names){
-			if(s.Length != 0)
+			if(s.Length != 0){
 				fixedNames.Add(s);
+			}
 		}
 
 		names = fixedNames.ToArray();

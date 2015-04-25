@@ -41,6 +41,6 @@ public sealed class Resource {
 	}
 
 	public static Resource[] MeleeWepons = { Resource.LAYBOMB_MELEE, Resource.ICY_MELEE, Resource.FLAME_MELEE, Resource.ELECTRIC_MELEE };
-	public static Resource[] RangedWepons = {Resource.PHOENIX, Resource.NAPALM_PHOENIX, Resource.BANANA_RANGE, Resource.CHILI_RANGE, Resource.FIRE_RANGE };
+	public static Resource[] RangedWepons = {Resource.PHOENIX, Resource.NAPALM_PHOENIX, Resource.BANANA_RANGE, Resource.CHILI_RANGE };
 	public static Resource[] Heroes = { Resource.MONK_HERO };
 }

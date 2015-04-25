@@ -42522,6 +42522,8 @@ MonoBehaviour:
   - {fileID: 161596, guid: 9cdbf966486b84a35ba4c06cae811f36, type: 2}
   - {fileID: 124460, guid: 7b0075f5b604550498639b403ce0fd9b, type: 2}
   - {fileID: 123736, guid: 2e9e5bcaad417454ebecc536b23b3f2e, type: 2}
+  - {fileID: 120706, guid: 94689b9c297f2684293ba8903fc23724, type: 2}
+  - {fileID: 123736, guid: c4c7308b95f975a4aacdf443c8e5cbe0, type: 2}
   SpawnTime: 20
 --- !u!4 &1699738650
 Transform:

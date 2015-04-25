@@ -25,7 +25,6 @@ public class HeroHealth : Damageable {
 	//TODO: Here is where the shield should be applied
 	public override void TakeDamage (float hitpoints, GameObject dealer){
 
-
 		if(!IsShielded){
 
 			//if friendly fire is disabled and dealer is in the same team, don't apply any damage
@@ -35,6 +34,7 @@ public class HeroHealth : Damageable {
 					return;
 
 			}
+
 
 			base.TakeDamage (hitpoints, dealer);
 
