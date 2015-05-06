@@ -86,14 +86,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 434926}
   - 50: {fileID: 5061084}
-  - 61: {fileID: 6164474}
-  - 58: {fileID: 5864632}
+  - 61: {fileID: 6123768}
   - 95: {fileID: 9597376}
   - 114: {fileID: 11465578}
   - 114: {fileID: 11425960}
-  - 114: {fileID: 11458666}
+  - 114: {fileID: 11488036}
   m_Layer: 9
-  m_Name: Monk
+  m_Name: MonkV2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,20 +475,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5864632
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124994}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.550000012}
-  serializedVersion: 2
-  m_Radius: .379999995
---- !u!61 &6164474
+--- !u!61 &6123768
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -499,9 +485,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 2f33dc684b21da640b19632ec7c2228d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .0299999993}
+  m_Offset: {x: 0, y: -.188632205}
   serializedVersion: 2
-  m_Size: {x: .75999999, y: 1.04999995}
+  m_Size: {x: .75999999, y: 1.48719203}
 --- !u!82 &8287432
 AudioSource:
   m_ObjectHideFlags: 1
@@ -606,17 +592,6 @@ MonoBehaviour:
   ShieldAfterDamage: 1
   ShieldDelay: .200000003
   FriendlyFireEnabled: 0
---- !u!114 &11458666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d6d29804fba884f934c79331b01405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11465578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -651,6 +626,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
   - {fileID: 21300006, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
   - {fileID: 21300010, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
+--- !u!114 &11488036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05245bf5302bd45af877a21c56a90174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21212374
 SpriteRenderer:
   m_ObjectHideFlags: 1
