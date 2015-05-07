@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e2e5e6d53f4f574cb9f71541b4a27fa
-timeCreated: 1427963696
+timeCreated: 1430997790
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -45,6 +45,7 @@ TextureImporter:
     21300076: RoofTile
     21300078: Roof_nd
     21300080: SmokeTrail
+    21300082: Explosion
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -423,9 +424,9 @@ TextureImporter:
     - name: Embrasure_nd
       rect:
         serializedVersion: 2
-        x: 1780
+        x: 1771
         y: 808
-        width: 169
+        width: 178
         height: 169
       alignment: 9
       pivot: {x: .82795018, y: .518503428}
@@ -497,6 +498,16 @@ TextureImporter:
         y: 60
         width: 128
         height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Explosion
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 79
+        width: 102
+        height: 116
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
