@@ -9,6 +9,7 @@ public class HeroControllerV2 : MonoBehaviour {
 
 	protected Hero _hero;
 	protected Rigidbody2D _rigidbody;
+	private BoxCollider2D _boxCollider;
 	
 	//class private attributes
 	protected Transform _groundCheck;			// A position marking where to check if the player is grounded.
@@ -36,7 +37,11 @@ public class HeroControllerV2 : MonoBehaviour {
 		
 		_hero 		= GetComponent<Hero>();
 		_rigidbody 	= GetComponent<Rigidbody2D>();
-		
+		//_boxCollider = GetComponent<BoxCollider2D>();
+
+		//if (_boxCollider == null)
+		//	Debug.LogError("HeroController needs the Hero to have a BoxCollider2D");
+
 		_rangeWeaponHand = transform.Find("Hand1");
 		_groundCheck     = transform.Find("GroundCheck");
 		_groundCheckLeft = transform.Find("GroundCheckLeft");

@@ -7,8 +7,11 @@ public class Teleporter : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (OtherEnd != null)
-            other.gameObject.transform.position = new Vector3(OtherEnd.position.x, other.transform.position.y, other.transform.position.z);
+        if (OtherEnd != null) 
+		{
+			 // Transform the entering object to the other end of the teleport 
+			 other.gameObject.transform.position += OtherEnd.position - transform.position;
+		}
     }
 
 }
