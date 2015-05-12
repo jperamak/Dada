@@ -40,7 +40,13 @@ public class ParticleExplosion : Damage {
 			}
 			
 			ep.gameObject.layer = LayerMask.NameToLayer("ExplosionParticle");
-			ep.GetComponent<Rigidbody2D>().AddForce(dir * ExplosionForce * 100);
+
+			// Every other particle is fast, every other is slow
+			if (i%2==0)
+				ep.GetComponent<Rigidbody2D>().AddForce(dir * ExplosionForce * 100);
+			else
+				ep.GetComponent<Rigidbody2D>().AddForce(dir * ExplosionForce * 50);
+
 			ep.transform.position = transform.position;
 			Destroy(ep.gameObject,ParticleLifetime);
 		}

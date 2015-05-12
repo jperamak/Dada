@@ -2642,7 +2642,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f575748354d50487182a00fb6584dadb, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: .400000006
   m_Pitch: 1
   Loop: 1
@@ -5461,6 +5461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e81e712e74e6324bb8e17655e78fcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeleportIfMovesTo: 0
   OtherEnd: {fileID: 2030772642}
 --- !u!61 &761678468
 BoxCollider2D:
@@ -5474,7 +5475,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 3, y: 5}
+  m_Size: {x: 3, y: 140}
 --- !u!4 &761678469
 Transform:
   m_ObjectHideFlags: 0
@@ -7331,7 +7332,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 985397652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.13000011, y: 14.6400003, z: 3.5999999}
+  m_LocalPosition: {x: 6.0999999, y: 9.11999989, z: 3.5999999}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 334421834}
@@ -8459,7 +8460,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: minXAndY.x
@@ -13757,6 +13758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e81e712e74e6324bb8e17655e78fcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeleportIfMovesTo: 1
   OtherEnd: {fileID: 980242882}
 --- !u!61 &2030772644
 BoxCollider2D:
@@ -13770,7 +13772,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 3, y: 5}
+  m_Size: {x: 3, y: 140}
 --- !u!1 &2056140003
 GameObject:
   m_ObjectHideFlags: 0

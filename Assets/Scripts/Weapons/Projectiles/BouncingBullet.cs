@@ -7,6 +7,10 @@ public class BouncingBullet : Projectile {
 	private int _bounces = 0;
 	protected GameObject _targetHit;
 
+	void Start() {
+		transform.eulerAngles = new Vector3( 0f,0f,Random.Range(0f,360f) );
+	}
+
 	void OnCollisionEnter2D(Collision2D coll){
 
 		if(_bounces < MaxBounces && coll != null){

@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffectOnTrigger: {fileID: 0}
   DetonateOnContact: 1
-  ExplodeOnContact: 0
+  ExplodeOnContact: 1
   DetonationDelay: 0
 --- !u!114 &11474918
 MonoBehaviour:
