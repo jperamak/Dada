@@ -5,7 +5,7 @@ public class FrogBomb : Projectile {
 	
 	public float firstPhaseLength = 5.0f;
 	public float secondPhaseLength = 2.0f;
-
+	public float jumpForce;
 
 	public SoundEffect CroakSound;
 	public SoundEffect AboutToExplodeSound;
@@ -41,6 +41,7 @@ public class FrogBomb : Projectile {
 	private IEnumerator Croak(){
 		while(!exploded){
 			CroakSound.PlayEffect();
+			this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f,jumpForce), ForceMode2D.Force);
 			yield return new WaitForSeconds(2.0f);
 		}
 	}
