@@ -5,12 +5,14 @@ public class Grenade : Projectile {
 
 	public bool DetonateOnContact = true;
 	public bool ExplodeOnContact = false;
-	public float DetonationDelay = 1.5f;
+    public bool ExplodeOnPlayerContact = false;
+    public float DetonationDelay = 1.5f;
 	
 	private SpriteRenderer _renderer;
 	private Rigidbody2D _rigidbody;
 	private float _contactTime = 0;
 	private bool exploded = false;
+
 
 	void Start(){
 		_renderer = transform.GetComponentInChildren<SpriteRenderer>();
@@ -24,15 +26,19 @@ public class Grenade : Projectile {
 
 	void OnCollisionEnter2D(Collision2D coll){
 
-		if(ExplodeOnContact)
-			Explode();
+        if (ExplodeOnContact)
+            Explode();
+        else if (ExplodeOnPlayerContact)
+            if (coll.collider.gameObject.tag == "Player")
+                Explode();
 
-		//start the countdown at the first contact.
-		//no need for collisions when DetonateOnContact is false
-		else if(DetonateOnContact && _contactTime == 0){
-			_contactTime = Time.time;
-			StartCoroutine(TickTack());
-		}
+        //start the countdown at the first contact.
+        //no need for collisions when DetonateOnContact is false
+        else if (DetonateOnContact && _contactTime == 0)
+        {
+            _contactTime = Time.time;
+            StartCoroutine(TickTack());
+        }
 	}
 
 	//turn the gameobject so it follows the gravity

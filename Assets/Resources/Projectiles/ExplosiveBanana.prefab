@@ -9,10 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 413480}
   - 50: {fileID: 5067168}
-  - 60: {fileID: 6073380}
   - 114: {fileID: 11492750}
   - 114: {fileID: 11439680}
   - 114: {fileID: 11461204}
+  - 60: {fileID: 6020810}
   m_Layer: 11
   m_Name: ExplosiveBanana
   m_TagString: Untagged
@@ -43,8 +43,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .127666831, y: .127666846, z: .127666846}
+  m_LocalPosition: {x: -18.533783, y: -1.25725698, z: 0}
+  m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 413482}
   m_Father: {fileID: 0}
@@ -76,28 +76,24 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!60 &6073380
+--- !u!60 &6020810
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113480}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 727b792ca2530754db440820f64a86f6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -2.48237658, y: -.534397662}
-      - {x: -3.19300556, y: 1.35689116}
-      - {x: -2.82435942, y: 1.61994255}
-      - {x: -2.06873417, y: .67284447}
-      - {x: .979611814, y: -.150454208}
-      - {x: 3.04612303, y: .107083134}
-      - {x: 3.07463908, y: -.668497086}
-      - {x: 1.73445761, y: -1.69247878}
-      - {x: -.991512418, y: -1.49588048}
+    - - {x: .270379364, y: -.351889908}
+      - {x: 2.03257227, y: .038639307}
+      - {x: .993353486, y: -1.07939482}
+      - {x: -1.12854636, y: -.538638413}
+      - {x: -2.1677525, y: 1.1201508}
 --- !u!114 &11439680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffectOnTrigger: {fileID: 0}
   DetonateOnContact: 1
+  ExplodeOnContact: 0
+  ExplodeOnPlayerContact: 1
   DetonationDelay: 1.5
 --- !u!212 &21213480
 SpriteRenderer:
