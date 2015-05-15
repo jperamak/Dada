@@ -38,6 +38,7 @@ public class FrogBomb : Projectile {
 		exploded = true;
 	}
 
+	// Croak and jump
 	private IEnumerator Croak(){
 		while(!exploded){
 			CroakSound.PlayEffect();
