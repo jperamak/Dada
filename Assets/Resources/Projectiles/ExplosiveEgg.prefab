@@ -230,7 +230,7 @@ MonoBehaviour:
   VisualEffect: {fileID: 0}
   DamageOwner: 0
   DamageAmount: 80
-  ExplosionForce: 6
+  ExplosionForce: 60
   ParticleLifetime: .200000003
   InteractWith:
     serializedVersion: 2

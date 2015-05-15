@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 31678895661864bf48c4e2c51acff08c
-timeCreated: 1431720831
+timeCreated: 1431721005
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Ground1
+    21300002: Ground2
+    21300004: Ground3
+    21300006: Ground4
+    21300008: Ground5
+    21300010: Ground7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,25 +36,85 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32.5
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Ground1
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 536
+        width: 338
+        height: 647
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground2
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 384
+        width: 118
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 387
+        width: 1455
+        height: 126
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 157
+        width: 844
+        height: 203
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 692
+        width: 106
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground7
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 698
+        width: 183
+        height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
