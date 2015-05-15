@@ -30,7 +30,7 @@ TagManager:
   - Ground
   - BackgroundBlock
   - Rubble
-  - 
+  - BackgroundObject
   - ExplosionParticle
   - Crocodile
   - ForegroundObject
