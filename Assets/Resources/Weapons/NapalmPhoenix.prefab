@@ -101,8 +101,8 @@ MonoBehaviour:
   FireSound: {fileID: 11418900, guid: 19ebc46a63e8a5445b9c3e6702402534, type: 2}
   SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11459342, guid: 0188210bdd706415897e63e2094269c5, type: 2}
-  MaxBullets: 5
-  RechargeEvery: 1
+  MaxBullets: 3
+  RechargeEvery: 1.5
   PushForce: 30
   OutOfAmmo: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8, type: 2}
 --- !u!212 &21252558
