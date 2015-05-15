@@ -230,7 +230,7 @@ MonoBehaviour:
   VisualEffect: {fileID: 0}
   DamageOwner: 0
   DamageAmount: 80
-  ExplosionForce: 60
+  ExplosionForce: 6
   ParticleLifetime: .200000003
   InteractWith:
     serializedVersion: 2
@@ -252,6 +252,7 @@ MonoBehaviour:
   VisualEffectOnTrigger: {fileID: 0}
   DetonateOnContact: 1
   ExplodeOnContact: 1
+  ExplodeOnPlayerContact: 0
   DetonationDelay: 0
 --- !u!114 &11474918
 MonoBehaviour:

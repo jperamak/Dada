@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: 4f1a81ce766c64642a259d9f4f736336
+timeCreated: 1431707106
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: TreeTrunk
+    21300002: Eyelid
+    21300004: Eyeball
+    21300006: Pupil
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: .481001616, y: .693602622}
+  spriteBorder: {x: 0, y: 259, z: 0, w: 0}
+  spritePixelsToUnits: 32.5
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: TreeTrunk
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 263
+        width: 1644
+        height: 774
+      alignment: 9
+      pivot: {x: .0304553043, y: .507023513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eyelid
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 36
+        width: 268
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eyeball
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 7
+        width: 258
+        height: 241
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pupil
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 49
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
