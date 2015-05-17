@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 31678895661864bf48c4e2c51acff08c
-timeCreated: 1431721005
+timeCreated: 1431876033
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,14 @@ TextureImporter:
     21300006: Ground4
     21300008: Ground5
     21300010: Ground7
+    21300012: Cellar
+    21300014: Cave
+    21300016: BigSkull
+    21300018: Spike
+    21300020: Bone
+    21300022: Skull
+    21300024: Slope1
+    21300026: Slope2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -58,10 +66,10 @@ TextureImporter:
     - name: Ground1
       rect:
         serializedVersion: 2
-        x: 888
-        y: 536
-        width: 338
-        height: 647
+        x: 671
+        y: 531
+        width: 555
+        height: 652
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,6 +120,86 @@ TextureImporter:
         y: 698
         width: 183
         height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cellar
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 362
+        width: 242
+        height: 460
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cave
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 845
+        width: 1051
+        height: 554
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BigSkull
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 673
+        width: 156
+        height: 167
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spike
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 514
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bone
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 534
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Skull
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 530
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Slope1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 22
+        width: 681
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Slope2
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 55
+        width: 690
+        height: 131
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
