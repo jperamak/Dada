@@ -63,7 +63,6 @@ GameObject:
   - 58: {fileID: 5820398}
   - 114: {fileID: 11440126}
   - 114: {fileID: 11489092}
-  - 114: {fileID: 11438666}
   m_Layer: 11
   m_Name: ExplosiveEgg
   m_TagString: Untagged
@@ -196,26 +195,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11438666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bbea72cf307518469cf0d6eb4291f0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  StampTex: {fileID: 2800000, guid: 440f5c5d2182020419aa56a0cb856d1e, type: 3}
-  Hardness: 1
-  Size: {x: 2, y: 2}
-  AngleOffset: 0
-  AngleRandomness: 0
-  HasExploded: 0
 --- !u!114 &11440126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,6 +233,7 @@ MonoBehaviour:
   ExplodeOnContact: 1
   ExplodeOnPlayerContact: 0
   DetonationDelay: 0
+  blinkRed: 0
 --- !u!114 &11474918
 MonoBehaviour:
   m_ObjectHideFlags: 1
