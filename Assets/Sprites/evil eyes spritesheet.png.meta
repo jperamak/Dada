@@ -1,13 +1,21 @@
 fileFormatVersion: 2
 guid: 313431d3787c049e2bea43074aa3c308
-timeCreated: 1431809575
+timeCreated: 1431908643
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: evil eyes spritesheet_0
+    21300002: evil eyes spritesheet_1
+    21300004: evil eyes spritesheet_2
+    21300006: evil eyes spritesheet_3
+    21300008: evil eyes spritesheet_4
+    21300010: evil eyes spritesheet_5
+    21300012: evil eyes spritesheet_6
+    21300014: evil eyes spritesheet_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -30,25 +38,105 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32.5
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: evil eyes spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 119
+        width: 93
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: evil eyes spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 119
+        width: 93
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: evil eyes spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 119
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: evil eyes spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 37
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: evil eyes spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 38
+        width: 105
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: evil eyes spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 38
+        width: 116
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: evil eyes spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 38
+        width: 117
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: evil eyes spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 118
+        width: 93
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
