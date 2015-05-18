@@ -123,9 +123,9 @@ MonoBehaviour:
   DamageOwner: 1
   DamageAmount: 50
   Radius: 2
-  ExplosionForce: 10
+  ExplosionForce: .5
   NumOfRays: 8
-  ParticleLifetime: .300000012
+  ParticleLifetime: .200000003
   InteractWith:
     serializedVersion: 2
     m_Bits: 4294967295
