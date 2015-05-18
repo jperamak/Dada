@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Playable/Planets.unity
   - enabled: 1
     path: Assets/Scenes/Playable/Arena.unity
+  - enabled: 1
+    path: Assets/Scenes/TeamFortress2.unity

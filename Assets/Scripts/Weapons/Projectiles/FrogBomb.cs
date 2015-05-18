@@ -49,10 +49,10 @@ public class FrogBomb : Projectile {
 	
 	private IEnumerator TickTack(){
 		while(!exploded){
-			if(_renderer.color == Color.white)
-				_renderer.color = Color.red;
-			else
-				_renderer.color = Color.white;
+		//	if(_renderer.color == Color.white)
+		//		_renderer.color = Color.red;
+		//	else
+		//		_renderer.color = Color.white;
 			
 			if(Time.time >= _detonationTime)
 				Explode();
