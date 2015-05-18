@@ -42311,7 +42311,7 @@ SpringJoint2D:
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: 2.37435293, y: -.546214581}
-  m_ConnectedAnchor: {x: 8.94931984, y: 14.6797848}
+  m_ConnectedAnchor: {x: 8.92432213, y: 13.6048832}
   m_Distance: 7
   m_DampingRatio: .100000001
   m_Frequency: 2
