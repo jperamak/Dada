@@ -336,7 +336,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.2179928, y: -.443504512, z: -1}
+  m_LocalPosition: {x: 23.604723, y: 3.1295557, z: -1}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
   m_Children:
   - {fileID: 427786}
@@ -622,10 +622,10 @@ MonoBehaviour:
   JumpSound: {fileID: 11471052, guid: 6a4fc9b53f92c0e499ecf8e38d985e6a, type: 2}
   TeamNumber: 0
   TeamColors:
-  - {fileID: 21300008, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
-  - {fileID: 21300000, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
-  - {fileID: 21300006, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
-  - {fileID: 21300010, guid: b6af7f1c2861e433baee49ed8b753c14, type: 3}
+  - {fileID: 21300010, guid: 04d49f32308254d1fb589360aa15d3a6, type: 3}
+  - {fileID: 21300004, guid: 04d49f32308254d1fb589360aa15d3a6, type: 3}
+  - {fileID: 21300006, guid: 04d49f32308254d1fb589360aa15d3a6, type: 3}
+  - {fileID: 21300000, guid: 04d49f32308254d1fb589360aa15d3a6, type: 3}
 --- !u!114 &11488036
 MonoBehaviour:
   m_ObjectHideFlags: 1

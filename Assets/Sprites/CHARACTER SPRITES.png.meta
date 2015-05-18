@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 04d49f32308254d1fb589360aa15d3a6
+timeCreated: 1431970428
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BlueFishMaster
+    21300002: GreenRaccoonMaster
+    21300004: RedPotMaster
+    21300006: BlueFezMaster
+    21300008: YellowFezMaster
+    21300010: RedRaccoonMaster
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BlueFishMaster
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 509
+        width: 145
+        height: 188
+      alignment: 9
+      pivot: {x: .688263595, y: .448982716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenRaccoonMaster
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 504
+        width: 138
+        height: 190
+      alignment: 9
+      pivot: {x: .630093098, y: .471523881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedPotMaster
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 511
+        width: 132
+        height: 175
+      alignment: 9
+      pivot: {x: .554030001, y: .471893847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueFezMaster
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 334
+        width: 122
+        height: 161
+      alignment: 9
+      pivot: {x: .614901423, y: .510692537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: YellowFezMaster
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 327
+        width: 108
+        height: 169
+      alignment: 9
+      pivot: {x: .613856554, y: .488358349}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedRaccoonMaster
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 156
+        width: 129
+        height: 173
+      alignment: 9
+      pivot: {x: .652152598, y: .470171988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
