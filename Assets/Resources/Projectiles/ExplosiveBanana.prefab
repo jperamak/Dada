@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.533783, y: -1.25725698, z: 0}
+  m_LocalPosition: {x: -18.8418789, y: 15.4235973, z: 0}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 413482}
@@ -71,7 +71,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -144,10 +144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VisualEffectOnTrigger: {fileID: 0}
-  DetonateOnContact: 1
+  DetonateOnContact: 0
   ExplodeOnContact: 0
-  ExplodeOnPlayerContact: 1
+  ExplodeOnPlayerContact: 0
   DetonationDelay: 1.5
+  blinkRed: 0
 --- !u!212 &21213480
 SpriteRenderer:
   m_ObjectHideFlags: 1

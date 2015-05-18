@@ -7,6 +7,7 @@ public class Grenade : Projectile {
 	public bool ExplodeOnContact = false;
     public bool ExplodeOnPlayerContact = false;
     public float DetonationDelay = 1.5f;
+	public bool blinkRed = false;
 	
 	private SpriteRenderer _renderer;
 	private Rigidbody2D _rigidbody;
@@ -56,11 +57,12 @@ public class Grenade : Projectile {
 
 	private IEnumerator TickTack(){
 		while(!exploded){
-			if(_renderer.color == Color.white)
-				_renderer.color = Color.red;
-			else
-				_renderer.color = Color.white;
-
+			if (blinkRed) {
+				if(_renderer.color == Color.white)
+					_renderer.color = Color.red;
+				else
+					_renderer.color = Color.white;
+			}
 			if(Time.time >= _contactTime + DetonationDelay)
 				Explode();
 			yield return new WaitForSeconds(0.25f);

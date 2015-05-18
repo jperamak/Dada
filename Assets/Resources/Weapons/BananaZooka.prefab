@@ -54,8 +54,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -17.9572792, y: 18.0086136, z: 0}
+  m_LocalScale: {x: .550000012, y: .550000012, z: 1}
   m_Children:
   - {fileID: 444586}
   - {fileID: 444588}
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.01999998, y: .389999986, z: 0}
+  m_LocalPosition: {x: 3.01999998, y: .649999976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 444584}
@@ -79,9 +79,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144588}
-  m_LocalRotation: {x: 0, y: 0, z: -.940584838, w: .33955878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .314655483, y: .314655542, z: .314655542}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 444584}
   m_RootOrder: 1
@@ -98,10 +98,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CooldownTime: .100000001
   VisualEffect: {fileID: 0}
-  FireSound: []
+  FireSound: {fileID: 0}
+  SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11492750, guid: db88ddf1b9ff332409e5c3fa398b75fc, type: 2}
   MaxBullets: 10
-  RechargeEvery: 1
+  RechargeEvery: .5
   PushForce: 20
   OutOfAmmo: {fileID: 0}
 --- !u!212 &21244588
@@ -128,7 +129,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1783731295
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02db25aba28c0f7459b26395d1bb58ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3752fdd26bb13429688b0353b8fdc30d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
