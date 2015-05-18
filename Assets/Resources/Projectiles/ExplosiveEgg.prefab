@@ -279,13 +279,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
   DamageOwner: 0
-  DamageAmount: 40
+  DamageAmount: 100
   Radius: 2.5
   NumOfRays: 15
   InteractWith:
     serializedVersion: 2
-    m_Bits: 4294901759
-  ExplosionPushForce: 0
+    m_Bits: 4294901247
+  ExplosionPushForce: 10
 --- !u!198 &19893056
 ParticleSystem:
   m_ObjectHideFlags: 1
