@@ -1,12 +1,15 @@
 fileFormatVersion: 2
 guid: 3752fdd26bb13429688b0353b8fdc30d
-timeCreated: 1431973568
-licenseType: Free
+timeCreated: 1431976868
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: MiniBananaGun
     21300002: Phoenix
     21300004: AssaultChili
+    21300006: WEAPON SPRITES_0
+    21300008: WEAPON SPRITES_1
+    21300010: WEAPON SPRITES_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -81,6 +84,36 @@ TextureImporter:
         height: 129
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WEAPON SPRITES_0
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 322
+        width: 244
+        height: 172
+      alignment: 9
+      pivot: {x: .588309109, y: .163364142}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WEAPON SPRITES_1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 129
+        width: 244
+        height: 182
+      alignment: 9
+      pivot: {x: .588760972, y: .172506139}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WEAPON SPRITES_2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 129
+        width: 238
+        height: 182
+      alignment: 9
+      pivot: {x: .593475103, y: .169077188}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

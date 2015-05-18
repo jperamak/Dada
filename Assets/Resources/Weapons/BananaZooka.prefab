@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 444588}
   - 212: {fileID: 21244588}
+  - 95: {fileID: 9551076}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.9572792, y: 18.0086136, z: 0}
+  m_LocalPosition: {x: -24.350193, y: 8.60145664, z: 0}
   m_LocalScale: {x: .550000012, y: .550000012, z: 1}
   m_Children:
   - {fileID: 444586}
@@ -85,6 +86,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 444584}
   m_RootOrder: 1
+--- !u!95 &9551076
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1eb9c9c65859b1429c26595de403d1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11446906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +136,7 @@ SpriteRenderer:
   - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
+  m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
@@ -127,7 +145,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1783731295
+  m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3752fdd26bb13429688b0353b8fdc30d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
