@@ -426,7 +426,7 @@ MonoBehaviour:
   DamageOwner: 1
   DamageAmount: 3000
   Radius: 5
-  ExplosionForce: 70
+  ExplosionForce: 7
   NumOfRays: 160
   ParticleLifetime: .300000012
   InteractWith:
