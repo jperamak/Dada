@@ -3373,10 +3373,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -15
+    m_UpperAngle: 15
 --- !u!50 &118003173
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -16694,10 +16694,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -15
+    m_UpperAngle: 15
 --- !u!50 &666701439
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -17975,6 +17975,64 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: 79673c2c87d2741cfa05939a964b4ab2, type: 2}
   m_PrefabInternal: {fileID: 735018228}
+--- !u!1 &740159571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 740159572}
+  - 114: {fileID: 740159573}
+  - 111: {fileID: 740159574}
+  m_Layer: 0
+  m_Name: GodOfRandomShit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &740159572
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740159571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.2999992, y: 18.7999992, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1434705032}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+--- !u!114 &740159573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740159571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2cbaa7eff1448e09939afd39d436e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedPerSec: 4
+  verticalMovement: 1
+--- !u!111 &740159574
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740159571}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f9909df9b04434306a3f7ecbec254975, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: f9909df9b04434306a3f7ecbec254975, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &748513557
 Prefab:
   m_ObjectHideFlags: 0
@@ -22405,10 +22463,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -30
+    m_UpperAngle: 30
 --- !u!50 &969750717
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -22893,10 +22951,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -30
+    m_UpperAngle: 30
 --- !u!50 &981338813
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -23908,7 +23966,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 167316, guid: 4692f22c17f02684eb985bb4e6621ab4, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4692f22c17f02684eb985bb4e6621ab4, type: 2}
@@ -31643,10 +31701,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -15
+    m_UpperAngle: 15
 --- !u!50 &1341163960
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -31763,10 +31821,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -15
+    m_UpperAngle: 15
 --- !u!50 &1342415146
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -32059,10 +32117,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -15
+    m_UpperAngle: 15
 --- !u!50 &1346308665
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -33471,6 +33529,60 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
   m_PrefabInternal: {fileID: 211433100}
+--- !u!1 &1434705030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1434705032}
+  - 212: {fileID: 1434705031}
+  m_Layer: 18
+  m_Name: Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1434705031
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1434705030}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1024582385
+  m_SortingOrder: 200
+  m_Sprite: {fileID: 21300000, guid: 17972ea2a902b48c7bb9db5cfca85af4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1434705032
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1434705030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 740159572}
+  m_RootOrder: 0
 --- !u!1001 &1439190939
 Prefab:
   m_ObjectHideFlags: 0
@@ -34380,10 +34492,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -15
+    m_UpperAngle: 15
 --- !u!50 &1486631080
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -35687,10 +35799,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -10
+    m_UpperAngle: 10
 --- !u!50 &1541315422
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -42640,10 +42752,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -15
+    m_UpperAngle: 5
 --- !u!50 &1820254050
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -43828,10 +43940,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -15
+    m_UpperAngle: 15
 --- !u!50 &1860336722
 Rigidbody2D:
   m_ObjectHideFlags: 0

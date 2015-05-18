@@ -1,0 +1,88 @@
+fileFormatVersion: 2
+guid: 17972ea2a902b48c7bb9db5cfca85af4
+timeCreated: 1431962275
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cloud_0
+    21300002: cloud_1
+    21300004: cloud_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 30
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cloud_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 40
+        width: 339
+        height: 232
+      alignment: 9
+      pivot: {x: .474165618, y: .0784649998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloud_1
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 38
+        width: 369
+        height: 235
+      alignment: 9
+      pivot: {x: .504944503, y: .0838464275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloud_2
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 40
+        width: 374
+        height: 227
+      alignment: 9
+      pivot: {x: .481461644, y: .0772179291}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
