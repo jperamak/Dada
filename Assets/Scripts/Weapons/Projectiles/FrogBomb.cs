@@ -49,6 +49,12 @@ public class FrogBomb : Projectile {
 	
 	private IEnumerator TickTack(){
 		while(!exploded){
+			float stepTime = 0.025f;
+			float scaleIncrease = 0.65f;
+			float addToScale = scaleIncrease / (secondPhaseLength / stepTime);
+			transform.localScale = new Vector3(transform.localScale.x + addToScale,
+			                                   transform.localScale.y + addToScale, 0f);
+
 		//	if(_renderer.color == Color.white)
 		//		_renderer.color = Color.red;
 		//	else
@@ -56,7 +62,7 @@ public class FrogBomb : Projectile {
 			
 			if(Time.time >= _detonationTime)
 				Explode();
-			yield return new WaitForSeconds(0.25f);
+			yield return new WaitForSeconds(stepTime);
 		}
 	}
 	
