@@ -17,7 +17,8 @@ namespace Dada.InputSystem{
 			if(Instance != null)
 				return;
 
-			GameObject go = new GameObject("GamepadSync");
+			GameObject go;
+			go = new GameObject("GamepadSync");
 			Instance = go.AddComponent<GamepadSync>();
 			_controllers = c;
 			DontDestroyOnLoad(Instance);

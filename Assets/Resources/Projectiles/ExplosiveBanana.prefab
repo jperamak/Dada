@@ -146,7 +146,7 @@ MonoBehaviour:
   VisualEffectOnTrigger: {fileID: 0}
   DetonateOnContact: 0
   ExplodeOnContact: 0
-  ExplodeOnPlayerContact: 0
+  ExplodeOnPlayerContact: 1
   DetonationDelay: 1.5
   blinkRed: 0
 --- !u!212 &21213480

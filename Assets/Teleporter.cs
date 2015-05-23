@@ -11,18 +11,19 @@ public class Teleporter : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-		// Teleport works only on rigidBodies...
         if (OtherEnd != null && other.attachedRigidbody != null) 
 		{
-			// ...that move to a given direction. (To prevent teleporting back and forth)
+			// Teleport works only on rigidBodies...
+			// that move to a given direction. (To prevent teleporting back and forth)
 			if ( (TeleportIfMovesTo == Direction.Right && other.attachedRigidbody.velocity.x > 0f) ||
-			     (TeleportIfMovesTo == Direction.Left && other.attachedRigidbody.velocity.x < 0f) ||
-			     (TeleportIfMovesTo == Direction.Up && other.attachedRigidbody.velocity.y > 0f) ||
+			     (TeleportIfMovesTo == Direction.Left && other.attachedRigidbody.velocity.x < 0f) )
+			{
+				other.gameObject.transform.position = new Vector3( OtherEnd.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z );
+			}
+			if ( (TeleportIfMovesTo == Direction.Up && other.attachedRigidbody.velocity.y > 0f) ||
 			     (TeleportIfMovesTo == Direction.Down && other.attachedRigidbody.velocity.y < 0f) )
 			{
-			 // move the position of the object to other end of teleport. Would be better if it would take in account 
-			 // the thickness of the teleports.
-			 other.gameObject.transform.position += OtherEnd.position - transform.position;
+				other.gameObject.transform.position = new Vector3( other.gameObject.transform.position.x, OtherEnd.position.y, other.gameObject.transform.position.z );
 			}
 		}
     }
