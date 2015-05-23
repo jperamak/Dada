@@ -37,6 +37,7 @@
         "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
         "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
         "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
+        
         "UP": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
         "DOWN": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
         "RIGHT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"ONE"}],

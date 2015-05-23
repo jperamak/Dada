@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 272fdd1df98a71249a67633ab1572865
-timeCreated: 1432399816
+guid: 8b846392d7c284646b3e7f7b63551bba
+timeCreated: 1432400048
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Ghosts_0
-    21300002: Ghosts_1
+    21300000: ghost2_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,13 +50,13 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Ghosts_1
+    - name: ghost2_0
       rect:
         serializedVersion: 2
-        x: 801
-        y: 261
-        width: 406
-        height: 507
+        x: 629
+        y: 0
+        width: 348
+        height: 413
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

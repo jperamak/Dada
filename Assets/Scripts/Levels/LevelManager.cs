@@ -108,7 +108,7 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
-	public virtual void SpawnHero(Player p, Vector2 newSpawnPoint){
+	public virtual GameObject SpawnHero(Player p, Vector2 newSpawnPoint){
 
 		//create an instance of the hero so the player can try it out in the selection screen
 		Hero hero = (Instantiate(p.Hero.Prefab) as GameObject).GetComponent<Hero>();
@@ -141,6 +141,7 @@ public class LevelManager : MonoBehaviour {
 			RespawnSound.PlayEffect();
 
         _camera.AddPlayer(hero.transform);
+		return hero.gameObject;
 	}
 
 	protected virtual IEnumerator RespawnCountdown(Player p, Vector2 newSpawnPoint, Ghost g){

@@ -30,7 +30,7 @@ public class Hero : MonoBehaviour {
 	void Awake(){
 		_rangeWeaponHand = transform.Find("Hand1");
 		_meleeWeaponHand = transform.Find("Hand2");
-		_body = transform.Find("Body/body1");
+		_body = transform.Find("Body/Robe");
 		JumpSound = DadaAudio.GetSoundEffect(JumpSound);
 	}
 

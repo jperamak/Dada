@@ -13,4 +13,16 @@ public class GravityLevelManager : LevelManager {
 
 		base.InitLevel ();
 	}
+
+	public override GameObject SpawnHero (Player p, Vector2 newSpawnPoint){
+
+		GameObject hero = base.SpawnHero (p, newSpawnPoint);
+		HeroControllerV2 hc2 = hero.GetComponent<HeroControllerV2>();
+		if(hc2 != null){
+			Destroy(hc2);
+			hero.AddComponent<HeroController>();
+		}
+
+		return hero;
+	}
 }
