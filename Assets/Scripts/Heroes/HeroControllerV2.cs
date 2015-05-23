@@ -50,6 +50,7 @@ public class HeroControllerV2 : MonoBehaviour {
 		_groundCheckRight = transform.Find("GroundCheckRight");
 		_groundCheckUpperLeft = transform.Find("GroundCheckUpperLeft");
 		_groundCheckLowerRight = transform.Find("GroundCheckLowerRight");
+		_slopeCheck = transform.Find("SlopeCheck");
 
 		_wallCheck 		 = transform.Find("WallCheck");
 		_crossairPivot 	 = transform.Find("CrossairPivot");
@@ -362,7 +363,7 @@ public class HeroControllerV2 : MonoBehaviour {
 //			||  Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) 
 //				|| Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn); //LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
 	
-		return Physics2D.OverlapArea( _groundCheckUpperLeft.position, _groundCheckLowerRight.position, _hero.JumpOn);
+		return (Physics2D.OverlapArea( _groundCheckUpperLeft.position, _groundCheckLowerRight.position, _hero.JumpOn) != null);
 	}  
 
 
