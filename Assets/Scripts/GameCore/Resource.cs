@@ -20,6 +20,10 @@ public sealed class Resource {
 	//Heroes
 	//public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/Monk");
 	public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/MonkV2");
+	public static readonly Resource POT_HERO = new Resource("Monk", "Heroes/MonkV2");
+	public static readonly Resource CAT_HERO = new Resource("Monk", "Heroes/MonkV2");
+	public static readonly Resource FISH_HERO = new Resource("Monk", "Heroes/MonkV2");
+	public static readonly Resource FEZ_HERO = new Resource("Monk", "Heroes/MonkV2");
 
 	//public static readonly Resource CACTUAR_HERO = new Resource("Cactuar", "Heroes/Cactuar");
 	//public static readonly Resource POTATO_HERO = new Resource("Mr. Potato", "Heroes/MrPotato");

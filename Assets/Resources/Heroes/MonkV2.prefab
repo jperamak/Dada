@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &107062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 454066}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &117994
 GameObject:
   m_ObjectHideFlags: 1
@@ -184,7 +199,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 477472}
   m_Layer: 0
-  m_Name: GroundCheck
+  m_Name: GroundCheckLowerRight
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -203,6 +218,21 @@ GameObject:
   m_Name: rightHand 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &169238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 439348}
+  m_Layer: 0
+  m_Name: GroundCheckUpperLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -336,7 +366,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.2833977, y: 30.7038555, z: -1}
+  m_LocalPosition: {x: 22.3005142, y: 3.85158443, z: -1}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
   m_Children:
   - {fileID: 427786}
@@ -344,12 +374,26 @@ Transform:
   - {fileID: 429830}
   - {fileID: 490582}
   - {fileID: 497044}
-  - {fileID: 477472}
+  - {fileID: 454066}
   - {fileID: 454908}
   - {fileID: 429368}
   - {fileID: 434838}
+  - {fileID: 439348}
+  - {fileID: 477472}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &439348
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.382999986, y: -.936999977, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 434926}
+  m_RootOrder: 9
 --- !u!4 &444422
 Transform:
   m_ObjectHideFlags: 1
@@ -362,6 +406,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 427786}
   m_RootOrder: 2
+--- !u!4 &454066
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.08800006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 434926}
+  m_RootOrder: 5
 --- !u!4 &454908
 Transform:
   m_ObjectHideFlags: 1
@@ -418,11 +474,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.08800006, z: 0}
+  m_LocalPosition: {x: .363000005, y: -1.15799999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434926}
-  m_RootOrder: 5
+  m_RootOrder: 10
 --- !u!4 &490582
 Transform:
   m_ObjectHideFlags: 1
