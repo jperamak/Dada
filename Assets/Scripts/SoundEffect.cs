@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -16,11 +17,14 @@ public class SoundEffect : MonoBehaviour
     public float minVolume = 1f;
     public float maxVolume = 1f;
 
+    public int maxSimultaneous = 5;
+
     public ClipCyclingMode Mode = ClipCyclingMode.Random;
 
     private int _currentClip;
 	private float _lastPlayed;
 
+    private int _numPlaying = 0;
 
     void Awake()
     {
@@ -34,20 +38,24 @@ public class SoundEffect : MonoBehaviour
 	//	if(_lastPlayed + PlayCooldown > Time.time)
 	//		return;
 
-        switch (Mode)
+        if (_numPlaying < maxSimultaneous)
         {
-            case ClipCyclingMode.Single:
-                PlayEffect(_audioClips.First());
-                break;
-            case ClipCyclingMode.InOrder:
-                if (_currentClip >= _audioClips.Count)
-                    _currentClip = 0;
-                PlayEffect(_audioClips[_currentClip]);
-                _currentClip++;
-                break;
-            case ClipCyclingMode.Random:
-                PlayEffect(_audioClips[Random.Range(0, _audioClips.Count)]);
-                break;
+            _numPlaying++;
+            switch (Mode)
+            {
+                case ClipCyclingMode.Single:
+                    PlayEffect(_audioClips.First());
+                    break;
+                case ClipCyclingMode.InOrder:
+                    if (_currentClip >= _audioClips.Count)
+                        _currentClip = 0;
+                    PlayEffect(_audioClips[_currentClip]);
+                    _currentClip++;
+                    break;
+                case ClipCyclingMode.Random:
+                    PlayEffect(_audioClips[Random.Range(0, _audioClips.Count)]);
+                    break;
+            }
         }
     }
 
@@ -63,7 +71,15 @@ public class SoundEffect : MonoBehaviour
 			_lastPlayed = Time.time;
             effect.Play();
         }
-    }   
+
+        StartCoroutine(Moo(Random.Range(0.2f,0.7f))) ;
+    }
+
+    private IEnumerator Moo(float time)
+    {
+        yield return new WaitForSeconds(time);
+        _numPlaying--;
+    }
 }
 
 public enum ClipCyclingMode
