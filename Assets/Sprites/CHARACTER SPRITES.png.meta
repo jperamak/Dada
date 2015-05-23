@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 04d49f32308254d1fb589360aa15d3a6
-timeCreated: 1432404870
+timeCreated: 1432407273
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -26,6 +26,10 @@ TextureImporter:
     21300038: Poop Hat
     21300040: Tea Hat
     21300042: Pot Hat
+    21300044: Crossair Sprite
+    21300046: CHARACTER SPRITES_1
+    21300048: CHARACTER SPRITES_3
+    21300050: CHARACTER SPRITES_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -170,6 +174,76 @@ TextureImporter:
         height: 96
       alignment: 9
       pivot: {x: .6648103, y: .238706589}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Crossair Sprite
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 21
+        width: 73
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHARACTER SPRITES_1
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 24
+        width: 64
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHARACTER SPRITES_2
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 27
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHARACTER SPRITES_3
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 24
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHARACTER SPRITES_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 21
+        width: 61
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHARACTER SPRITES_5
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 135
+        width: 96
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHARACTER SPRITES_6
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 57
+        width: 135
+        height: 129
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
