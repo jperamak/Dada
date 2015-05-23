@@ -15,6 +15,8 @@ public class HeroControllerV2 : MonoBehaviour {
 	protected Transform _groundCheck;			// A position marking where to check if the player is grounded.
 	protected Transform _groundCheckLeft;		// A position marking where to check if the player is grounded.
 	protected Transform _groundCheckRight;	// A position marking where to check if the player is grounded.
+	protected Transform _groundCheckUpperLeft;		// A position markings to corner of area where to check if the player is grounded.
+	protected Transform _groundCheckLowerRight;	// A position marking where to check if the player is grounded.
 	protected Transform _slopeCheck;
 	protected Transform _wallCheck;			// A position marking where to check if the player is grounded.
 	protected Transform _crossairPivot;		// The point where the crossair is attached to
@@ -46,7 +48,10 @@ public class HeroControllerV2 : MonoBehaviour {
 		_groundCheck     = transform.Find("GroundCheck");
 		_groundCheckLeft = transform.Find("GroundCheckLeft");
 		_groundCheckRight = transform.Find("GroundCheckRight");
-		_slopeCheck 	 = transform.Find("SlopeCheck");
+		_groundCheckUpperLeft = transform.Find("GroundCheckUpperLeft");
+		_groundCheckLowerRight = transform.Find("GroundCheckLowerRight");
+		_slopeCheck = transform.Find("SlopeCheck");
+
 		_wallCheck 		 = transform.Find("WallCheck");
 		_crossairPivot 	 = transform.Find("CrossairPivot");
 		_crossair 		 = _crossairPivot.Find("Crossair");
@@ -354,11 +359,14 @@ public class HeroControllerV2 : MonoBehaviour {
 
 	private bool IsGrounded(){
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		return Physics2D.Linecast(transform.position, _groundCheck.position, _hero.JumpOn) 
-			||  Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) 
-				|| Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn); //LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
-		
+//		return Physics2D.Linecast(transform.position, _groundCheck.position, _hero.JumpOn) 
+//			||  Physics2D.Linecast(transform.position, _groundCheckLeft.position, _hero.JumpOn) 
+//				|| Physics2D.Linecast(transform.position, _groundCheckRight.position, _hero.JumpOn); //LayerMask.GetMask(new string[] { "Ground", "Rubble",  }));
+	
+		return (Physics2D.OverlapArea( _groundCheckUpperLeft.position, _groundCheckLowerRight.position, _hero.JumpOn) != null);
 	}  
+
+
 
 
 	// Adjust joystick input (-1..1) so that input which has absolute value of minimum or smaller will return 0f

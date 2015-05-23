@@ -95,6 +95,8 @@ public class DadaInput {
 		}
 
 		names = fixedNames.ToArray();
+		for (int i=0; i< names.Length; i++)
+			Debug.Log( names[i] );
 
 		if(Instance._controllerNames == null || !ArraysEqual<string>(names,Instance._controllerNames)){
 			Instance._controllerNames = names;

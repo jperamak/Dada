@@ -110,7 +110,8 @@ public class ConsoleController : AbstractController {
 			float sum = 0;
 			float val;
 			foreach(KeyProperty prop in keys){
-				
+
+				Debug.Log("suff: "+suffix+" name: "+prop.Name);
 				//read value from device
 				if(prop.IsAxis)
 					val = UnityEngine.Input.GetAxis(suffix+prop.Name);
