@@ -267,7 +267,7 @@ public class LevelManager : MonoBehaviour {
 	private Player CreateDebugPlayers(){
 
 		Player p1 = new Player(DadaInput.GetJoystick(0));
-		p1.Hero = Resource.MONK_HERO;
+		p1.Hero = Resource.FISH_HERO;
 		p1.FirstWeapon = Resource.PHOENIX;
 		p1.SecondWeapon = Resource.LAYBOMB_MELEE;
 		p1.InTeam = Team.TEAM_1;

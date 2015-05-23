@@ -32,11 +32,14 @@ public class Hero : MonoBehaviour {
 		_meleeWeaponHand = transform.Find("Hand2");
 		_body = transform.Find("Body/Robe");
 		JumpSound = DadaAudio.GetSoundEffect(JumpSound);
+
 	}
 
 	void Start(){
-		if(TeamNumber < TeamColors.Length)
+
+		if(TeamNumber < TeamColors.Length){
 			_body.GetComponent<SpriteRenderer>().sprite = TeamColors[TeamNumber];
+		}
 	}
 
 
