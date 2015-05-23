@@ -64,7 +64,7 @@ public class MainScreen : MonoBehaviour {
 
 		if(DadaGame.PlayersNum >= 1){
 			Player p = new Player(DadaInput.GetJoystick(0));
-			p.Hero = Resource.POT_HERO;
+			p.Hero = Resource.FISH_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
 			p.SecondWeapon = Resource.LAYBOMB_MELEE;
 			p.InTeam = Team.TEAM_1;
@@ -73,7 +73,7 @@ public class MainScreen : MonoBehaviour {
 		
 		if(DadaGame.PlayersNum >= 2){
 			Player p = new Player(DadaInput.GetJoystick(1));
-			p.Hero = Resource.FISH_HERO;
+			p.Hero = Resource.FEZ_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
 			p.SecondWeapon = Resource.LAYBOMB_MELEE;
 			p.InTeam = Team.TEAM_2;
@@ -82,7 +82,7 @@ public class MainScreen : MonoBehaviour {
 		
 		if(DadaGame.PlayersNum >= 3){
 			Player p = new Player(DadaInput.GetJoystick(2));
-			p.Hero = Resource.CAT_HERO;
+			p.Hero = Resource.RACCOON_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
 			p.SecondWeapon = Resource.LAYBOMB_MELEE;
 			p.InTeam = isTeam ? Team.TEAM_1 : Team.TEAM_3;
@@ -91,7 +91,7 @@ public class MainScreen : MonoBehaviour {
 		
 		if(DadaGame.PlayersNum >= 4){
 			Player p = new Player(DadaInput.GetJoystick(3));
-			p.Hero = Resource.FEZ_HERO;
+			p.Hero = Resource.POOP_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
 			p.SecondWeapon = Resource.LAYBOMB_MELEE;
 			p.InTeam = isTeam ? Team.TEAM_1 : Team.TEAM_4;

@@ -18,15 +18,12 @@ public sealed class Resource {
 	public static readonly Resource ELECTRIC_MELEE = new Resource("Electric Deer", "Weapons/ElectricKatana");
 
 	//Heroes
-	//public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/Monk");
-	public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/MonkV2");
-	public static readonly Resource POT_HERO = new Resource("Monk", "Heroes/MonkV2");
-	public static readonly Resource CAT_HERO = new Resource("Monk", "Heroes/MonkV2");
-	public static readonly Resource FISH_HERO = new Resource("Monk", "Heroes/MonkV2");
-	public static readonly Resource FEZ_HERO = new Resource("Monk", "Heroes/MonkV2");
-
-	//public static readonly Resource CACTUAR_HERO = new Resource("Cactuar", "Heroes/Cactuar");
-	//public static readonly Resource POTATO_HERO = new Resource("Mr. Potato", "Heroes/MrPotato");
+	public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/Monk");
+	public static readonly Resource POOP_HERO = new Resource("Poopy", "Heroes/PoopMonk");
+	public static readonly Resource RACCOON_HERO = new Resource("RaccoonLover", "Heroes/RaccoonMonk");
+	public static readonly Resource FISH_HERO = new Resource("Fisher", "Heroes/FishMonk");
+	public static readonly Resource FEZ_HERO = new Resource("TheDoctor", "Heroes/FezMonk");
+	
 
 	public string Name{get; private set;}
 	public string Path{get; private set;}
