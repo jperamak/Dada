@@ -81,10 +81,16 @@
         "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted":true}],
         "MOVE_AXIS": [{"KeyName": "axis 3","IsAxis": true}],
         "AIM_AXIS": [{"KeyName": "axis 4","IsAxis": true, "Inverted":true}],
-        "UP": [{"KeyName": "axis 7",  "KeyTriggerCondition":"ONE"}],
-        "DOWN": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
-        "RIGHT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
-        "LEFT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
+        
+        "X_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
+        "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
+        "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
+        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
+        
+        "UP": [{"KeyName": "button 5"}],
+        "DOWN": [{"KeyName": "button 6"}],
+        "RIGHT": [{"KeyName": "button 8"}],
+        "LEFT": [{"KeyName": "button 7"}],
     },
     "Logitech Dual Action": {
         "MELEE": [{"KeyName": "button 2"}],
