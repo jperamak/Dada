@@ -40,10 +40,32 @@
         "UP": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
         "DOWN": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
         "RIGHT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
-        "LEFT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
-        
+        "LEFT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}], 
     },
-        "©Microsoft Corporation Controller": {
+    
+    "Controller (Xbox 360 Wireless Receiver for Windows)": {
+        "MELEE": [{"KeyName": "button 1"}],
+        "SHOOT": [{"KeyName": "button 2"}],
+        "JUMP": [{"KeyName": "button 0"}],
+        "SPECIAL": [{"KeyName": "button 3"}],
+        "MENU": [{"KeyName": "button 7"}],
+        "START": [{"KeyName": "button 7"}],
+        "SELECT": [{"KeyName": "button 6"}],
+        "BACK": [{"KeyName": "button 1"}],
+        "PAUSE": [{"KeyName": "button 7"}],
+        "SUBMIT": [{"KeyName": "button 0"}],
+        "CANCEL": [{"KeyName": "button 1"}],
+        "X_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
+        "Y_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
+        "MOVE_AXIS": [{"KeyName": "axis X","IsAxis": true}, {"KeyName": "axis 6","IsAxis": true}],
+        "AIM_AXIS": [{"KeyName": "axis Y","IsAxis": true, "Inverted": true},{"KeyName": "axis 7","IsAxis": true}],
+        "UP": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
+        "DOWN": [{"KeyName": "axis 7", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}],
+        "RIGHT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"ONE"}],
+        "LEFT": [{"KeyName": "axis 6", "IsAxis": true, "KeyTriggerCondition":"MINUS_ONE"}], 
+    },
+    
+  "©Microsoft Corporation Controller": {
         "MELEE": [{"KeyName": "button 17"}],
         "SHOOT": [{"KeyName": "button 14"},{"KeyName": "button 18"}],
         "JUMP": [{"KeyName": "button 13"},{"KeyName": "button 16"}],

@@ -1,4 +1,5 @@
 ﻿using System;
+using Dada.InputSystem;
 
 namespace UnityEngine.EventSystems
 {
@@ -10,9 +11,12 @@ namespace UnityEngine.EventSystems
 		
 		private Vector2 m_LastMousePosition;
 		private Vector2 m_MousePosition;
-		
-		protected DadaInputModule()
-		{ }
+		private AbstractController _controller;
+
+
+
+		protected DadaInputModule(){
+		}
 		
 		[Obsolete("Mode is no longer needed on input module as it handles both mouse and keyboard simultaneously.", false)]
 		public enum InputMode
@@ -114,11 +118,13 @@ namespace UnityEngine.EventSystems
 		{
 			if (!base.ShouldActivateModule())
 				return false;
-			
-			var shouldActivate = DadaInput.GetButtonDown(m_SubmitButton);
-			shouldActivate |= DadaInput.GetButtonDown(m_CancelButton);
-			shouldActivate |= !Mathf.Approximately(DadaInput.GetAxis(m_HorizontalAxis), 0.0f);
-			shouldActivate |= !Mathf.Approximately(DadaInput.GetAxis(m_VerticalAxis), 0.0f);
+
+			_controller = DadaInput.GetJoystick(0);
+
+			var shouldActivate = _controller.GetButtonDown(m_SubmitButton);
+			shouldActivate |= _controller.GetButtonDown(m_CancelButton);
+			shouldActivate |= !Mathf.Approximately(_controller.GetAxis(m_HorizontalAxis), 0.0f);
+			shouldActivate |= !Mathf.Approximately(_controller.GetAxis(m_VerticalAxis), 0.0f);
 			shouldActivate |= (m_MousePosition - m_LastMousePosition).sqrMagnitude > 0.0f;
 			shouldActivate |= Input.GetMouseButtonDown(0);
 			return shouldActivate;
@@ -170,18 +176,18 @@ namespace UnityEngine.EventSystems
 				return false;
 			
 			var data = GetBaseEventData();
-			if (DadaInput.GetButtonDown(m_SubmitButton))
+			if (_controller.GetButtonDown(m_SubmitButton))
 				ExecuteEvents.Execute(eventSystem.currentSelectedGameObject, data, ExecuteEvents.submitHandler);
 			
-			if (DadaInput.GetButtonDown(m_CancelButton))
+			if (_controller.GetButtonDown(m_CancelButton))
 				ExecuteEvents.Execute(eventSystem.currentSelectedGameObject, data, ExecuteEvents.cancelHandler);
 			return data.used;
 		}
 		
 		private bool AllowMoveEventProcessing(float time)
 		{
-			bool allow = DadaInput.GetButtonDown(m_HorizontalAxis);
-			allow |= DadaInput.GetButtonDown(m_VerticalAxis);
+			bool allow = _controller.GetButtonDown(m_HorizontalAxis);
+			allow |= _controller.GetButtonDown(m_VerticalAxis);
 			allow |= (time > m_NextAction);
 			return allow;
 		}
@@ -189,10 +195,10 @@ namespace UnityEngine.EventSystems
 		private Vector2 GetRawMoveVector()
 		{
 			Vector2 move = Vector2.zero;
-			move.x = DadaInput.GetAxis(m_HorizontalAxis);
-			move.y = DadaInput.GetAxis(m_VerticalAxis);
+			move.x = _controller.GetAxis(m_HorizontalAxis);
+			move.y = _controller.GetAxis(m_VerticalAxis);
 			
-			if (DadaInput.GetButtonDown(m_HorizontalAxis))
+			if (_controller.GetButtonDown(m_HorizontalAxis))
 			{
 				if (move.x < 0)
 					move.x = -1f;
