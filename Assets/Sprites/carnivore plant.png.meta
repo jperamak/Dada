@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: 018418b7f9aa546079f45a428a95efc2
-timeCreated: 1432465553
+timeCreated: 1432490077
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Carnivore_jaw1
+    21300002: carnivore jaw2
+    21300004: Carnivore_Leaf
+    21300006: Carnivore_glasses
+    21300008: Carnivore_stem
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +35,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +53,57 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Carnivore_jaw1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 448
+        width: 154
+        height: 244
+      alignment: 9
+      pivot: {x: .393158942, y: .407280356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: carnivore jaw2
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 451
+        width: 117
+        height: 237
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Carnivore_Leaf
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 422
+        width: 182
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Carnivore_glasses
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 565
+        width: 184
+        height: 129
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Carnivore_stem
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 141
+        width: 55
+        height: 272
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
