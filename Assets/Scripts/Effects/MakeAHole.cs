@@ -12,6 +12,6 @@ public class MakeAHole : Effect{
 	
 //		var angle = transform.rotation.eulerAngles.z + AngleOffset + Random.Range(-0.5f, 0.5f) * AngleRandomness;
 		
-	//	D2D_Destructible.StampAll(transform.position, Size, 0f, StampTex, Hardness, Layers);
+		D2D_Destructible.StampAll(transform.position, Size, 0f, StampTex, Hardness, Layers);
 	}
 }

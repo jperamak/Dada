@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 212: {fileID: 21200000}
+  - 114: {fileID: 11400000}
+  - 50: {fileID: 5000000}
+  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400002}
+  - 60: {fileID: 6000000}
+  m_Layer: 0
+  m_Name: Breaking Egg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!50 &5000000
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!60 &6000000
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: .473624468, y: -.17723459}
+      - {x: .473526448, y: -.0402097106}
+      - {x: .431948096, y: .131578371}
+      - {x: .358211935, y: .312577248}
+      - {x: .280000001, y: .435474604}
+      - {x: .193945915, y: .525264859}
+      - {x: .113156736, y: .584106028}
+      - {x: .0273203831, y: .606556952}
+      - {x: -.0743156746, y: .594895184}
+      - {x: -.169839963, y: .540949225}
+      - {x: -.248841047, y: .467422694}
+      - {x: -.325894028, y: .354475677}
+      - {x: -.415104836, y: .165055156}
+      - {x: -.468051881, y: -.0134161413}
+      - {x: -.471368641, y: -.179679945}
+      - {x: -.443316787, y: -.314525366}
+      - {x: -.377244353, y: -.447155535}
+      - {x: -.271644324, y: -.535688877}
+      - {x: -.125777751, y: -.592933297}
+      - {x: -.00549752777, y: -.601466656}
+      - {x: .115688898, y: -.592933297}
+      - {x: .262577862, y: -.540177703}
+      - {x: .371288985, y: -.453110993}
+      - {x: .446380079, y: -.318094969}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89dd81744734284fa6a3418cf274264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageLevels:
+  - Sprite: {fileID: 21300000, guid: fb581fe72c60cc74b9b1d0f6781824de, type: 3}
+    DamageRequired: 0
+  - Sprite: {fileID: 21300000, guid: 9fafb747af68b5e49a3abac1f60c1e9f, type: 3}
+    DamageRequired: 10
+  - Sprite: {fileID: 21300000, guid: 58f03e6684a98f34bb8aa24f758f4846, type: 3}
+    DamageRequired: 20
+  - Sprite: {fileID: 21300000, guid: 48c0c2a8507df72419649d889fee9a41, type: 3}
+    DamageRequired: 30
+  - Sprite: {fileID: 21300000, guid: abc47fb26c3c29c459b40e9b0a6444b9, type: 3}
+    DamageRequired: 30
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f04369491c63ef4b8faea60e06874ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageScale: 5
+  DamageThreshold: 2
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88dc85a399893742aaea5652e853d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  Age: 0
+  ActivateDelay: .5
+  AllowDestruction: 1
+  DamageLimit: 100
+  ReplaceWith: {fileID: 100000, guid: 191365e5b965a794c9802ccbf3aa0314, type: 2}
+--- !u!212 &21200000
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: fb581fe72c60cc74b9b1d0f6781824de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
