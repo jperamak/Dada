@@ -5,11 +5,12 @@ public class PickupSpawner : MonoBehaviour {
 
     public GameObject[] WeaponPickupPrefabs;
     public float SpawnTime;
+	public float offsetTime;
 
     private float timer;
 	// Use this for initialization
 	void Start () {
-        timer = 0;
+        timer = -offsetTime;
 	}
 	
 	// Update is called once per frame
