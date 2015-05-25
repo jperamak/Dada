@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: b13bdca3487fba647a3add8b62df899c
 timeCreated: 1432592877
 licenseType: Free
@@ -16,6 +17,13 @@ TextureImporter:
     21300018: Egg_full_2
     21300020: Egg_full_3
     21300022: Egg_full_4
+=======
+guid: 6a80a0932cca24a3cac8ad98433c2f7d
+timeCreated: 1432586287
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName: {}
+>>>>>>> Stashed changes
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,14 +50,22 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
+<<<<<<< Updated upstream
     aniso: 16
+=======
+    aniso: -1
+>>>>>>> Stashed changes
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+<<<<<<< Updated upstream
   spriteMode: 2
+=======
+  spriteMode: 1
+>>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -60,6 +76,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+<<<<<<< Updated upstream
     sprites:
     - name: Egg_top
       rect:
@@ -181,6 +198,9 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
+=======
+    sprites: []
+>>>>>>> Stashed changes
   spritePackingTag: 
   userData: 
   assetBundleName: 
