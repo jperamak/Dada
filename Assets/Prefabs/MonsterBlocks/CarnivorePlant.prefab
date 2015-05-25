@@ -462,7 +462,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.1100006, y: -4.55000019, z: 0}
+  m_LocalPosition: {x: -19.1299992, y: -4.28000021, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429696}
@@ -604,10 +604,10 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106288}
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -634,10 +634,10 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135876}
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -857,8 +857,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92878dfed14a84863b5475463371e100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectHeroRange: 15
-  force: 200
+  detectRange: 20
+  attackRange: 13
+  detectPullForce: 80
+  attackPullForce: 400
 --- !u!212 &21204444
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -934,7 +936,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300006, guid: 4f1a81ce766c64642a259d9f4f736336, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21227470
@@ -1168,7 +1170,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300006, guid: 018418b7f9aa546079f45a428a95efc2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21269752
@@ -1220,7 +1222,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300006, guid: 4f1a81ce766c64642a259d9f4f736336, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21284206
@@ -1313,8 +1315,8 @@ SpringJoint2D:
   m_Anchor: {x: .388480663, y: 3.39320374}
   m_ConnectedAnchor: {x: -.0218818188, y: .794503212}
   m_Distance: .00499999989
-  m_DampingRatio: .75
-  m_Frequency: 10
+  m_DampingRatio: .850000024
+  m_Frequency: 8
 --- !u!231 &23147846
 SpringJoint2D:
   m_ObjectHideFlags: 1
@@ -1328,7 +1330,7 @@ SpringJoint2D:
   m_ConnectedAnchor: {x: -.0615544319, y: .786539078}
   m_Distance: 1
   m_DampingRatio: .5
-  m_Frequency: 5
+  m_Frequency: 2
 --- !u!231 &23154120
 SpringJoint2D:
   m_ObjectHideFlags: 1
@@ -1341,8 +1343,8 @@ SpringJoint2D:
   m_Anchor: {x: .0087621212, y: 3.60509205}
   m_ConnectedAnchor: {x: .640762091, y: 1.08509159}
   m_Distance: .00499999989
-  m_DampingRatio: .75
-  m_Frequency: 10
+  m_DampingRatio: .850000024
+  m_Frequency: 6
 --- !u!231 &23196596
 SpringJoint2D:
   m_ObjectHideFlags: 1
@@ -1353,10 +1355,10 @@ SpringJoint2D:
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: .049195528, y: .762530804}
-  m_ConnectedAnchor: {x: 3.19117641, y: .00391149521}
+  m_ConnectedAnchor: {x: 3.18818998, y: .291376829}
   m_Distance: .00499999989
   m_DampingRatio: .75
-  m_Frequency: 9
+  m_Frequency: 8
 --- !u!231 &23197702
 SpringJoint2D:
   m_ObjectHideFlags: 1
@@ -1369,8 +1371,8 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 3.61578035}
   m_ConnectedAnchor: {x: -.401259661, y: .987579346}
   m_Distance: .00499999989
-  m_DampingRatio: .75
-  m_Frequency: 10
+  m_DampingRatio: .850000024
+  m_Frequency: 8
 --- !u!233 &23313130
 HingeJoint2D:
   m_ObjectHideFlags: 1
@@ -1446,7 +1448,7 @@ HingeJoint2D:
   m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: -40
-    m_UpperAngle: 15
+    m_UpperAngle: 25
 --- !u!233 &23393862
 HingeJoint2D:
   m_ObjectHideFlags: 1
@@ -1457,7 +1459,7 @@ HingeJoint2D:
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: -.049608469, y: -1.2130332}
-  m_ConnectedAnchor: {x: 3.52039123, y: -1.96303344}
+  m_ConnectedAnchor: {x: 3.50039268, y: -1.69303346}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

@@ -8781,6 +8781,7 @@ MonoBehaviour:
   maxPitch: 1
   minVolume: 1
   maxVolume: 1
+  maxSimultaneous: 5
   Mode: 2
 --- !u!82 &399462743
 AudioSource:
@@ -17795,6 +17796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 0
   OtherEnd: {fileID: 2002318815}
+  TeleportsTo: {fileID: 2030772641}
 --- !u!61 &761678468
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50703,6 +50705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 1
   OtherEnd: {fileID: 980242882}
+  TeleportsTo: {fileID: 761678466}
 --- !u!61 &2030772644
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -17076,7 +17076,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 681486894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.4000015, y: -24, z: 0}
+  m_LocalPosition: {x: -43.4000015, y: -23.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29521,6 +29521,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: xMargin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: minZoom
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: zoomMod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: maxZoom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
+      propertyPath: moveSmooth
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []

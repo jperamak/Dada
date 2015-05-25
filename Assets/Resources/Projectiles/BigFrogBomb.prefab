@@ -186,7 +186,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.8800011, y: -5.28000021, z: 0}
+  m_LocalPosition: {x: -22.855402, y: 12.6431236, z: 0}
   m_LocalScale: {x: .699999988, y: .699999988, z: 1}
   m_Children:
   - {fileID: 482162}
@@ -480,7 +480,7 @@ MonoBehaviour:
   VisualEffectOnTrigger: {fileID: 0}
   firstPhaseLength: 18
   secondPhaseLength: 1.5
-  jumpForce: 1500
+  jumpForce: 3700
   CroakSound: {fileID: 11402292, guid: 7e48584d467b941b782df283ba8ef60f, type: 2}
   AboutToExplodeSound: {fileID: 11402292, guid: cad3d574039ee4a9f903cbe786ba2eba,
     type: 2}

@@ -7,13 +7,13 @@ public class CrateCowboyHat : MonoBehaviour {
 	public float floatSpeed;
 
 	float awakeTime;
-	Animation hatAnim;
+
 	bool hatInHead = false;
 
 	// Use this for initialization
 	void Awake () {
 		awakeTime = Time.time;
-		hatAnim = this.GetComponent<Animation>();
+
 	}
 	
 	// Update is called once per frame
@@ -25,8 +25,13 @@ public class CrateCowboyHat : MonoBehaviour {
 			transform.position = Vector2.MoveTowards(transform.position, target.transform.position, floatSpeed*Time.deltaTime);
 		//}
 
-		if (awakeTime > 0.5f && (target.transform.position - transform.position).magnitude < 0.1f) {
+
+		if (Time.time - awakeTime > 0.5f && (target.transform.position - transform.position).magnitude < 0.1f) {
 			hatInHead = true;
+			Animation hatAnim = this.GetComponent<Animation>();
+			if (hatAnim != null)
+				hatAnim.enabled = false;
+			transform.eulerAngles = new Vector3(0f,0f,0f);
 		}
 
 

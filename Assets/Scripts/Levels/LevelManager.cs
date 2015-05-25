@@ -40,8 +40,9 @@ public class LevelManager : MonoBehaviour {
 
 		//********** FOR DEBUG ONLY!! **************
 		if(_teams == null || _teams.Count == 0){
-			DadaGame.RegisterPlayer(CreateDebugPlayers());
-			_teams = DadaGame.Teams;
+			DadaGame.RegisterPlayer(CreateDebugPlayers(0));
+            DadaGame.RegisterPlayer(CreateDebugPlayers(1));
+            _teams = DadaGame.Teams;
 		}
 
 		//find all respawn points
@@ -264,13 +265,16 @@ public class LevelManager : MonoBehaviour {
 		return pos;
 	}
 	
-	private Player CreateDebugPlayers(){
+	private Player CreateDebugPlayers(int controller){
 
-		Player p1 = new Player(DadaInput.GetJoystick(0));
+		Player p1 = new Player(DadaInput.GetJoystick(controller));
 		p1.Hero = Resource.FISH_HERO;
 		p1.FirstWeapon = Resource.PHOENIX;
 		p1.SecondWeapon = Resource.LAYBOMB_MELEE;
-		p1.InTeam = Team.TEAM_1;
+        if (controller == 0)
+            p1.InTeam = Team.TEAM_1;
+        else
+            p1.InTeam = Team.TEAM_2;
 		return p1;
 	}
 
