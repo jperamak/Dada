@@ -29537,7 +29537,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: maxZoom
-      value: 0
+      value: 24.2000008
       objectReference: {fileID: 0}
     - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: moveSmooth

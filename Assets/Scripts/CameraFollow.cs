@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour
     public float buffer = 4f;
 
     public float minZoom;
-    private float maxZoom;
+    public float maxZoom;
 
     private Vector2 minPlayer;
     private Vector2 maxPlayer;
@@ -21,13 +21,13 @@ public class CameraFollow : MonoBehaviour
     public List<Transform> players;
 
 
-    void Awake()
+    void Start()
     {
         topRight = GameObject.Find("cameraTopRightBound").transform.position;
         bottomLeft = GameObject.Find("cameraBottomLeftBound").transform.position;
-        float x = (topRight.x - bottomLeft.x) / 2f * Screen.height / Screen.width;
-        float y = (topRight.y - bottomLeft.y) / 2f;
-        maxZoom = x > y ? x : y;
+        //float x = (topRight.x - bottomLeft.x) / 2f * Screen.height / Screen.width;
+        //float y = (topRight.y - bottomLeft.y) / 2f;
+        //maxZoom = x > y ? x : y;
     }
 
     public void AddPlayer(Transform p)
@@ -41,7 +41,7 @@ public class CameraFollow : MonoBehaviour
     }
 
 
-    void LateUpdate()
+    void Update()
     {
         FindCorners();
         AdjustZoom();
