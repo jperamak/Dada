@@ -2,43 +2,33 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class CameraFollow : MonoBehaviour 
+public class CameraFollow : MonoBehaviour
 {
-	public float xMargin = 1f;		// Distance in the x axis the player can move before the camera follows.
-	public float yMargin = 1f;		// Distance in the y axis the player can move before the camera follows.
-	public float xSmooth = 8f;		// How smoothly the camera catches up with it's target movement in the x axis.
-	public float ySmooth = 8f;		// How smoothly the camera catches up with it's target movement in the y axis.
-    public float zoomSmooth = 2f;
 
-    public Vector2 maxXAndY;		// The maximum x and y coordinates the camera can have.
-	public Vector2 minXAndY;		// The minimum x and y coordinates the camera can have.
-    public float maxZoom;
+    public float moveSmooth = 1f;
+    public float zoomSmooth = 8f;
+
+    public float buffer = 4f;
+
     public float minZoom;
-    public float zoomMod = 0.6f;
+    private float maxZoom;
 
-    public Vector2 average;
     private Vector2 minPlayer;
     private Vector2 maxPlayer;
-    private float vertExtent;
-    private float horExtent;
-    private Vector3 topRight, bottomLeft;
+    private Vector3 topRight, bottomLeft, average;
+    
+    [HideInInspector]
+    public List<Transform> players;
 
 
-
-	public List<Transform> players;		// Reference to the player's transform.
-
-	void Awake ()
-	{
-
+    void Awake()
+    {
         topRight = GameObject.Find("cameraTopRightBound").transform.position;
         bottomLeft = GameObject.Find("cameraBottomLeftBound").transform.position;
-        
-        // Setting up the reference.
-        average = Vector2.zero;
-        minPlayer = Vector2.zero;
-        maxPlayer = Vector2.zero;
-
-	}
+        float x = (topRight.x - bottomLeft.x) / 2f * Screen.height / Screen.width;
+        float y = (topRight.y - bottomLeft.y) / 2f;
+        maxZoom = x > y ? x : y;
+    }
 
     public void AddPlayer(Transform p)
     {
@@ -50,106 +40,66 @@ public class CameraFollow : MonoBehaviour
         players.Remove(p);
     }
 
-	bool CheckXMargin()
-	{
-		// Returns true if the distance between the camera and the player in the x axis is greater than the x margin.
-        foreach (Transform t in players)
-            if (Mathf.Abs(transform.position.x - t.position.x) > xMargin)
-                return true;
-         if ( transform.position.x - xMargin  < bottomLeft.x)
-        {
-            minPlayer.x = bottomLeft.x;
-        }
-        if ( transform.position.x + xMargin  > topRight.x)
-        {
-            maxPlayer.x = topRight.x;
-        }
-        return false;
-	}
+
+    void LateUpdate()
+    {
+        FindCorners();
+        AdjustZoom();
+        Move();
+    }
+
+    void Move()
+    {
+        average = (minPlayer + maxPlayer) / 2;
+        float targetX = Mathf.Lerp(transform.position.x, average.x, moveSmooth * Time.deltaTime);
+        float targetY = Mathf.Lerp(transform.position.y, average.y, moveSmooth * Time.deltaTime);
+        targetX = Mathf.Clamp(targetX, bottomLeft.x + GetComponent<Camera>().orthographicSize * Screen.width / Screen.height, topRight.x - GetComponent<Camera>().orthographicSize * Screen.width / Screen.height);
+        targetY = Mathf.Clamp(targetY, bottomLeft.y + GetComponent<Camera>().orthographicSize, topRight.y - GetComponent<Camera>().orthographicSize);
+        transform.position = new Vector3(targetX, targetY, transform.position.z);
+    }
 
 
-	bool CheckYMargin()
-	{
-		// Returns true if the distance between the camera and the player in the y axis is greater than the y margin.
-        foreach (Transform t in players)
-            if (Mathf.Abs(transform.position.y - t.position.y) > yMargin)
-            {
-                return true;
-            }
-        if ( transform.position.y - yMargin  < bottomLeft.y)
-        {
-            minPlayer.y = bottomLeft.y;
-        }
-        if ( transform.position.y + yMargin  > topRight.y)
-        {
-            maxPlayer.y = topRight.y;
-        }
-        return false;
-	}
-
-
-	void LateUpdate ()
-	{
-        if (players.Count > 0)
-		    TrackPlayer();
-	}
-	
     void AdjustZoom()
     {
-        float x = (maxPlayer.x - minPlayer.x) * zoomMod;
-        float y = (maxPlayer.y - minPlayer.y) * zoomMod;
+        float x = (maxPlayer.x - minPlayer.x) / 2f * Screen.height / Screen.width;
+        float y = (maxPlayer.y - minPlayer.y) / 2f;
 
 
         if (x < minZoom && y < minZoom)
-            GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, minZoom, zoomSmooth * Time.deltaTime);
+            GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, minZoom + buffer, zoomSmooth * Time.deltaTime);
         else
         {
             float zoom = x > y ? x : y;
-            zoom = Mathf.Lerp(GetComponent<Camera>().orthographicSize, zoom, zoomSmooth * Time.deltaTime);
+            zoom = Mathf.Lerp(GetComponent<Camera>().orthographicSize, zoom + buffer, zoomSmooth * Time.deltaTime);
             GetComponent<Camera>().orthographicSize = zoom < maxZoom ? zoom : maxZoom;
         }
-        vertExtent = Camera.main.orthographicSize;
-        horExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
     }
-	
-	void TrackPlayer ()
-	{
-        minPlayer = maxXAndY;
-        maxPlayer = minXAndY;
-        foreach (Transform t in players)
+
+    void FindCorners()
+    {
+        minPlayer = topRight;
+        maxPlayer = bottomLeft;
+        foreach (Transform p in players)
         {
-            minPlayer.x = minPlayer.x < t.position.x ? minPlayer.x : t.position.x;
-            minPlayer.y = minPlayer.y < t.position.y ? minPlayer.y : t.position.y;
+            if (p.position.x < minPlayer.x)
+                minPlayer.x = p.position.x;
+            if (p.position.y < minPlayer.y)
+                minPlayer.y = p.position.y;
 
-            maxPlayer.x = maxPlayer.x > t.position.x ? maxPlayer.x : t.position.x;
-            maxPlayer.y = maxPlayer.y > t.position.y ? maxPlayer.y : t.position.y;
+            if (p.position.x > maxPlayer.x)
+                maxPlayer.x = p.position.x;
+            if (p.position.y > maxPlayer.y)
+                maxPlayer.y = p.position.y;
 
-            average = (minPlayer + maxPlayer) * 0.5f;
+            if (maxPlayer.x > topRight.x - buffer)
+                maxPlayer.x = topRight.x - buffer;
+            if (maxPlayer.y > topRight.y - buffer)
+                maxPlayer.y = topRight.y - buffer;
+
+            if (minPlayer.x < bottomLeft.x + buffer)
+                minPlayer.x = bottomLeft.x + buffer;
+            if (minPlayer.y < bottomLeft.y + buffer)
+                minPlayer.y = bottomLeft.y + buffer;
         }
-
-		// By default the target x and y coordinates of the camera are it's current x and y coordinates.
-		float targetX = transform.position.x;
-		float targetY = transform.position.y;
-
-
-		// If the player has moved beyond the x margin...
-		if(CheckXMargin())
-			// ... the target x coordinate should be a Lerp between the camera's current x position and the player's current x position.
-            targetX = Mathf.Lerp(transform.position.x, average.x, xSmooth * Time.deltaTime);
-
-		// If the player has moved beyond the y margin...
-		if(CheckYMargin())
-			// ... the target y coordinate should be a Lerp between the camera's current y position and the player's current y position.
-            targetY = Mathf.Lerp(transform.position.y, average.y, ySmooth * Time.deltaTime);
-
-        AdjustZoom();
-
-		// The target x and y coordinates should not be larger than the maximum or smaller than the minimum.
-        targetX = Mathf.Clamp(targetX, horExtent + minXAndY.x * 0.5f , maxXAndY.x * 0.5f - horExtent);
-        targetY = Mathf.Clamp(targetY, vertExtent +  minXAndY.y * 0.5f, maxXAndY.y * 0.5f - vertExtent);
-
-
-		// Set the camera's position to the target position with the same z component.
-		transform.position = new Vector3(targetX, targetY, transform.position.z);
-	}
+    }
 }

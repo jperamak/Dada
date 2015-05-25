@@ -75,7 +75,7 @@ MonoBehaviour:
   sleepTime: .5
   dragMod: 3
   range: 3
-  chaseFollow: 8
+  chaseFollow: 16
   chaseSpeed: 8
 --- !u!114 &11476768
 MonoBehaviour:
