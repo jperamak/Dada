@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 17972ea2a902b48c7bb9db5cfca85af4
-timeCreated: 1431962275
+timeCreated: 1432579619
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,28 +59,28 @@ TextureImporter:
         y: 40
         width: 339
         height: 232
-      alignment: 9
-      pivot: {x: .474165618, y: .0784649998}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: cloud_1
       rect:
         serializedVersion: 2
-        x: 484
-        y: 38
-        width: 369
-        height: 235
-      alignment: 9
-      pivot: {x: .504944503, y: .0838464275}
+        x: 513
+        y: 40
+        width: 339
+        height: 232
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: cloud_2
       rect:
         serializedVersion: 2
-        x: 919
+        x: 933
         y: 40
-        width: 374
-        height: 227
-      alignment: 9
-      pivot: {x: .481461644, y: .0772179291}
+        width: 339
+        height: 232
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
