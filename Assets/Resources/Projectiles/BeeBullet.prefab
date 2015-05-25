@@ -11,11 +11,11 @@ GameObject:
   - 212: {fileID: 21272030}
   - 50: {fileID: 5042954}
   - 58: {fileID: 5844414}
-  - 114: {fileID: 11476768}
   - 114: {fileID: 11435580}
-  m_Layer: 11
+  - 114: {fileID: 11476768}
+  m_Layer: 0
   m_Name: BeeBullet
-  m_TagString: Bullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 101200}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
   DamageOwner: 1
-  DamageAmount: 10
+  DamageAmount: 2
 --- !u!212 &21272030
 SpriteRenderer:
   m_ObjectHideFlags: 1

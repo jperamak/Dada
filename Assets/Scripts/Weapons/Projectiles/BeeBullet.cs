@@ -10,6 +10,8 @@ public class BeeBullet : Projectile {
     public float range, chaseFollow, chaseSpeed;
     private Transform _target;
 
+    protected GameObject _targetHit;
+
     private Rigidbody2D _rigidbody;
 	// Use this for initialization
 	void Start () {
@@ -20,13 +22,21 @@ public class BeeBullet : Projectile {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
+        {
+            _targetHit = other.gameObject;
+            Debug.Log("moo");
             TriggerEffects();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("moo");
-        TriggerEffects();
+        Debug.Log("moo2");
+        if (coll.collider.gameObject.tag == "Player")
+        {
+            _targetHit = coll.gameObject;
+            TriggerEffects();
+        }
     }
 
 	// Update is called once per frame
@@ -61,4 +71,18 @@ public class BeeBullet : Projectile {
             _rigidbody.velocity = dir.normalized * chaseSpeed;
         }
 	}
+
+    public virtual void TriggerEffects()
+    {
+
+        if (_effects != null)
+        {
+            for (int i = 0; i < _effects.Length; i++)
+            {
+                _effects[i].Owner = Owner;
+                _effects[i].OnEnd += OnEffectFinshed;
+                _effects[i].Trigger(_targetHit);
+            }
+        }
+    }
 }

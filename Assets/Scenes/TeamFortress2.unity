@@ -9416,7 +9416,7 @@ Transform:
   - {fileID: 445440562}
   - {fileID: 1204505298}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &352920567
 Prefab:
   m_ObjectHideFlags: 0
@@ -15432,6 +15432,7 @@ MonoBehaviour:
   MaxHitpoints: 10
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 0}
+  _currentHitpoints: 0
   hitpointsLightDamage: 60
   hitpointsHeavyDamage: 30
   spriteLightDamage: {fileID: 21300014, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
@@ -17076,11 +17077,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 681486894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.4000015, y: -23.5, z: 0}
+  m_LocalPosition: {x: -43.5, y: -23.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 1
 --- !u!1001 &682096245
 Prefab:
   m_ObjectHideFlags: 0
@@ -17593,6 +17594,7 @@ MonoBehaviour:
   MaxHitpoints: 500
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 0}
+  _currentHitpoints: 0
 --- !u!111 &710096000
 Animation:
   m_ObjectHideFlags: 0
@@ -18170,7 +18172,7 @@ Transform:
   m_Children:
   - {fileID: 1434705032}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!114 &740159573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20122,7 +20124,7 @@ Transform:
   - {fileID: 1095248097}
   - {fileID: 83358718}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &840709348
 Prefab:
   m_ObjectHideFlags: 0
@@ -23369,7 +23371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!82 &986617388
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29553,7 +29555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: maxZoom
-      value: 0
+      value: 24.2000008
       objectReference: {fileID: 0}
     - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: moveSmooth
@@ -39314,6 +39316,7 @@ MonoBehaviour:
   - {fileID: 123736, guid: c4c7308b95f975a4aacdf443c8e5cbe0, type: 2}
   - {fileID: 120706, guid: 94689b9c297f2684293ba8903fc23724, type: 2}
   SpawnTime: 40
+  offsetTime: 0
 --- !u!4 &1699738650
 Transform:
   m_ObjectHideFlags: 0
@@ -39325,7 +39328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!4 &1705139465 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
@@ -40253,7 +40256,7 @@ Transform:
   m_Children:
   - {fileID: 1453886370}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1753956342 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 138116, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
@@ -44395,6 +44398,7 @@ MonoBehaviour:
   MaxHitpoints: 10
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 0}
+  _currentHitpoints: 0
   hitpointsLightDamage: 60
   hitpointsHeavyDamage: 30
   spriteLightDamage: {fileID: 21300014, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
@@ -49977,7 +49981,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &2124554611
 GameObject:
   m_ObjectHideFlags: 0
