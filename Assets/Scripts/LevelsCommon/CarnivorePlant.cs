@@ -5,8 +5,10 @@ using System.Collections;
 // I was drunk as shit when I coded this so be bear with with me.
 public class CarnivorePlant : MonoBehaviour {
 
-	public float detectHeroRange;
-	public float force;
+	public float detectRange;
+	public float attackRange;
+	public float detectPullForce;
+	public float attackPullForce;
 
 
 
@@ -21,20 +23,26 @@ public class CarnivorePlant : MonoBehaviour {
 	void Update () {
 
 	
-		Vector2 preyVector = GetVectorToClosestHero();
+		Vector2 heroVector = GetVectorToClosestHero();
 
-		// if player is close...
-		if (preyVector.magnitude < detectHeroRange) {
+		if (heroVector.magnitude < detectRange) {
+
+			Vector2 forceVector = Vector2.Scale( heroVector.normalized, new Vector2(detectPullForce, detectPullForce));
+
+			// force is stronger if player is very close
+			if (heroVector.magnitude < attackRange)
+				forceVector = Vector2.Scale( heroVector.normalized, new Vector2(attackPullForce, attackPullForce));
 
 			// apply force to direction of player
-			preyVector.Normalize();
-			preyVector = Vector2.Scale( preyVector, new Vector2(force,force));
-			this.GetComponent<Rigidbody2D>().AddForce(preyVector,ForceMode2D.Force);
+			this.GetComponent<Rigidbody2D>().AddForce(forceVector,ForceMode2D.Force);
+		}
 
-			// and start to open and close mouth
+		if (heroVector.magnitude < attackRange) {
+	
+			// start to open and close mouth
 			if (Time.time > nextMunch) {
 				if (this.GetComponent<SpringJoint2D>().distance > 0.5f) {
-					this.GetComponent<SpringJoint2D>().distance = 0.3f;
+					this.GetComponent<SpringJoint2D>().distance = 0.1f;
 					nextMunch = Time.time + 0.4f;
 				}
 				else {
@@ -46,6 +54,8 @@ public class CarnivorePlant : MonoBehaviour {
 
 
 	}
+
+
 
 	Vector2 GetVectorToClosestHero() {
 
