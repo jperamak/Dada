@@ -4656,9 +4656,72 @@ Prefab:
       propertyPath: ownedByTeamNumber
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
+      propertyPath: OwnedByTeam
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &172443688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 172443691}
+  - 114: {fileID: 172443689}
+  - 60: {fileID: 172443690}
+  m_Layer: 0
+  m_Name: Killzone 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &172443689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172443688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d3ae068036c4be39e9bc98c505ef52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &172443690
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172443688}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -202.615204, y: -3.89357018}
+      - {x: -201.309326, y: 4.34052992}
+      - {x: 17.1224117, y: 2.91893315}
+      - {x: 13.9291506, y: -2.65592551}
+      - {x: -13.5248709, y: -2.50543666}
+      - {x: -18.2724285, y: -3.52284956}
+--- !u!4 &172443691
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172443688}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.1296654, y: 6.40586185, z: 0}
+  m_LocalScale: {x: .324987382, y: 9.21249962, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1335365980}
+  m_RootOrder: 1
 --- !u!1 &174402617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5627,6 +5690,10 @@ Prefab:
     - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
       propertyPath: ownedByTeamNumber
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
+      propertyPath: OwnedByTeam
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
@@ -9052,6 +9119,10 @@ Prefab:
       propertyPath: ownedByTeamNumber
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
+      propertyPath: OwnedByTeam
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
   m_IsPrefabParent: 0
@@ -9345,7 +9416,7 @@ Transform:
   - {fileID: 445440562}
   - {fileID: 1204505298}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &352920567
 Prefab:
   m_ObjectHideFlags: 0
@@ -11064,7 +11135,7 @@ Prefab:
         type: 2}
     - target: {fileID: 11182780, guid: dcf503c44a173477dbeff65576bb844d, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11411486, guid: dcf503c44a173477dbeff65576bb844d, type: 2}
       propertyPath: m_Enabled
@@ -13085,6 +13156,71 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: 47f2a48df468c4269a363b7898ad51e3, type: 2}
   m_PrefabInternal: {fileID: 480827802}
+--- !u!1 &483102482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483102485}
+  - 114: {fileID: 483102483}
+  - 60: {fileID: 483102484}
+  m_Layer: 0
+  m_Name: Killzone 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &483102483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 483102482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d3ae068036c4be39e9bc98c505ef52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &483102484
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 483102482}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -11.4093695, y: 2.60994172}
+      - {x: 83.4824371, y: 2.72090793}
+      - {x: 128.289902, y: -3.47493815}
+      - {x: -16.5299492, y: -3.47594357}
+      - {x: -9.46846962, y: -2.72384262}
+      - {x: 17.4339848, y: -2.81998301}
+      - {x: 21.9640732, y: -2.31587481}
+      - {x: -10.8236675, y: -2.36585808}
+      - {x: -10.9864264, y: -1.64516318}
+      - {x: -7.77646255, y: -1.24762201}
+      - {x: -9.42086029, y: -1.18553543}
+      - {x: -10.8882494, y: -.00258478103}
+--- !u!4 &483102485
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 483102482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 115.5, y: 3.9000001, z: 0}
+  m_LocalScale: {x: .324987382, y: 9.21249962, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1335365980}
+  m_RootOrder: 0
 --- !u!1001 &484020431
 Prefab:
   m_ObjectHideFlags: 0
@@ -16944,7 +17080,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
 --- !u!1001 &682096245
 Prefab:
   m_ObjectHideFlags: 0
@@ -17438,8 +17574,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92878dfed14a84863b5475463371e100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectHeroRange: 15
-  force: 80
+  detectRange: 0
+  attackRange: 0
+  detectPullForce: 0
+  attackPullForce: 0
 --- !u!114 &710095999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18032,7 +18170,7 @@ Transform:
   m_Children:
   - {fileID: 1434705032}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!114 &740159573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19984,7 +20122,7 @@ Transform:
   - {fileID: 1095248097}
   - {fileID: 83358718}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!1001 &840709348
 Prefab:
   m_ObjectHideFlags: 0
@@ -23231,7 +23369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!82 &986617388
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27186,6 +27324,10 @@ Prefab:
       propertyPath: ownedByTeamNumber
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
+      propertyPath: OwnedByTeam
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
   m_IsPrefabParent: 0
@@ -29371,7 +29513,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11452042, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: minXAndY.x
@@ -31527,6 +31669,36 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: 47f2a48df468c4269a363b7898ad51e3, type: 2}
   m_PrefabInternal: {fileID: 1332616027}
+--- !u!1 &1335365979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1335365980}
+  m_Layer: 0
+  m_Name: Killzones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1335365980
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335365979}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -67.8296661, y: -2.80586171, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 483102485}
+  - {fileID: 172443691}
+  - {fileID: 1413693999}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &1336005118
 GameObject:
   m_ObjectHideFlags: 0
@@ -33367,11 +33539,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1413693996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -33.2000008, z: 0}
+  m_LocalPosition: {x: 67.8296661, y: -30.3941383, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1335365980}
+  m_RootOrder: 2
 --- !u!1001 &1416631394
 Prefab:
   m_ObjectHideFlags: 0
@@ -39133,7 +39305,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
 --- !u!4 &1705139465 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
@@ -40061,7 +40233,7 @@ Transform:
   m_Children:
   - {fileID: 1453886370}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1753956342 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 138116, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
@@ -40683,6 +40855,10 @@ Prefab:
     - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
       propertyPath: ownedByTeamNumber
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
+      propertyPath: OwnedByTeam
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
@@ -47242,6 +47418,10 @@ Prefab:
       propertyPath: ownedByTeamNumber
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11494080, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
+      propertyPath: OwnedByTeam
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb02ec8f9bce4c3e8e00d2d7e0b8490, type: 2}
   m_IsPrefabParent: 0
@@ -49252,8 +49432,7 @@ Prefab:
     - target: {fileID: 11469794, guid: a578ec11baea84b2496e18a730788a98, type: 2}
       propertyPath: DamageSound
       value: 
-      objectReference: {fileID: 11425744, guid: 9e0a2c10a3d134124ab439245c93ba0e,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 11469794, guid: a578ec11baea84b2496e18a730788a98, type: 2}
       propertyPath: DestroySound
       value: 
@@ -49333,7 +49512,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11159628, guid: a578ec11baea84b2496e18a730788a98, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11483816, guid: a578ec11baea84b2496e18a730788a98, type: 2}
       propertyPath: m_Enabled

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class DadaGame {
 
-	public static bool IsTeamPlay{get; private set;}
+	public static bool IsTeamPlay{get; set;}
 	public static int PlayersNum{get; set;}
 	public static int TeamsNum{get{return _teams.Count;}}
 	public static List<Player> Players{get{return _players;}}
@@ -32,9 +32,6 @@ public class DadaGame {
 			_teams.Add(player.InTeam, new List<Player>());
 		}
 
-		//enable teams. it means that there are at least 2 players in the same team. 
-		else
-			IsTeamPlay = true;
 
 		//in every case add the player to its team
 		_teams[player.InTeam].Add(player);

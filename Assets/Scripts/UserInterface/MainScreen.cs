@@ -62,6 +62,8 @@ public class MainScreen : MonoBehaviour {
 
 	private void SetupPlayers(bool isTeam){
 
+		DadaGame.IsTeamPlay = isTeam;
+
 		if(DadaGame.PlayersNum >= 1){
 			Player p = new Player(DadaInput.GetJoystick(0));
 			p.Hero = Resource.FISH_HERO;
@@ -94,7 +96,7 @@ public class MainScreen : MonoBehaviour {
 			p.Hero = Resource.POOP_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
 			p.SecondWeapon = Resource.LAYBOMB_MELEE;
-			p.InTeam = isTeam ? Team.TEAM_1 : Team.TEAM_4;
+			p.InTeam = isTeam ? Team.TEAM_2 : Team.TEAM_4;
 			DadaGame.RegisterPlayer(p);
 		}
 
