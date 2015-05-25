@@ -110,7 +110,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   StampTex: {fileID: 2800000, guid: 440f5c5d2182020419aa56a0cb856d1e, type: 3}
   Hardness: 1
-  Size: {x: 1, y: 1}
+  Size: {x: 1.29999995, y: 1.29999995}
 --- !u!114 &11475794
 MonoBehaviour:
   m_ObjectHideFlags: 1

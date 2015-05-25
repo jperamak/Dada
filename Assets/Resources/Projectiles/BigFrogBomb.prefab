@@ -463,7 +463,7 @@ MonoBehaviour:
   InteractWith:
     serializedVersion: 2
     m_Bits: 4294639615
-  ExplosionParticles: {fileID: 11475794, guid: b0a673db8ba5cd043a5367c63602daaa, type: 2}
+  ExplosionParticles: {fileID: 11439022, guid: 9ddc145f9994a48c1af62655b6b79571, type: 2}
   ExplosionPushForce: 40
   ExplosionSound: {fileID: 11418440, guid: cd6c344a139c34da0b58abbef60ec5d9, type: 2}
 --- !u!114 &11476520
