@@ -5,12 +5,12 @@ public class WeaponPickup : MonoBehaviour {
 
     public GameObject WeaponPrefab;
 
-    void OnCollisionEnter2D(Collision2D c)
+    void OnTriggerEnter2D(Collider2D c)
     {
 
-        if (c.collider.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Player")
         {
-            var h = c.collider.gameObject.GetComponent<Hero>();
+            var h = c.gameObject.GetComponent<Hero>();
             Weapon w = (Instantiate(WeaponPrefab) as GameObject).GetComponent<Weapon>();
             w.transform.parent = h.gameObject.transform.FindChild("Hand1");
             if (h.transform.localScale.x < 0)
