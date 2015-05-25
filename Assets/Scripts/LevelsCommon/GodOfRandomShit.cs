@@ -23,7 +23,6 @@ public class GodOfRandomShit : MonoBehaviour {
 
 	private Animator _anim;
 	private float altitude;
-	private float timer = 0;
 	private bool _pooping = false;
 	private bool _pooped = false;
 	private float _randOffset;
@@ -48,7 +47,6 @@ public class GodOfRandomShit : MonoBehaviour {
 
 		if(Mathf.Abs(distFromPoopPoint + _randOffset) < 1.0f && !_pooping && !_pooped){
 			_anim.SetTrigger("AboutToPoop");
-			Debug.Log("Reached poop point at "+transform.position);
 			_pooping = true;
 			Invoke("Plop",TimeBeforePoop);
 		}
@@ -91,7 +89,6 @@ public class GodOfRandomShit : MonoBehaviour {
 	private void Goto(Vector2 target, float seconds){
 
 		_randOffset = Random.Range(-DistancePoopOffset,DistancePoopOffset);
-		Debug.Log("offset "+_randOffset);
 		_pooped = false;
 		_passedTime = 0;
 		_initialPos = transform.position;

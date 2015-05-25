@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: b13bdca3487fba647a3add8b62df899c
+timeCreated: 1432592877
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Egg_top
+    21300002: Chicken_norm
+    21300004: Chicken_coak
+    21300006: Egg_shadow
+    21300008: Egg_crack_1
+    21300010: Egg_crack_2
+    21300012: Egg_crack_3
+    21300014: Egg_crack_4
+    21300016: Egg_full_1
+    21300018: Egg_full_2
+    21300020: Egg_full_3
+    21300022: Egg_full_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Egg_top
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1035
+        width: 315
+        height: 178
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Chicken_norm
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1010
+        width: 269
+        height: 407
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Chicken_coak
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1009
+        width: 269
+        height: 407
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_shadow
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1033
+        width: 225
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_crack_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 562
+        width: 370
+        height: 380
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_crack_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 562
+        width: 370
+        height: 380
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_crack_3
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 562
+        width: 370
+        height: 380
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_crack_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 562
+        width: 370
+        height: 379
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_full_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 36
+        width: 372
+        height: 465
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_full_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 36
+        width: 370
+        height: 465
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_full_3
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 36
+        width: 370
+        height: 465
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Egg_full_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 36
+        width: 372
+        height: 465
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
