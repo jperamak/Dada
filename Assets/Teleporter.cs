@@ -5,17 +5,8 @@ public class Teleporter : MonoBehaviour {
 
 	public enum Direction {Right, Left, Up, Down};
 	public Direction TeleportIfMovesTo = Direction.Right;
-
-
-    public Transform OtherEnd = null;
 	public GameObject TeleportsTo = null;
-
-	Teleporter otherTeleport = null;
-
-	void Start() {
-
-	}
-
+	
 
     void OnTriggerStay2D(Collider2D other)
     {

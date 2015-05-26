@@ -7710,7 +7710,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 3
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 906496186}
 --- !u!61 &372533945
 BoxCollider2D:
@@ -8142,7 +8141,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 399462735}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f575748354d50487182a00fb6584dadb, type: 3}
@@ -11944,7 +11943,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 3
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 654106669}
 --- !u!61 &529992526
 BoxCollider2D:
@@ -14479,7 +14477,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 2
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 529992523}
 --- !u!61 &654106672
 BoxCollider2D:
@@ -16852,7 +16849,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 0
-  OtherEnd: {fileID: 2002318815}
   TeleportsTo: {fileID: 2030772641}
 --- !u!61 &761678468
 BoxCollider2D:
@@ -16909,10 +16905,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponPickupPrefabs:
   - {fileID: 161596, guid: 9cdbf966486b84a35ba4c06cae811f36, type: 2}
-  - {fileID: 124460, guid: 7b0075f5b604550498639b403ce0fd9b, type: 2}
-  - {fileID: 123736, guid: 2e9e5bcaad417454ebecc536b23b3f2e, type: 2}
-  - {fileID: 120706, guid: 94689b9c297f2684293ba8903fc23724, type: 2}
-  - {fileID: 123736, guid: c4c7308b95f975a4aacdf443c8e5cbe0, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   SpawnTime: 60
   offsetTime: 20
 --- !u!4 &764220725
@@ -17670,10 +17666,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponPickupPrefabs:
   - {fileID: 161596, guid: 9cdbf966486b84a35ba4c06cae811f36, type: 2}
-  - {fileID: 124460, guid: 7b0075f5b604550498639b403ce0fd9b, type: 2}
-  - {fileID: 123736, guid: 2e9e5bcaad417454ebecc536b23b3f2e, type: 2}
-  - {fileID: 120706, guid: 94689b9c297f2684293ba8903fc23724, type: 2}
-  - {fileID: 123736, guid: c4c7308b95f975a4aacdf443c8e5cbe0, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   SpawnTime: 60
   offsetTime: 40
 --- !u!4 &795088180
@@ -18481,7 +18477,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 1
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 1483614979}
 --- !u!61 &829778998
 BoxCollider2D:
@@ -20281,7 +20276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 2
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 372533942}
 --- !u!61 &906496189
 BoxCollider2D:
@@ -22688,7 +22682,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 986617385}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a5e1676cf4be04e409912eadcc968dc7, type: 3}
@@ -34731,7 +34725,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 0
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 829778995}
 --- !u!61 &1483614982
 BoxCollider2D:
@@ -40340,10 +40333,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponPickupPrefabs:
   - {fileID: 161596, guid: 9cdbf966486b84a35ba4c06cae811f36, type: 2}
-  - {fileID: 124460, guid: 7b0075f5b604550498639b403ce0fd9b, type: 2}
-  - {fileID: 123736, guid: 2e9e5bcaad417454ebecc536b23b3f2e, type: 2}
-  - {fileID: 120706, guid: 94689b9c297f2684293ba8903fc23724, type: 2}
-  - {fileID: 123736, guid: c4c7308b95f975a4aacdf443c8e5cbe0, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   SpawnTime: 60
   offsetTime: 0
 --- !u!4 &1699738650
@@ -47591,7 +47584,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 1
-  OtherEnd: {fileID: 980242882}
   TeleportsTo: {fileID: 761678466}
 --- !u!61 &2030772644
 BoxCollider2D:
