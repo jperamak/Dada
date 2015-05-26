@@ -320,10 +320,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClips: []
+  PlayCooldown: .5
   minPitch: 1
   maxPitch: 1
   minVolume: 1
   maxVolume: 1
+  maxSimultaneous: 5
   Mode: 2
 --- !u!1001 &100100000
 Prefab:
