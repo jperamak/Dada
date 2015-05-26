@@ -69,6 +69,9 @@ public class SoundEffect : MonoBehaviour
         if ( effect != null )
         {
 			_lastPlayed = Time.time;
+            effect.pitch *= Random.Range(minPitch,maxPitch);
+            effect.volume *= Random.Range(minVolume,maxVolume);
+
             effect.Play();
         }
 

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 3752fdd26bb13429688b0353b8fdc30d
-timeCreated: 1431976868
-licenseType: Pro
+timeCreated: 1432651786
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: MiniBananaGun
@@ -10,6 +10,8 @@ TextureImporter:
     21300006: WEAPON SPRITES_0
     21300008: WEAPON SPRITES_1
     21300010: WEAPON SPRITES_2
+    21300012: WEAPON SPRITES_3
+    21300014: WEAPON SPRITES_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -114,6 +116,26 @@ TextureImporter:
         height: 182
       alignment: 9
       pivot: {x: .593475103, y: .169077188}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WEAPON SPRITES_3
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 465
+        width: 287
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WEAPON SPRITES_4
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 350
+        width: 91
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

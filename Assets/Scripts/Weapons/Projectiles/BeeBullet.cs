@@ -62,7 +62,7 @@ public class BeeBullet : Projectile {
         }
         if (_awake == 1)
         {
-            _rigidbody.velocity = Quaternion.EulerAngles(0, 0, Random.Range(-45f, 45f)) * _rigidbody.velocity;
+            _rigidbody.velocity = Quaternion.EulerAngles(0, 0, Random.Range(-45f, 45f)) * _rigidbody.velocity.normalized * 4f;
             Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, range);
             for (int i = 0; i < objects.Length; i++)
             {
@@ -79,6 +79,8 @@ public class BeeBullet : Projectile {
             {
                 Vector3 dir = Vector3.Lerp(_rigidbody.velocity, _target.position - transform.position, chaseFollow * Time.deltaTime);
                 _rigidbody.velocity = dir.normalized * chaseSpeed;
+                float angle = Mathf.Atan2(_rigidbody.velocity.y, _rigidbody.velocity.x);
+                transform.eulerAngles = new Vector3(0, 0, angle * Mathf.Rad2Deg);
             }
             else
                 _awake--;
