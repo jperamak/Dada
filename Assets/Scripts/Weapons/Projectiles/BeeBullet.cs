@@ -20,6 +20,7 @@ public class BeeBullet : Projectile {
     protected GameObject _targetHit;
 
     private Rigidbody2D _rigidbody;
+	bool flySoundStarted = false;
 	// Use this for initialization
 	void Start () {
 
@@ -58,8 +59,9 @@ public class BeeBullet : Projectile {
         }
         if (_awake == 1)
         {
-            if (flySound != null)
+            if (flySound != null && !flySoundStarted)
                 flySound.PlayEffect();
+			flySoundStarted = true;
             if (aggroSound != null)
                 aggroSound.Stop();
 
