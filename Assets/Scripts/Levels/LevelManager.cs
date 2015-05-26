@@ -15,7 +15,6 @@ public class LevelManager : MonoBehaviour {
 	protected SpawnPoint[] _spawnPoints;
 	protected int[] _scores;
 	protected List<Team> _teams;
-	protected List<Text> _scoreText;
     protected List<GameObject> _scoreThing;
 
     private CameraFollow _camera;
@@ -53,7 +52,6 @@ public class LevelManager : MonoBehaviour {
 		ShuffleSpawnPoints();
 
 		//find the scores UI and give them the same color of the player
-		_scoreText = new List<Text>();
         _scoreThing = new List<GameObject>();
 		for(int i=0; i<scoreText.childCount; i++){
 
@@ -64,8 +62,6 @@ public class LevelManager : MonoBehaviour {
                 _scoreThing.Add(scoreText.GetChild(i).gameObject);
                 scoreText.GetChild(i).GetComponent<Image>().color = _teams[i].TeamColor;
                 scoreText.GetChild(i).GetComponent<UIScore>().ScoresBg.GetComponent<Image>().color =  _teams[DadaGame.Players[i].InTeam.Number].TeamColor;
-				//_scoreText.Add(scoreText.GetChild(i).GetComponent<Text>());
-				//_scoreText[i].color = _teams[i].TeamColor;
 			}
 
 		}
@@ -212,16 +208,6 @@ public class LevelManager : MonoBehaviour {
         return false;
     }
 
-	/*private void NewUpdateScore(){
-
-		for(int i=0; i< DadaGame.Teams.Count; i++)
-			_scoreText[i].text = _teams[i].Name+": "+_scores[i];
-		
-		for (int i = 0; i < DadaGame.Teams.Count; i++)
-			if (_scores[i] >= MaxScore)
-				Finish(i);
-	} */
-    
     private void UpdateScore()
     {
         for (int i = 0; i < DadaGame.Teams.Count; i++)
@@ -238,14 +224,12 @@ public class LevelManager : MonoBehaviour {
         for (int i = 0; i < DadaGame.Teams.Count; i++)
             if (_scores[i] >= MaxScore)
                Finish(i);
-         
     }
 
     private void Finish(int winner)
     {
         Time.timeScale = 0.5f;
 
-        
         _fin.text = "Team " + _teams[winner].Name + " wins!";
 		_fin.color = _teams[winner].TeamColor;
         _fin.transform.gameObject.SetActive(true);
@@ -303,5 +287,4 @@ public class LevelManager : MonoBehaviour {
             p1.InTeam = Team.TEAM_2;
 		return p1;
 	}
-
 }
