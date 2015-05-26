@@ -27,20 +27,9 @@ public class BeeBullet : Projectile {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
 	}
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            _targetHit = other.gameObject;
-            Debug.Log("moo");
-            TriggerEffects();
-        }
-    }
-
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("moo2");
-        if (coll.collider.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player")
         {
             _targetHit = coll.gameObject;
             TriggerEffects();

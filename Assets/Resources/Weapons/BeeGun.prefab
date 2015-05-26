@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78bb66229315c8148a8783d8324f73a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CooldownTime: .100000001
+  CooldownTime: .5
   VisualEffect: {fileID: 0}
   FireSound: {fileID: 0}
   SpawnPoint: {fileID: 0}

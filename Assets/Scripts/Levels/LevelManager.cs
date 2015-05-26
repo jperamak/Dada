@@ -15,7 +15,8 @@ public class LevelManager : MonoBehaviour {
 	protected SpawnPoint[] _spawnPoints;
 	protected int[] _scores;
 	protected List<Team> _teams;
-	protected List<Text> _scoreText; 
+	protected List<Text> _scoreText;
+    protected List<GameObject> _scoreThing;
 
     private CameraFollow _camera;
 	private Text _fin;
@@ -41,7 +42,7 @@ public class LevelManager : MonoBehaviour {
 		//********** FOR DEBUG ONLY!! **************
 		if(_teams == null || _teams.Count == 0){
 			DadaGame.RegisterPlayer(CreateDebugPlayers(0));
-            //DadaGame.RegisterPlayer(CreateDebugPlayers(1));
+            DadaGame.RegisterPlayer(CreateDebugPlayers(1));
             _teams = DadaGame.Teams;
 		}
 
@@ -53,14 +54,18 @@ public class LevelManager : MonoBehaviour {
 
 		//find the scores UI and give them the same color of the player
 		_scoreText = new List<Text>();
+        _scoreThing = new List<GameObject>();
 		for(int i=0; i<scoreText.childCount; i++){
 
 			//there is no team for this score: hide the text
 			if(i >= _teams.Count)
 				scoreText.GetChild(i).gameObject.SetActive(false);
 			else{
-				_scoreText.Add(scoreText.GetChild(i).GetComponent<Text>());
-				_scoreText[i].color = _teams[i].TeamColor;
+                _scoreThing.Add(scoreText.GetChild(i).gameObject);
+                scoreText.GetChild(i).GetComponent<Image>().color = _teams[i].TeamColor;
+                scoreText.GetChild(i).GetComponent<UIScore>().ScoresBg.GetComponent<Image>().color =  _teams[DadaGame.Players[i].InTeam.Number].TeamColor;
+				//_scoreText.Add(scoreText.GetChild(i).GetComponent<Text>());
+				//_scoreText[i].color = _teams[i].TeamColor;
 			}
 
 		}
@@ -98,7 +103,6 @@ public class LevelManager : MonoBehaviour {
 
 		_scores = new int[DadaGame.TeamsNum];
 
-		UpdateScore();
 
 		for(int i=0; i<_scores.Length; i++)
 			_scores[i] = 0;
@@ -107,6 +111,9 @@ public class LevelManager : MonoBehaviour {
 		for(int i=0; i<players.Count; i++){
 			SpawnHero(players[i], GetRandomSpawnPoint(players[i]));
 		}
+
+        UpdateScore();
+
 	}
 
 	public virtual GameObject SpawnHero(Player p, Vector2 newSpawnPoint){
@@ -205,7 +212,7 @@ public class LevelManager : MonoBehaviour {
         return false;
     }
 
-	private void UpdateScore(){
+	/*private void NewUpdateScore(){
 
 		for(int i=0; i< DadaGame.Teams.Count; i++)
 			_scoreText[i].text = _teams[i].Name+": "+_scores[i];
@@ -213,7 +220,26 @@ public class LevelManager : MonoBehaviour {
 		for (int i = 0; i < DadaGame.Teams.Count; i++)
 			if (_scores[i] >= MaxScore)
 				Finish(i);
-	}
+	} */
+    
+    private void UpdateScore()
+    {
+        for (int i = 0; i < DadaGame.Players.Count; i++)
+        {
+            _scoreThing[i].GetComponent<UIScore>().Score.GetComponent<Text>().text = "" + _scores[i];
+            GameObject p = GameObject.Find("Player " + i);
+            if (p)
+            {
+                _scoreThing[i].GetComponent<UIScore>().Hat.GetComponent<Image>().overrideSprite = p.GetComponent<Hero>().GetHat();
+                _scoreThing[i].GetComponent<UIScore>().Hat.GetComponent<Image>().SetNativeSize();
+            }
+        }
+        
+        for (int i = 0; i < DadaGame.Teams.Count; i++)
+            if (_scores[i] >= MaxScore)
+               Finish(i);
+         
+    }
 
     private void Finish(int winner)
     {

@@ -74,10 +74,10 @@ MonoBehaviour:
   VisualEffectOnTrigger: {fileID: 0}
   sleepTime: .5
   dragMod: 3
-  range: 3
+  range: 5
   chaseFollow: 16
-  chaseSpeed: 8
-  lifeTime: 7
+  chaseSpeed: 9
+  lifeTime: 10
 --- !u!114 &11476768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
   DamageOwner: 1
-  DamageAmount: 2
+  DamageAmount: 10
 --- !u!212 &21272030
 SpriteRenderer:
   m_ObjectHideFlags: 1

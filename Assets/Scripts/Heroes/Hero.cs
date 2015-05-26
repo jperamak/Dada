@@ -27,6 +27,11 @@ public class Hero : MonoBehaviour {
 	private Transform _meleeWeaponHand;		// The hand that holds the melee weapon
 	private Transform _body;
 
+    public Sprite GetHat()
+    {
+        return _body.parent.FindChild("Hat").GetComponent<SpriteRenderer>().sprite;
+    }
+
 	void Awake(){
 		_rangeWeaponHand = transform.Find("Hand1");
 		_meleeWeaponHand = transform.Find("Hand2");
