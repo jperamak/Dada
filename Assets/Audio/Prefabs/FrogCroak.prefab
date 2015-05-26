@@ -113,8 +113,9 @@ MonoBehaviour:
   PlayCooldown: .5
   minPitch: 1
   maxPitch: 1
-  minVolume: 1
-  maxVolume: 1
+  minVolume: .5
+  maxVolume: .850000024
+  maxSimultaneous: 5
   Mode: 0
 --- !u!1001 &100100000
 Prefab:
