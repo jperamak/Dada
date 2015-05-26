@@ -12,6 +12,7 @@ public class GodOfRandomShit : MonoBehaviour {
 	public Transform FinalPoint;
 	public Transform PoopAboutAtPoint;
 	public GameObject[] WeaponPickupPrefabs;
+    public SoundEffect PoopSound;
 
 	private Transform _goingTo;
 	private float _distance;
@@ -30,6 +31,7 @@ public class GodOfRandomShit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        PoopSound = DadaAudio.GetSoundEffect(PoopSound);
 		_anim = GetComponent<Animator>();
 		altitude = transform.position.y;
 		_goingTo = FinalPoint;
@@ -71,6 +73,8 @@ public class GodOfRandomShit : MonoBehaviour {
 
 	private void Plop(){
 		_anim.SetTrigger("Poop");
+        if (PoopSound != null)
+            PoopSound.PlayEffect();
 		Instantiate(WeaponPickupPrefabs[Random.Range(0, WeaponPickupPrefabs.Length)], transform.position, Quaternion.identity);
 		_pooping = false;
 		_pooped = true;
