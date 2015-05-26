@@ -224,7 +224,7 @@ public class LevelManager : MonoBehaviour {
     
     private void UpdateScore()
     {
-        for (int i = 0; i < DadaGame.Players.Count; i++)
+        for (int i = 0; i < DadaGame.Teams.Count; i++)
         {
             _scoreThing[i].GetComponent<UIScore>().Score.GetComponent<Text>().text = "" + _scores[i];
             GameObject p = GameObject.Find("Player " + i);
