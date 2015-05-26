@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b13bdca3487fba647a3add8b62df899c
-timeCreated: 1432592877
+timeCreated: 1432598275
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -104,12 +104,12 @@ TextureImporter:
     - name: Egg_crack_1
       rect:
         serializedVersion: 2
-        x: 47
+        x: 49
         y: 562
         width: 370
         height: 380
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .49655804, y: .0606027693}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Egg_crack_2
       rect:
@@ -118,8 +118,8 @@ TextureImporter:
         y: 562
         width: 370
         height: 380
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .508176386, y: .0606866144}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Egg_crack_3
       rect:
@@ -128,8 +128,8 @@ TextureImporter:
         y: 562
         width: 370
         height: 380
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .504405737, y: .0624471568}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Egg_crack_4
       rect:
@@ -138,8 +138,8 @@ TextureImporter:
         y: 562
         width: 370
         height: 379
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .522028089, y: .0612926632}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Egg_full_1
       rect:
@@ -148,8 +148,8 @@ TextureImporter:
         y: 36
         width: 372
         height: 465
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .482472122, y: .054789979}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Egg_full_2
       rect:
@@ -158,8 +158,8 @@ TextureImporter:
         y: 36
         width: 370
         height: 465
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .535245299, y: .0477788039}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Egg_full_3
       rect:
@@ -168,8 +168,8 @@ TextureImporter:
         y: 36
         width: 370
         height: 465
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .513216913, y: .0863403007}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Egg_full_4
       rect:
@@ -178,8 +178,8 @@ TextureImporter:
         y: 36
         width: 372
         height: 465
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .504382074, y: .0512843877}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

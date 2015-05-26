@@ -57,6 +57,18 @@ TagManager:
   - name: Background
     uniqueID: 1535931219
     locked: 0
+  - name: MagicTree2
+    uniqueID: 842033733
+    locked: 0
+  - name: CanvasFieldFar
+    uniqueID: 3807676471
+    locked: 0
+  - name: MagicTree1
+    uniqueID: 1666880255
+    locked: 0
+  - name: CanvasFieldClose
+    uniqueID: 1728491643
+    locked: 0
   - name: Character
     uniqueID: 2511236001
     locked: 0
