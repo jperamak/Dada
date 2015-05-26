@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CooldownTime: .100000001
   VisualEffect: {fileID: 0}
-  FireSound: {fileID: 0}
+  FireSound: {fileID: 11486720, guid: a7ce44132b2a449d29a0d70dac1f527b, type: 2}
   SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11492750, guid: db88ddf1b9ff332409e5c3fa398b75fc, type: 2}
   MaxBullets: 10
