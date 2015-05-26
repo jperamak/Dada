@@ -2715,7 +2715,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 126264, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
       propertyPath: m_Name
@@ -7004,7 +7004,7 @@ Transform:
   - {fileID: 1383836923}
   - {fileID: 445440562}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1001 &353596825
 Prefab:
   m_ObjectHideFlags: 0
@@ -7756,7 +7756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 3
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 906496186}
 --- !u!61 &372533945
 BoxCollider2D:
@@ -9137,7 +9136,7 @@ Transform:
   - {fileID: 906496187}
   - {fileID: 654106670}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
 --- !u!1001 &433872555
 Prefab:
   m_ObjectHideFlags: 0
@@ -11990,7 +11989,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 3
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 654106669}
 --- !u!61 &529992526
 BoxCollider2D:
@@ -12402,7 +12400,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 126264, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
       propertyPath: m_Name
@@ -14653,7 +14651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 2
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 529992523}
 --- !u!61 &654106672
 BoxCollider2D:
@@ -14782,48 +14779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c23b6376f751446b8db0cbde976250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &663769644
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .316887856
-      objectReference: {fileID: 0}
-    - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.73411465
-      objectReference: {fileID: 0}
-    - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 421228, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &664273071
 Prefab:
   m_ObjectHideFlags: 0
@@ -17068,7 +17023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 0
-  OtherEnd: {fileID: 2002318815}
   TeleportsTo: {fileID: 2030772641}
 --- !u!61 &761678468
 BoxCollider2D:
@@ -17095,7 +17049,7 @@ Transform:
   m_Children:
   - {fileID: 980242882}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &764220723
 GameObject:
   m_ObjectHideFlags: 0
@@ -17143,7 +17097,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!1 &767488358
 GameObject:
   m_ObjectHideFlags: 0
@@ -17172,7 +17126,7 @@ Transform:
   - {fileID: 1469747445}
   - {fileID: 488415691}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!4 &767966924
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: aa9d84027fb904d2ea6691ae429d0af6, type: 2}
@@ -17905,7 +17859,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!4 &796167641
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: aa9d84027fb904d2ea6691ae429d0af6, type: 2}
@@ -18699,7 +18653,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 1
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 1483614979}
 --- !u!61 &829778998
 BoxCollider2D:
@@ -20499,7 +20452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 2
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 372533942}
 --- !u!61 &906496189
 BoxCollider2D:
@@ -22899,7 +22851,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!82 &986617388
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32844,7 +32796,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!1001 &1415112213
 Prefab:
   m_ObjectHideFlags: 0
@@ -34859,7 +34811,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 0
-  OtherEnd: {fileID: 0}
   TeleportsTo: {fileID: 829778995}
 --- !u!61 &1483614982
 BoxCollider2D:
@@ -40486,7 +40437,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!1 &1700875893
 GameObject:
   m_PrefabParentObject: {fileID: 138116, guid: aa9d84027fb904d2ea6691ae429d0af6, type: 2}
@@ -47707,7 +47658,7 @@ Transform:
   m_Children:
   - {fileID: 2002318815}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!114 &2030772643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47720,7 +47671,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportIfMovesTo: 1
-  OtherEnd: {fileID: 980242882}
   TeleportsTo: {fileID: 761678466}
 --- !u!61 &2030772644
 BoxCollider2D:
@@ -49824,7 +49774,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1001 &2123566824
 Prefab:
   m_ObjectHideFlags: 0
