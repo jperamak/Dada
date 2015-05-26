@@ -35,12 +35,12 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134998}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ccaa90dbbfbf24e7bbaa18e9cdcea4aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .769999981
+  m_Volume: .782000005
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   maxPitch: 1
   minVolume: 1
   maxVolume: 1
+  maxSimultaneous: 1
   Mode: 2
 --- !u!1001 &100100000
 Prefab:
