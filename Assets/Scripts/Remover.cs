@@ -35,8 +35,4 @@ public class Remover : MonoBehaviour
 			Destroy(col.gameObject);
 		}
 	}
-
-
-
-
 }

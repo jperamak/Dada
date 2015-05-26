@@ -77,6 +77,7 @@ MonoBehaviour:
   range: 3
   chaseFollow: 16
   chaseSpeed: 8
+  lifeTime: 7
 --- !u!114 &11476768
 MonoBehaviour:
   m_ObjectHideFlags: 1

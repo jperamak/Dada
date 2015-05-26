@@ -8,7 +8,8 @@ public class Grenade : Projectile {
     public bool ExplodeOnPlayerContact = false;
     public float DetonationDelay = 1.5f;
 	public bool blinkRed = false;
-	
+    public bool randomRotate = false;
+
 	private SpriteRenderer _renderer;
 	private Rigidbody2D _rigidbody;
 	private float _contactTime = 0;
@@ -18,6 +19,8 @@ public class Grenade : Projectile {
 	void Start(){
 		_renderer = transform.GetComponentInChildren<SpriteRenderer>();
 		_rigidbody = GetComponent<Rigidbody2D>();
+        if ( randomRotate)
+            _rigidbody.angularVelocity = Random.Range(-180f,180f);
 		//start immediately the countdown DetonateOnContact is false
 		if(!DetonateOnContact){
 			_contactTime = Time.time;
@@ -46,8 +49,11 @@ public class Grenade : Projectile {
 	protected virtual void FixedUpdate (){
 
 		Vector2 velocity = _rigidbody.velocity;
-		float angle = Mathf.Atan2( velocity.y, velocity.x );
-		transform.eulerAngles = new Vector3(0, 0, angle *  Mathf.Rad2Deg);
+        if (!randomRotate)
+        {
+            float angle = Mathf.Atan2(velocity.y, velocity.x);
+            transform.eulerAngles = new Vector3(0, 0, angle * Mathf.Rad2Deg);
+        }
 	}
 
 	private void Explode(){

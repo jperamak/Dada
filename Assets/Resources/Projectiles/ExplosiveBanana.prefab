@@ -149,6 +149,7 @@ MonoBehaviour:
   ExplodeOnPlayerContact: 1
   DetonationDelay: 1.5
   blinkRed: 0
+  randomRotate: 1
 --- !u!212 &21213480
 SpriteRenderer:
   m_ObjectHideFlags: 1

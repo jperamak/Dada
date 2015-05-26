@@ -9,13 +9,21 @@ public class BeeBullet : Projectile {
     public float dragMod = 2;
     public float range, chaseFollow, chaseSpeed;
     private Transform _target;
+    public float lifeTime = 5f;
+    private bool _fading = false;
+
+    private float startTime;
+    private SpriteRenderer spriteRend;
 
     protected GameObject _targetHit;
 
     private Rigidbody2D _rigidbody;
 	// Use this for initialization
 	void Start () {
+        startTime = Time.time;
         sleepTime += Time.time;
+        spriteRend = GetComponent<SpriteRenderer>();
+
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
 	}
 
@@ -67,10 +75,38 @@ public class BeeBullet : Projectile {
         }
         if (_awake == 2)
         {
-            Vector3 dir = Vector3.Lerp(_rigidbody.velocity, _target.position - transform.position, chaseFollow * Time.deltaTime);
-            _rigidbody.velocity = dir.normalized * chaseSpeed;
+            if (_target != null)
+            {
+                Vector3 dir = Vector3.Lerp(_rigidbody.velocity, _target.position - transform.position, chaseFollow * Time.deltaTime);
+                _rigidbody.velocity = dir.normalized * chaseSpeed;
+            }
+            else
+                _awake--;
+        }
+
+        if (Time.time >= startTime + lifeTime)
+        {
+            if (!_fading)
+            { 
+                Destroy(gameObject, 2);
+                _fading = true;
+            }
+            float timeIntoFading = Time.time - startTime - lifeTime;
+            
+
+            if (timeIntoFading > 0.0f && lifeTime > 0.0f)
+                SetAlpha(1.0f - timeIntoFading / 2f);
         }
 	}
+
+
+    void SetAlpha(float value) // from 0 .. 1
+    {
+        if (spriteRend == null)
+            return;
+        Color color = new Color(spriteRend.color.r, spriteRend.color.g, spriteRend.color.b, value);
+        spriteRend.material.color = color;
+    }
 
     public virtual void TriggerEffects()
     {
