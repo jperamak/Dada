@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Remover : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
         
 		if (col == null)

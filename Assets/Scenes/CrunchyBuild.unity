@@ -9493,6 +9493,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65132ed76d156674686d209b463ed302, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &656836195
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 656836194}
 --- !u!1001 &657529383
 Prefab:
   m_ObjectHideFlags: 0
@@ -13912,6 +13916,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespawnTime: 2
   RespawnSound: {fileID: 0}
+  GhostPrefab: {fileID: 0}
+  SpawnParticlePrefab: {fileID: 0}
+  MaxScore: 10
 --- !u!4 &986617387
 Transform:
   m_ObjectHideFlags: 0
@@ -16306,7 +16313,7 @@ Transform:
   - {fileID: 1264534919}
   - {fileID: 138421501}
   - {fileID: 1586500379}
-  - {fileID: 1657032030}
+  - {fileID: 656836195}
   - {fileID: 986617387}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -17095,15 +17102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1ff7ff4ce484f1aad8887efed74b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMargin: 1
-  yMargin: 1
-  xSmooth: 8
-  ySmooth: 8
-  maxXAndY: {x: 60, y: 13}
-  minXAndY: {x: -60, y: -3}
-  maxZoom: 20
+  moveSmooth: 1
+  zoomSmooth: 8
+  buffer: 4
   minZoom: 20
-  average: {x: 0, y: 0}
+  maxZoom: 20
   players: []
 --- !u!1001 &1228346049
 Prefab:
@@ -20068,7 +20071,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 400, y: 10}
+  m_Size: {x: 100, y: 60}
 --- !u!4 &1413693999
 Transform:
   m_ObjectHideFlags: 0
@@ -20076,7 +20079,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1413693996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -33.2000008, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -22599,6 +22602,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespawnTime: 2
   RespawnSound: {fileID: 0}
+  GhostPrefab: {fileID: 0}
+  SpawnParticlePrefab: {fileID: 0}
+  MaxScore: 10
 --- !u!82 &1598653683
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23695,11 +23701,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87f620b11dbec4ebb9e0f4cb0ad976cd, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &1657032030
-RectTransform:
-  m_PrefabParentObject: {fileID: 22415034, guid: 65132ed76d156674686d209b463ed302,
-    type: 2}
-  m_PrefabInternal: {fileID: 656836194}
 --- !u!1001 &1666180897
 Prefab:
   m_ObjectHideFlags: 0
@@ -29125,15 +29126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1ff7ff4ce484f1aad8887efed74b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMargin: 1
-  yMargin: 1
-  xSmooth: 8
-  ySmooth: 8
-  maxXAndY: {x: 60, y: 13}
-  minXAndY: {x: -60, y: -13}
-  maxZoom: 20
+  moveSmooth: 1
+  zoomSmooth: 8
+  buffer: 4
   minZoom: 10
-  average: {x: 0, y: 0}
+  maxZoom: 20
   players: []
 --- !u!1001 &1973764463
 Prefab:
