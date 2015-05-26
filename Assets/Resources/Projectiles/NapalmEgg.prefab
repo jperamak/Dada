@@ -209,7 +209,10 @@ MonoBehaviour:
   VisualEffectOnTrigger: {fileID: 0}
   DetonateOnContact: 0
   ExplodeOnContact: 1
-  DetonationDelay: 1
+  ExplodeOnPlayerContact: 0
+  DetonationDelay: .75
+  blinkRed: 0
+  randomRotate: 0
 --- !u!114 &11474918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,14 +239,14 @@ MonoBehaviour:
   VisualEffect: {fileID: 0}
   DamageOwner: 1
   DamageAmount: 10
-  ExplosionForce: 60
+  ExplosionForce: 70
   ParticleLifetime: 3
   InteractWith:
     serializedVersion: 2
     m_Bits: 4294901759
   ExplosionParticles: {fileID: 11455620, guid: c063e7fee2d19415b8d3e98f406b7d31, type: 2}
   NumOfParticles: 15
-  ExplosionSound: {fileID: 0}
+  ExplosionSound: {fileID: 11487134, guid: a2a5aa33580d246f4b229ccc8ea13952, type: 2}
 --- !u!114 &11489092
 MonoBehaviour:
   m_ObjectHideFlags: 1

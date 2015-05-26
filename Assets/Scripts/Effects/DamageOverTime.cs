@@ -10,6 +10,15 @@ public class DamageOverTime : DamageAoE {
 	private float _nextDamage;
 	private float _endTime;
 
+	public SoundEffect soundEffect;
+	
+	void Start()
+	{
+		soundEffect = DadaAudio.GetSoundEffect(soundEffect);
+		soundEffect.PlayEffect();
+	}
+
+
 	public override void Trigger(){
 		Execute();
 		DoVisualEffect();

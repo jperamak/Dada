@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11487134}
   - 82: {fileID: 8201256}
   m_Layer: 0
-  m_Name: RocketExplode
+  m_Name: NapalmExplode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,9 +38,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ae63c625f5e154c14a8d02cc1ae29135, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bf1b9849017b6477eb24f7f07fb72600, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .649999976
+  m_Volume: .310000002
   m_Pitch: 1
   Loop: 0
   Mute: 0

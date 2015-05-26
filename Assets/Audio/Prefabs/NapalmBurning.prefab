@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11487134}
   - 82: {fileID: 8201256}
   m_Layer: 0
-  m_Name: RocketExplode
+  m_Name: NapalmBurning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,9 +38,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ae63c625f5e154c14a8d02cc1ae29135, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e2402f2ff6fd5498e8f64c0c178be28a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .649999976
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   maxPitch: 1
   minVolume: 1
   maxVolume: 1
-  maxSimultaneous: 5
+  maxSimultaneous: 1
   Mode: 2
 --- !u!1001 &100100000
 Prefab:

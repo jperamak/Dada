@@ -40,7 +40,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4c65062b8ae6446968887b5fdd1acd6e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .649999976
+  m_Volume: .939999998
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -113,8 +113,9 @@ MonoBehaviour:
   PlayCooldown: .5
   minPitch: 1
   maxPitch: 1
-  minVolume: 1
-  maxVolume: 1
+  minVolume: .550000012
+  maxVolume: .949999988
+  maxSimultaneous: 5
   Mode: 0
 --- !u!1001 &100100000
 Prefab:
