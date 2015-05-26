@@ -30,6 +30,7 @@ GameObject:
   - 114: {fileID: 11495800}
   - 114: {fileID: 11428992}
   - 58: {fileID: 5881472}
+  - 60: {fileID: 6066178}
   m_Layer: 9
   m_Name: FishMonk
   m_TagString: Player
@@ -418,7 +419,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.6834717, y: -4.35125542, z: -1}
+  m_LocalPosition: {x: -17.9735203, y: -11.8369808, z: -1}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
   m_Children:
   - {fileID: 490010}
@@ -455,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.94313288, y: 0, z: 1}
+  m_LocalPosition: {x: 1.94000006, y: .569999993, z: 1}
   m_LocalScale: {x: .200000003, y: .200000003, z: .399999976}
   m_Children: []
   m_Father: {fileID: 464894}
@@ -506,20 +507,40 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -.540000021}
   serializedVersion: 2
   m_Radius: .389999986
+--- !u!60 &6066178
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109686}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: 2f33dc684b21da640b19632ec7c2228d, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -.374439538, y: .551496327}
+      - {x: .383227646, y: .560014248}
+      - {x: .369966805, y: -.857192636}
+      - {x: .311574936, y: -.918335915}
+      - {x: -.314962059, y: -.919795811}
+      - {x: -.373821259, y: -.866045952}
+      - {x: -.374997437, y: -.530382752}
 --- !u!61 &6199794
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 6200000, guid: 2f33dc684b21da640b19632ec7c2228d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -602,7 +623,6 @@ MonoBehaviour:
   MaxHitpoints: 10
   DamageSound: {fileID: 0}
   DestroySound: {fileID: 11431582, guid: 8a10a3aa136f7d64a84563bd9959ca53, type: 2}
-  _currentHitpoints: 0
   ShieldAfterRespawn: 2.5
   ShieldAfterDamage: 1
   ShieldDelay: .200000003
