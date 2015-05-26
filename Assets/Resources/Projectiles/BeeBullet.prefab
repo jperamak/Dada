@@ -79,7 +79,7 @@ MonoBehaviour:
   chaseSpeed: 9
   lifeTime: 10
   flySound: {fileID: 11402486, guid: 331beb1d0ddea43639427f4036f9440c, type: 2}
-  aggroSound: {fileID: 0}
+  aggroSound: {fileID: 11453438, guid: 7107f68a1effc467ba0f59ef95a3ed05, type: 2}
 --- !u!114 &11476768
 MonoBehaviour:
   m_ObjectHideFlags: 1

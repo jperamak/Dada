@@ -254,8 +254,8 @@ MonoBehaviour:
   PlayCooldown: .5
   minPitch: 1
   maxPitch: 1
-  minVolume: .400000006
-  maxVolume: .730000019
+  minVolume: .699999988
+  maxVolume: .889999986
   maxSimultaneous: 5
   Mode: 2
 --- !u!1001 &100100000
