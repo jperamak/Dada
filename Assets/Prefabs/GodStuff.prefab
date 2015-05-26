@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.22652531, y: -1.14229226, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 412548}
@@ -213,6 +213,7 @@ MonoBehaviour:
   - {fileID: 109824, guid: d43854bbe83defa4ea98364893397dba, type: 2}
   - {fileID: 106784, guid: 24d8e4013b783da42b01ab50cbc65ded, type: 2}
   - {fileID: 126264, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
+  PoopSound: {fileID: 11407468, guid: ee284aceebdd64b718f9d02ef0bf62c3, type: 2}
 --- !u!212 &21299058
 SpriteRenderer:
   m_ObjectHideFlags: 1
