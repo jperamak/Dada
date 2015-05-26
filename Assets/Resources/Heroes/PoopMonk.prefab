@@ -599,7 +599,7 @@ MonoBehaviour:
   JumpForce: 1000
   JumpAirModifier: .0500000007
   JumpLength: .5
-  JumpSpeed: 20
+  JumpSpeed: 21
   JumpOn:
     serializedVersion: 2
     m_Bits: 413696
