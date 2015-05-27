@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6ad61c07e006c4e2792b6ea2a66da061
-timeCreated: 1432672817
+timeCreated: 1432733854
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -19,6 +19,7 @@ TextureImporter:
     21300024: MushroomPiece3
     21300026: MushroomStem1
     21300028: CAVE SPRITES_3
+    21300030: CAVE SPRITES_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -211,6 +212,16 @@ TextureImporter:
         y: 919
         width: 740
         height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 404
+        width: 446
+        height: 150
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
