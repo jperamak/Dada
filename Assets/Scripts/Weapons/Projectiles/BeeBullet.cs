@@ -5,6 +5,7 @@ public class BeeBullet : Projectile {
 
     public float sleepTime;
     private int _awake = 0;
+	private int _lastAwake = 0;
     private float _drag;
     public float dragMod = 2;
     public float range, chaseFollow, chaseSpeed;
@@ -46,6 +47,8 @@ public class BeeBullet : Projectile {
 
 	// Update is called once per frame
 	void Update () {
+		_lastAwake = _awake;
+
         if (_awake == 0 && Time.time > sleepTime)
         {
             _drag = _rigidbody.drag + dragMod;
@@ -59,7 +62,7 @@ public class BeeBullet : Projectile {
         }
         if (_awake == 1)
         {
-            if (flySound != null && !flySoundStarted)
+            if (flySound != null && _lastAwake != 1)
                 flySound.PlayEffect();
 			flySoundStarted = true;
             if (aggroSound != null)
@@ -80,8 +83,8 @@ public class BeeBullet : Projectile {
         {
             if (flySound != null)
                 flySound.Stop();
-            if (aggroSound != null)
-                aggroSound.PlayEffect();
+			if (aggroSound != null && _lastAwake != 2)
+				aggroSound.PlayEffect();
 
             if (_target != null)
             {
