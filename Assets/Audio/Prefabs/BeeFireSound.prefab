@@ -112,8 +112,8 @@ MonoBehaviour:
   _audioClips:
   - {fileID: 0}
   PlayCooldown: .5
-  minPitch: 1
-  maxPitch: 1
+  minPitch: .379999995
+  maxPitch: .519999981
   minVolume: 1
   maxVolume: 1
   maxSimultaneous: 5

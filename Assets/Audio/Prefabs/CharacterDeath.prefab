@@ -42,7 +42,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: df7de304ac9394d838700a33981a340a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .699999988
+  m_Volume: .569999993
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -111,7 +111,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b442e25400fca4a14b831dfe237d5ce3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .579999983
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -180,7 +180,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: edfa3c036801742a2b820beeb5a31e40, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .800000012
+  m_Volume: .649999976
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -250,10 +250,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClips: []
+  PlayCooldown: .5
   minPitch: 1
   maxPitch: 1
   minVolume: 1
   maxVolume: 1
+  maxSimultaneous: 5
   Mode: 2
 --- !u!1001 &100100000
 Prefab:
