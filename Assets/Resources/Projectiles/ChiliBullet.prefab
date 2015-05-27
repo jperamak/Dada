@@ -79,7 +79,7 @@ GameObject:
   - 114: {fileID: 11442310}
   - 114: {fileID: 11442312}
   m_Layer: 0
-  m_Name: SimpleBullet
+  m_Name: ChiliBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
   DamageOwner: 1
-  DamageAmount: 10
+  DamageAmount: 20
 --- !u!198 &19864906
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -23,6 +23,11 @@ public class MainScreenManager : MonoBehaviour {
 	public Animator[] CowLevels;
 	public string[] LevelsName;
 
+	public SoundEffect MenuBackAudio;
+	public SoundEffect MenuConfirmAudio;
+	public SoundEffect MenuBipAudio;
+	public SoundEffect MenuConfirmEggsAudio;
+
 	private FadeEffect _startFadeText;
 	private FadeEffect _creditsFadeText;
 	private FadeEffect _teamFadeText;
@@ -65,6 +70,7 @@ public class MainScreenManager : MonoBehaviour {
 				_creditsFadeText.Stop(1,0);
 				StartGameText.color = Color.yellow;
 				CreditsText.color = Color.white;
+				MenuBipAudio.PlayEffect();
 			}
 
 			//highlight Credits text
@@ -73,6 +79,7 @@ public class MainScreenManager : MonoBehaviour {
 				_startFadeText.Stop(1,0);
 				CreditsText.color = Color.yellow;
 				StartGameText.color = Color.white;
+				MenuBipAudio.PlayEffect();
 			}
 
 			//player pressed submit
@@ -96,6 +103,8 @@ public class MainScreenManager : MonoBehaviour {
 					EggsAnimator.SetTrigger("PopIn");
 					_currentScreen = Screen.PLAYER_SELECTION;
 				}
+
+				MenuConfirmAudio.PlayEffect();
 			}
 		}
 		else if(_currentScreen == Screen.CREDITS){
@@ -110,6 +119,7 @@ public class MainScreenManager : MonoBehaviour {
 				CreditsPage.Fade(1,0,0,0.3f);
 				StartPage.Fade(0,1,0.3f, 0.3f);
 				_currentScreen = Screen.START;
+				MenuBackAudio.PlayEffect();
 
 			}
 		}
@@ -127,6 +137,7 @@ public class MainScreenManager : MonoBehaviour {
 				StartPage.Fade(0,1,1f, 0.3f);
 				_currentScreen = Screen.START;
 				_playerNum = 0;
+				MenuBackAudio.PlayEffect();
 			}
 
 			//open new egg
@@ -134,7 +145,9 @@ public class MainScreenManager : MonoBehaviour {
 				if(_playerNum < DadaInput.ConrtollerCount){
 					PlayerEggsAnim[_playerNum].SetTrigger("Crack");
 					_playerNum++;
+					MenuBipAudio.PlayEffect();
 				}
+
 			}
 
 			//close egg
@@ -142,11 +155,13 @@ public class MainScreenManager : MonoBehaviour {
 				if(_playerNum > 0){
 					_playerNum--;
 					PlayerEggsAnim[_playerNum].SetTrigger("Close");
+					MenuBipAudio.PlayEffect();
 				}
 			}
 
 			//Smash eggs and show Levels
 			if(_controller.GetButtonDown(VirtualKey.SUBMIT)){
+
 				LogoAnimator.SetTrigger("Reduce");
 				EggsAnimator.SetTrigger("Smash");
 
@@ -158,7 +173,7 @@ public class MainScreenManager : MonoBehaviour {
 				}
 
 				CowLevels[0].SetBool("IsDancing",true);
-
+				MenuConfirmAudio.PlayEffect();
 				_currentScreen = Screen.LEVEL_SELECTION;
 			}
 		}
@@ -166,6 +181,7 @@ public class MainScreenManager : MonoBehaviour {
 
 			//Go to Start and close eggs
 			if(_controller.GetButtonDown(VirtualKey.BACK)){
+				MenuBackAudio.PlayEffect();
 				LogoAnimator.SetTrigger("Enlarge");
 				EggsAnimator.SetTrigger("UnSmash");
 
@@ -185,6 +201,7 @@ public class MainScreenManager : MonoBehaviour {
 				if(_levelNum+1 < CowLevels.Length){
 					CowLevels[_levelNum].SetBool("IsDancing",false);
 					CowLevels[_levelNum+1].SetBool("IsDancing",true);
+					MenuBipAudio.PlayEffect();
 					_levelNum++;
 				}
 			}
@@ -194,6 +211,7 @@ public class MainScreenManager : MonoBehaviour {
 				if(_levelNum > 0){
 					CowLevels[_levelNum].SetBool("IsDancing",false);
 					CowLevels[_levelNum-1].SetBool("IsDancing",true);
+					MenuBipAudio.PlayEffect();
 					_levelNum--;
 				}
 			}
@@ -213,6 +231,7 @@ public class MainScreenManager : MonoBehaviour {
 				AllVsAllModeText.color = Color.white;
 				ModePage.Fade(0,1,0.3f, 0.3f);
 				_isTeamMode = true;
+				MenuConfirmAudio.PlayEffect();
 				_currentScreen = Screen.MODE_SELECTION;
 
 			}
@@ -226,6 +245,7 @@ public class MainScreenManager : MonoBehaviour {
 				TeamModeText.color = Color.yellow;
 				AllVsAllModeText.color = Color.white;
 				_isTeamMode = true;
+				MenuBipAudio.PlayEffect();
 			}
 			
 			//highlight Credits text
@@ -235,9 +255,11 @@ public class MainScreenManager : MonoBehaviour {
 				AllVsAllModeText.color = Color.yellow;
 				TeamModeText.color = Color.white;
 				_isTeamMode = false;
+				MenuBipAudio.PlayEffect();
 			}
 
 			if(_controller.GetButtonDown(VirtualKey.BACK)){
+				MenuBackAudio.PlayEffect();
 				ModePage.Fade(1,0,0,0.3f);
 
 				for(int i=0; i< CowLevels.Length; i++){
@@ -249,6 +271,7 @@ public class MainScreenManager : MonoBehaviour {
 
 			if(_controller.GetButtonDown(VirtualKey.SUBMIT)){
 				BlackScreen.Fade();
+				MenuConfirmAudio.PlayEffect();
 				Invoke("BeginGame",0.6f);
 				_currentScreen = Screen.BLACKSCREEN;
 			}
