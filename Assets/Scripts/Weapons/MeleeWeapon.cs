@@ -11,10 +11,10 @@ public class MeleeWeapon : Weapon {
 			SpawnPoint = transform.FindChild("Spawner");
 	}
 
-	protected override void Shoot(){
+	protected override Projectile Shoot(){
 
 		if(Strike == null || SpawnPoint == null)
-			return;
+			return null;
 
 		//looks for any custom spawn point forced externally. otherwise use the standard muzzle
 		Vector2 referencePos;
@@ -48,6 +48,7 @@ public class MeleeWeapon : Weapon {
 			visualFx.transform.parent = _owner.transform;
 		}
 
+		return bulletInst;
 		
 	}
 	/*

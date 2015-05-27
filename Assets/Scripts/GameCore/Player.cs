@@ -12,6 +12,7 @@ public class Player{
 	public Resource Hero{get; set;}
 	public Resource FirstWeapon{get; set;}
 	public Resource SecondWeapon{get; set;}
+    public Resource Hat { get; set; }
 
 
 	public Player(AbstractController controller, int playerNum = -1){

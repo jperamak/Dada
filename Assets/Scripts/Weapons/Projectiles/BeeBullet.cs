@@ -12,14 +12,22 @@ public class BeeBullet : Projectile {
     public float lifeTime = 5f;
     private bool _fading = false;
 
+    public SoundEffect flySound, aggroSound;
+
     private float startTime;
     private SpriteRenderer spriteRend;
 
     protected GameObject _targetHit;
 
     private Rigidbody2D _rigidbody;
+	bool flySoundStarted = false;
 	// Use this for initialization
 	void Start () {
+
+        flySound = DadaAudio.GetSoundEffect(flySound);
+        aggroSound = DadaAudio.GetSoundEffect(aggroSound);
+
+
         startTime = Time.time;
         sleepTime += Time.time;
         spriteRend = GetComponent<SpriteRenderer>();
@@ -27,20 +35,9 @@ public class BeeBullet : Projectile {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
 	}
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            _targetHit = other.gameObject;
-            Debug.Log("moo");
-            TriggerEffects();
-        }
-    }
-
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("moo2");
-        if (coll.collider.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player")
         {
             _targetHit = coll.gameObject;
             TriggerEffects();
@@ -62,6 +59,12 @@ public class BeeBullet : Projectile {
         }
         if (_awake == 1)
         {
+            if (flySound != null && !flySoundStarted)
+                flySound.PlayEffect();
+			flySoundStarted = true;
+            if (aggroSound != null)
+                aggroSound.Stop();
+
             _rigidbody.velocity = Quaternion.EulerAngles(0, 0, Random.Range(-45f, 45f)) * _rigidbody.velocity.normalized * 4f;
             Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, range);
             for (int i = 0; i < objects.Length; i++)
@@ -75,6 +78,11 @@ public class BeeBullet : Projectile {
         }
         if (_awake == 2)
         {
+            if (flySound != null)
+                flySound.Stop();
+            if (aggroSound != null)
+                aggroSound.PlayEffect();
+
             if (_target != null)
             {
                 Vector3 dir = Vector3.Lerp(_rigidbody.velocity, _target.position - transform.position, chaseFollow * Time.deltaTime);

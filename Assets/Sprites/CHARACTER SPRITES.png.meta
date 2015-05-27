@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 04d49f32308254d1fb589360aa15d3a6
-timeCreated: 1432552817
+timeCreated: 1432664322
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -30,6 +30,7 @@ TextureImporter:
     21300046: CHARACTER SPRITES_1
     21300048: CHARACTER SPRITES_3
     21300050: CHARACTER SPRITES_5
+    21300052: CHARACTER SPRITES_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -128,52 +129,52 @@ TextureImporter:
     - name: Raccoon Hat
       rect:
         serializedVersion: 2
-        x: 703
-        y: 389
-        width: 129
-        height: 92
+        x: 696
+        y: 385
+        width: 138
+        height: 102
       alignment: 9
-      pivot: {x: .702030182, y: .35488227}
+      pivot: {x: .649357021, y: .335129678}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Fez Hat
       rect:
         serializedVersion: 2
-        x: 891
-        y: 430
-        width: 78
-        height: 50
+        x: 857
+        y: 401
+        width: 138
+        height: 102
       alignment: 9
-      pivot: {x: .855134606, y: 0}
+      pivot: {x: .657403946, y: .320689172}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Poop Hat
       rect:
         serializedVersion: 2
-        x: 724
-        y: 233
-        width: 93
-        height: 90
+        x: 688
+        y: 221
+        width: 138
+        height: 102
       alignment: 9
-      pivot: {x: .646162152, y: .25071615}
+      pivot: {x: .659331381, y: .230524555}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Tea Hat
       rect:
         serializedVersion: 2
-        x: 861
-        y: 239
-        width: 127
-        height: 86
+        x: 847
+        y: 223
+        width: 138
+        height: 102
       alignment: 9
-      pivot: {x: .60833019, y: .0840649307}
+      pivot: {x: .581993639, y: .190961346}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pot Hat
       rect:
         serializedVersion: 2
-        x: 863
+        x: 845
         y: 548
-        width: 127
-        height: 96
+        width: 137
+        height: 102
       alignment: 9
-      pivot: {x: .6648103, y: .238706589}
+      pivot: {x: .638281584, y: .220891014}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Crossair Sprite
       rect:
@@ -244,6 +245,16 @@ TextureImporter:
         height: 129
       alignment: 9
       pivot: {x: .507913768, y: .132838517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHARACTER SPRITES_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 555
+        width: 68
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

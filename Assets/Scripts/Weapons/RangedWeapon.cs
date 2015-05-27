@@ -28,10 +28,10 @@ public class RangedWeapon : Weapon {
 		base.OnTriggerDown ();
 	}
 
-	protected override void Shoot(){
+	protected override Projectile Shoot(){
 
 		if(_currentBullets <= 0 || Bullet == null || SpawnPoint == null)
-			return;
+			return null;
 
 		//looks for any custom spawn point forced externally. otherwise use the standard muzzle
 		Transform _referencePoint = _customSpawnPoint != null ? _customSpawnPoint : SpawnPoint;
@@ -60,6 +60,8 @@ public class RangedWeapon : Weapon {
 				//bulletInst.GetComponent<Rigidbody2D>().AddForce(_referencePoint.right * PushForce,ForceMode2D.Impulse);
 
 		}
+
+		return bulletInst;
 	}
 
 	protected void Recharge(){

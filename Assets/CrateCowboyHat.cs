@@ -32,6 +32,7 @@ public class CrateCowboyHat : MonoBehaviour {
 			if (hatAnim != null)
 				hatAnim.enabled = false;
 			transform.eulerAngles = new Vector3(0f,0f,0f);
+			transform.position = target.transform.position;
 		}
 
 

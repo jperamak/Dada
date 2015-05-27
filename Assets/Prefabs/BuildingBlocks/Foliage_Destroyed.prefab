@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21260224}
   - 50: {fileID: 5060224}
   - 60: {fileID: 6060224}
-  - 114: {fileID: 11497932}
   - 114: {fileID: 11400126}
+  - 114: {fileID: 11417770}
   m_Layer: 13
   m_Name: Rubble3
   m_TagString: Untagged
@@ -31,8 +31,8 @@ GameObject:
   - 212: {fileID: 21260226}
   - 50: {fileID: 5060226}
   - 60: {fileID: 6060226}
-  - 114: {fileID: 11470744}
   - 114: {fileID: 11411266}
+  - 114: {fileID: 11491530}
   m_Layer: 13
   m_Name: Rubble2
   m_TagString: Untagged
@@ -51,8 +51,8 @@ GameObject:
   - 212: {fileID: 21260228}
   - 50: {fileID: 5060228}
   - 60: {fileID: 6060228}
-  - 114: {fileID: 11499494}
   - 114: {fileID: 11450212}
+  - 114: {fileID: 11464562}
   m_Layer: 13
   m_Name: Rubble1
   m_TagString: Untagged
@@ -83,7 +83,7 @@ Transform:
   m_GameObject: {fileID: 160224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.639999986, y: -.637000024, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 460230}
   m_RootOrder: 2
@@ -95,7 +95,7 @@ Transform:
   m_GameObject: {fileID: 160226}
   m_LocalRotation: {x: 0, y: 0, z: .300320536, w: .953838348}
   m_LocalPosition: {x: .588999987, y: -.214000002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 460230}
   m_RootOrder: 1
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 160228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.728999972, y: .252999991, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 460230}
   m_RootOrder: 0
@@ -118,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.6712389, y: 3.26644111, z: 0}
+  m_LocalPosition: {x: 15.7033653, y: 3.40536427, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 460228}
@@ -263,6 +263,19 @@ MonoBehaviour:
   secondsToStartFading: 2
   secondsForFading: 1
   destroy: 1
+--- !u!114 &11417770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602ff48e96923434c9f4b5ee0e14e916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minVelocity: 5
+  maxVelocity: 10
 --- !u!114 &11450212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,69 +290,32 @@ MonoBehaviour:
   secondsToStartFading: 2
   secondsForFading: 1
   destroy: 1
---- !u!114 &11470744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160226}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHitpoints: 10
-  DamageSound: {fileID: 0}
-  DestroySound: {fileID: 0}
-  hitpointsLightDamage: 0
-  hitpointsHeavyDamage: 0
-  spriteLightDamage: {fileID: 0}
-  spriteHeavyDamage: {fileID: 0}
-  leftWhenDestroyed: {fileID: 0}
-  DestroyOnZeroHp: 1
-  damageFromCollisions: 0
---- !u!114 &11497932
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160224}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHitpoints: 10
-  DamageSound: {fileID: 0}
-  DestroySound: {fileID: 0}
-  hitpointsLightDamage: 0
-  hitpointsHeavyDamage: 0
-  spriteLightDamage: {fileID: 0}
-  spriteHeavyDamage: {fileID: 0}
-  leftWhenDestroyed: {fileID: 0}
-  DestroyOnZeroHp: 1
-  damageFromCollisions: 0
---- !u!114 &11499494
+--- !u!114 &11464562
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160228}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
+  m_Script: {fileID: 11500000, guid: 602ff48e96923434c9f4b5ee0e14e916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitpoints: 10
-  DamageSound: {fileID: 0}
-  DestroySound: {fileID: 0}
-  hitpointsLightDamage: 0
-  hitpointsHeavyDamage: 0
-  spriteLightDamage: {fileID: 0}
-  spriteHeavyDamage: {fileID: 0}
-  leftWhenDestroyed: {fileID: 0}
-  DestroyOnZeroHp: 1
-  damageFromCollisions: 0
+  minVelocity: 5
+  maxVelocity: 10
+--- !u!114 &11491530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602ff48e96923434c9f4b5ee0e14e916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minVelocity: 5
+  maxVelocity: 10
 --- !u!212 &21260224
 SpriteRenderer:
   m_ObjectHideFlags: 1

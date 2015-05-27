@@ -38,7 +38,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8f88ef57a3918474c896c54839e5be82, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7b8be513cf7854b7bb9d4a521f8e9df0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .500999987
   m_Pitch: 1
@@ -116,6 +116,7 @@ MonoBehaviour:
   maxPitch: 1
   minVolume: 1
   maxVolume: 1
+  maxSimultaneous: 5
   Mode: 2
 --- !u!1001 &100100000
 Prefab:

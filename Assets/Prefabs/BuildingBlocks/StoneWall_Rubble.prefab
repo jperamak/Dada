@@ -13,7 +13,7 @@ GameObject:
   - 60: {fileID: 6060222}
   - 114: {fileID: 11427642}
   - 114: {fileID: 11470612}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Rubble4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ GameObject:
   - 60: {fileID: 6060224}
   - 114: {fileID: 11497932}
   - 114: {fileID: 11478498}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Rubble3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - 60: {fileID: 6060226}
   - 114: {fileID: 11470744}
   - 114: {fileID: 11446340}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Rubble2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - 60: {fileID: 6060228}
   - 114: {fileID: 11499494}
   - 114: {fileID: 11422592}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Rubble1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,6 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroy: 1
 --- !u!114 &11427642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroy: 1
 --- !u!114 &11470612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,6 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroy: 1
 --- !u!114 &11470744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -395,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroy: 1
 --- !u!114 &11497932
 MonoBehaviour:
   m_ObjectHideFlags: 1

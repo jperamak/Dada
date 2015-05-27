@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 6ad61c07e006c4e2792b6ea2a66da061
+timeCreated: 1432672817
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CAVE SPRITES_0
+    21300002: CAVE SPRITES_1
+    21300004: CAVE SPRITES_2
+    21300006: MushroomStem2
+    21300008: CAVE SPRITES_4
+    21300010: CAVE SPRITES_5
+    21300012: CAVE SPRITES_6
+    21300014: CAVE SPRITES_7
+    21300016: CAVE SPRITES_8
+    21300018: Mushroom
+    21300020: MushroomPiece1
+    21300022: MushroomPiece2
+    21300024: MushroomPiece3
+    21300026: MushroomStem1
+    21300028: CAVE SPRITES_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 35
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CAVE SPRITES_0
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 403
+        width: 378
+        height: 701
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_1
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 396
+        width: 408
+        height: 602
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_2
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 600
+        width: 467
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MushroomStem2
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 833
+        width: 175
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 595
+        width: 442
+        height: 238
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_5
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 420
+        width: 159
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_6
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 418
+        width: 157
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 184
+        width: 358
+        height: 175
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 12
+        width: 553
+        height: 340
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mushroom
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 22
+        width: 59
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MushroomPiece1
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 61
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MushroomPiece2
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 53
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MushroomPiece3
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 99
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MushroomStem1
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 46
+        width: 397
+        height: 245
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CAVE SPRITES_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 919
+        width: 740
+        height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

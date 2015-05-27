@@ -123,6 +123,7 @@ MonoBehaviour:
   RechargeEvery: .5
   PushForce: 20
   OutOfAmmo: {fileID: 0}
+  ProjectileRandomRotation: 1
 --- !u!212 &21244588
 SpriteRenderer:
   m_ObjectHideFlags: 1

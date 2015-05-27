@@ -34,7 +34,7 @@ public abstract class Weapon : MonoBehaviour {
 		}
 	}
 
-	protected abstract void Shoot();
+	protected abstract Projectile Shoot();
 
 	public virtual void OnTriggerDown (){
 		if(Time.time - _lastShoot > CooldownTime){
