@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: 272fdd1df98a71249a67633ab1572865
-timeCreated: 1432399816
+timeCreated: 1432732348
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Ghosts_0
     21300002: Ghosts_1
+    21300004: Ghosts_2
+    21300006: Ghosts_3
+    21300008: Ghosts_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,21 +48,61 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 120
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
+    - name: Ghosts_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 274
+        width: 402
+        height: 497
+      alignment: 9
+      pivot: {x: .549807191, y: .533572257}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ghosts_1
       rect:
         serializedVersion: 2
-        x: 801
-        y: 261
-        width: 406
-        height: 507
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        x: 464
+        y: 246
+        width: 341
+        height: 526
+      alignment: 9
+      pivot: {x: .475534558, y: .553926289}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ghosts_2
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 232
+        width: 334
+        height: 540
+      alignment: 9
+      pivot: {x: .465030521, y: .567977667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ghosts_3
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 244
+        width: 340
+        height: 528
+      alignment: 9
+      pivot: {x: .475462794, y: .560042202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ghosts_4
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 274
+        width: 402
+        height: 497
+      alignment: 9
+      pivot: {x: .421138644, y: .54028666}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

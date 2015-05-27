@@ -4,6 +4,7 @@ using System.Collections;
 public class WeaponPickup : MonoBehaviour {
 
     public GameObject WeaponPrefab;
+	public SoundEffect PickupSound;
 
     void OnTriggerEnter2D(Collider2D c)
     {
@@ -18,13 +19,14 @@ public class WeaponPickup : MonoBehaviour {
             w.transform.localPosition = Vector2.zero;
             w.SetOwner(h.gameObject);
             h.GiveWeapon(w);
+			PickupSound.PlayEffect();
             Destroy(this.gameObject);
         }
     }
 
 	// Use this for initialization
 	void Start () {
-	
+		PickupSound = DadaAudio.GetSoundEffect(PickupSound);
 	}
 	
 	// Update is called once per frame
