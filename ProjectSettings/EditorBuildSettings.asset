@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Arena3.unity
   - enabled: 1
     path: Assets/Scenes/Arena5.unity
+  - enabled: 1
+    path: Assets/Scenes/MushroomArena.unity

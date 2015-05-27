@@ -148,7 +148,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 8456761}
---- !u!114 &9825069 stripped
+--- !u!114 &9825069
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11492466, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
@@ -215,7 +215,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 31313891}
---- !u!114 &35700790 stripped
+--- !u!114 &35700790
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11469730, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
@@ -650,21 +650,21 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!4 &382938180 stripped
+--- !u!4 &382938180
 Transform:
   m_PrefabParentObject: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
   m_PrefabInternal: {fileID: 867155621}
---- !u!95 &382938181 stripped
+--- !u!95 &382938181
 Animator:
   m_PrefabParentObject: {fileID: 9597180, guid: 179effaf2af85554f9c75e80b24399b5,
     type: 2}
   m_PrefabInternal: {fileID: 867155621}
---- !u!95 &454065251 stripped
+--- !u!95 &454065251
 Animator:
   m_PrefabParentObject: {fileID: 9546466, guid: 179effaf2af85554f9c75e80b24399b5,
     type: 2}
   m_PrefabInternal: {fileID: 867155621}
---- !u!95 &476963059 stripped
+--- !u!95 &476963059
 Animator:
   m_PrefabParentObject: {fileID: 9503898, guid: 179effaf2af85554f9c75e80b24399b5,
     type: 2}
@@ -732,7 +732,7 @@ Transform:
   - {fileID: 2048369535}
   m_Father: {fileID: 252471490}
   m_RootOrder: 2
---- !u!4 &691265487 stripped
+--- !u!4 &691265487
 Transform:
   m_PrefabParentObject: {fileID: 479102, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_PrefabInternal: {fileID: 2085580775}
@@ -1127,11 +1127,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c63e798bd8d81e4db37acb2b2661099, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &854394789 stripped
+--- !u!4 &854394789
 Transform:
   m_PrefabParentObject: {fileID: 449986, guid: 9c63e798bd8d81e4db37acb2b2661099, type: 2}
   m_PrefabInternal: {fileID: 854394788}
---- !u!95 &854394790 stripped
+--- !u!95 &854394790
 Animator:
   m_PrefabParentObject: {fileID: 9563574, guid: 9c63e798bd8d81e4db37acb2b2661099,
     type: 2}
@@ -1255,13 +1255,13 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &943744295 stripped
+--- !u!114 &943744295
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11410572, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
   m_PrefabInternal: {fileID: 1969047255}
   m_Script: {fileID: 11500000, guid: c60146eb0693b134eb36af483a6be9ac, type: 3}
---- !u!1 &974080023 stripped
+--- !u!1 &974080023
 GameObject:
   m_PrefabParentObject: {fileID: 176426, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_PrefabInternal: {fileID: 1785400108}
@@ -1308,16 +1308,16 @@ Transform:
   - {fileID: 252471490}
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!4 &1030242514 stripped
+--- !u!4 &1030242514
 Transform:
   m_PrefabParentObject: {fileID: 449986, guid: 9c63e798bd8d81e4db37acb2b2661099, type: 2}
   m_PrefabInternal: {fileID: 1963311256}
---- !u!95 &1030242515 stripped
+--- !u!95 &1030242515
 Animator:
   m_PrefabParentObject: {fileID: 9563574, guid: 9c63e798bd8d81e4db37acb2b2661099,
     type: 2}
   m_PrefabInternal: {fileID: 1963311256}
---- !u!4 &1057829509 stripped
+--- !u!4 &1057829509
 Transform:
   m_PrefabParentObject: {fileID: 479102, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_PrefabInternal: {fileID: 1785400108}
@@ -1428,19 +1428,19 @@ Transform:
   - {fileID: 854394789}
   m_Father: {fileID: 252471490}
   m_RootOrder: 1
---- !u!114 &1247105562 stripped
+--- !u!114 &1247105562
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11468822, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
   m_PrefabInternal: {fileID: 1969047255}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!114 &1321448216 stripped
+--- !u!114 &1321448216
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11477958, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
   m_PrefabInternal: {fileID: 1969047255}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!1 &1371663632 stripped
+--- !u!1 &1371663632
 GameObject:
   m_PrefabParentObject: {fileID: 176426, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_PrefabInternal: {fileID: 2085580775}
@@ -1533,12 +1533,12 @@ Transform:
   - {fileID: 1918104330}
   m_Father: {fileID: 362964595}
   m_RootOrder: 0
---- !u!224 &1445415034 stripped
+--- !u!224 &1445415034
 RectTransform:
   m_PrefabParentObject: {fileID: 22430888, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
   m_PrefabInternal: {fileID: 1969047255}
---- !u!114 &1477704425 stripped
+--- !u!114 &1477704425
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11406802, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
@@ -1624,7 +1624,7 @@ MonoBehaviour:
   - {fileID: 2048369536}
   LevelsName:
   - TeamFortress2
-  - Arena5
+  - MushroomArena
   - Planets
 --- !u!4 &1711048178
 Transform:
@@ -1992,7 +1992,7 @@ Prefab:
     - {fileID: 11498798, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1853207379 stripped
+--- !u!1 &1853207379
 GameObject:
   m_PrefabParentObject: {fileID: 193352, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_PrefabInternal: {fileID: 1785400108}
@@ -2007,12 +2007,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1457d6b405dabad468942e1fc6137a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1856457007 stripped
+--- !u!95 &1856457007
 Animator:
   m_PrefabParentObject: {fileID: 9566922, guid: 179effaf2af85554f9c75e80b24399b5,
     type: 2}
   m_PrefabInternal: {fileID: 867155621}
---- !u!1 &1879546839 stripped
+--- !u!1 &1879546839
 GameObject:
   m_PrefabParentObject: {fileID: 193352, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_PrefabInternal: {fileID: 2085580775}
@@ -2266,13 +2266,13 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &2019404593 stripped
+--- !u!114 &2019404593
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11437322, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
   m_PrefabInternal: {fileID: 1969047255}
   m_Script: {fileID: 11500000, guid: c60146eb0693b134eb36af483a6be9ac, type: 3}
---- !u!114 &2042513425 stripped
+--- !u!114 &2042513425
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11409764, guid: afc3d897c008d524b9e78bb727811fca,
     type: 2}
@@ -2357,11 +2357,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c63e798bd8d81e4db37acb2b2661099, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &2048369535 stripped
+--- !u!4 &2048369535
 Transform:
   m_PrefabParentObject: {fileID: 449986, guid: 9c63e798bd8d81e4db37acb2b2661099, type: 2}
   m_PrefabInternal: {fileID: 2048369534}
---- !u!95 &2048369536 stripped
+--- !u!95 &2048369536
 Animator:
   m_PrefabParentObject: {fileID: 9563574, guid: 9c63e798bd8d81e4db37acb2b2661099,
     type: 2}
@@ -2755,7 +2755,7 @@ Prefab:
     - {fileID: 11498798, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6bfae1834d92dc942b0ce451f24ac928, type: 2}
   m_IsPrefabParent: 0
---- !u!95 &2126089350 stripped
+--- !u!95 &2126089350
 Animator:
   m_PrefabParentObject: {fileID: 9587602, guid: 179effaf2af85554f9c75e80b24399b5,
     type: 2}
