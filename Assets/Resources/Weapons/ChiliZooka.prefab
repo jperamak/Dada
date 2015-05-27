@@ -98,13 +98,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CooldownTime: .100000001
   VisualEffect: {fileID: 0}
-  FireSound: {fileID: 0}
+  FireSound: {fileID: 11413700, guid: b068c755194c9406a8108d4d05220672, type: 2}
   SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11442310, guid: 804ac68f809d4ba41808555b5d6be74a, type: 2}
   MaxBullets: 10
   RechargeEvery: .5
   PushForce: 80
   OutOfAmmo: {fileID: 0}
+  ProjectileRandomRotation: 0
 --- !u!212 &21298150
 SpriteRenderer:
   m_ObjectHideFlags: 1
