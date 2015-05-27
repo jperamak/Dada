@@ -60,7 +60,8 @@ public class LevelManager : MonoBehaviour {
 				scoreText.GetChild(i).gameObject.SetActive(false);
 			else{
                 _scoreThing.Add(scoreText.GetChild(i).gameObject);
-                scoreText.GetChild(i).GetComponent<Image>().color = _teams[i].TeamColor;
+				GameObject frame = scoreText.GetChild(i).FindChild("Frame").gameObject;
+                frame.GetComponent<Image>().color = _teams[i].TeamColor;
                 scoreText.GetChild(i).GetComponent<UIScore>().ScoresBg.GetComponent<Image>().color =  _teams[DadaGame.Players[i].InTeam.Number].TeamColor;
 			}
 
