@@ -22865,7 +22865,7 @@ GameObject:
   - 4: {fileID: 950423341}
   - 212: {fileID: 950423340}
   - 60: {fileID: 950423342}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: CAVE SPRITES_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
