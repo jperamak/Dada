@@ -293,7 +293,7 @@ public class MainScreenManager : MonoBehaviour {
 			Player p = new Player(DadaInput.GetJoystick(0));
 			p.Hero = Resource.FISH_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
-			p.SecondWeapon = Resource.LAYBOMB_MELEE;
+			p.SecondWeapon = Resource.LAYBOMB_MELEE; 
 			p.InTeam = Team.TEAM_1;
 			DadaGame.RegisterPlayer(p);
 		}
