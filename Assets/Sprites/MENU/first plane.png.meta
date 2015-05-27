@@ -1,18 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: 3f11f24abee27974ba03f6a30ad801b9
-timeCreated: 1432590619
+timeCreated: 1432660970
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: first plane_0
-=======
-guid: 99aa6555443d04d3fb84b172412eb842
-timeCreated: 1432586291
-licenseType: Free
-TextureImporter:
-  fileIDToRecycleName: {}
->>>>>>> Stashed changes
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,22 +31,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-<<<<<<< Updated upstream
     aniso: 16
-=======
-    aniso: -1
->>>>>>> Stashed changes
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-<<<<<<< Updated upstream
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -65,7 +49,6 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-<<<<<<< Updated upstream
     sprites:
     - name: first plane_0
       rect:
@@ -73,13 +56,10 @@ TextureImporter:
         x: 0
         y: 0
         width: 2852
-        height: 318
+        height: 309
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-=======
-    sprites: []
->>>>>>> Stashed changes
   spritePackingTag: 
   userData: 
   assetBundleName: 

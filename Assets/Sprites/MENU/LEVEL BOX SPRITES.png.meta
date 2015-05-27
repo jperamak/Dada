@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 guid: caf6c278bf7f048b383614400a9f0133
-timeCreated: 1432649481
+timeCreated: 1432689813
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: LEVEL BOX SPRITES_0
+    21300002: LEVEL BOX SPRITES_1
+    21300004: LEVEL BOX SPRITES_3
+    21300006: LEVEL BOX SPRITES_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +34,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +52,47 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: LEVEL BOX SPRITES_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 345
+        width: 536
+        height: 596
+      alignment: 9
+      pivot: {x: .48264876, y: .0764478147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LEVEL BOX SPRITES_1
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 713
+        width: 518
+        height: 175
+      alignment: 9
+      pivot: {x: .502564907, y: .77331543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LEVEL BOX SPRITES_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 36
+        width: 148
+        height: 276
+      alignment: 9
+      pivot: {x: .868062615, y: .913989186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LEVEL BOX SPRITES_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 36
+        width: 240
+        height: 216
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -1,14 +1,21 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: 5f151a443a4a8d94884a67675fd48bc8
-timeCreated: 1432589390
-=======
-guid: 1e19db68819594d0cb337cd735799744
-timeCreated: 1432586286
->>>>>>> Stashed changes
+timeCreated: 1432660628
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: CHICKEN BUTTONS_0
+    21300002: CHICKEN BUTTONS_1
+    21300004: CHICKEN BUTTONS_2
+    21300006: CHICKEN BUTTONS_3
+    21300008: CHICKEN BUTTONS_4
+    21300010: CHICKEN BUTTONS_5
+    21300012: CHICKEN BUTTONS_6
+    21300014: CHICKEN BUTTONS_7
+    21300016: CHICKEN BUTTONS_8
+    21300018: CHICKEN BUTTONS_9
+    21300020: CHICKEN BUTTONS_10
+    21300022: CHICKEN BUTTONS_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,22 +42,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-<<<<<<< Updated upstream
     aniso: 16
-=======
-    aniso: -1
->>>>>>> Stashed changes
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-<<<<<<< Updated upstream
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -61,7 +60,127 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: CHICKEN BUTTONS_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1035
+        width: 315
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1010
+        width: 269
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_2
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1009
+        width: 269
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_3
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1033
+        width: 225
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 562
+        width: 370
+        height: 380
+      alignment: 9
+      pivot: {x: .501864612, y: .0520111099}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_5
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 562
+        width: 370
+        height: 380
+      alignment: 9
+      pivot: {x: .50568372, y: .0544992536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_6
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 562
+        width: 370
+        height: 380
+      alignment: 9
+      pivot: {x: .5, y: .0655675009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_7
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 562
+        width: 370
+        height: 379
+      alignment: 9
+      pivot: {x: .522735119, y: .0588725135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_8
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 36
+        width: 372
+        height: 465
+      alignment: 9
+      pivot: {x: .443468153, y: .0477450714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_9
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 36
+        width: 370
+        height: 465
+      alignment: 9
+      pivot: {x: .502841771, y: .0477450714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_10
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 36
+        width: 370
+        height: 465
+      alignment: 9
+      pivot: {x: .502841949, y: .0432225205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CHICKEN BUTTONS_11
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 36
+        width: 372
+        height: 465
+      alignment: 9
+      pivot: {x: .567838252, y: .0500063412}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

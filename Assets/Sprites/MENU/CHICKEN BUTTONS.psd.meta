@@ -1,29 +1,21 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: b13bdca3487fba647a3add8b62df899c
-timeCreated: 1432598275
+timeCreated: 1432661246
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Egg_top
-    21300002: Chicken_norm
-    21300004: Chicken_coak
-    21300006: Egg_shadow
-    21300008: Egg_crack_1
-    21300010: Egg_crack_2
-    21300012: Egg_crack_3
-    21300014: Egg_crack_4
-    21300016: Egg_full_1
-    21300018: Egg_full_2
-    21300020: Egg_full_3
-    21300022: Egg_full_4
-=======
-guid: 6a80a0932cca24a3cac8ad98433c2f7d
-timeCreated: 1432586287
-licenseType: Free
-TextureImporter:
-  fileIDToRecycleName: {}
->>>>>>> Stashed changes
+    21300000: CHICKEN BUTTONS_0
+    21300002: CHICKEN BUTTONS_1
+    21300004: CHICKEN BUTTONS_2
+    21300006: CHICKEN BUTTONS_3
+    21300008: CHICKEN BUTTONS_4
+    21300010: CHICKEN BUTTONS_5
+    21300012: CHICKEN BUTTONS_6
+    21300014: CHICKEN BUTTONS_7
+    21300016: CHICKEN BUTTONS_8
+    21300018: CHICKEN BUTTONS_9
+    21300020: CHICKEN BUTTONS_10
+    21300022: CHICKEN BUTTONS_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -50,22 +42,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-<<<<<<< Updated upstream
     aniso: 16
-=======
-    aniso: -1
->>>>>>> Stashed changes
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-<<<<<<< Updated upstream
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +60,8 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-<<<<<<< Updated upstream
     sprites:
-    - name: Egg_top
+    - name: CHICKEN BUTTONS_0
       rect:
         serializedVersion: 2
         x: 58
@@ -88,7 +71,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Chicken_norm
+    - name: CHICKEN BUTTONS_1
       rect:
         serializedVersion: 2
         x: 464
@@ -98,7 +81,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Chicken_coak
+    - name: CHICKEN BUTTONS_2
       rect:
         serializedVersion: 2
         x: 872
@@ -108,7 +91,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_shadow
+    - name: CHICKEN BUTTONS_3
       rect:
         serializedVersion: 2
         x: 1354
@@ -118,17 +101,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_crack_1
+    - name: CHICKEN BUTTONS_4
       rect:
         serializedVersion: 2
-        x: 49
+        x: 47
         y: 562
         width: 370
         height: 380
       alignment: 9
-      pivot: {x: .49655804, y: .0606027693}
+      pivot: {x: .503680348, y: .0664019138}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_crack_2
+    - name: CHICKEN BUTTONS_5
       rect:
         serializedVersion: 2
         x: 464
@@ -136,9 +119,9 @@ TextureImporter:
         width: 370
         height: 380
       alignment: 9
-      pivot: {x: .508176386, y: .0606866144}
+      pivot: {x: .507360518, y: .0592350997}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_crack_3
+    - name: CHICKEN BUTTONS_6
       rect:
         serializedVersion: 2
         x: 863
@@ -146,9 +129,9 @@ TextureImporter:
         width: 370
         height: 380
       alignment: 9
-      pivot: {x: .504405737, y: .0624471568}
+      pivot: {x: .503680229, y: .0592350997}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_crack_4
+    - name: CHICKEN BUTTONS_7
       rect:
         serializedVersion: 2
         x: 1280
@@ -156,9 +139,9 @@ TextureImporter:
         width: 370
         height: 379
       alignment: 9
-      pivot: {x: .522028089, y: .0612926632}
+      pivot: {x: .496523291, y: .0616648346}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_full_1
+    - name: CHICKEN BUTTONS_8
       rect:
         serializedVersion: 2
         x: 54
@@ -166,9 +149,9 @@ TextureImporter:
         width: 372
         height: 465
       alignment: 9
-      pivot: {x: .482472122, y: .054789979}
+      pivot: {x: .474008948, y: .0471784212}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_full_2
+    - name: CHICKEN BUTTONS_9
       rect:
         serializedVersion: 2
         x: 464
@@ -176,9 +159,9 @@ TextureImporter:
         width: 370
         height: 465
       alignment: 9
-      pivot: {x: .535245299, y: .0477788039}
+      pivot: {x: .5, y: .0471784212}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_full_3
+    - name: CHICKEN BUTTONS_10
       rect:
         serializedVersion: 2
         x: 872
@@ -186,9 +169,9 @@ TextureImporter:
         width: 370
         height: 465
       alignment: 9
-      pivot: {x: .513216913, y: .0863403007}
+      pivot: {x: .502903283, y: .0471784212}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Egg_full_4
+    - name: CHICKEN BUTTONS_11
       rect:
         serializedVersion: 2
         x: 1280
@@ -196,11 +179,8 @@ TextureImporter:
         width: 372
         height: 465
       alignment: 9
-      pivot: {x: .504382074, y: .0512843877}
+      pivot: {x: .515896678, y: .0485347882}
       border: {x: 0, y: 0, z: 0, w: 0}
-=======
-    sprites: []
->>>>>>> Stashed changes
   spritePackingTag: 
   userData: 
   assetBundleName: 

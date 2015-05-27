@@ -1,18 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: dc38726ff1db5fb42a99673eb00f8701
-timeCreated: 1432590576
+timeCreated: 1432661132
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: shadow_0
-=======
-guid: b7739dea994af4e80a21f20ff300e2ff
-timeCreated: 1432586294
-licenseType: Free
-TextureImporter:
-  fileIDToRecycleName: {}
->>>>>>> Stashed changes
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,22 +31,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-<<<<<<< Updated upstream
     aniso: 16
-=======
-    aniso: -1
->>>>>>> Stashed changes
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-<<<<<<< Updated upstream
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -65,21 +49,17 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-<<<<<<< Updated upstream
     sprites:
     - name: shadow_0
       rect:
         serializedVersion: 2
-        x: 1185
-        y: 98
-        width: 237
-        height: 59
+        x: 1187
+        y: 108
+        width: 229
+        height: 38
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-=======
-    sprites: []
->>>>>>> Stashed changes
   spritePackingTag: 
   userData: 
   assetBundleName: 
