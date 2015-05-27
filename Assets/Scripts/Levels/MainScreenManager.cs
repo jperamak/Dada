@@ -26,7 +26,7 @@ public class MainScreenManager : MonoBehaviour {
 	public SoundEffect MenuBackAudio;
 	public SoundEffect MenuConfirmAudio;
 	public SoundEffect MenuBipAudio;
-	public SoundEffect MenuConfirmEggsAudio;
+	public SoundEffect MenuChangeLevelsAudio;
 
 	private FadeEffect _startFadeText;
 	private FadeEffect _creditsFadeText;
@@ -201,7 +201,7 @@ public class MainScreenManager : MonoBehaviour {
 				if(_levelNum+1 < CowLevels.Length){
 					CowLevels[_levelNum].SetBool("IsDancing",false);
 					CowLevels[_levelNum+1].SetBool("IsDancing",true);
-					MenuBipAudio.PlayEffect();
+					MenuChangeLevelsAudio.PlayEffect();
 					_levelNum++;
 				}
 			}
@@ -211,7 +211,7 @@ public class MainScreenManager : MonoBehaviour {
 				if(_levelNum > 0){
 					CowLevels[_levelNum].SetBool("IsDancing",false);
 					CowLevels[_levelNum-1].SetBool("IsDancing",true);
-					MenuBipAudio.PlayEffect();
+					MenuChangeLevelsAudio.PlayEffect();
 					_levelNum--;
 				}
 			}
