@@ -11,11 +11,15 @@ public class CarnivorePlant : MonoBehaviour {
 	public float attackPullForce;
 
 
+	Transform forceMarker;
 
 	float nextMunch = 0f;
 
 	// Use this for initialization
 	void Start () {
+		forceMarker = transform.FindChild("ForceMarker");
+		if (forceMarker == null)
+			Debug.LogError("No forcemarker found for carnivore plant");
 	}
 
 
@@ -34,7 +38,9 @@ public class CarnivorePlant : MonoBehaviour {
 				forceVector = Vector2.Scale( heroVector.normalized, new Vector2(attackPullForce, attackPullForce));
 
 			// apply force to direction of player
-			this.GetComponent<Rigidbody2D>().AddForce(forceVector,ForceMode2D.Force);
+			//this.GetComponent<Rigidbody2D>().AddForce(forceVector,ForceMode2D.Force);
+			this.GetComponent<Rigidbody2D>().AddForceAtPosition(forceVector, forceMarker.position, ForceMode2D.Force);
+
 		}
 
 		if (heroVector.magnitude < attackRange) {
