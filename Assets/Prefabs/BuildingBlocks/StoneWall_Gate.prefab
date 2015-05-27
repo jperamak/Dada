@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca45e160a9ea43198d647a3b6b70bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownedByTeamNumber: 2
+  OwnedByTeam: 0
   OpenSound: {fileID: 11430224, guid: a75eb8000087b4aa59cb007d02d1daed, type: 2}
   CloseSound: {fileID: 0}
 --- !u!212 &21210610
@@ -231,7 +231,7 @@ SpriteRenderer:
   m_SortingLayerID: 1535931219
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300024, guid: 8e2e5e6d53f4f574cb9f71541b4a27fa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: .796078444, b: .796078444, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
