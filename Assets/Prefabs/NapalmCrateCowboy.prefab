@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11436582}
   - 61: {fileID: 6189920}
   - 50: {fileID: 5055046}
+  - 114: {fileID: 11493572}
   m_Layer: 20
   m_Name: NapalmCrateCowboy
   m_TagString: Untagged
@@ -264,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.5556507, y: -29.8140316, z: 0}
+  m_LocalPosition: {x: -29.4239922, y: 29.2994976, z: 0}
   m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children:
   - {fileID: 467774}
@@ -461,6 +462,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 443056}
   floatSpeed: 10
+--- !u!114 &11493572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4702c1ee49146c7bb339f728933f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToStartFading: 30
+  secondsForFading: 3
+  destroyParent: 0
+  destroyThis: 1
 --- !u!212 &21204276
 SpriteRenderer:
   m_ObjectHideFlags: 1

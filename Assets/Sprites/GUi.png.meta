@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: efa8018b12a25e2448921d224162709c
-timeCreated: 1432658986
+timeCreated: 1432742446
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: GUi_0
     21300002: GUi_1
+    21300004: GUi_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,22 +55,32 @@ TextureImporter:
     - name: GUi_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 268
-        width: 98
-        height: 98
+        x: 54
+        y: 99
+        width: 225
+        height: 227
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GUi_1
       rect:
         serializedVersion: 2
-        x: 215
-        y: 266
+        x: 252
+        y: 304
         width: 58
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GUi_2
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 112
+        width: 223
+        height: 215
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

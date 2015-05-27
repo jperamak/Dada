@@ -82,6 +82,7 @@ GameObject:
   - 114: {fileID: 11430228}
   - 61: {fileID: 6150280}
   - 50: {fileID: 5077010}
+  - 114: {fileID: 11411108}
   m_Layer: 20
   m_Name: ChiliCrateCowboy
   m_TagString: Untagged
@@ -264,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.43444061, y: -26.1457367, z: 0}
+  m_LocalPosition: {x: -39.360199, y: 28.7262554, z: 0}
   m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children:
   - {fileID: 443168}
@@ -435,6 +436,21 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11411108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4702c1ee49146c7bb339f728933f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToStartFading: 30
+  secondsForFading: 3
+  destroyParent: 0
+  destroyThis: 1
 --- !u!114 &11430228
 MonoBehaviour:
   m_ObjectHideFlags: 1

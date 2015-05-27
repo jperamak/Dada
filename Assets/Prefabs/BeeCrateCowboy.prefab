@@ -63,6 +63,7 @@ GameObject:
   - 114: {fileID: 11466032}
   - 61: {fileID: 6167404}
   - 50: {fileID: 5041600}
+  - 114: {fileID: 11439608}
   m_Layer: 20
   m_Name: BeeCrateCowboy
   m_TagString: Untagged
@@ -175,7 +176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.31303549, y: -26.9922657, z: 0}
+  m_LocalPosition: {x: -42.513031, y: 33.5032806, z: 0}
   m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children:
   - {fileID: 470072}
@@ -435,6 +436,21 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11439608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4702c1ee49146c7bb339f728933f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToStartFading: 30
+  secondsForFading: 3
+  destroyParent: 0
+  destroyThis: 1
 --- !u!114 &11466032
 MonoBehaviour:
   m_ObjectHideFlags: 1
