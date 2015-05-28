@@ -47,6 +47,9 @@ public class MainScreenManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () { 
 
+		Time.timeScale = 1f;
+		DadaGame.Reset();
+
 		_startFadeText = StartGameText.GetComponent<FadeEffect>();
 		_creditsFadeText = CreditsText.GetComponent<FadeEffect>();
 		_teamFadeText = TeamModeText.GetComponent<FadeEffect>();

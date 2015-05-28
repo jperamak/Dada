@@ -44,8 +44,11 @@ public class DadaGame {
 	}
 
 	public static void Reset(){
-		_players.Clear();
-		_teams.Clear();
+		if(_players != null)
+			_players.Clear();
+
+		if(_teams != null)
+			_teams.Clear();
 
 		_players = null;
 		_teams = null;

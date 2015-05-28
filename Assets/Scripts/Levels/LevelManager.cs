@@ -145,7 +145,7 @@ public class LevelManager : MonoBehaviour {
 			_scores[i] = 0;
 	
 		List<Player> players = DadaGame.Players;
-		for(int i=0; i<players.Count; i++){
+		for(int i=0; i<players.Count && i < 4; i++){
 			SpawnHero(players[i], GetRandomSpawnPoint(players[i]));
 		}
 
