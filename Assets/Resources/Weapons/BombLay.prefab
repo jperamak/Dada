@@ -99,12 +99,12 @@ MonoBehaviour:
   CooldownTime: 1
   VisualEffect: {fileID: 0}
   FireSound: {fileID: 0}
+  SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11415224, guid: 61f79d03032a9434598a3ec02b03fda9, type: 2}
-  MaxBullets: 1
+  MaxBullets: 0
   RechargeEvery: -1
   PushForce: 0
   OutOfAmmo: {fileID: 0}
-  SpawnPoint: {fileID: 0}
 --- !u!212 &21277256
 SpriteRenderer:
   m_ObjectHideFlags: 1

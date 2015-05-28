@@ -231,7 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
   DamageOwner: 1
-  DamageAmount: 20
+  DamageAmount: 40
 --- !u!198 &19864906
 ParticleSystem:
   m_ObjectHideFlags: 1
