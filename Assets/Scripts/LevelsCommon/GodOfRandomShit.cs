@@ -91,13 +91,11 @@ public class GodOfRandomShit : MonoBehaviour {
 
 
 
-		if(_goingTo == null)
-			_goingTo = FinalPoint;
-		else if(_goingTo == FinalPoint)
+		if(_goingTo == FinalPoint)
 			_goingTo = StartPoint;
 		else
 			_goingTo = FinalPoint;
-		Debug.Log("going to "+_goingTo.position);
+
 		Goto(_goingTo.position,TimeToTravel);
 	}
 

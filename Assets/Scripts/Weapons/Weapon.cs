@@ -45,10 +45,8 @@ public abstract class Weapon : MonoBehaviour {
 			Projectile p = Shoot();
 
 			//be sure that the weapon shooted
-			if (FireSound != null && p != null){
-				Debug.Log("Fire ");
+			if (FireSound != null && p != null)
 				FireSound.PlayEffect();
-			}
 
 			_lastShoot = Time.time;
 		}

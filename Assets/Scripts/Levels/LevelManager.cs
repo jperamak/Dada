@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Dada.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,7 +22,12 @@ public class LevelManager : MonoBehaviour {
 	private Text _fin;
 	private Transform _pauseScreen;
 	private bool _isPaused = false;
-
+	private GameObject _restartMenu;
+	private FadeEffect _restartYes;
+	private FadeEffect _restartNo;
+	private bool _gameEnded = false;
+	private AbstractController _controller1;
+	private int _winningTeam;
 
 	protected void Awake(){
 		Current = this;
@@ -31,10 +37,15 @@ public class LevelManager : MonoBehaviour {
 	protected void Start(){
 		Transform canvas = GameObject.Find("Canvas").transform;
 		Transform scoreText = canvas.Find("Scores");
-		_fin = canvas.transform.FindChild("Fin").GetComponent<Text>();
-		_pauseScreen = canvas.transform.FindChild("PauseScreen");
-        _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
 
+		_fin 		 = canvas.transform.FindChild("Fin").GetComponent<Text>();
+		_restartMenu = canvas.transform.FindChild("RestartMenu").gameObject;
+		_pauseScreen = canvas.transform.FindChild("PauseScreen");
+		_restartYes  = canvas.transform.FindChild("RestartMenu/RestartYes").GetComponent<FadeEffect>();
+		_restartNo   = canvas.transform.FindChild("RestartMenu/RestartNo").GetComponent<FadeEffect>();
+
+		_controller1 = DadaInput.GetJoystick(0);
+		_camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
 		_teams = DadaGame.Teams;
 
 
@@ -75,7 +86,7 @@ public class LevelManager : MonoBehaviour {
 
 
 		//Pause game
-		if(!_isPaused && startPressed){
+		if(!_isPaused && startPressed && !_gameEnded){
 			Time.timeScale = 0.0000001f;
 			_isPaused = true;
 			_pauseScreen.gameObject.SetActive(true);
@@ -94,6 +105,34 @@ public class LevelManager : MonoBehaviour {
 				Application.LoadLevel("MainScreen");
 			}
 		}
+
+		//game ended.  
+		if(_gameEnded){
+
+			if(_controller1.GetButtonDown(VirtualKey.LEFT) && !_restartYes.IsFading){
+				_restartYes.Fade();
+				_restartNo.Stop(1,0);
+				_restartYes.GetComponent<Text>().color = _teams[_winningTeam].TeamColor;
+				_restartNo.GetComponent<Text>().color = Color.white;
+			}
+
+			if(_controller1.GetButtonDown(VirtualKey.RIGHT) && !_restartNo.IsFading){
+				_restartNo.Fade();
+				_restartYes.Stop(1,0);
+				_restartNo.GetComponent<Text>().color = _teams[_winningTeam].TeamColor;
+				_restartYes.GetComponent<Text>().color = Color.white;
+			}
+
+			if(_controller1.GetButtonDown(VirtualKey.SUBMIT)){
+				if(_restartYes.IsFading)
+					Application.LoadLevel(Application.loadedLevelName);
+				else
+					Application.LoadLevel("MainScreen");
+			}
+
+
+		}
+
 	}
 
     public virtual void InitLevel(){
@@ -142,6 +181,10 @@ public class LevelManager : MonoBehaviour {
 		//spawn a particle effect
 		SpawnParticle(newSpawnPoint,p.InTeam.TeamColor);
 
+		if(_gameEnded){
+			Destroy(hero.GetComponent<HeroControllerV2>());
+			Destroy(hero.GetComponent<HeroController>());
+		}
 		if(RespawnSound != null)
 			RespawnSound.PlayEffect();
 
@@ -231,10 +274,11 @@ public class LevelManager : MonoBehaviour {
     {
         Time.timeScale = 0.5f;
 
-        _fin.text = "Team " + _teams[winner].Name + " wins!";
+		_winningTeam = winner;
+		_fin.text = _teams[winner].Name + (DadaGame.IsTeamPlay ? "Team \nwins!" : " wins!");
 		_fin.color = _teams[winner].TeamColor;
         _fin.transform.gameObject.SetActive(true);
-        Invoke("NextLevel",2);
+        Invoke("ActivateRestartMenu",2.1f);
     }
 
 	private void SpawnParticle(Vector2 position, Color c){
@@ -247,9 +291,34 @@ public class LevelManager : MonoBehaviour {
 		Destroy(particles,5.0f);
 	}
 
-    private void NextLevel(){
+	private void ActivateRestartMenu(){
         Time.timeScale = 1f;
-        Application.LoadLevel(Application.loadedLevelName);
+
+		//remove all hero controller
+		HeroController[] c1 = GameObject.FindObjectsOfType<HeroController>();
+		HeroControllerV2[] c2 = GameObject.FindObjectsOfType<HeroControllerV2>();
+		Hero[] h = GameObject.FindObjectsOfType<Hero>();
+
+		Debug.Log("h: "+h.Length);
+		Debug.Log("c1: "+c1.Length);
+		for(int i=0;i<c1.Length;i++)
+			Destroy(c1[i]);
+
+		Debug.Log("c2: "+c2.Length);
+		for(int i=0;i<c2.Length;i++)
+			Destroy(c2[i]);
+
+		//enable restart menu
+		_restartMenu.SetActive(true);
+
+		//set blinking text
+		_restartYes.Fade();
+		_restartNo.Stop(1,0);
+		_restartYes.GetComponent<Text>().color = _teams[_winningTeam].TeamColor;
+		_restartNo.GetComponent<Text>().color = Color.white;
+
+		//set game ended
+		_gameEnded = true;
     }
 
 	private void ShuffleSpawnPoints(){
@@ -280,7 +349,7 @@ public class LevelManager : MonoBehaviour {
 
 		Player p1 = new Player(DadaInput.GetJoystick(controller));
 		p1.Hero = Resource.FISH_HERO;
-		p1.FirstWeapon = Resource.BEE_RANGE;
+		p1.FirstWeapon = Resource.NAPALM_PHOENIX;
 		p1.SecondWeapon = Resource.LAYBOMB_MELEE;
         if (controller == 0)
             p1.InTeam = Team.TEAM_1;

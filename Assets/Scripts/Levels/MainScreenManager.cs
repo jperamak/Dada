@@ -160,7 +160,7 @@ public class MainScreenManager : MonoBehaviour {
 			}
 
 			//Smash eggs and show Levels
-			if(_controller.GetButtonDown(VirtualKey.SUBMIT)){
+			if(_controller.GetButtonDown(VirtualKey.SUBMIT) && _playerNum > 0){
 
 				LogoAnimator.SetTrigger("Reduce");
 				EggsAnimator.SetTrigger("Smash");
