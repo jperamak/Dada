@@ -60,8 +60,8 @@ public class LevelManager : MonoBehaviour {
 				scoreText.GetChild(i).gameObject.SetActive(false);
 			else{
                 _scoreThing.Add(scoreText.GetChild(i).gameObject);
-				GameObject frame = scoreText.GetChild(i).FindChild("Frame").gameObject;
-                frame.GetComponent<Image>().color = _teams[i].TeamColor;
+				//GameObject frame = scoreText.GetChild(i).FindChild("Frame").gameObject;
+                //frame.GetComponent<Image>().color = _teams[i].TeamColor;
                 scoreText.GetChild(i).GetComponent<UIScore>().ScoresBg.GetComponent<Image>().color =  _teams[DadaGame.Players[i].InTeam.Number].TeamColor;
 			}
 
@@ -218,7 +218,7 @@ public class LevelManager : MonoBehaviour {
             if (p)
             {
                 _scoreThing[i].GetComponent<UIScore>().Hat.GetComponent<Image>().overrideSprite = p.GetComponent<Hero>().GetHat();
-                _scoreThing[i].GetComponent<UIScore>().Hat.GetComponent<Image>().SetNativeSize();
+               // _scoreThing[i].GetComponent<UIScore>().Hat.GetComponent<Image>().SetNativeSize();
             }
         }
         
@@ -280,7 +280,7 @@ public class LevelManager : MonoBehaviour {
 
 		Player p1 = new Player(DadaInput.GetJoystick(controller));
 		p1.Hero = Resource.FISH_HERO;
-		p1.FirstWeapon = Resource.BANANA_RANGE;
+		p1.FirstWeapon = Resource.BEE_RANGE;
 		p1.SecondWeapon = Resource.LAYBOMB_MELEE;
         if (controller == 0)
             p1.InTeam = Team.TEAM_1;
