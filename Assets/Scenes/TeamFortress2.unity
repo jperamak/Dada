@@ -23085,7 +23085,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22481516, guid: 4692f22c17f02684eb985bb4e6621ab4, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22481516, guid: 4692f22c17f02684eb985bb4e6621ab4, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -28632,6 +28632,19 @@ Prefab:
     - target: {fileID: 431554, guid: c9450601221b86043b07848f4da63be9, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481260, guid: c9450601221b86043b07848f4da63be9, type: 2}
+      propertyPath: TimeToTravel
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481260, guid: c9450601221b86043b07848f4da63be9, type: 2}
+      propertyPath: TechnoSound
+      value: 
+      objectReference: {fileID: 11432778, guid: 5bee9afd09d064ddfa967dbf051dff26,
+        type: 2}
+    - target: {fileID: 11481260, guid: c9450601221b86043b07848f4da63be9, type: 2}
+      propertyPath: TimeBeforePoop
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9450601221b86043b07848f4da63be9, type: 2}

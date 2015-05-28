@@ -13,6 +13,7 @@ public class GodOfRandomShit : MonoBehaviour {
 	public Transform PoopAboutAtPoint;
 	public GameObject[] WeaponPickupPrefabs;
     public SoundEffect PoopSound;
+	public SoundEffect TechnoSound;
 
 	private Transform _goingTo;
 	private float _distance;
@@ -32,12 +33,14 @@ public class GodOfRandomShit : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         PoopSound = DadaAudio.GetSoundEffect(PoopSound);
+		TechnoSound = DadaAudio.GetSoundEffect(TechnoSound);
 		_anim = GetComponent<Animator>();
 		altitude = transform.position.y;
-		_goingTo = FinalPoint;
 
 
-		Goto(FinalPoint.position,TimeToTravel);
+
+		//Goto(FinalPoint.position,TimeToTravel);
+		Invoke("WaitAtPoint",WaitTimeAtStops);
 	}
 	
 	// Update is called once per frame
@@ -64,6 +67,8 @@ public class GodOfRandomShit : MonoBehaviour {
 
 			if( _totTime - _passedTime <= 0){
 				_going = false;
+				if (TechnoSound != null)
+					TechnoSound.Stop();
 				Invoke("WaitAtPoint",WaitTimeAtStops);
 			}
 		}
@@ -81,12 +86,18 @@ public class GodOfRandomShit : MonoBehaviour {
 	}
 
 	private void WaitAtPoint(){
+		if (TechnoSound != null)
+			TechnoSound.PlayEffect();
 
-		if(_goingTo == StartPoint)
+
+
+		if(_goingTo == null)
 			_goingTo = FinalPoint;
-		else
+		else if(_goingTo == FinalPoint)
 			_goingTo = StartPoint;
-
+		else
+			_goingTo = FinalPoint;
+		Debug.Log("going to "+_goingTo.position);
 		Goto(_goingTo.position,TimeToTravel);
 	}
 
