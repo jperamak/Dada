@@ -10,7 +10,6 @@ public class FrogBomb : Projectile {
 	public SoundEffect CroakSound;
 	public SoundEffect AboutToExplodeSound;
 
-	private SpriteRenderer _renderer;
 	private bool exploded = false;
 
 	private float _detonationTime;
@@ -19,8 +18,7 @@ public class FrogBomb : Projectile {
 	void Start(){
 		CroakSound = DadaAudio.GetSoundEffect(CroakSound);
 		AboutToExplodeSound = DadaAudio.GetSoundEffect(AboutToExplodeSound);
-
-		_renderer = transform.GetComponentInChildren<SpriteRenderer>();
+		
 		_detonationTime = Time.time + firstPhaseLength + secondPhaseLength;
 		Invoke( "AboutToDetonate", firstPhaseLength );
 		StartCoroutine( Croak() );
@@ -54,11 +52,6 @@ public class FrogBomb : Projectile {
 			float addToScale = scaleIncrease / (secondPhaseLength / stepTime);
 			transform.localScale = new Vector3(transform.localScale.x + addToScale,
 			                                   transform.localScale.y + addToScale, 0f);
-
-		//	if(_renderer.color == Color.white)
-		//		_renderer.color = Color.red;
-		//	else
-		//		_renderer.color = Color.white;
 			
 			if(Time.time >= _detonationTime)
 				Explode();

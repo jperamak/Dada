@@ -9,7 +9,7 @@ public class CharacterSelectionView : MonoBehaviour {
 	public Transform SpawnPoint;
 
 	private GameObject _coverPanel;
-	private int _iHero, _iMelee, _iRange, _iTeam;
+	private int _iHero, _iRange, _iTeam;
 	private int _btnSelected;
 
 	private AbstractController _controller;
@@ -23,7 +23,6 @@ public class CharacterSelectionView : MonoBehaviour {
 	void Awake () {
 		//_coverPanel = transform.FindChild("Cover").gameObject;
 		_iHero = 0;
-		_iMelee = 0;
 		_iRange = 0;
         _iTeam = 0;
 		_btnSelected = 0;

@@ -27,8 +27,6 @@ public class HeroControllerV2 : MonoBehaviour {
 	protected bool _facingRight = true;		// For determining which way the player is currently facing.
 	private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
 	private bool _grounded = false;			// Whether or not the player is grounded.
-	private int _walljump = 0;              // whether or not the player can walljump
-	private bool _jumpStart = false;
 	private bool _jump = false;
 	private float _jumpStartTime;
 

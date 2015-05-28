@@ -261,7 +261,6 @@ public class LevelManager : MonoBehaviour {
             if (p)
             {
                 _scoreThing[i].GetComponent<UIScore>().Hat.GetComponent<Image>().overrideSprite = p.GetComponent<Hero>().GetHat();
-               // _scoreThing[i].GetComponent<UIScore>().Hat.GetComponent<Image>().SetNativeSize();
             }
         }
         
@@ -278,6 +277,17 @@ public class LevelManager : MonoBehaviour {
 		_fin.text = _teams[winner].Name + (DadaGame.IsTeamPlay ? "Team \nwins!" : " wins!");
 		_fin.color = _teams[winner].TeamColor;
         _fin.transform.gameObject.SetActive(true);
+
+		//remove all hero controller
+		HeroController[] c1 = GameObject.FindObjectsOfType<HeroController>();
+		HeroControllerV2[] c2 = GameObject.FindObjectsOfType<HeroControllerV2>();
+		
+		for(int i=0;i<c1.Length;i++)
+			Destroy(c1[i]);
+		
+		for(int i=0;i<c2.Length;i++)
+			Destroy(c2[i]);
+
         Invoke("ActivateRestartMenu",2.1f);
     }
 
@@ -293,16 +303,6 @@ public class LevelManager : MonoBehaviour {
 
 	private void ActivateRestartMenu(){
         Time.timeScale = 1f;
-
-		//remove all hero controller
-		HeroController[] c1 = GameObject.FindObjectsOfType<HeroController>();
-		HeroControllerV2[] c2 = GameObject.FindObjectsOfType<HeroControllerV2>();
-
-		for(int i=0;i<c1.Length;i++)
-			Destroy(c1[i]);
-
-		for(int i=0;i<c2.Length;i++)
-			Destroy(c2[i]);
 
 		//enable restart menu
 		_restartMenu.SetActive(true);

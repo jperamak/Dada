@@ -30,7 +30,7 @@ public class Ghost : MonoBehaviour {
 
 	public void SetColor(Color c){
 		SpriteRenderer renderer = GetComponentInChildren<SpriteRenderer>();
-		renderer.color = new Color(c.r, c.g, c.b, 0.5f);
+		renderer.color = new Color(c.r, c.g, c.b, 1f);
 
 		ParticleSystem particles = GetComponentInChildren<ParticleSystem>();
 		particles.startColor = c;

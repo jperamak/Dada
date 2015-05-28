@@ -39,17 +39,16 @@ public class GetAboutCollidingObjects {
 		
 		List<GameObject> results = new List<GameObject>();
 		
-		foreach (Collider2D col in colliders) {
+		for(int i=0; i<colliders.Length; i++){
 			
 			Collider2D[] otherColliders = Physics2D.OverlapCircleAll( obj.transform.position, radius );
-			foreach (Collider2D otherCol in otherColliders) {
-				
-				if (!results.Contains(otherCol.gameObject) && obj!=otherCol.gameObject) {
-					results.Add(otherCol.gameObject);
-				}
 
+			for(int j=0; j<otherColliders.Length; j++){
+
+				if (!results.Contains(otherColliders[j].gameObject) && obj!=otherColliders[j].gameObject) {
+					results.Add(otherColliders[j].gameObject);
+				}
 			}
-			
 		}
 		
 		return results.ToArray();

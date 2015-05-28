@@ -19,7 +19,7 @@ public class SimpleBullet : Projectile {
 	}
 
 
-	public virtual void TriggerEffects(){
+	public override void TriggerEffects(){
 		
 		if(_effects != null){
 			for(int i=0;i<_effects.Length;i++){

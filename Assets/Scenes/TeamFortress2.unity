@@ -22266,7 +22266,7 @@ MonoBehaviour:
   RespawnSound: {fileID: 0}
   GhostPrefab: {fileID: 11438746, guid: e6a873e9dda5adf47a9e2febe4c9af5f, type: 2}
   SpawnParticlePrefab: {fileID: 100002, guid: 33dcd440042fd674593e29668fae453d, type: 2}
-  MaxScore: 1
+  MaxScore: 10
 --- !u!4 &986617387
 Transform:
   m_ObjectHideFlags: 0

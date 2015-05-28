@@ -8,8 +8,6 @@ public class CrateCowboyHat : MonoBehaviour {
 
 	float awakeTime;
 
-	bool hatInHead = false;
-
 	// Use this for initialization
 	void Awake () {
 		awakeTime = Time.time;
@@ -27,7 +25,6 @@ public class CrateCowboyHat : MonoBehaviour {
 
 
 		if (Time.time - awakeTime > 0.5f && (target.transform.position - transform.position).magnitude < 0.1f) {
-			hatInHead = true;
 			Animation hatAnim = this.GetComponent<Animation>();
 			if (hatAnim != null)
 				hatAnim.enabled = false;

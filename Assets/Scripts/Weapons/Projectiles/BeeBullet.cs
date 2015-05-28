@@ -21,8 +21,7 @@ public class BeeBullet : Projectile {
     protected GameObject _targetHit;
 
     private Rigidbody2D _rigidbody;
-	bool flySoundStarted = false;
-	// Use this for initialization
+
 	void Start () {
 
         flySound = DadaAudio.GetSoundEffect(flySound);
@@ -64,12 +63,13 @@ public class BeeBullet : Projectile {
         {
             if (flySound != null && _lastAwake != 1)
                 flySound.PlayEffect();
-			flySoundStarted = true;
+
             if (aggroSound != null)
                 aggroSound.Stop();
 
-            _rigidbody.velocity = Quaternion.EulerAngles(0, 0, Random.Range(-45f, 45f)) * _rigidbody.velocity.normalized * 4f;
-            Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, range);
+            _rigidbody.velocity = Quaternion.Euler(0, 0, Random.Range(-45f, 45f)) * _rigidbody.velocity.normalized * 4f;
+            
+			Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, range);
             for (int i = 0; i < objects.Length; i++)
             {
                 if (objects[i].gameObject.tag == "Player")
@@ -121,7 +121,7 @@ public class BeeBullet : Projectile {
         spriteRend.material.color = color;
     }
 
-    public virtual void TriggerEffects()
+    public override void TriggerEffects()
     {
 
         if (_effects != null)
