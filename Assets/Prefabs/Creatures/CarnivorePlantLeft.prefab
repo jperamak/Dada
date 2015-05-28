@@ -243,7 +243,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &177258
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -463,11 +463,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177258}
   m_LocalRotation: {x: 0, y: 0, z: -.797325253, w: .603549957}
-  m_LocalPosition: {x: 23.1459999, y: 11.9049997, z: 0}
+  m_LocalPosition: {x: .00799942017, y: .204999924, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 445766}
-  m_RootOrder: 5
+  m_Father: {fileID: 467212}
+  m_RootOrder: 0
 --- !u!4 &445766
 Transform:
   m_ObjectHideFlags: 1
@@ -483,7 +483,6 @@ Transform:
   - {fileID: 409262}
   - {fileID: 470100}
   - {fileID: 467212}
-  - {fileID: 439838}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &445840
@@ -547,7 +546,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 23.1380005, y: 11.6999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 439838}
   m_Father: {fileID: 445766}
   m_RootOrder: 4
 --- !u!4 &468792
@@ -1338,7 +1338,7 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101152}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5069674}
   m_Anchor: {x: .0102524757, y: .92269659}
   m_ConnectedAnchor: {x: -.0615544319, y: .786539078}
@@ -1352,7 +1352,7 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149420}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: .049195528, y: .762530804}
   m_ConnectedAnchor: {x: -8.88677597, y: -15.3598185}
@@ -1366,7 +1366,7 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100288}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5066378}
   m_Anchor: {x: 0, y: 3.61578035}
   m_ConnectedAnchor: {x: -.401259661, y: .987579346}
@@ -1380,7 +1380,7 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140614}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5000446}
   m_Anchor: {x: .0087621212, y: 3.60509205}
   m_ConnectedAnchor: {x: .640762091, y: 1.08509159}
@@ -1394,7 +1394,7 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149420}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5064516}
   m_Anchor: {x: .388480663, y: 3.39320374}
   m_ConnectedAnchor: {x: -.0218818188, y: .794503212}
@@ -1408,7 +1408,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101152}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5069674}
   m_Anchor: {x: .615780354, y: -.552391052}
   m_ConnectedAnchor: {x: -.454221249, y: -.702390671}
@@ -1427,7 +1427,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149420}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: -.049608469, y: -1.2130332}
   m_ConnectedAnchor: {x: -8.37960815, y: -17.3430347}
@@ -1446,7 +1446,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149420}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5064516}
   m_Anchor: {x: -.0222458839, y: 1.32637835}
   m_ConnectedAnchor: {x: -.0222458839, y: -1.28462124}
@@ -1465,7 +1465,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100288}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5066378}
   m_Anchor: {x: 0, y: 1.36000013}
   m_ConnectedAnchor: {x: 0, y: -1.26900005}
@@ -1484,7 +1484,7 @@ HingeJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140614}
   m_Enabled: 1
-  m_EnableCollision: 0
+  m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5000446}
   m_Anchor: {x: -.0188550949, y: 1.55247474}
   m_ConnectedAnchor: {x: .613144875, y: -.957525551}
