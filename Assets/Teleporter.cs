@@ -24,6 +24,11 @@ public class Teleporter : MonoBehaviour {
 
 
 	bool IsObjectMovingRightWay( Rigidbody2D rigidBody ) {
+
+		if(rigidBody == null){
+			Debug.LogWarning("rigidbody is null in teleporter "+name+" (IsObjectMovingRightWay)");
+			return false;
+		}
 		return ( (TeleportIfMovesTo == Direction.Right && rigidBody.velocity.x > 0f) ||
 		         (TeleportIfMovesTo == Direction.Left  && rigidBody.velocity.x < 0f) ||
 		         (TeleportIfMovesTo == Direction.Up    && rigidBody.velocity.y > 0f) ||

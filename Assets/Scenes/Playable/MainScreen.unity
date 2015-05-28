@@ -931,6 +931,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 889, y: 500}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &755812513 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11427510, guid: afc3d897c008d524b9e78bb727811fca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1969047255}
+  m_Script: {fileID: 11500000, guid: c60146eb0693b134eb36af483a6be9ac, type: 3}
 --- !u!1 &817494583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1362,18 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 109202, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166394, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120774, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
   m_IsPrefabParent: 0
@@ -1380,6 +1398,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1457d6b405dabad468942e1fc6137a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1006982162 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11464768, guid: afc3d897c008d524b9e78bb727811fca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1969047255}
+  m_Script: {fileID: 11500000, guid: c60146eb0693b134eb36af483a6be9ac, type: 3}
 --- !u!1 &1008703956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,6 +1820,8 @@ MonoBehaviour:
   AllVsAllModeText: {fileID: 1247105562}
   CreditsPage: {fileID: 943744295}
   StartPage: {fileID: 9825069}
+  SelectLevelLabel: {fileID: 1006982162}
+  SelectPlayerLabel: {fileID: 755812513}
   ModePage: {fileID: 2042513425}
   BlackScreen: {fileID: 2019404593}
   LogoAnimator: {fileID: 1104316278}
@@ -2455,6 +2481,22 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 362964594}
+    - target: {fileID: 11427510, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
+      propertyPath: FadeTime
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427510, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
+      propertyPath: Delay
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410572, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
+      propertyPath: Delay
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410572, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
+      propertyPath: FadeTime
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
   m_IsPrefabParent: 0

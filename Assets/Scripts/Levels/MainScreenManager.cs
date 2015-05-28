@@ -14,6 +14,8 @@ public class MainScreenManager : MonoBehaviour {
 	
 	public FadeEffect CreditsPage;
 	public FadeEffect StartPage;
+	public FadeEffect SelectLevelLabel;
+	public FadeEffect SelectPlayerLabel;
 	public FadeEffect ModePage;
 	public FadeEffect BlackScreen;
 
@@ -67,7 +69,7 @@ public class MainScreenManager : MonoBehaviour {
 			//highlight Start text
 			if(_controller.GetButtonDown(VirtualKey.UP) && !_startFadeText.IsFading){
 				_startFadeText.Fade();
-				_creditsFadeText.Stop(1,0);
+				_creditsFadeText.Stop(1,0.15f);
 				StartGameText.color = Color.yellow;
 				CreditsText.color = Color.white;
 				MenuBipAudio.PlayEffect();
@@ -76,7 +78,7 @@ public class MainScreenManager : MonoBehaviour {
 			//highlight Credits text
 			if(_controller.GetButtonDown(VirtualKey.DOWN) && !_creditsFadeText.IsFading){
 				_creditsFadeText.Fade();
-				_startFadeText.Stop(1,0);
+				_startFadeText.Stop(1,0.15f);
 				CreditsText.color = Color.yellow;
 				StartGameText.color = Color.white;
 				MenuBipAudio.PlayEffect();
@@ -87,9 +89,8 @@ public class MainScreenManager : MonoBehaviour {
 
 				//Go to credits
 				if(_creditsFadeText.IsFading){
-					_creditsFadeText.Stop(1,0);
+					_creditsFadeText.Stop(1,0.15f);
 					CreditsText.color = Color.white;
-					LogoAnimator.SetTrigger("Reduce");
 					StartPage.Fade(1,0,0,0.3f);
 					CreditsPage.Fade(0,1,0.3f, 0.3f);
 					_currentScreen = Screen.CREDITS;
@@ -97,13 +98,15 @@ public class MainScreenManager : MonoBehaviour {
 
 				//Go to player selection
 				else{
-					_creditsFadeText.Stop(1,0);
+					_creditsFadeText.Stop(1,0.15f);
 					CreditsText.color = Color.white;
 					StartPage.Fade(1,0,0,0.3f);
 					EggsAnimator.SetTrigger("PopIn");
 					_currentScreen = Screen.PLAYER_SELECTION;
+					SelectPlayerLabel.Fade(0,1,0.5f,0.3f);
 				}
 
+				LogoAnimator.SetTrigger("Reduce");
 				MenuConfirmAudio.PlayEffect();
 			}
 		}
@@ -116,10 +119,12 @@ public class MainScreenManager : MonoBehaviour {
 				_startFadeText.Fade();
 				StartGameText.color = Color.yellow;
 				LogoAnimator.SetTrigger("Enlarge");
-				CreditsPage.Fade(1,0,0,0.3f);
+				CreditsPage.Fade(1,0,0,0.2f);
 				StartPage.Fade(0,1,0.3f, 0.3f);
+
 				_currentScreen = Screen.START;
 				MenuBackAudio.PlayEffect();
+
 
 			}
 		}
@@ -133,8 +138,10 @@ public class MainScreenManager : MonoBehaviour {
 				for(int i = _playerNum-1; i >= 0; i--)
 					PlayerEggsAnim[i].SetTrigger("Close");
 
+				LogoAnimator.SetTrigger("Enlarge");
 				EggsAnimator.SetTrigger("PopOut");
 				StartPage.Fade(0,1,1f, 0.3f);
+				SelectPlayerLabel.Fade(1,0,0,0.2f);
 				_currentScreen = Screen.START;
 				_playerNum = 0;
 				MenuBackAudio.PlayEffect();
@@ -162,7 +169,6 @@ public class MainScreenManager : MonoBehaviour {
 			//Smash eggs and show Levels
 			if(_controller.GetButtonDown(VirtualKey.SUBMIT) && _playerNum > 0){
 
-				LogoAnimator.SetTrigger("Reduce");
 				EggsAnimator.SetTrigger("Smash");
 
 				for(int i=0; i< CowLevels.Length; i++){
@@ -173,6 +179,8 @@ public class MainScreenManager : MonoBehaviour {
 				}
 
 				CowLevels[0].SetBool("IsDancing",true);
+				SelectPlayerLabel.Fade(1,0,0,0.1f);
+				SelectLevelLabel.Fade(0,1,0.5f,0.3f);
 				MenuConfirmAudio.PlayEffect();
 				_currentScreen = Screen.LEVEL_SELECTION;
 			}
@@ -182,8 +190,10 @@ public class MainScreenManager : MonoBehaviour {
 			//Go to Start and close eggs
 			if(_controller.GetButtonDown(VirtualKey.BACK)){
 				MenuBackAudio.PlayEffect();
-				LogoAnimator.SetTrigger("Enlarge");
 				EggsAnimator.SetTrigger("UnSmash");
+
+				SelectLevelLabel.Fade(1,0,0,0.1f);
+				SelectPlayerLabel.Fade(0,1,0.5f,0.3f);
 
 				for(int i=0; i< CowLevels.Length; i++){
 					CowLevels[i].SetTrigger("Disappear");
@@ -226,10 +236,11 @@ public class MainScreenManager : MonoBehaviour {
 
 				//Go to start
 				_teamFadeText.Fade();
-				_allvsFadeText.Stop(1,0);
+				_allvsFadeText.Stop(1,0.15f);
 				TeamModeText.color = Color.yellow;
 				AllVsAllModeText.color = Color.white;
-				ModePage.Fade(0,1,0.3f, 0.3f);
+				ModePage.Fade(0,1,0.5f,0.3f);
+				SelectLevelLabel.Fade(1,0,0,0.2f);
 				_isTeamMode = true;
 				MenuConfirmAudio.PlayEffect();
 				_currentScreen = Screen.MODE_SELECTION;
@@ -241,7 +252,7 @@ public class MainScreenManager : MonoBehaviour {
 			//highlight team mode text
 			if(_controller.GetButtonDown(VirtualKey.LEFT) && !_teamFadeText.IsFading){
 				_teamFadeText.Fade();
-				_allvsFadeText.Stop(1,0);
+				_allvsFadeText.Stop(1,0.15f);
 				TeamModeText.color = Color.yellow;
 				AllVsAllModeText.color = Color.white;
 				_isTeamMode = true;
@@ -251,7 +262,7 @@ public class MainScreenManager : MonoBehaviour {
 			//highlight Credits text
 			if(_controller.GetButtonDown(VirtualKey.RIGHT) && !_creditsFadeText.IsFading){
 				_allvsFadeText.Fade();
-				_teamFadeText.Stop(1,0);
+				_teamFadeText.Stop(1,0.15f);
 				AllVsAllModeText.color = Color.yellow;
 				TeamModeText.color = Color.white;
 				_isTeamMode = false;
@@ -260,7 +271,8 @@ public class MainScreenManager : MonoBehaviour {
 
 			if(_controller.GetButtonDown(VirtualKey.BACK)){
 				MenuBackAudio.PlayEffect();
-				ModePage.Fade(1,0,0,0.3f);
+				ModePage.Fade(1,0,0,0.2f);
+				SelectLevelLabel.Fade(0,1,0.3f,0.2f);
 
 				for(int i=0; i< CowLevels.Length; i++){
 					if(i != _levelNum)

@@ -22,6 +22,7 @@ public class Remover : MonoBehaviour
     }
 
 	void OnCollisionEnter2D(Collision2D col){
+		Debug.Log("collision enter");
 		// If the player hits the trigger...
 		if (col == null)
 			return;

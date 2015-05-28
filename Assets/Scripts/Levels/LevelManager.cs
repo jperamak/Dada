@@ -297,14 +297,10 @@ public class LevelManager : MonoBehaviour {
 		//remove all hero controller
 		HeroController[] c1 = GameObject.FindObjectsOfType<HeroController>();
 		HeroControllerV2[] c2 = GameObject.FindObjectsOfType<HeroControllerV2>();
-		Hero[] h = GameObject.FindObjectsOfType<Hero>();
 
-		Debug.Log("h: "+h.Length);
-		Debug.Log("c1: "+c1.Length);
 		for(int i=0;i<c1.Length;i++)
 			Destroy(c1[i]);
 
-		Debug.Log("c2: "+c2.Length);
 		for(int i=0;i<c2.Length;i++)
 			Destroy(c2[i]);
 
