@@ -282,10 +282,6 @@ public class MainScreenManager : MonoBehaviour {
 
 		_levelName = LevelsName[_levelNum];
 
-		Debug.Log(_playerNum);
-		Debug.Log(_levelName);
-		Debug.Log(_isTeamMode);
-
 		DadaGame.PlayersNum = Mathf.Clamp(_playerNum,0,DadaInput.ConrtollerCount);
 		DadaGame.IsTeamPlay = _isTeamMode;
 		

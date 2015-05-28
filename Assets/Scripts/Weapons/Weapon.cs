@@ -39,11 +39,17 @@ public abstract class Weapon : MonoBehaviour {
 	public virtual void OnTriggerDown (){
 		if(Time.time - _lastShoot > CooldownTime){
 
-            if (FireSound != null)
-                FireSound.PlayEffect();
+            
 
 
-			Shoot();
+			Projectile p = Shoot();
+
+			//be sure that the weapon shooted
+			if (FireSound != null && p != null){
+				Debug.Log("Fire ");
+				FireSound.PlayEffect();
+			}
+
 			_lastShoot = Time.time;
 		}
 	}
