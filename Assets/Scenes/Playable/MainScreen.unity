@@ -2481,22 +2481,6 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 362964594}
-    - target: {fileID: 11427510, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
-      propertyPath: FadeTime
-      value: .300000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 11427510, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
-      propertyPath: Delay
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11410572, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
-      propertyPath: Delay
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11410572, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
-      propertyPath: FadeTime
-      value: .300000012
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
   m_IsPrefabParent: 0

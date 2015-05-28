@@ -506,8 +506,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartGradient: 0
   EndGradient: 1
-  FadeTime: 1.5
-  Delay: 0
+  FadeTime: .300000012
+  Delay: .5
   Loop: 0
   FadeOnAwake: 0
 --- !u!114 &11412846
@@ -598,8 +598,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartGradient: 0
   EndGradient: 1
-  FadeTime: 1.5
-  Delay: 0
+  FadeTime: .300000012
+  Delay: .5
   Loop: 0
   FadeOnAwake: 0
 --- !u!114 &11434272
@@ -972,7 +972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select a Cow-Level
+  m_Text: Select a Level
 --- !u!114 &11476032
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour {
 	private int _winningTeam;
 
 	protected void Awake(){
+		Time.timeScale = 1f;
 		Current = this;
         RespawnSound = DadaAudio.GetSoundEffect(RespawnSound);
 	}
