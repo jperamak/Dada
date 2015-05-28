@@ -1382,24 +1382,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 161438, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 109202, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 166394, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 120774, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9566922, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &943744295 stripped
@@ -2017,7 +2000,7 @@ MonoBehaviour:
   - {fileID: 2126089350}
   - {fileID: 454065251}
   - {fileID: 476963059}
-  - {fileID: 0}
+  - {fileID: 1715364965}
   CowLevels:
   - {fileID: 1030242515}
   - {fileID: 854394790}
@@ -2043,27 +2026,11 @@ Transform:
   - {fileID: 1603449903}
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &1715364962 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 161438, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
-  m_PrefabInternal: {fileID: 867155621}
---- !u!95 &1715364963
+--- !u!95 &1715364965 stripped
 Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1715364962}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cee91c9815c89bf4f8a870e3d681ecf3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_PrefabParentObject: {fileID: 9566922, guid: 179effaf2af85554f9c75e80b24399b5,
+    type: 2}
+  m_PrefabInternal: {fileID: 867155621}
 --- !u!1001 &1785400108
 Prefab:
   m_ObjectHideFlags: 0
