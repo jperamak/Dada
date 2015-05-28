@@ -5,7 +5,7 @@
 public class D2D_AutoSpriteCollider : D2D_SpriteCollider
 {
 	[SerializeField]
-	private new PolygonCollider2D collider;
+	private PolygonCollider2D collider;
 	
 	public override void RebuildAllColliders()
 	{

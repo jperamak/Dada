@@ -3,7 +3,7 @@ using Dada.InputSystem;
 using System.Collections;
 
 [RequireComponent(typeof(Hero))]
-public class HeroPlanetController : HeroController {
+public class HeroPlanetController : HeroControllerV1 {
 
 	private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
 	private bool _grounded = false;			// Whether or not the player is grounded.

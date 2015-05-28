@@ -23,12 +23,20 @@ public class SoundEffect : MonoBehaviour
 
     private int _currentClip;
 	private float _lastPlayed;
+	private float[] _originalPitch;
+	private float[] _originalVolume;
 
     private int _numPlaying = 0;
 
-    void Awake()
-    {
+    void Awake(){
         _audioClips = GetComponents<AudioSource>().ToList<AudioSource>();
+		_originalPitch = new float[_audioClips.Count];
+		_originalVolume = new float[_audioClips.Count];
+
+		for(int i=0;i<_audioClips.Count;i++){
+			_originalPitch[i] = _audioClips[i].pitch;
+			_originalVolume[i] = _audioClips[i].volume;
+		}
     }
 
     public void PlayEffect()
@@ -38,22 +46,23 @@ public class SoundEffect : MonoBehaviour
 	//	if(_lastPlayed + PlayCooldown > Time.time)
 	//		return;
 
+
         if (_numPlaying < maxSimultaneous)
         {
             _numPlaying++;
             switch (Mode)
             {
                 case ClipCyclingMode.Single:
-                    PlayEffect(_audioClips.First());
+                    PlayEffect(0);
                     break;
                 case ClipCyclingMode.InOrder:
                     if (_currentClip >= _audioClips.Count)
                         _currentClip = 0;
-                    PlayEffect(_audioClips[_currentClip]);
+                    PlayEffect(_currentClip);
                     _currentClip++;
                     break;
                 case ClipCyclingMode.Random:
-                    PlayEffect(_audioClips[Random.Range(0, _audioClips.Count)]);
+                    PlayEffect(Random.Range(0, _audioClips.Count));
                     break;
             }
         }
@@ -64,13 +73,15 @@ public class SoundEffect : MonoBehaviour
         _audioClips.ForEach(c => c.Stop());
     }
 
-    private void PlayEffect(AudioSource effect)
-    {
+    private void PlayEffect(int index){
+
+		AudioSource effect = _audioClips[index];
+
         if ( effect != null )
         {
 			_lastPlayed = Time.time;
-            effect.pitch *= Random.Range(minPitch,maxPitch);
-            effect.volume *= Random.Range(minVolume,maxVolume);
+            effect.pitch =  _originalPitch[index] * Random.Range(minPitch,maxPitch);
+			effect.volume = _originalVolume[index] * Random.Range(minVolume,maxVolume);
 
             effect.Play();
         }

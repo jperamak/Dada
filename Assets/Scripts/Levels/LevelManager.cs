@@ -288,7 +288,7 @@ public class LevelManager : MonoBehaviour {
 		for(int i=0;i<c2.Length;i++)
 			Destroy(c2[i]);
 
-        Invoke("ActivateRestartMenu",2.1f);
+        Invoke("ActivateRestartMenu",1.5f);
     }
 
 	private void SpawnParticle(Vector2 position, Color c){
@@ -345,7 +345,7 @@ public class LevelManager : MonoBehaviour {
 
 		Player p1 = new Player(DadaInput.GetJoystick(controller));
 		p1.Hero = Resource.FISH_HERO;
-		p1.FirstWeapon = Resource.NAPALM_PHOENIX;
+		p1.FirstWeapon = Resource.CHILI_RANGE;
 		p1.SecondWeapon = Resource.LAYBOMB_MELEE;
         if (controller == 0)
             p1.InTeam = Team.TEAM_1;

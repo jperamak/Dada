@@ -8,8 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playable/MainScreen.unity
   - enabled: 1
-    path: Assets/Scenes/Playable/Planets.unity
-  - enabled: 1
     path: Assets/Scenes/TeamFortress2.unity
   - enabled: 1
     path: Assets/Scenes/MushroomArena.unity
+  - enabled: 1
+    path: Assets/Scenes/Playable/Planets.unity
