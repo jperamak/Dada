@@ -6254,7 +6254,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 399462735}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a1ff7ff4ce484f1aad8887efed74b11, type: 3}
   m_Name: 
@@ -6264,6 +6264,8 @@ MonoBehaviour:
   buffer: 4
   minZoom: 12
   maxZoom: 24.2000008
+  manualControlEnabled: 1
+  manualZoomSpeed: 3
   players: []
 --- !u!114 &399462742
 MonoBehaviour:
