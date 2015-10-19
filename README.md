@@ -1,4 +1,4 @@
-# The Epic Battle of Dada Masters
+# The Epic Battle of the Dada Masters
 
 A game for Game Project course (2014-2015) at Aalto University.
 
