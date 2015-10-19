@@ -6261,7 +6261,7 @@ MonoBehaviour:
   zoomSmooth: 8
   buffer: 4
   minZoom: 12
-  maxZoom: 19.9699993
+  maxZoom: 19.8999996
   manualControlEnabled: 0
   manualZoomSpeed: 3
   players: []
@@ -22057,7 +22057,7 @@ MonoBehaviour:
   GhostPrefab: {fileID: 11438746, guid: e6a873e9dda5adf47a9e2febe4c9af5f, type: 2}
   SpawnParticlePrefab: {fileID: 100002, guid: 33dcd440042fd674593e29668fae453d, type: 2}
   MaxScore: 6
-  testPlayers: 1
+  testPlayers: 2
 --- !u!4 &986617387
 Transform:
   m_ObjectHideFlags: 0
