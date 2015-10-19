@@ -35,6 +35,12 @@ public class LevelManager : MonoBehaviour {
         RespawnSound = DadaAudio.GetSoundEffect(RespawnSound);
 	}
 
+    public enum TestPlayers
+    {
+        one = 1, two = 2,three = 3,four = 4
+    }
+    public TestPlayers testPlayers = TestPlayers.one;
+
 	protected void Start(){
 		Transform canvas = GameObject.Find("Canvas").transform;
 		Transform scoreText = canvas.Find("Scores");
@@ -52,8 +58,8 @@ public class LevelManager : MonoBehaviour {
 
 		//********** FOR DEBUG ONLY!! **************
 		if(_teams == null || _teams.Count == 0){
-			DadaGame.RegisterPlayer(CreateDebugPlayers(0));
-            //DadaGame.RegisterPlayer(CreateDebugPlayers(1));
+			for (int i = 0; i < (int)testPlayers; i++)
+                DadaGame.RegisterPlayer(CreateDebugPlayers(i));
             _teams = DadaGame.Teams;
 		}
 
