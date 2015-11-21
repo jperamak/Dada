@@ -19,3 +19,5 @@ Assets/UnityVS/
 sysinfo.txt
 
 Assets/Sprites/UI SPRITES.psd.meta
+Assets/Scenes/TeamFortress2.unity
+Assets/Scripts/Levels/LevelManager.cs

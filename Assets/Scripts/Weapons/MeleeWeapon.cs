@@ -11,6 +11,8 @@ public class MeleeWeapon : Weapon {
 			SpawnPoint = transform.FindChild("Spawner");
 	}
 
+
+
 	protected override Projectile Shoot(){
 
 		if(Strike == null || SpawnPoint == null)

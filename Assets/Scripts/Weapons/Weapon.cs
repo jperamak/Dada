@@ -8,7 +8,7 @@ public abstract class Weapon : MonoBehaviour {
 	public GameObject VisualEffect;
     public SoundEffect FireSound;
 	public Transform SpawnPoint;
-	
+
 	protected GameObject _owner;
 	protected Player _player;
 
@@ -38,16 +38,13 @@ public abstract class Weapon : MonoBehaviour {
 
 	public virtual void OnTriggerDown (){
 		if(Time.time - _lastShoot > CooldownTime){
-
-            
-
-
+			
 			Projectile p = Shoot();
-
+			
 			//be sure that the weapon shooted
 			if (FireSound != null && p != null)
 				FireSound.PlayEffect();
-
+			
 			_lastShoot = Time.time;
 		}
 	}

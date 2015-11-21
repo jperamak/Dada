@@ -11,6 +11,7 @@ public sealed class Resource {
 	public static readonly Resource NAPALM_PHOENIX = new Resource("Napalm Phoenix", "Weapons/NapalmPhoenix");
 	public static readonly Resource FIRE_RANGE = new Resource("Aaaaah!", "Weapons/FireStaff");
 	public static readonly Resource BEE_RANGE = new Resource("BeeGun", "Weapons/BeeGun");
+	public static readonly Resource ARTILLERY_PHOENIX = new Resource("Artillery Phoenix", "Weapons/ArtilleryPhoenix");
 
 	//Melee weapons
 	public static readonly Resource LAYBOMB_MELEE = new Resource("Frog Lover", "Weapons/BombLay");
