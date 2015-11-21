@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 137606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a7971c55e52482438a451bb6f3e8ae0, type: 3}
+  m_Script: {fileID: 11500000, guid: 44445258a8e847a4fa28a0e7919a89fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CooldownTime: .100000001
@@ -194,8 +194,7 @@ MonoBehaviour:
   OutOfAmmo: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8, type: 2}
   aimBar: {fileID: 172958}
   emptyAimBar: {fileID: 174692}
-  adjustablePushForce: 1
-  pushForceTimeToFull: 4
+  pushForceTimeToFull: 5
 --- !u!212 &21218908
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -214,9 +213,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -242,9 +239,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -270,9 +265,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -298,9 +291,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
