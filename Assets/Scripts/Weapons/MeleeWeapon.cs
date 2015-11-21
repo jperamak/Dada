@@ -46,9 +46,18 @@ public class MeleeWeapon : Weapon {
 		//The effect is played from the spawn position and with the same rotation
 		//Plus, make the effect stay fixed
 		if(VisualEffect != null){
-			GameObject visualFx = Instantiate(VisualEffect, referencePos, referenceRot) as GameObject;
-			visualFx.transform.parent = _owner.transform;
-		}
+
+            bool facingRight = _owner.GetComponent<HeroController>().IsFacingRight;
+			GameObject visualFx = Instantiate(VisualEffect, referencePos, Quaternion.identity) as GameObject;
+			visualFx.transform.SetParent(_owner.transform);
+
+            if(facingRight)
+                visualFx.transform.localRotation = referenceRot;
+            else{
+                visualFx.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+                visualFx.transform.localRotation = Quaternion.Euler(0, 0, 180-referenceRot.eulerAngles.z);
+            }
+        }
 
 		return bulletInst;
 		

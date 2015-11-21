@@ -353,7 +353,7 @@ public class LevelManager : MonoBehaviour {
 		Player p1 = new Player(DadaInput.GetJoystick(controller));
 		p1.Hero = Resource.FISH_HERO;
 		p1.FirstWeapon = Resource.ARTILLERY_PHOENIX;
-		p1.SecondWeapon = Resource.LAYBOMB_MELEE;
+		p1.SecondWeapon = Resource.KATANA_MELEE;
         if (controller == 0)
             p1.InTeam = Team.TEAM_1;
         else

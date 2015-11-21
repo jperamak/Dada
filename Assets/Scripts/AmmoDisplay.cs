@@ -30,12 +30,12 @@ public class AmmoDisplay : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         _maxBullets = _weapon.MaxBullets;
-        if (!_flipped && !_heroController.facingRight)
+        if (!_flipped && !_heroController.IsFacingRight)
         {
             _flipped = true;
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
-        else if (_flipped && _heroController.facingRight)
+        else if (_flipped && _heroController.IsFacingRight)
         {
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             _flipped = false;

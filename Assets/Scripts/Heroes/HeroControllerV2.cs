@@ -5,8 +5,6 @@ using System.Collections;
 [RequireComponent(typeof(Hero))]
 public class HeroControllerV2 : HeroController { 
 
-
-
 	protected Hero _hero;
 	protected Rigidbody2D _rigidbody;
 	private BoxCollider2D _boxCollider;
@@ -26,11 +24,6 @@ public class HeroControllerV2 : HeroController {
 
     protected ParticleSystem _jumpCloud;
 
-	protected bool _facingRight = true;		// For determining which way the player is currently facing.
-	public bool facingRight
-    {
-        get { return _facingRight; }
-    }
     private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
 	private bool _grounded = false;			// Whether or not the player is grounded.
 	private bool _jump = false;
@@ -60,8 +53,6 @@ public class HeroControllerV2 : HeroController {
 		_crossairPivot 	 = transform.Find("CrossairPivot");
 		_crossair 		 = _crossairPivot.Find("Crossair");
 
-		if(transform.localScale.x < 0)
-			_facingRight = false;
 	}
 
 
@@ -101,13 +92,13 @@ public class HeroControllerV2 : HeroController {
 		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
 
 		// Option 1: The old way 
-		float yAxis = _hero.PlayerInstance.Controller.YAxis;
+		float yAxis = _hero.PlayerInstance.Controller.YAxis * 0.5f;
 		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
 		Vector3 newRotation = new Vector3(0, 0, aimAngle);
 		Vector3 crossairRotation = newRotation;
 
-		//correct crossair rotation due to negative scale of the x axis
-		if(!_facingRight){
+        //correct crossair rotation due to negative scale of the x axis
+        if (!IsFacingRight){
 			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
 			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
 		}
@@ -119,11 +110,11 @@ public class HeroControllerV2 : HeroController {
 		//correct ranged weapon spawnpoint due to scale change
 		if(_hero.RangedWeapon != null)
 			_hero.RangedWeapon.SpawnPoint.eulerAngles = crossairRotation;
-		
-		//correct ranged weapon spawnpoint due to scale change
-		if(_hero.MeleeWeapon != null)
-			_hero.MeleeWeapon.SpawnPoint.eulerAngles = crossairRotation;
-	}
+
+        //correct melee weapon spawnpoint due to scale change
+        if (_hero.MeleeWeapon != null)
+            _hero.MeleeWeapon.SpawnPoint.eulerAngles = crossairRotation;
+    }
 
 	protected virtual void ProcessWeapons(){
 		AbstractController _controller =_hero.PlayerInstance.Controller;
@@ -168,11 +159,11 @@ public class HeroControllerV2 : HeroController {
 		h = Mathf.Abs(h) < 0.25f ? 0 : h;
 
 		// If the input is moving the player right and the player is facing left...
-		if(h > 0 && !_facingRight)
+		if(h > 0 && !IsFacingRight)
 			// ... flip the player.
 			Flip();
 		// Otherwise if the input is moving the player left and the player is facing right...
-		else if(h < 0 && _facingRight)
+		else if(h < 0 && IsFacingRight)
 			// ... flip the player.
 			Flip();
 	}
@@ -313,8 +304,6 @@ public class HeroControllerV2 : HeroController {
 	}
 
 	protected virtual void Flip (){
-		// Switch the way the player is labelled as facing.
-		_facingRight = !_facingRight;
 		
 		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;

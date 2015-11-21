@@ -1,0 +1,452 @@
+fileFormatVersion: 2
+guid: 81272c4dbe58e7b4b987382edccdbbf4
+timeCreated: 1448129578
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slash10_0
+    21300002: slash10_1
+    21300004: slash10_2
+    21300006: slash10_3
+    21300008: slash10_4
+    21300010: slash10_5
+    21300012: slash10_6
+    21300014: slash10_7
+    21300016: slash10_8
+    21300018: slash10_9
+    21300020: slash10_10
+    21300022: slash10_11
+    21300024: slash10_12
+    21300026: slash10_13
+    21300028: slash10_14
+    21300030: slash10_15
+    21300032: slash10_16
+    21300034: slash10_17
+    21300036: slash10_18
+    21300038: slash10_19
+    21300040: slash10_20
+    21300042: slash10_21
+    21300044: slash10_22
+    21300046: slash10_23
+    21300048: slash10_24
+    21300050: slash10_25
+    21300052: slash10_26
+    21300054: slash10_27
+    21300056: slash10_28
+    21300058: slash10_29
+    21300060: slash10_30
+    21300062: slash10_31
+    21300064: slash10_32
+    21300066: slash10_33
+    21300068: slash10_34
+    21300070: slash10_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: slash10_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 770
+        width: 188
+        height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 771
+        width: 186
+        height: 187
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_2
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 772
+        width: 184
+        height: 185
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_3
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 786
+        width: 134
+        height: 120
+      alignment: 9
+      pivot: {x: .100000001, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_4
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 789
+        width: 134
+        height: 120
+      alignment: 9
+      pivot: {x: .100000001, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_5
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 599
+        width: 134
+        height: 120
+      alignment: 9
+      pivot: {x: .100000001, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 601
+        width: 134
+        height: 120
+      alignment: 9
+      pivot: {x: .100000001, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_7
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 622
+        width: 159
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_8
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 619
+        width: 153
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_9
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 612
+        width: 141
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_10
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 418
+        width: 121
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 435
+        width: 128
+        height: 102
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_12
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 432
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_13
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 435
+        width: 129
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 432
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_15
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 424
+        width: 130
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_16
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 415
+        width: 130
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_17
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 429
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_18
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 429
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_19
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 218
+        width: 130
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 203
+        width: 136
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_21
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 208
+        width: 134
+        height: 159
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_22
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 211
+        width: 137
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_23
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 212
+        width: 145
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 17
+        width: 152
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_25
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 16
+        width: 149
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 59
+        width: 151
+        height: 103
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_27
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 55
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_28
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 51
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_29
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 66
+        width: 137
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_30
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 55
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_31
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 62
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_32
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 45
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_33
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 48
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_34
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 45
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slash10_35
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 48
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

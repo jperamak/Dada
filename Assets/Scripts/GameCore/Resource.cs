@@ -17,10 +17,11 @@ public sealed class Resource {
 	public static readonly Resource LAYBOMB_MELEE = new Resource("Frog Lover", "Weapons/BombLay");
 	public static readonly Resource ICY_MELEE = new Resource("Ice Cream", "Weapons/IcyKatana");
 	public static readonly Resource FLAME_MELEE = new Resource("Hot Teaspoon", "Weapons/FlameKatana");
-	public static readonly Resource ELECTRIC_MELEE = new Resource("Electric Deer", "Weapons/ElectricKatana");
+    public static readonly Resource ELECTRIC_MELEE = new Resource("Electric Deer", "Weapons/ElectricKatana");
+    public static readonly Resource KATANA_MELEE = new Resource("Katana", "Weapons/Katana");
 
-	//Heroes
-	public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/Monk");
+    //Heroes
+    public static readonly Resource MONK_HERO = new Resource("Monk", "Heroes/Monk");
 	public static readonly Resource POOP_HERO = new Resource("Poopy", "Heroes/PoopMonk");
 	public static readonly Resource RACCOON_HERO = new Resource("RaccoonLover", "Heroes/RaccoonMonk");
 	public static readonly Resource FISH_HERO = new Resource("Fisher", "Heroes/FishMonk");
@@ -45,7 +46,7 @@ public sealed class Resource {
 		}
 	}
 
-	public static Resource[] MeleeWepons = { Resource.LAYBOMB_MELEE, Resource.ICY_MELEE, Resource.FLAME_MELEE, Resource.ELECTRIC_MELEE };
+	public static Resource[] MeleeWepons = { Resource.KATANA_MELEE, Resource.LAYBOMB_MELEE, Resource.ICY_MELEE, Resource.FLAME_MELEE, Resource.ELECTRIC_MELEE };
 	public static Resource[] RangedWepons = {Resource.PHOENIX, Resource.NAPALM_PHOENIX, Resource.BANANA_RANGE, Resource.CHILI_RANGE };
 	public static Resource[] Heroes = { Resource.MONK_HERO };
 }
