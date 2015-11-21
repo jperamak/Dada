@@ -19,7 +19,7 @@ public class MainScreen : MonoBehaviour {
 		Button[] _buttons = ButtonLayout.transform.GetComponentsInChildren<Button>();
 
 		for(int i=0; i<_buttons.Length; i++){
-			if(i >= DadaInput.ConrtollerCount)
+			if(i >= DadaInput.ControllerCount)
 				_buttons[i].interactable = false;
 			if(i==0){
 				_selectedDefaultPlayers = _buttons[i];
@@ -105,7 +105,7 @@ public class MainScreen : MonoBehaviour {
 	public void RegisterPlayerNumber(int num){
 
 		//be sure that 
-		DadaGame.PlayersNum = Mathf.Clamp(num,0,DadaInput.ConrtollerCount);
+		DadaGame.PlayersNum = Mathf.Clamp(num,0,DadaInput.ControllerCount);
 		ShowLevels();
 	}
 

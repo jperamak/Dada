@@ -20,7 +20,7 @@ public class CharacterSelectionScreen : MonoBehaviour {
 		//Disable windows without a player
 		for(int i=0;i<4;i++){
 			views[i] = canvas.transform.GetChild(i).GetComponent<CharacterSelectionView>();
-			if(i < DadaGame.PlayersNum && i < DadaInput.ConrtollerCount){
+			if(i < DadaGame.PlayersNum && i < DadaInput.ControllerCount){
 				views[i].OnPlayerReady = PlayerReady;	
 				views[i].SetController(DadaInput.GetJoystick(i));
 			}

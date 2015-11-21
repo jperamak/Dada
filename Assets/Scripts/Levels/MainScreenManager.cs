@@ -152,7 +152,7 @@ public class MainScreenManager : MonoBehaviour {
 
 			//open new egg
 			if(_controller.GetButtonDown(VirtualKey.RIGHT)){
-				if(_playerNum < DadaInput.ConrtollerCount){
+				if(_playerNum < DadaInput.ControllerCount){
 					PlayerEggsAnim[_playerNum].SetTrigger("Crack");
 					_playerNum++;
 					MenuBipAudio.PlayEffect();
@@ -297,7 +297,7 @@ public class MainScreenManager : MonoBehaviour {
 
 		_levelName = LevelsName[_levelNum];
 
-		DadaGame.PlayersNum = Mathf.Clamp(_playerNum,0,DadaInput.ConrtollerCount);
+		DadaGame.PlayersNum = Mathf.Clamp(_playerNum,0,DadaInput.ControllerCount);
 		DadaGame.IsTeamPlay = _isTeamMode;
 		
 		if(DadaGame.PlayersNum >= 1){
