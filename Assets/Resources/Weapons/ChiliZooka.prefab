@@ -131,9 +131,13 @@ MonoBehaviour:
   SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11442310, guid: 804ac68f809d4ba41808555b5d6be74a, type: 2}
   MaxBullets: 10
-  RechargeEvery: 2
+  RechargeEvery: 0
   PushForce: 80
   OutOfAmmo: {fileID: 0}
+  aimBar: {fileID: 0}
+  emptyAimBar: {fileID: 0}
+  adjustablePushForce: 0
+  pushForceTimeToFull: 5
   ProjectileRandomRotation: 0
 --- !u!212 &21239004
 SpriteRenderer:
@@ -200,7 +204,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: RechargeEvery
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
