@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -134,6 +132,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 3f11f24abee27974ba03f6a30ad801b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -201,6 +205,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 9e596ebbd8f364b41b5382a9bb5cf7a4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -385,7 +395,7 @@ Transform:
   - {fileID: 1107272968}
   - {fileID: 649517513}
   m_Father: {fileID: 1008703957}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &305147899
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +461,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -512,6 +524,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b51e7bed0a3722d4b9241f9f8d099471, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -596,10 +614,12 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &362964595
 Transform:
   m_ObjectHideFlags: 0
@@ -648,6 +668,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 1
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -702,10 +723,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!4 &382938180 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
-  m_PrefabInternal: {fileID: 867155621}
 --- !u!95 &382938181 stripped
 Animator:
   m_PrefabParentObject: {fileID: 9597180, guid: 179effaf2af85554f9c75e80b24399b5,
@@ -984,6 +1001,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 67f215e06ebccef4eaef605a7ccf6be3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1299,7 +1322,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowActivationOnStandalone: 0
+  m_ForceModuleActive: 0
 --- !u!114 &859932512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,7 +1371,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1008703957}
+    m_TransformParent: {fileID: 1445415034}
     m_Modifications:
     - target: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1356,7 +1379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.70000005
+      value: 37.0598679
       objectReference: {fileID: 0}
     - target: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1380,7 +1403,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 10.01618
+      objectReference: {fileID: 0}
+    - target: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 10.01618
+      objectReference: {fileID: 0}
+    - target: {fileID: 485002, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 10.01618
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 179effaf2af85554f9c75e80b24399b5, type: 2}
@@ -1439,7 +1474,6 @@ Transform:
   m_Children:
   - {fileID: 1648395894}
   - {fileID: 362964595}
-  - {fileID: 382938180}
   - {fileID: 1445415034}
   - {fileID: 252471490}
   m_Father: {fileID: 0}
@@ -1490,7 +1524,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1553,7 +1589,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1611,7 +1649,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1667,6 +1707,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 057d5d06e282fef4990514e581321296, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -1853,7 +1899,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2480,7 +2528,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2634,7 +2684,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22430888, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22430888, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -2680,6 +2730,14 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 362964594}
+    - target: {fileID: 11468822, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
+      propertyPath: m_Text
+      value: FFA
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406802, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
+      propertyPath: m_Text
+      value: Teams
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afc3d897c008d524b9e78bb727811fca, type: 2}
   m_IsPrefabParent: 0
@@ -2904,7 +2962,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

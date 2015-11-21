@@ -9,8 +9,12 @@ public class RangedWeapon : Weapon {
 	public float PushForce = 20.0f;
 	public SoundEffect OutOfAmmo;
 
+    protected int _currentBullets;
 
-	protected int _currentBullets;
+	public int currentBullets
+    {
+        get { return _currentBullets; }
+    }
 
 	void Start(){
 		if(SpawnPoint == null)

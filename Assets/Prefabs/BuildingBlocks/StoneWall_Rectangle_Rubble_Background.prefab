@@ -13,7 +13,7 @@ GameObject:
   - 60: {fileID: 6014142}
   - 114: {fileID: 11414142}
   - 114: {fileID: 11420538}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ GameObject:
   - 60: {fileID: 6014144}
   - 114: {fileID: 11414144}
   - 114: {fileID: 11417460}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - 60: {fileID: 6014146}
   - 114: {fileID: 11414146}
   - 114: {fileID: 11431356}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - 60: {fileID: 6014148}
   - 114: {fileID: 11414148}
   - 114: {fileID: 11464004}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - 60: {fileID: 6014150}
   - 114: {fileID: 11414150}
   - 114: {fileID: 11473150}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - 60: {fileID: 6014152}
   - 114: {fileID: 11414152}
   - 114: {fileID: 11426458}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - 60: {fileID: 6014154}
   - 114: {fileID: 11414154}
   - 114: {fileID: 11460404}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - 60: {fileID: 6014156}
   - 114: {fileID: 11414156}
   - 114: {fileID: 11465322}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,6 +293,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5014142
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -301,13 +302,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5014144
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -316,13 +318,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5014146
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -331,13 +334,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5014148
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -346,13 +350,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5014150
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -361,13 +366,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5014152
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -376,13 +382,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5014154
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -391,13 +398,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5014156
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -406,11 +414,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &6014142
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -586,13 +594,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11414144
 MonoBehaviour:
@@ -605,13 +615,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11414146
 MonoBehaviour:
@@ -624,13 +636,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11414148
 MonoBehaviour:
@@ -643,13 +657,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11414150
 MonoBehaviour:
@@ -662,13 +678,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11414152
 MonoBehaviour:
@@ -681,13 +699,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11414154
 MonoBehaviour:
@@ -700,13 +720,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11414156
 MonoBehaviour:
@@ -719,13 +741,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afbccb4a97ad47c7bea360c6f1b5051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 15
-  currentHitpoints: 10
+  MaxHitpoints: 10
+  DamageSound: {fileID: 0}
+  DestroySound: {fileID: 0}
   hitpointsLightDamage: 0
   hitpointsHeavyDamage: 0
   spriteLightDamage: {fileID: 0}
   spriteHeavyDamage: {fileID: 0}
   leftWhenDestroyed: {fileID: 0}
+  DestroyOnZeroHp: 1
   damageFromCollisions: 0
 --- !u!114 &11417460
 MonoBehaviour:
@@ -740,6 +764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11420538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -753,6 +779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11426458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -766,6 +794,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11431356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -779,6 +809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11460404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -792,6 +824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11464004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -805,6 +839,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11465322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -818,6 +854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11473150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -831,6 +869,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 5
   secondsForFading: 2
+  destroyParent: 1
+  destroyThis: 0
 --- !u!212 &21214142
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -849,7 +889,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -875,7 +917,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -901,7 +945,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -927,7 +973,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -953,7 +1001,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -979,7 +1029,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1005,7 +1057,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1031,7 +1085,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1045,7 +1101,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114158}

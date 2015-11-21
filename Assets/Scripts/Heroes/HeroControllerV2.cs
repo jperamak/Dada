@@ -25,7 +25,11 @@ public class HeroControllerV2 : HeroController {
 	protected Transform _weaponSpawner;		// the default spawn point of the weapon
 	
 	protected bool _facingRight = true;		// For determining which way the player is currently facing.
-	private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
+	public bool facingRight
+    {
+        get { return _facingRight; }
+    }
+    private int _tauntIndex;				// The index of the taunts array indicating the most recent taunt.
 	private bool _grounded = false;			// Whether or not the player is grounded.
 	private bool _jump = false;
 	private float _jumpStartTime;

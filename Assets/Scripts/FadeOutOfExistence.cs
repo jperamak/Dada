@@ -13,6 +13,7 @@ public class FadeOutOfExistence : MonoBehaviour {
 	void Awake () 
 	{
 		awakeTime = Time.time;
+        secondsToStartFading = secondsToStartFading * Random.Range(0.8f, 1.2f);
         if ( destroyThis)
             Destroy(gameObject, secondsToStartFading + secondsForFading);
 		if ( destroyParent)
