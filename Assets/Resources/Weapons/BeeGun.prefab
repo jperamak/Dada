@@ -130,10 +130,14 @@ MonoBehaviour:
   FireSound: {fileID: 11451074, guid: 81dc714705a6041dc802ec29f639fcf1, type: 2}
   SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11435580, guid: 2fc39752a79165343a719ea8dba6c960, type: 2}
-  MaxBullets: 3
-  RechargeEvery: 1.5
+  MaxBullets: 7
+  RechargeEvery: 0
   PushForce: 40
   OutOfAmmo: {fileID: 0}
+  aimBar: {fileID: 0}
+  emptyAimBar: {fileID: 0}
+  adjustablePushForce: 0
+  pushForceTimeToFull: 5
   ProjectileRandomRotation: 0
 --- !u!212 &21242414
 SpriteRenderer:
@@ -200,11 +204,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: MaxBullets
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: RechargeEvery
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

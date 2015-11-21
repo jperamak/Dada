@@ -149,9 +149,13 @@ MonoBehaviour:
   SpawnPoint: {fileID: 0}
   Bullet: {fileID: 11492750, guid: db88ddf1b9ff332409e5c3fa398b75fc, type: 2}
   MaxBullets: 10
-  RechargeEvery: .5
+  RechargeEvery: 0
   PushForce: 20
   OutOfAmmo: {fileID: 0}
+  aimBar: {fileID: 0}
+  emptyAimBar: {fileID: 0}
+  adjustablePushForce: 0
+  pushForceTimeToFull: 5
   ProjectileRandomRotation: 1
 --- !u!212 &21232032
 SpriteRenderer:
@@ -171,7 +175,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -197,7 +203,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -211,7 +219,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: RechargeEvery
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144584}

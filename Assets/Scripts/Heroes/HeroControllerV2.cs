@@ -23,7 +23,9 @@ public class HeroControllerV2 : HeroController {
 	protected Transform _crossair; 			// Crossair's transform, useful for calculating the shoot direction
 	protected Transform _rangeWeaponHand;		// The hand that holds the ranged weapon
 	protected Transform _weaponSpawner;		// the default spawn point of the weapon
-	
+
+    protected ParticleSystem _jumpCloud;
+
 	protected bool _facingRight = true;		// For determining which way the player is currently facing.
 	public bool facingRight
     {
@@ -45,7 +47,7 @@ public class HeroControllerV2 : HeroController {
 
 		//if (_boxCollider == null)
 		//	Debug.LogError("HeroController needs the Hero to have a BoxCollider2D");
-
+        _jumpCloud = transform.Find("JumpCloud").GetComponent < ParticleSystem>();
 		_rangeWeaponHand = transform.Find("Hand1");
 		_groundCheck     = transform.Find("GroundCheck");
 		_groundCheckLeft = transform.Find("GroundCheckLeft");
@@ -292,11 +294,16 @@ public class HeroControllerV2 : HeroController {
 		{
 			_walljump = 0;
 		}*/
-		if ( _controller.GetButton(VirtualKey.JUMP) )
-			_rigidbody.gravityScale=0.9f;
-		else
-			_rigidbody.gravityScale=3.0f;
-
+        if (_controller.GetButton(VirtualKey.JUMP))
+        {
+            _rigidbody.gravityScale = 0.9f;
+            _jumpCloud.Play();
+        }
+        else
+        {
+            _rigidbody.gravityScale = 3.0f;
+            _jumpCloud.Stop();
+        }
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		//Debug.Log (_rigidbody.velocity.y);
 	
