@@ -28619,6 +28619,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11481260, guid: c9450601221b86043b07848f4da63be9, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 431554, guid: c9450601221b86043b07848f4da63be9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -28664,6 +28668,14 @@ Prefab:
       propertyPath: TimeBeforePoop
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11481260, guid: c9450601221b86043b07848f4da63be9, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
+    - target: {fileID: 11481260, guid: c9450601221b86043b07848f4da63be9, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9450601221b86043b07848f4da63be9, type: 2}
   m_IsPrefabParent: 0
@@ -28779,7 +28791,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1001 &1249160589
 Prefab:
   m_ObjectHideFlags: 0

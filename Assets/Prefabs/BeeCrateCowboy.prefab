@@ -275,6 +275,7 @@ Transform:
   m_RootOrder: 2
 --- !u!50 &5038158
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -283,13 +284,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5041600
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -298,13 +300,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .5
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5053826
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -313,11 +316,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &6008168
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -495,7 +498,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -521,7 +526,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -547,7 +554,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -573,7 +582,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -599,7 +610,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -625,7 +638,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -651,7 +666,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -666,7 +683,8 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122288}
   m_Enabled: 1
-  m_CollideConnected: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5041600}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -1.60369158, y: 2.98432636}
@@ -680,7 +698,8 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177308}
   m_Enabled: 1
-  m_CollideConnected: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5041600}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 1.60549867, y: 3.05542135}
@@ -694,11 +713,11 @@ SliderJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122288}
   m_Enabled: 1
-  m_CollideConnected: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5041600}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -1.57413995, y: 2.3894453}
-  serializedVersion: 2
   m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -715,11 +734,11 @@ SliderJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177308}
   m_Enabled: 1
-  m_CollideConnected: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5041600}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 1.61097717, y: 2.55663061}
-  serializedVersion: 2
   m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -735,7 +754,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 126264}

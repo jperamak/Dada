@@ -24,7 +24,7 @@ public class Damage : Effect {
                     Damageable dmg = _targets[i].GetComponent<Damageable>();
                     if (dmg != null)
                     {
-                        dmg.TakeDamage(DamageAmount, Owner);
+                        dmg.TakeDamage(DamageAmount);
                     }
                 }
 			}

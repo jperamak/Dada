@@ -22,6 +22,7 @@ public class AmmoDisplay : MonoBehaviour {
         for (int i = 0; i < _maxBullets; i++)
         {
             GameObject g = Instantiate(ammoCountPrefab);
+            g.transform.parent = transform;
             _bullets.Add(g);
         }
     }
