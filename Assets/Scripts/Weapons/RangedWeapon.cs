@@ -54,6 +54,11 @@ public class RangedWeapon : Weapon {
 
 	}
 
+    public void Reset()
+    {
+        _currentBullets = MaxBullets;
+    }
+
 	public override void OnTriggerUp (){
 		if (aimMode){
 			StopAiming();
