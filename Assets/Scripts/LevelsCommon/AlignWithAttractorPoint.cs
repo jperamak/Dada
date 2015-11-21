@@ -52,7 +52,7 @@ public class AlignWithAttractorPoint : MonoBehaviour {
 
 		Vector2 down = Vector2.zero;
 		for(int i=0;i<_points.Count; i++){
-			down += (Vector2)(transform.position - _points[i].transform.position);
+			down += (Vector2)(transform.position - _points[i].position ) * -Mathf.Sign(_points[i].GetComponent<PointEffector2D>().forceMagnitude);
 		}
 		down = down / _points.Count;
 		down.Normalize();
