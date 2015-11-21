@@ -33,7 +33,6 @@ public class RangedWeapon : Weapon {
 			pushForcePercent += Time.deltaTime / pushForceTimeToFull;
 			if (pushForcePercent > 1.0f)
 				pushForcePercent = 1.0f;
-			Debug.Log(pushForcePercent);
 			aimBar.transform.localScale = new Vector3(5f*pushForcePercent,5f,5f);
 		}
 	}

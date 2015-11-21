@@ -267,7 +267,7 @@ MonoBehaviour:
   InteractWith:
     serializedVersion: 2
     m_Bits: 4294901247
-  ExplosionPushForce: 50
+  ExplosionPushForce: 100
 --- !u!198 &19893056
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1388,7 +1388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: ExplosionPushForce
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
