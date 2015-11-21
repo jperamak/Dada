@@ -13,7 +13,7 @@ GameObject:
   - 60: {fileID: 6069624}
   - 114: {fileID: 11455040}
   - 114: {fileID: 11459262}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - 60: {fileID: 6075230}
   - 114: {fileID: 11429224}
   - 114: {fileID: 11424338}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   - 60: {fileID: 6022572}
   - 114: {fileID: 11463540}
   - 114: {fileID: 11476802}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,6 +128,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5038120
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -136,13 +137,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5051924
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -151,13 +153,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5088630
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -166,11 +169,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &6022572
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -259,7 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 2
   secondsForFading: 1
-  destroy: 1
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11455040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -273,7 +277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 2
   secondsForFading: 1
-  destroy: 1
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11459262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,7 +305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 2
   secondsForFading: 1
-  destroy: 1
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11476802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,11 +338,13 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1535931219
+  m_SortingLayerID: 1024582385
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300024, guid: 6ad61c07e006c4e2792b6ea2a66da061, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -358,11 +366,13 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1535931219
+  m_SortingLayerID: 1024582385
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300022, guid: 6ad61c07e006c4e2792b6ea2a66da061, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -384,11 +394,13 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1535931219
+  m_SortingLayerID: 1024582385
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300020, guid: 6ad61c07e006c4e2792b6ea2a66da061, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -398,7 +410,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingLayerID
+      value: 1024582385
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 120248}

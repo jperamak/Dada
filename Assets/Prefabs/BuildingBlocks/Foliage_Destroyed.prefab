@@ -13,7 +13,7 @@ GameObject:
   - 60: {fileID: 6060224}
   - 114: {fileID: 11400126}
   - 114: {fileID: 11417770}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ GameObject:
   - 60: {fileID: 6060226}
   - 114: {fileID: 11411266}
   - 114: {fileID: 11491530}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - 60: {fileID: 6060228}
   - 114: {fileID: 11450212}
   - 114: {fileID: 11464562}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Rubble1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,6 +128,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5060224
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -136,13 +137,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5060226
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -151,13 +153,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5060228
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -166,11 +169,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &6060224
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -248,7 +251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 2
   secondsForFading: 1
-  destroy: 1
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11411266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -262,7 +266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 2
   secondsForFading: 1
-  destroy: 1
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11417770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -289,7 +294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsToStartFading: 2
   secondsForFading: 1
-  destroy: 1
+  destroyParent: 1
+  destroyThis: 0
 --- !u!114 &11464562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,7 +340,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -360,7 +368,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -386,7 +396,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -400,7 +412,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160230}

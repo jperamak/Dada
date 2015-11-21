@@ -48,8 +48,10 @@ public class AmmoDisplay : MonoBehaviour {
         while (_bullets.Count < _maxBullets)
         {
             GameObject g = Instantiate(ammoCountPrefab);
+            g.transform.parent = transform;
             _bullets.Add(g);
         }
+
         for (int i = 0; i < _maxBullets; i++)
         {
             float x = (-(_maxBullets - 1) / 2f + i) * ammoCountPrefab.transform.localScale.x *2;
