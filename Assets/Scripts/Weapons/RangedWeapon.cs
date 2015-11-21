@@ -7,6 +7,7 @@ public class RangedWeapon : Weapon {
 	public int MaxBullets = 10;
 	public float RechargeEvery = 0.5f;
 	public float PushForce = 20.0f;
+	public bool adjustablePuishForce = false;
 	public SoundEffect OutOfAmmo;
 
 
