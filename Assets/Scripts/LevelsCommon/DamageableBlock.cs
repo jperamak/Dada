@@ -16,6 +16,18 @@ public class DamageableBlock : Damageable {
 	public bool damageFromCollisions;
 
 	private Sprite _spriteNoDamage = null;
+	private GameObject leftWhenDestroyedInstance;
+
+	void Awake()
+	{
+		if (leftWhenDestroyed!= null)
+		{
+			leftWhenDestroyedInstance = Instantiate(leftWhenDestroyed);
+			//leftWhenDestroyedInstance.transform.parent = transform;
+			leftWhenDestroyedInstance.SetActive(false);
+		}
+		base.Awake();
+	}
 
 	void Start() {
 		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
@@ -76,9 +88,13 @@ public class DamageableBlock : Damageable {
 
 
 	private void LeaveRuins() {
-		GameObject ruin = Instantiate(leftWhenDestroyed, transform.position, transform.rotation) as GameObject;
-		ruin.transform.localScale = transform.localScale;
-		Rigidbody2D[] bodies = ruin.GetComponentsInChildren<Rigidbody2D>();
+		leftWhenDestroyedInstance.SetActive(true);
+		leftWhenDestroyedInstance.transform.position = transform.position;
+		leftWhenDestroyedInstance.transform.rotation = transform.rotation;
+		leftWhenDestroyedInstance.transform.localScale = transform.localScale;
+//			= Instantiate(leftWhenDestroyed, transform.position, transform.rotation) as GameObject;
+//		ruin.transform.localScale = transform.localScale;
+		Rigidbody2D[] bodies = leftWhenDestroyedInstance.GetComponentsInChildren<Rigidbody2D>();
 
 
 		if (this.GetComponent<Rigidbody2D>() != null) {
@@ -89,7 +105,7 @@ public class DamageableBlock : Damageable {
 	}
 
 	protected override void OnDestroyed (){
-		if (_currentHitpoints <= 0.0f && leftWhenDestroyed != null) {
+		if (_currentHitpoints <= 0.0f && leftWhenDestroyedInstance != null) {
 			LeaveRuins();
 		}
 

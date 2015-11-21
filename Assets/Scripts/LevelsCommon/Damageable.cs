@@ -16,7 +16,7 @@ public class Damageable : MonoBehaviour {
 	protected GameObject _lastHitFrom;
 
 	
-	void Awake () {
+	protected void Awake () {
 		_currentHitpoints = MaxHitpoints;
         DestroySound = DadaAudio.GetSoundEffect(DestroySound);
         DamageSound = DadaAudio.GetSoundEffect(DamageSound);

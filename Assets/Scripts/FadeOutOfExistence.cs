@@ -10,21 +10,27 @@ public class FadeOutOfExistence : MonoBehaviour {
 	private SpriteRenderer spriteRend;
 	private float awakeTime;
 
+	bool firstUpdate = true;
+
 	void Awake () 
 	{
-		awakeTime = Time.time;
-        secondsToStartFading = secondsToStartFading * Random.Range(0.8f, 1.2f);
-        if ( destroyThis)
-            Destroy(gameObject, secondsToStartFading + secondsForFading);
-		if ( destroyParent)
-			Destroy(gameObject.transform.parent.gameObject, secondsToStartFading + secondsForFading);
-
 		spriteRend = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if (firstUpdate)
+		{
+			firstUpdate = false;
+			awakeTime = Time.time;
+			secondsToStartFading = secondsToStartFading * Random.Range(0.8f, 1.2f);
+			if ( destroyThis)
+				Destroy(gameObject, secondsToStartFading + secondsForFading);
+			if ( destroyParent)
+				Destroy(gameObject.transform.parent.gameObject, secondsToStartFading + secondsForFading);
+		}
+
 		float timeIntoFading = Time.time - awakeTime - secondsToStartFading;
 
 		if (timeIntoFading > 0.0f && secondsForFading > 0.0f)
