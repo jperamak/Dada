@@ -7,8 +7,14 @@ public class RangedWeapon : Weapon {
 	public int MaxBullets = 10;
 	public float RechargeEvery = 0.5f;
 	public float PushForce = 20.0f;
-	public bool adjustablePuishForce = false;
 	public SoundEffect OutOfAmmo;
+	public GameObject aimBar;
+	public GameObject emptyAimBar;
+	public bool adjustablePushForce = false;
+	public float pushForceTimeToFull = 5f;
+
+	bool aimMode = false;
+	float pushForcePercent = 1f;
 
 
 	protected int _currentBullets;
@@ -22,11 +28,35 @@ public class RangedWeapon : Weapon {
         OutOfAmmo = DadaAudio.GetSoundEffect(OutOfAmmo);
 	}
 
+	void Update(){
+		if (aimMode) {
+			pushForcePercent += Time.deltaTime / pushForceTimeToFull;
+			if (pushForcePercent > 1.0f)
+				pushForcePercent = 1.0f;
+			Debug.Log(pushForcePercent);
+			aimBar.transform.localScale = new Vector3(5f*pushForcePercent,5f,5f);
+		}
+	}
+
 	public override void OnTriggerDown (){
         if (_currentBullets == 0 && OutOfAmmo != null)
             OutOfAmmo.PlayEffect();
 
-		base.OnTriggerDown ();
+		if (adjustablePushForce){
+			StartAiming();
+		}
+		else {
+			base.OnTriggerDown();
+		}
+
+	}
+
+	public override void OnTriggerUp (){
+		if (aimMode){
+			StopAiming();
+			Shoot ();
+		}
+		base.OnTriggerUp();
 	}
 
 	protected override Projectile Shoot(){
@@ -55,7 +85,7 @@ public class RangedWeapon : Weapon {
 			//add velocity instead of force
 			if(bulletInst.GetComponent<Rigidbody2D>() != null)
 			{
-                bulletInst.GetComponent<Rigidbody2D>().velocity = (_referencePoint.right * PushForce);
+                bulletInst.GetComponent<Rigidbody2D>().velocity = (_referencePoint.right * PushForce * pushForcePercent);
                 bulletInst.GetComponent<Rigidbody2D>().velocity += gameObject.transform.parent.parent.gameObject.GetComponent<Rigidbody2D>().velocity / 2;
             }
 				//bulletInst.GetComponent<Rigidbody2D>().AddForce(_referencePoint.right * PushForce,ForceMode2D.Impulse);
@@ -69,6 +99,23 @@ public class RangedWeapon : Weapon {
 		if(_currentBullets < MaxBullets)
 			_currentBullets++;
 	}
+
+	void StartAiming()
+	{
+		aimMode = true;
+		aimBar.SetActive(true);
+		emptyAimBar.SetActive(true);
+		aimBar.transform.localScale.Set (0f,5f,5f);
+		pushForcePercent = 0f;
+	}
+
+	void StopAiming()
+	{
+		aimMode = false;
+		aimBar.SetActive(false);
+		emptyAimBar.SetActive(false);
+	}
+
 
 
 				

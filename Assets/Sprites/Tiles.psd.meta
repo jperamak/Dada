@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d5d93ef458eb941638b4b87cb29f5b0c
-timeCreated: 1426187447
+timeCreated: 1448119038
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -46,6 +46,7 @@ TextureImporter:
     21300078: ChainSide
     21300080: ChainTop
     21300082: Tiles_0
+    21300084: Aimbar
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -79,6 +80,7 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -470,6 +472,26 @@ TextureImporter:
         height: 60
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tiles_0
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 443
+        width: 3
+        height: 2
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Aimbar
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 437
+        width: 58
+        height: 8
+      alignment: 9
+      pivot: {x: 0, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
