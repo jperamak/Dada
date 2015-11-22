@@ -304,7 +304,7 @@ public class MainScreenManager : MonoBehaviour {
 			Player p = new Player(DadaInput.GetJoystick(0));
 			p.Hero = Resource.FISH_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
-			p.SecondWeapon = Resource.LAYBOMB_MELEE; 
+			p.SecondWeapon = Resource.KATANA_MELEE; 
 			p.InTeam = Team.TEAM_1;
 			DadaGame.RegisterPlayer(p);
 		}
@@ -313,7 +313,7 @@ public class MainScreenManager : MonoBehaviour {
 			Player p = new Player(DadaInput.GetJoystick(1));
 			p.Hero = Resource.FEZ_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
-			p.SecondWeapon = Resource.LAYBOMB_MELEE;
+			p.SecondWeapon = Resource.KATANA_MELEE;
 			p.InTeam = Team.TEAM_2;
 			DadaGame.RegisterPlayer(p);
 		}
@@ -322,7 +322,7 @@ public class MainScreenManager : MonoBehaviour {
 			Player p = new Player(DadaInput.GetJoystick(2));
 			p.Hero = Resource.RACCOON_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
-			p.SecondWeapon = Resource.LAYBOMB_MELEE;
+			p.SecondWeapon = Resource.KATANA_MELEE;
 			p.InTeam = _isTeamMode ? Team.TEAM_1 : Team.TEAM_3;
 			DadaGame.RegisterPlayer(p);
 		}
@@ -331,7 +331,7 @@ public class MainScreenManager : MonoBehaviour {
 			Player p = new Player(DadaInput.GetJoystick(3));
 			p.Hero = Resource.POOP_HERO;
 			p.FirstWeapon = Resource.PHOENIX;
-			p.SecondWeapon = Resource.LAYBOMB_MELEE;
+			p.SecondWeapon = Resource.KATANA_MELEE;
 			p.InTeam = _isTeamMode ? Team.TEAM_2 : Team.TEAM_4;
 			DadaGame.RegisterPlayer(p);
 		}

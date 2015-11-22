@@ -16394,7 +16394,7 @@ MonoBehaviour:
   - {fileID: 106784, guid: 1ed231847b2d0b142999ce1efd67219d, type: 2}
   - {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
   - {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
-  SpawnTime: 30
+  SpawnTime: 20
   offsetTime: 10
 --- !u!4 &764220725
 Transform:
@@ -17881,7 +17881,7 @@ MonoBehaviour:
   - {fileID: 106784, guid: 1ed231847b2d0b142999ce1efd67219d, type: 2}
   - {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
   - {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
-  SpawnTime: 30
+  SpawnTime: 20
   offsetTime: 20
 --- !u!4 &795088180
 Transform:
@@ -35552,7 +35552,7 @@ MonoBehaviour:
   - {fileID: 106784, guid: 1ed231847b2d0b142999ce1efd67219d, type: 2}
   - {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
   - {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
-  SpawnTime: 30
+  SpawnTime: 20
   offsetTime: 0
 --- !u!4 &1699738650
 Transform:

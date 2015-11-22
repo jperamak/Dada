@@ -8869,7 +8869,7 @@ Transform:
   - {fileID: 445440562}
   - {fileID: 1204505298}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!1001 &352920567
 Prefab:
   m_ObjectHideFlags: 0
@@ -10126,6 +10126,80 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gluedObjects:
   - {fileID: 1009490060}
+--- !u!1001 &391538285
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 32.5499992
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 152776, guid: e2a64d5d08c37284781e3cdbf0c79749, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 126264, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 152028, guid: 7dd0dff38ceef4fda8ba779ce8a6cb0a, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 106784, guid: 24d8e4013b783da42b01ab50cbc65ded, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 109824, guid: d43854bbe83defa4ea98364893397dba, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: SpawnTime
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &391700451 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438116, guid: bf4acdd83e1f84ee8b7443682cb77c0b, type: 2}
@@ -16390,7 +16464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
 --- !u!1001 &682096245
 Prefab:
   m_ObjectHideFlags: 0
@@ -19238,7 +19312,7 @@ Transform:
   - {fileID: 205531976}
   - {fileID: 9584923}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!1001 &840709348
 Prefab:
   m_ObjectHideFlags: 0
@@ -22361,7 +22435,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
 --- !u!82 &986617388
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27235,6 +27309,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3001a1d3c4dcd4b69803277b67ff3c96, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1185952819
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -32.8300018
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.980000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478236, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 152776, guid: e2a64d5d08c37284781e3cdbf0c79749, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 126264, guid: c245754dc976cdf478dc9c71aa2227c1, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 152028, guid: 7dd0dff38ceef4fda8ba779ce8a6cb0a, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 106784, guid: 24d8e4013b783da42b01ab50cbc65ded, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 109824, guid: d43854bbe83defa4ea98364893397dba, type: 2}
+    - target: {fileID: 11439922, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: SpawnTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 134338, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+      propertyPath: m_Name
+      value: PickupSpawner (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ecc8eb45071369847ab9e0f3e86e031e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1191190695
 Prefab:
   m_ObjectHideFlags: 0
@@ -28621,7 +28773,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11481260, guid: c9450601221b86043b07848f4da63be9, type: 2}
       propertyPath: WeaponPickupPrefabs.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 431554, guid: c9450601221b86043b07848f4da63be9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -28676,6 +28828,10 @@ Prefab:
       propertyPath: WeaponPickupPrefabs.Array.data[7]
       value: 
       objectReference: {fileID: 115156, guid: de1a4c385cdd6974d9376b93572d9c3f, type: 2}
+    - target: {fileID: 11481260, guid: c9450601221b86043b07848f4da63be9, type: 2}
+      propertyPath: WeaponPickupPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 106784, guid: 1ed231847b2d0b142999ce1efd67219d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9450601221b86043b07848f4da63be9, type: 2}
   m_IsPrefabParent: 0
@@ -28791,7 +28947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!1001 &1249160589
 Prefab:
   m_ObjectHideFlags: 0
@@ -31432,7 +31588,7 @@ Transform:
   - {fileID: 172443691}
   - {fileID: 1413693999}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
 --- !u!1 &1335548386
 GameObject:
   m_ObjectHideFlags: 0
@@ -40355,7 +40511,7 @@ Transform:
   m_Children:
   - {fileID: 1453886370}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!1 &1753956342 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 138116, guid: a2f27cadbec5346189aeaaa28f816672, type: 2}
@@ -50545,7 +50701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1 &2124554611
 GameObject:
   m_ObjectHideFlags: 0
