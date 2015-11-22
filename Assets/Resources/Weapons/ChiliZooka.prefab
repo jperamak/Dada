@@ -133,11 +133,7 @@ MonoBehaviour:
   MaxBullets: 10
   RechargeEvery: 0
   PushForce: 80
-  OutOfAmmo: {fileID: 0}
-  aimBar: {fileID: 0}
-  emptyAimBar: {fileID: 0}
-  adjustablePushForce: 0
-  pushForceTimeToFull: 5
+  OutOfAmmo: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8, type: 2}
   ProjectileRandomRotation: 0
 --- !u!212 &21239004
 SpriteRenderer:
@@ -206,6 +202,11 @@ Prefab:
       propertyPath: RechargeEvery
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OutOfAmmo
+      value: 
+      objectReference: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 198146}

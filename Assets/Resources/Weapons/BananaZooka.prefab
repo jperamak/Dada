@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78bb66229315c8148a8783d8324f73a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CooldownTime: .100000001
+  CooldownTime: .200000003
   VisualEffect: {fileID: 0}
   FireSound: {fileID: 11486720, guid: a7ce44132b2a449d29a0d70dac1f527b, type: 2}
   SpawnPoint: {fileID: 0}
@@ -151,11 +151,7 @@ MonoBehaviour:
   MaxBullets: 10
   RechargeEvery: 0
   PushForce: 20
-  OutOfAmmo: {fileID: 0}
-  aimBar: {fileID: 0}
-  emptyAimBar: {fileID: 0}
-  adjustablePushForce: 0
-  pushForceTimeToFull: 5
+  OutOfAmmo: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8, type: 2}
   ProjectileRandomRotation: 1
 --- !u!212 &21232032
 SpriteRenderer:
@@ -224,6 +220,19 @@ Prefab:
       propertyPath: RechargeEvery
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: CooldownTime
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: MaxBullets
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OutOfAmmo
+      value: 
+      objectReference: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144584}
