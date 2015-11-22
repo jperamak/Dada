@@ -92,7 +92,7 @@ public class HeroControllerV2 : HeroController {
 		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
 
 		// Option 1: The old way 
-		float yAxis = _hero.PlayerInstance.Controller.YAxis * 0.5f;
+        float yAxis = _hero.PlayerInstance.Controller.YAxis;// *0.5f; 
 		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
 		Vector3 newRotation = new Vector3(0, 0, aimAngle);
 		Vector3 crossairRotation = newRotation;
