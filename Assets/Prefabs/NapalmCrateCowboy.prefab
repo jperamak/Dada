@@ -275,6 +275,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5054214
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -283,13 +284,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5055046
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -298,13 +300,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .5
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5070276
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -313,11 +316,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &6005434
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -447,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f41f8c751666146ac549dba03a1000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponPrefab: {fileID: 145140, guid: a52924ce6fc2bb641b2ae87cd14f5fe2, type: 2}
+  WeaponPrefab: {fileID: 145140, guid: 82df9b46bd162a84abfd6263abadce2b, type: 2}
   PickupSound: {fileID: 11432778, guid: 9dfaed2bc25684da48689e9e5e24ece0, type: 2}
 --- !u!114 &11482566
 MonoBehaviour:
@@ -666,7 +669,8 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119502}
   m_Enabled: 1
-  m_CollideConnected: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5055046}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 1.60549867, y: 3.05542135}
@@ -680,7 +684,8 @@ SpringJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143888}
   m_Enabled: 1
-  m_CollideConnected: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5055046}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -1.60369158, y: 2.98432636}
@@ -694,11 +699,11 @@ SliderJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119502}
   m_Enabled: 1
-  m_CollideConnected: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5055046}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 1.61097717, y: 2.55663061}
-  serializedVersion: 2
   m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -715,11 +720,11 @@ SliderJoint2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143888}
   m_Enabled: 1
-  m_CollideConnected: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 5055046}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -1.57413995, y: 2.3894453}
-  serializedVersion: 2
   m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -735,7 +740,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: WeaponPrefab
+      value: 
+      objectReference: {fileID: 145140, guid: 82df9b46bd162a84abfd6263abadce2b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 109824}

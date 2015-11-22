@@ -11,13 +11,13 @@ GameObject:
   - 212: {fileID: 21293556}
   - 50: {fileID: 5050152}
   - 58: {fileID: 5858928}
-  - 114: {fileID: 11455620}
   - 114: {fileID: 11413144}
   - 95: {fileID: 9585372}
   - 108: {fileID: 10877018}
   - 199: {fileID: 19990338}
   - 198: {fileID: 19876664}
-  m_Layer: 0
+  - 114: {fileID: 11424676}
+  m_Layer: 16
   m_Name: Napalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ Rigidbody2D:
   m_Mass: .100000001
   m_LinearDrag: 1
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: .25
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VisualEffect: {fileID: 0}
   DamageOwner: 1
-  DamageAmount: 1
+  DamageAmount: 10
   Radius: .25
   InteractWith:
     serializedVersion: 2
@@ -135,7 +135,7 @@ MonoBehaviour:
   DamageInterval: .200000003
   DurationTime: 3
   soundEffect: {fileID: 11487134, guid: 9ec775dd5c49744698b16156ea5e684e, type: 2}
---- !u!114 &11455620
+--- !u!114 &11424676
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -147,6 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VisualEffectOnTrigger: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4292237257
 --- !u!198 &19876664
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -324,12 +327,12 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: .333333343
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1168,9 +1171,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1206,9 +1207,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1226,6 +1225,46 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Mass
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: DamageAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].value
+      value: .333333343
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: layerMask.m_Bits
+      value: 4292237257
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LinearDrag
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

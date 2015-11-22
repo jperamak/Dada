@@ -3,6 +3,7 @@ using System.Collections;
 
 public class StickyBullet : Projectile {
 
+	public LayerMask layerMask;
 	protected bool _isStick = false;
 	private int bouncesCount = 0;
 	void OnCollisionEnter2D(Collision2D coll){
