@@ -194,7 +194,7 @@ MonoBehaviour:
   OutOfAmmo: {fileID: 11413118, guid: cedb037499f466746a4fcfdbb54c2cb8, type: 2}
   aimBar: {fileID: 172958}
   emptyAimBar: {fileID: 174692}
-  pushForceTimeToFull: 5
+  pushForceTimeToFull: 3
 --- !u!212 &21218908
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -317,6 +317,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: RechargeEvery
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pushForceTimeToFull
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
