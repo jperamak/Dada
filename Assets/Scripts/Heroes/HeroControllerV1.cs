@@ -1,12 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Dada.InputSystem;
 using System.Collections;
 
 [RequireComponent(typeof(Hero))]
-public class HeroControllerV1 : HeroController { 
-	
-	protected Hero _hero;
-	protected Rigidbody2D _rigidbody;
+public class HeroControllerV1 : HeroController {
+
+    protected Hero _hero;
+    protected Rigidbody2D _rigidbody;
 	
 	//class private attributes
 	protected Transform _groundCheck;			// A position marking where to check if the player is grounded.
@@ -77,38 +77,41 @@ public class HeroControllerV1 : HeroController {
 		//Weapons
 		ProcessWeapons();
 	}
-	
-	protected virtual void ProcessAim(){
-		
-		//rotate crossair and ranged weapon accordingly to current aim and hero's rotation
-		
-		// Option 1: The old way 
-		float yAxis = _hero.PlayerInstance.Controller.YAxis;
-		float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
-		Vector3 newRotation = new Vector3(0, 0, aimAngle);
-		Vector3 crossairRotation = newRotation;
-		
-		//correct crossair rotation due to negative scale of the x axis
-		if(!_facingRight){
-			aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
-			crossairRotation = new Vector3(0, 0, 180 - aimAngle);
-		}
-		
-	
-		_crossairPivot.eulerAngles 	 = newRotation;
-		_rangeWeaponHand.eulerAngles = newRotation;
-		_crossair.eulerAngles 		 = crossairRotation;
-		
-		//correct ranged weapon spawnpoint due to scale change
-		if(_hero.RangedWeapon != null)
-			_hero.RangedWeapon.SpawnPoint.eulerAngles = crossairRotation;
-		
-		//correct ranged weapon spawnpoint due to scale change
-		if(_hero.MeleeWeapon != null)
-			_hero.MeleeWeapon.SpawnPoint.eulerAngles = crossairRotation;
-	}
-	
-	protected virtual void ProcessWeapons(){
+
+    protected virtual void ProcessAim() {
+
+        //rotate crossair and ranged weapon accordingly to current aim and hero's rotation
+        float y = -_hero.PlayerInstance.Controller.YAxis;// *0.5f;
+        float aimAngle;
+        float meleeAngle, rangeAngle;
+
+        //invert angle if player is facing left
+        if (IsFacingRight) {
+            aimAngle = Mathf.Rad2Deg * Mathf.Acos(y) + transform.rotation.eulerAngles.z - 90;
+            rangeAngle = meleeAngle = aimAngle;
+        }
+        else {
+            aimAngle = -(Mathf.Rad2Deg * Mathf.Acos(y) - transform.rotation.eulerAngles.z - 90);
+            rangeAngle = aimAngle + 180;
+            meleeAngle = -(Mathf.Rad2Deg * Mathf.Acos(-y) - transform.rotation.eulerAngles.z + 90);
+        }
+
+        Quaternion fixRotation = Quaternion.Euler(0, 0, aimAngle);
+
+        _crossairPivot.rotation = fixRotation;
+        _rangeWeaponHand.rotation = fixRotation;
+        _crossair.rotation = fixRotation;
+
+        //correct melee weapon spawnpoint due to scale change
+        if (_hero.MeleeWeapon != null)
+            _hero.MeleeWeapon.SpawnPoint.rotation = Quaternion.Euler(0, 0, meleeAngle);
+
+        //correct ranged weapon spawnpoint due to scale change
+        if (_hero.RangedWeapon != null)
+            _hero.RangedWeapon.SpawnPoint.rotation = Quaternion.Euler(0, 0, rangeAngle);
+    }
+
+    protected virtual void ProcessWeapons(){
 		AbstractController _controller =_hero.PlayerInstance.Controller;
 		
 		//Use the ranged weapon from the muzzle
