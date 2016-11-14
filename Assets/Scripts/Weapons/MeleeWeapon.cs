@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class MeleeWeapon : Weapon {
@@ -24,7 +24,7 @@ public class MeleeWeapon : Weapon {
 
 		if(_customSpawnPoint != null){
 			referencePos = _customSpawnPoint.position;
-			referenceRot = _customSpawnPoint.rotation;
+			referenceRot = _customSpawnPoint.localRotation;
 		}
 		else if(_useOverriddenProp){
 			referencePos = _overriddenPos;
@@ -32,7 +32,7 @@ public class MeleeWeapon : Weapon {
 		}
 		else{
 			referencePos = SpawnPoint.position;
-			referenceRot = SpawnPoint.rotation;
+			referenceRot = SpawnPoint.localRotation;
 		}
 
 		//Always apply effects from the owner's position. Ignore spawner position but consider rotation
