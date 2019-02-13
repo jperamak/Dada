@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Dada.InputSystem;
 using System.Collections.Generic;
 
@@ -142,9 +142,9 @@ public class DadaInput {
 		}
 		if(controllers.Count > 0)
 			GamepadSync.Initialize(controllers);
-#if UNITY_EDITOR
+
 		_joyList.Add(new KeyboardController(_rawKeyMaps["Keyboard"],_joyList.Count));
-#endif
+
 		if(_joyList.Count > 0)
 			_joy = new CompositeController(_joyList);
 		else
