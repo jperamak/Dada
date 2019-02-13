@@ -144,34 +144,30 @@ public class HeroControllerV2 : HeroController {
     protected virtual void ProcessAim() {
 
         //rotate crossair and ranged weapon accordingly to current aim and hero's rotation
-        float y = -_hero.PlayerInstance.Controller.YAxis;// *0.5f;
-        float aimAngle;
-        float meleeAngle, rangeAngle;
 
-        //invert angle if player is facing left
-        if (IsFacingRight) {
-            aimAngle = Mathf.Rad2Deg * Mathf.Acos(y) + transform.rotation.eulerAngles.z - 90;
-            rangeAngle = meleeAngle = aimAngle;
-        }
-        else {
-            aimAngle = -(Mathf.Rad2Deg * Mathf.Acos(y) - transform.rotation.eulerAngles.z - 90);
-            rangeAngle = aimAngle + 180;
-            meleeAngle = -(Mathf.Rad2Deg * Mathf.Acos(-y) - transform.rotation.eulerAngles.z + 90);
+        // Option 1: The old way 
+        float yAxis = _hero.PlayerInstance.Controller.YAxis;
+        float aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) + transform.rotation.eulerAngles.z;
+        Vector3 newRotation = new Vector3(0, 0, aimAngle);
+        Vector3 crossairRotation = newRotation;
+
+        //correct crossair rotation due to negative scale of the x axis
+        if (!IsFacingRight) {
+            aimAngle = Mathf.Rad2Deg * Mathf.Asin(yAxis) - transform.rotation.eulerAngles.z;
+            crossairRotation = new Vector3(0, 0, 180 - aimAngle);
         }
 
-        Quaternion fixRotation = Quaternion.Euler(0, 0, aimAngle);
-
-        _crossairPivot.rotation = fixRotation;
-        _rangeWeaponHand.rotation = fixRotation;
-        _crossair.rotation = fixRotation;
-
-        //correct melee weapon spawnpoint due to scale change
-        if (_hero.MeleeWeapon != null)
-            _hero.MeleeWeapon.SpawnPoint.rotation = Quaternion.Euler(0, 0, meleeAngle);
+        _crossairPivot.eulerAngles = newRotation;
+        _rangeWeaponHand.eulerAngles = newRotation;
+        _crossair.eulerAngles = crossairRotation;
 
         //correct ranged weapon spawnpoint due to scale change
         if (_hero.RangedWeapon != null)
-            _hero.RangedWeapon.SpawnPoint.rotation = Quaternion.Euler(0, 0, rangeAngle);
+            _hero.RangedWeapon.SpawnPoint.eulerAngles = crossairRotation;
+
+        //correct melee weapon spawnpoint due to scale change
+        if (_hero.MeleeWeapon != null)
+            _hero.MeleeWeapon.SpawnPoint.eulerAngles = crossairRotation;
     }
 
     protected virtual void ProcessFlip(){
